@@ -18,6 +18,27 @@
     "Narita Airport": ["Narita"],
   };
 
+  const AREA_REGIONS = {
+    Tokyo: "Tokyo",
+    "Tokyo Station": "Tokyo",
+    Shinjuku: "Tokyo",
+    Shibuya: "Tokyo",
+    Ginza: "Tokyo",
+    Shinagawa: "Tokyo",
+    Ueno: "Tokyo",
+    Asakusa: "Tokyo",
+    Ikebukuro: "Tokyo",
+    Roppongi: "Tokyo",
+    Odaiba: "Tokyo",
+    "Haneda Airport": "Tokyo",
+    Narita: "Chiba",
+    "Narita Airport": "Chiba",
+    Namba: "Osaka",
+    Umeda: "Osaka",
+    "Kansai Airport": "Osaka",
+    "Rinku Town": "Osaka",
+  };
+
   const PLAN_UPDATES = {
     27: {
       area: "Shinagawa",
@@ -293,7 +314,8 @@
   function pickupMinutes(startArea, luggageArea) {
     if (!luggageArea) return null;
     if (startArea === luggageArea) return 25;
-    return isNearby(startArea, luggageArea) ? 40 : null;
+    if (isNearby(startArea, luggageArea)) return 40;
+    return AREA_REGIONS[startArea] && AREA_REGIONS[startArea] === AREA_REGIONS[luggageArea] ? 60 : null;
   }
 
   function areaMatches(plan, startArea) {
@@ -302,26 +324,62 @@
     return plan.starts.some((area) => isNearby(area, startArea));
   }
 
+  function normalizeLuggageMode(luggage) {
+    if (luggage === "with_me") return "store_near_stop";
+    if (luggage === "stored_hotel" || luggage === "stored_locker") return "return_elsewhere";
+    return luggage || "store_near_stop";
+  }
+
+  function mergeGenericAirportConnector(steps) {
+    const airportIndex = steps.findIndex((step) => /(?:travel|head) to (?:haneda|narita|kansai) airport/i.test(step.label));
+    if (airportIndex <= 0) return steps;
+    const connector = steps[airportIndex - 1];
+    if (!/(?:airport (?:departure )?(?:route|point)|narita departure point|departure station)/i.test(connector.label)) return steps;
+    steps[airportIndex] = { ...steps[airportIndex], minutes: Number(steps[airportIndex].minutes || 0) + Number(connector.minutes || 0) };
+    steps.splice(airportIndex - 1, 1);
+    return steps;
+  }
+
+  function isReturnConnector(step) {
+    return Boolean(step && /(?:\breturn\b|\breach\b|walk back|departure station)/i.test(step.label));
+  }
+
   function withLuggageStep(plan, luggage, luggageArea, startArea) {
-    const stored = luggage === "stored_hotel" || luggage === "stored_locker";
-    const steps = plan.steps.map((step) => ({ ...step }));
-    if (!stored) return { compatible: true, pickupMinutes: 0, steps };
-    if (pickupMinutes(startArea, luggageArea) === null) return { compatible: false, pickupMinutes: 0, steps };
-    const pickupBaseArea = plan.airportPlan ? startArea : (plan.pickupBaseArea || plan.area || startArea);
+    const mode = normalizeLuggageMode(luggage);
+    let steps = plan.steps.map((step) => ({ ...step }));
+    if (plan.airportPlan) return { compatible: true, pickupMinutes: 0, mode, steps };
+
+    if (mode === "store_near_stop") {
+      steps.unshift({ minutes: 10, label: "Store your luggage near the suggested stop", isStorageDrop: true, leave: "", happens: "", action: "", next: "" });
+      const airportIndex = steps.findIndex((step) => /(?:travel|head) to (?:haneda|narita|kansai) airport/i.test(step.label));
+      const connectorIndex = airportIndex - 1;
+      if (connectorIndex >= 0 && isReturnConnector(steps[connectorIndex])) {
+        steps[connectorIndex] = { ...steps[connectorIndex], label: "Collect your luggage and reach the airport transfer", isPickup: true };
+      } else {
+        steps.splice(airportIndex >= 0 ? airportIndex : steps.length, 0, { minutes: 10, label: "Collect your luggage and begin the airport transfer", isPickup: true, leave: "", happens: "", action: "", next: "" });
+      }
+      return { compatible: true, pickupMinutes: 10, mode, storageArea: plan.area || startArea, steps };
+    }
+
+    steps = mergeGenericAirportConnector(steps);
+    if (mode === "none") return { compatible: true, pickupMinutes: 0, mode, steps };
+    if (mode !== "return_elsewhere" || !luggageArea) return { compatible: false, pickupMinutes: 0, mode, steps };
+    const pickupBaseArea = plan.pickupBaseArea || plan.area || startArea;
     const minutes = pickupMinutes(pickupBaseArea, luggageArea);
-    if (minutes === null) return { compatible: false, pickupMinutes: 0, steps };
+    if (minutes === null) return { compatible: false, pickupMinutes: 0, mode, steps };
     const label = luggage === "stored_hotel"
       ? `Return to your hotel in ${luggageArea} and collect your luggage`
-      : `Collect your luggage from the locker in ${luggageArea}`;
+      : luggage === "stored_locker"
+        ? `Collect your luggage from the locker in ${luggageArea}`
+        : `Return to ${luggageArea} and collect your luggage`;
     const airportIndex = steps.findIndex((step) => /(?:travel|head) to (?:haneda|narita|kansai) airport/i.test(step.label));
-    const insertAt = airportIndex >= 0 ? airportIndex : steps.length;
-    steps.splice(insertAt, 0, { minutes, label, isPickup: true, leave: "", happens: "", action: "", next: "" });
-    return { compatible: true, pickupMinutes: minutes, steps };
+    steps.splice(airportIndex >= 0 ? airportIndex : steps.length, 0, { minutes, label, isPickup: true, leave: "", happens: "", action: "", next: "" });
+    return { compatible: true, pickupMinutes: minutes, mode, storageArea: luggageArea, steps };
   }
 
   function totalMinutes(steps) {
     return steps.reduce((sum, step) => sum + Number(step.minutes || 0), 0);
   }
 
-  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, areaMatches, withLuggageStep, totalMinutes };
+  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, areaMatches, normalizeLuggageMode, withLuggageStep, totalMinutes };
 })(window);

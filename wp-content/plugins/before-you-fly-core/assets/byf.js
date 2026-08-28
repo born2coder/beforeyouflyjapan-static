@@ -50,12 +50,12 @@
   const luggageHelp = luggageLocation.querySelector("small");
   const updateLuggage = () => {
     const chosen = form.querySelector('[name="luggage"]:checked')?.value || "";
-    const stored = chosen === "stored_hotel" || chosen === "stored_locker";
-    luggageLocation.hidden = !stored;
-    luggageSelect.required = stored;
-    if (!stored) luggageSelect.value = "";
-    luggageQuestion.textContent = chosen === "stored_hotel" ? "Where is your hotel?" : "Where will you pick up your luggage?";
-    luggageHelp.textContent = "Choose the same area or a nearby station area. We add 25–40 minutes for the return and pickup.";
+    const returnElsewhere = chosen === "return_elsewhere" || chosen === "stored_hotel" || chosen === "stored_locker";
+    luggageLocation.hidden = !returnElsewhere;
+    luggageSelect.required = returnElsewhere;
+    if (!returnElsewhere) luggageSelect.value = "";
+    luggageQuestion.textContent = "Where will you return to collect your luggage?";
+    luggageHelp.textContent = "Choose the area you must return to. We include a conservative return-and-pickup allowance.";
   };
   form.querySelectorAll('[name="luggage"]').forEach((element) => element.addEventListener("change", updateLuggage));
 
@@ -81,7 +81,7 @@
   function renderNoPlan({ airport, airportData, recommended, flight, available, start, luggage, reason }) {
     const fallback = airportFallback[airport];
     const reasonCopy = reason === "luggage_far"
-      ? "Your luggage location is not in the same area or a nearby station area, so we have not guessed a risky detour. Change the starting area or luggage area if either entry is too broad."
+      ? "The luggage return area appears to be in a different region from this plan, so we have not guessed a risky cross-region detour. Check the starting area and luggage area."
       : data.messages.noPlan;
     const live = airportData.transport ? `<a class="byf-submit byf-no-primary" target="_blank" rel="noopener" href="${escapeHtml(airportData.transport)}">Check a live route to the airport →</a>` : "";
     const near = airportHome[airport] ? `<a class="byf-no-secondary" target="_blank" rel="noopener" href="${escapeHtml(airportHome[airport])}">Open official airport information →</a>` : "";
@@ -113,12 +113,13 @@
     const luggage = values.get("luggage");
     const luggageArea = values.get("luggage_area") || "";
     const interest = values.get("interest") || "";
-    const stored = luggage === "stored_hotel" || luggage === "stored_locker";
-    if (stored && !luggageArea) {
+    const luggageMode = core.normalizeLuggageMode(luggage);
+    const returnElsewhere = luggageMode === "return_elsewhere";
+    if (returnElsewhere && !luggageArea) {
       out.innerHTML = '<section class="byf-no"><h2>Choose where you will pick up your luggage.</h2></section>';
       return;
     }
-    const luggageIsNear = !stored || core.pickupMinutes(start, luggageArea) !== null;
+    const luggageRouteIsValid = !returnElsewhere || core.pickupMinutes(start, luggageArea) !== null;
 
     const plans = data.plans
       .map((plan) => {
@@ -130,8 +131,7 @@
         const earliest = new Date(Math.max(free.getTime(), onFreeDate(free, plan.startMin).getTime()));
         const latest = new Date(Math.min(recommended.getTime() - total * 60000, onFreeDate(free, plan.startMax).getTime()));
         const dayOk = !plan.days || /daily/i.test(plan.days) || plan.days.split(",").map((day) => day.trim().slice(0, 3)).includes(weekdayFormatter.format(free));
-        const luggageOk = luggage === "none" || (stored && plan.luggage !== "no") || (luggage === "with_me" && plan.luggage === "yes");
-        if (total > available || !luggageOk || !dayOk || earliest > latest) return null;
+        if (total > available || !dayOk || earliest > latest) return null;
         return { ...plan, _candidate: {
           start: latest,
           steps,
@@ -144,7 +144,7 @@
       .sort((left, right) => right._candidate.score - left._candidate.score || Math.abs(available - left._candidate.total) - Math.abs(available - right._candidate.total));
 
     if (available <= 0 || !plans.length) {
-      renderNoPlan({ airport, airportData, recommended, flight, available, start, luggage, reason: luggageIsNear ? "time" : "luggage_far" });
+      renderNoPlan({ airport, airportData, recommended, flight, available, start, luggage, reason: luggageRouteIsValid ? "time" : "luggage_far" });
       return;
     }
 
@@ -158,14 +158,17 @@
       });
       const hasAirportTravel = Boolean(leaveAt);
       if (!leaveAt) leaveAt = candidate.start;
-      const luggageLabel = stored
-        ? `${candidate.pickupMinutes}-min pickup included`
-        : plan.luggage === "yes" ? "Works with luggage" : plan.luggage === "stored" ? "Store large luggage first" : "Best without luggage";
+      const luggageLabel = returnElsewhere
+        ? `${candidate.pickupMinutes}-min return included`
+        : luggageMode === "store_near_stop"
+          ? plan.airportPlan ? "Keep luggage with you" : "Storage handling included"
+          : "No luggage detour";
       const reasons = [];
       if (plan.starts.includes(start)) reasons.push(`Starts in ${start}`);
       else reasons.push(`Near ${start}`);
       if (interest && plan.interest.includes(interest)) reasons.push(`Matches ${interest}`);
-      if (stored) reasons.push(`Pickup in ${luggageArea} is in the timeline`);
+      if (returnElsewhere) reasons.push(`Return to ${luggageArea} is in the timeline`);
+      else if (luggageMode === "store_near_stop" && !plan.airportPlan) reasons.push("Store luggage near the suggested stop");
       reasons.push("Airport buffer protected");
       const params = new URLSearchParams({
         byf_context: "1",
