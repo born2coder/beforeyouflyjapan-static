@@ -75,6 +75,8 @@ body.page-for-hotels{overflow-x:hidden}.page-for-hotels .entry-content{position:
 .byf-luggage-field .byf-radio input{flex:0 0 auto;width:18px;height:18px}
 .byf-luggage-location[hidden]{display:none!important}
 .byf-luggage-location small{display:block;margin-top:7px;color:#64727b;font-weight:500}
+.byf-rich-step.is-luggage-pickup{border-left:4px solid var(--byf-gold);background:#fffaf0}
+.byf-rich-step.is-luggage-pickup h3:before{content:"LUGGAGE · ";color:var(--byf-vermilion);font-size:11px;letter-spacing:.08em}
 .byf-fit-reason{margin:14px 0;padding:11px 14px;border-left:3px solid var(--byf-gold);background:#f5f1e8;color:var(--byf-indigo)}
 .byf-card-times{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}
 .byf-card-times span{display:flex;flex-direction:column;padding:12px;background:#f6f3eb;border:1px solid #ddd4c2}
