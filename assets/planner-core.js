@@ -394,8 +394,17 @@
   function areaMatches(plan, startArea) {
     if (plan.area === startArea) return true;
     if (plan.starts.includes(startArea)) return true;
-    if (startArea === "Tokyo" && plan.airport === "HND") return true;
+    if (startArea === "Tokyo" && plan.airport === "HND" && !plan.airportPlan) return true;
     return plan.starts.some((area) => isNearby(area, startArea));
+  }
+
+  function airportTransferMinimum(airport, area) {
+    const minimums = {
+      HND: { "Haneda Airport": 0, Shinagawa: 35, Tokyo: 50, "Tokyo Station": 50, Ginza: 50, Roppongi: 50, Shibuya: 60, Shinjuku: 60, Ueno: 75, Asakusa: 75, Ikebukuro: 75, Odaiba: 75 },
+      NRT: { "Narita Airport": 0, Narita: 35, Tokyo: 110, "Tokyo Station": 110, Ginza: 110, Shinagawa: 120, Roppongi: 120, Shibuya: 120, Shinjuku: 120, Ueno: 100, Asakusa: 100, Ikebukuro: 120, Odaiba: 130 },
+      KIX: { "Kansai Airport": 0, "Rinku Town": 20, Namba: 70, Umeda: 90 },
+    };
+    return minimums[airport] && minimums[airport][area] != null ? minimums[airport][area] : null;
   }
 
   function normalizeLuggageMode(luggage) {
@@ -484,6 +493,11 @@
         : `Return to ${luggageArea} and collect your luggage`;
     const airportIndex = steps.findIndex(isAirportTransferStep);
     steps.splice(airportIndex >= 0 ? airportIndex : steps.length, 0, { minutes, label, isPickup: true, leave: "", happens: "", action: "", next: "" });
+    if (airportIndex >= 0 && luggageArea !== pickupBaseArea) {
+      const transferMinimum = airportTransferMinimum(plan.airport, luggageArea);
+      const shiftedAirportIndex = airportIndex + 1;
+      if (transferMinimum !== null) steps[shiftedAirportIndex] = { ...steps[shiftedAirportIndex], minutes: Math.max(Number(steps[shiftedAirportIndex].minutes || 0), transferMinimum) };
+    }
     return { compatible: true, pickupMinutes: minutes, mode, storageArea: luggageArea, steps };
   }
 
@@ -539,5 +553,5 @@
     return Boolean(start && Number.isFinite(start.getTime()) && start >= window.earliest && start <= window.latest);
   }
 
-  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, areaMatches, normalizeLuggageMode, isAirportTransferStep, prepareSteps, withLuggageStep, totalMinutes, timingFacts, scorePlan, onJstDate, planWindow, isStartWithinWindow };
+  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, airportTransferMinimum, areaMatches, normalizeLuggageMode, isAirportTransferStep, prepareSteps, withLuggageStep, totalMinutes, timingFacts, scorePlan, onJstDate, planWindow, isStartWithinWindow };
 })(window);

@@ -196,7 +196,7 @@
     initializePlanContext();
   } else {
     const script = document.createElement("script");
-    script.src = "/assets/planner-core.js?v=20260829-2";
+    script.src = "/assets/planner-core.js?v=20260829-3";
     script.dataset.byfPlannerCore = "1";
     script.addEventListener("load", initializePlanContext, { once: true });
     document.head.append(script);

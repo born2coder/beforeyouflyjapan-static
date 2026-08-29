@@ -117,6 +117,14 @@ assert.equal(roppongiRelax[0].plan.id, 98, "Shibuya route should outrank a Ginza
 assert.equal(core.pickupMinutes("Haneda Airport", "Shinjuku"), 120);
 assert.equal(core.pickupMinutes("Kansai Airport", "Namba"), 120);
 assert.equal(core.pickupMinutes("Ueno", "Namba"), null);
+assert.equal(core.airportTransferMinimum("KIX", "Namba"), 70);
+
+const terminalMini = data.plans.find((plan) => plan.id === 2801);
+assert.equal(core.areaMatches(terminalMini, "Tokyo"), false, "a Tokyo start must not be treated as already at Haneda");
+
+const rinkuReturn = core.withLuggageStep(data.plans.find((plan) => plan.id === 3601), "return_elsewhere", "Namba", "Kansai Airport");
+const rinkuAirportStep = rinkuReturn.steps.find(core.isAirportTransferStep);
+assert.ok(rinkuAirportStep.minutes >= 70, "airport transfer must be recalculated from the luggage area");
 
 const naritaAirport = data.plans.find((plan) => plan.id === 32);
 assert.doesNotMatch(naritaAirport.hook, /temple-town/i);

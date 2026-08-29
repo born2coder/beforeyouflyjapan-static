@@ -39,7 +39,7 @@ const cases = [
   { name: "Tokyo Station before Narita", input: { airport: "NRT", start: "Tokyo Station", luggage: "none", available: 300 }, expect: /Tokyo Station & Marunouchi/ },
   { name: "Namba short Osaka window", input: { airport: "KIX", start: "Namba", luggage: "none", available: 190 }, expect: /Namba Last Stop|Dotonbori/ },
   { name: "Umeda short Osaka window", input: { airport: "KIX", start: "Umeda", luggage: "none", available: 220 }, expect: /Umeda Before/ },
-  { name: "Tokyo window too short for city sightseeing", input: { airport: "HND", start: "Tokyo", luggage: "store_near_stop", available: 100 }, expect: /Haneda Terminal Mini/ },
+  { name: "Tokyo window too short for city sightseeing", input: { airport: "HND", start: "Tokyo", luggage: "store_near_stop", available: 100 }, expectNone: true },
 ];
 
 for (const testCase of cases) {

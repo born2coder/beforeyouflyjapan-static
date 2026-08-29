@@ -76,10 +76,14 @@
     const fallback = airportFallback[airport];
     const reasonCopy = reason === "luggage_far"
       ? "The luggage return area appears to be in a different region from this plan, so we have not guessed a risky cross-region detour. Check the starting area and luggage area."
+      : reason === "airport_backtrack"
+        ? "Your luggage is outside the airport. Go directly to the entered luggage area, collect it, and return to the airport without adding sightseeing. Check both legs with a live route now."
       : data.messages.noPlan;
+    const fallbackTitle = reason === "airport_backtrack" ? "Skip sightseeing and retrieve your luggage now" : fallback.title;
+    const fallbackText = reason === "airport_backtrack" ? "This planner will not add an optional stop when you must leave the airport and come back for luggage." : fallback.text;
     const live = airportData.transport ? `<a class="byf-submit byf-no-primary" target="_blank" rel="noopener" href="${escapeHtml(airportData.transport)}">Check a live route to the airport →</a>` : "";
     const near = airportHome[airport] ? `<a class="byf-no-secondary" target="_blank" rel="noopener" href="${escapeHtml(airportHome[airport])}">Open official airport information →</a>` : "";
-    out.innerHTML = `<section class="byf-no"><p class="byf-kicker">SAFE FALLBACK</p><h2>${escapeHtml(fallback.title)}</h2><p>${escapeHtml(reasonCopy)}</p><p>${escapeHtml(fallback.text)}</p><div class="byf-timebar"><b>${dateFormatter.format(recommended)}</b><span>Protected airport-ready time</span><b>${dateFormatter.format(flight)}</b><span>Your flight</span></div><div class="byf-actions">${live}${near}<a href="#planner">Change my conditions</a></div></section>`;
+    out.innerHTML = `<section class="byf-no"><p class="byf-kicker">SAFE FALLBACK</p><h2>${escapeHtml(fallbackTitle)}</h2><p>${escapeHtml(reasonCopy)}</p><p>${escapeHtml(fallbackText)}</p><div class="byf-timebar"><b>${dateFormatter.format(recommended)}</b><span>Protected airport-ready time</span><b>${dateFormatter.format(flight)}</b><span>Your flight</span></div><div class="byf-actions">${live}${near}<a href="#planner">Change my conditions</a></div></section>`;
     track("no_plan_found", { airport, starting_area: start, available_minutes: available, luggage_state: luggage, reason });
     out.scrollIntoView({ behavior: "smooth" });
   }
@@ -114,6 +118,11 @@
       return;
     }
     const luggageRouteIsValid = !returnElsewhere || core.pickupMinutes(start, luggageArea) !== null;
+    const airportBacktrack = returnElsewhere && /Airport$/.test(start) && luggageArea !== start;
+    if (airportBacktrack) {
+      renderNoPlan({ airport, airportData, recommended, flight, available, start, luggage, reason: "airport_backtrack" });
+      return;
+    }
 
     const plans = data.plans
       .map((plan) => {
@@ -155,7 +164,8 @@
           ? plan.airportPlan ? "Keep luggage with you" : "Storage handling included"
           : "No luggage detour";
       const reasons = [];
-      if (plan.starts.includes(start)) reasons.push(`Starts in ${start}`);
+      if (plan.area === start) reasons.push(plan.airportPlan ? `Already at ${start}` : `Starts in ${start}`);
+      else if (plan.starts.includes(start)) reasons.push(`Starts in ${start}`);
       else reasons.push(`Near ${start}`);
       if (interest && plan.interest.includes(interest)) reasons.push(`Matches ${interest}`);
       if (returnElsewhere) reasons.push(plan.airportPlan && start === luggageArea ? `Pickup in ${luggageArea} is in the timeline` : `Return to ${luggageArea} is in the timeline`);
