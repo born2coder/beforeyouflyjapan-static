@@ -50,6 +50,24 @@ for (const plan of data.plans) {
   }
 }
 
+let destinationStorageRoutes = 0;
+for (const plan of data.plans.filter((item) => !item.airportPlan)) {
+  for (const start of plan.starts) {
+    if (!core.areaMatches(plan, start)) continue;
+    const fit = core.withLuggageStep(plan, "store_near_stop", "", start);
+    const dropIndex = fit.steps.findIndex((step) => step.isStorageDrop);
+    const pickupIndex = fit.steps.findIndex((step) => step.isPickup);
+    const airportIndex = fit.steps.findIndex(core.isAirportTransferStep);
+    assert.equal(fit.storageArea, plan.area, `storage must follow the plan area: ${plan.id}/${start}`);
+    assert.ok(dropIndex >= 0 && pickupIndex > dropIndex, `storage sequence is invalid: ${plan.id}/${start}`);
+    assert.ok(airportIndex < 0 || pickupIndex < airportIndex, `pickup must precede airport travel: ${plan.id}/${start}`);
+    assert.match(fit.steps[dropIndex].label, new RegExp(plan.area.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), `drop label lacks area: ${plan.id}`);
+    assert.match(fit.steps[pickupIndex].label, new RegExp(plan.area.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), `pickup label lacks area: ${plan.id}`);
+    if (plan.area !== start && dropIndex > 0) destinationStorageRoutes += 1;
+  }
+}
+assert.ok(destinationStorageRoutes > 20, "destination-storage routing was not exercised broadly");
+
 const airportStarts = {
   HND: ["Tokyo Station", "Shinjuku", "Shibuya", "Ueno", "Haneda Airport", "Roppongi"],
   NRT: ["Narita", "Narita Airport", "Tokyo Station", "Ueno"],

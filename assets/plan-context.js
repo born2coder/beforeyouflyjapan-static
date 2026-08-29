@@ -103,8 +103,8 @@
   }
 
   function stepDescription(step) {
-    if (step.isStorageDrop) return ["Use a station locker or staffed luggage-storage service near the suggested stop.", "Choose a storage point you can identify and return to easily. Locker availability is not guaranteed."];
-    if (step.isPickup) return ["Use the luggage allowance already included in this plan.", "Collect every bag, check the receipt or counter, and begin the airport transfer when this step ends."];
+    if (step.isStorageDrop) return [`Use a station locker or staffed luggage-storage service in ${step.storageArea || plan.area}.`, "Choose a storage point you can identify and return to easily. Locker availability is not guaranteed."];
+    if (step.isPickup) return [`Use the luggage allowance already included for ${step.storageArea || luggageFit?.storageArea || plan.area}.`, "Collect every bag, check the receipt or counter, and begin the airport transfer when this step ends."];
     if (core.isAirportTransferStep(step)) return ["This allowance includes station access, waiting, and the airport transfer.", "Check the live route before moving and use the displayed time as a hard departure deadline."];
     if (/margin/i.test(step.label)) return ["This time is deliberately left unplanned for platform changes or small delays.", "Do not spend this margin on another stop."];
     if (/confirm|check-in|security/i.test(step.label)) return ["Verify the correct terminal and the latest instructions from your airline.", "Resolve check-in, bag-drop, or terminal questions before using time for food or shopping."];
@@ -186,7 +186,7 @@
           ? `Your luggage pickup in ${luggageFit.storageArea} is included with a conservative allowance.`
           : `Your return to ${luggageFit.storageArea} is included with a conservative allowance. Check the exact hotel or storage route live; it can take longer.`
         : luggageFit.mode === "store_near_stop" && !plan.airportPlan
-          ? "This plan includes time to store and collect luggage near the suggested stop."
+          ? `This plan includes ${luggageFit.dropMinutes} minutes to store luggage and time to collect it again in ${luggageFit.storageArea}. You do not return to ${params.get("start")} unless it is the same area.`
           : "No separate luggage detour is included.";
     }
   }
@@ -196,7 +196,7 @@
     initializePlanContext();
   } else {
     const script = document.createElement("script");
-    script.src = "/assets/planner-core.js?v=20260829-3";
+    script.src = "/assets/planner-core.js?v=20260829-4";
     script.dataset.byfPlannerCore = "1";
     script.addEventListener("load", initializePlanContext, { once: true });
     document.head.append(script);

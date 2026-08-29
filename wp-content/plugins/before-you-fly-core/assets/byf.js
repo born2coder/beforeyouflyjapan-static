@@ -161,7 +161,7 @@
           ? `${candidate.pickupMinutes}-min pickup included`
           : `${candidate.pickupMinutes}-min return included`
         : luggageMode === "store_near_stop"
-          ? plan.airportPlan ? "Keep luggage with you" : "Storage handling included"
+          ? plan.airportPlan ? "Keep luggage with you" : `Storage in ${plan.area} included`
           : "No luggage detour";
       const reasons = [];
       if (plan.area === start) reasons.push(plan.airportPlan ? `Already at ${start}` : `Starts in ${start}`);
@@ -169,7 +169,7 @@
       else reasons.push(`Near ${start}`);
       if (interest && plan.interest.includes(interest)) reasons.push(`Matches ${interest}`);
       if (returnElsewhere) reasons.push(plan.airportPlan && start === luggageArea ? `Pickup in ${luggageArea} is in the timeline` : `Return to ${luggageArea} is in the timeline`);
-      else if (luggageMode === "store_near_stop" && !plan.airportPlan) reasons.push("Store luggage near the suggested stop");
+      else if (luggageMode === "store_near_stop" && !plan.airportPlan) reasons.push(`Store and collect luggage in ${plan.area}`);
       reasons.push("Airport buffer protected");
       const params = new URLSearchParams({
         byf_context: "1",

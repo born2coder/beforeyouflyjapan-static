@@ -50,10 +50,29 @@ for (const testCase of cases) {
 
 const localStorage = core.withLuggageStep(data.plans.find((plan) => plan.id === 89), "store_near_stop", "", "Tokyo Station");
 assert.equal(localStorage.pickupMinutes, 15);
+assert.equal(localStorage.dropMinutes, 20);
 assert.ok(localStorage.steps[0].isStorageDrop);
+assert.match(localStorage.steps[0].label, /Tokyo Station/);
 assert.ok(localStorage.steps.some((step) => step.isPickup));
 assert.ok(localStorage.steps.findIndex((step) => step.isPickup) < localStorage.steps.findIndex((step) => /Travel to Haneda Airport/.test(step.label)));
 assert.ok(!localStorage.steps.some((step) => /airport departure (?:point|route)/i.test(step.label)));
+
+const destinationStorage = core.withLuggageStep(data.plans.find((plan) => plan.id === 98), "store_near_stop", "", "Roppongi");
+assert.equal(destinationStorage.storageArea, "Shibuya");
+assert.equal(destinationStorage.dropMinutes, 25);
+assert.equal(destinationStorage.steps[0].label, "Reach Shibuya Station");
+assert.ok(destinationStorage.steps[1].isStorageDrop);
+assert.match(destinationStorage.steps[1].label, /Store your luggage in Shibuya/);
+assert.ok(destinationStorage.steps.some((step) => step.isPickup && /in Shibuya/.test(step.label)));
+assert.ok(!destinationStorage.steps.some((step) => /return to Roppongi/i.test(step.label)));
+
+const shinjukuToUenoStorage = core.withLuggageStep(data.plans.find((plan) => plan.id === 252), "store_near_stop", "", "Shinjuku");
+assert.equal(shinjukuToUenoStorage.storageArea, "Ueno");
+assert.match(shinjukuToUenoStorage.steps[0].label, /Travel to Ueno/);
+assert.match(shinjukuToUenoStorage.steps[1].label, /Store your luggage in Ueno/);
+assert.ok(shinjukuToUenoStorage.steps.some((step) => step.isPickup && /in Ueno/.test(step.label)));
+assert.ok(!shinjukuToUenoStorage.steps.some((step) => /return to Shinjuku/i.test(step.label)));
+assert.equal(core.totalMinutes(shinjukuToUenoStorage.steps), core.totalMinutes(data.plans.find((plan) => plan.id === 252).steps) + 25);
 
 const sameAreaPickup = core.withLuggageStep(data.plans.find((plan) => plan.id === 34), "return_elsewhere", "Namba", "Namba");
 assert.equal(sameAreaPickup.pickupMinutes, 35);

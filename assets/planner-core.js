@@ -12,6 +12,13 @@
     Asakusa: ["Ueno"],
     Ikebukuro: ["Shinjuku"],
     Roppongi: ["Tokyo", "Ginza", "Shibuya"],
+    Toyosu: ["Tokyo", "Ginza", "Odaiba"],
+    Jimbocho: ["Tokyo", "Tokyo Station", "Ueno"],
+    Harajuku: ["Shinjuku", "Shibuya"],
+    Hamamatsucho: ["Ginza", "Shinagawa", "Roppongi"],
+    Akihabara: ["Tokyo Station", "Ueno"],
+    Tsukiji: ["Tokyo Station", "Ginza"],
+    Nihonbashi: ["Tokyo", "Tokyo Station", "Ginza"],
     Namba: ["Umeda"],
     Umeda: ["Namba"],
     Narita: ["Narita Airport"],
@@ -30,6 +37,13 @@
     Ikebukuro: "Tokyo",
     Roppongi: "Tokyo",
     Odaiba: "Tokyo",
+    Toyosu: "Tokyo",
+    Jimbocho: "Tokyo",
+    Harajuku: "Tokyo",
+    Hamamatsucho: "Tokyo",
+    Akihabara: "Tokyo",
+    Tsukiji: "Tokyo",
+    Nihonbashi: "Tokyo",
     "Haneda Airport": "Tokyo",
     Narita: "Chiba",
     "Narita Airport": "Chiba",
@@ -171,21 +185,32 @@
     258: {
       hook: "Roppongi’s evening energy followed by one focused Azabudai meal or shop, with a clear return to the Haneda route",
     },
+    256: { area: "Toyosu" },
     254: {
+      area: "Jimbocho",
       hook: "a focused browse through Jimbocho’s specialist bookshops followed by one Kanda coffee or meal",
     },
     247: {
+      area: "Harajuku",
       hook: "Harajuku’s street fashion and Omotesando’s architecture in one walkable corridor before the Haneda transfer",
     },
+    244: { area: "Hamamatsucho" },
+    243: { area: "Hamamatsucho" },
+    234: { area: "Harajuku" },
     121: {
+      area: "Tokyo Station",
       hook: "a full final-day route from Tokyo Station and Nihonbashi through Tsukiji and Ginza to Tokyo Bay, only for a genuinely long window",
     },
+    104: { area: "Akihabara" },
     96: {
+      area: "Harajuku",
       hook: "the forested approach and shrine precincts of Meiji Jingu, with time to return directly toward Haneda",
     },
     92: {
+      area: "Tsukiji",
       hook: "one focused Tsukiji Outer Market meal and short browse before returning to the Haneda corridor",
     },
+    90: { area: "Nihonbashi" },
     33: {
       area: "Namba",
       hook: "Dotonbori’s giant signs and riverwalk, followed by one Osaka specialty before returning to Nankai Namba for KIX",
@@ -353,7 +378,7 @@
 
   function inferArea(plan) {
     if (plan.area) return plan.area;
-    const names = ["Tokyo Station", "Shinagawa", "Shinjuku", "Shibuya", "Ginza", "Ueno", "Asakusa", "Ikebukuro", "Roppongi", "Odaiba", "Narita", "Namba", "Umeda", "Kansai Airport"];
+    const names = ["Tokyo Station", "Shinagawa", "Shinjuku", "Shibuya", "Ginza", "Ueno", "Asakusa", "Ikebukuro", "Roppongi", "Odaiba", "Toyosu", "Jimbocho", "Harajuku", "Hamamatsucho", "Akihabara", "Tsukiji", "Nihonbashi", "Narita", "Namba", "Umeda", "Kansai Airport"];
     return names.find((area) => plan.name.includes(area)) || (plan.airport === "KIX" ? "Namba" : "Tokyo");
   }
 
@@ -400,8 +425,8 @@
 
   function airportTransferMinimum(airport, area) {
     const minimums = {
-      HND: { "Haneda Airport": 0, Shinagawa: 35, Tokyo: 50, "Tokyo Station": 50, Ginza: 50, Roppongi: 50, Shibuya: 60, Shinjuku: 60, Ueno: 75, Asakusa: 75, Ikebukuro: 75, Odaiba: 75 },
-      NRT: { "Narita Airport": 0, Narita: 35, Tokyo: 110, "Tokyo Station": 110, Ginza: 110, Shinagawa: 120, Roppongi: 120, Shibuya: 120, Shinjuku: 120, Ueno: 100, Asakusa: 100, Ikebukuro: 120, Odaiba: 130 },
+      HND: { "Haneda Airport": 0, Shinagawa: 35, Tokyo: 50, "Tokyo Station": 50, Ginza: 50, Roppongi: 50, Shibuya: 60, Shinjuku: 60, Ueno: 75, Asakusa: 75, Ikebukuro: 75, Odaiba: 75, Toyosu: 75, Jimbocho: 65, Harajuku: 65, Hamamatsucho: 45, Akihabara: 70, Tsukiji: 55, Nihonbashi: 55 },
+      NRT: { "Narita Airport": 0, Narita: 35, Tokyo: 110, "Tokyo Station": 110, Ginza: 110, Shinagawa: 120, Roppongi: 120, Shibuya: 120, Shinjuku: 120, Ueno: 100, Asakusa: 100, Ikebukuro: 120, Odaiba: 130, Toyosu: 130, Jimbocho: 115, Harajuku: 125, Hamamatsucho: 120, Akihabara: 105, Tsukiji: 120, Nihonbashi: 110 },
       KIX: { "Kansai Airport": 0, "Rinku Town": 20, Namba: 70, Umeda: 90 },
     };
     return minimums[airport] && minimums[airport][area] != null ? minimums[airport][area] : null;
@@ -469,15 +494,20 @@
     }
 
     if (mode === "store_near_stop") {
-      steps.unshift({ minutes: 15, label: "Store your luggage near the suggested stop", isStorageDrop: true, leave: "", happens: "", action: "", next: "" });
+      const storageArea = plan.area || startArea;
+      const travelsToStorage = storageArea !== startArea;
+      const firstStepReachesStorage = travelsToStorage && steps[0] && !isAirportTransferStep(steps[0]) && /^(?:travel|head|reach|walk|take)\b/i.test(steps[0].label || "");
+      const dropMinutes = travelsToStorage ? 25 : 20;
+      const dropIndex = firstStepReachesStorage ? 1 : 0;
+      steps.splice(dropIndex, 0, { minutes: dropMinutes, label: `Store your luggage in ${storageArea}, near the suggested stop`, storageArea, isStorageDrop: true, leave: "", happens: "", action: "", next: "" });
       const airportIndex = steps.findIndex(isAirportTransferStep);
       const connectorIndex = airportIndex - 1;
       if (connectorIndex >= 0 && isReturnConnector(steps[connectorIndex])) {
-        steps[connectorIndex] = { ...steps[connectorIndex], minutes: Math.max(15, Number(steps[connectorIndex].minutes || 0)), label: "Collect your luggage and reach the airport transfer", isPickup: true };
+        steps[connectorIndex] = { ...steps[connectorIndex], minutes: Math.max(15, Number(steps[connectorIndex].minutes || 0)), label: `Collect your luggage in ${storageArea} and reach the airport transfer`, storageArea, isPickup: true };
       } else {
-        steps.splice(airportIndex >= 0 ? airportIndex : steps.length, 0, { minutes: 15, label: "Collect your luggage and begin the airport transfer", isPickup: true, leave: "", happens: "", action: "", next: "" });
+        steps.splice(airportIndex >= 0 ? airportIndex : steps.length, 0, { minutes: 15, label: `Collect your luggage in ${storageArea} and begin the airport transfer`, storageArea, isPickup: true, leave: "", happens: "", action: "", next: "" });
       }
-      return { compatible: true, pickupMinutes: 15, mode, storageArea: plan.area || startArea, steps };
+      return { compatible: true, dropMinutes, pickupMinutes: 15, mode, storageArea, steps };
     }
 
     steps = mergeGenericAirportConnector(steps);
