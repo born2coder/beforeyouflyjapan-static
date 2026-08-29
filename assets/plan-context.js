@@ -22,7 +22,22 @@
   const timeOnly = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", hour12: true, timeZone: "Asia/Tokyo" });
   const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[character]));
 
-  const kixGuidance = {
+  const planGuidance = {
+    28: {
+      choose: ["You want the lowest-complexity Haneda option and are satisfied with one airport experience.", "You will confirm the departure terminal and airline counter before eating or shopping.", "You are willing to skip the optional experience if airline procedures need attention."],
+      avoid: ["Your terminal or check-in status is still unresolved.", "You need a particular restaurant, shop, or observation deck to be open.", "Your airline deadline is already close."],
+      sources: [["Haneda international departure procedures", "https://tokyo-haneda.com/en/flight/int/dep_step.html"], ["Haneda terminal floor guide", "https://tokyo-haneda.com/en/floor/floor-guide.html"]],
+    },
+    31: {
+      choose: ["You are at or near Narita and want a quiet, low-complexity final stop.", "A meal, cafe break, or rest near your confirmed terminal is enough.", "You will resolve terminal and counter questions before using optional time."],
+      avoid: ["You intend to return to Narita city after reaching the airport.", "Your terminal or airline counter is still uncertain.", "Your airline deadline is already close."],
+      sources: [["Narita international departure procedure", "https://www.narita-airport.jp/en/airportguide/inter-dep/"], ["Narita airport facility layout", "https://www.narita-airport.jp/en/service/ud/guide/"]],
+    },
+    32: {
+      choose: ["You want one final Japanese meal or focused souvenir browse inside Narita Airport.", "You will confirm your terminal and check-in counter first.", "You can choose from what is open near your actual departure route."],
+      avoid: ["You need a specific shop or restaurant to be guaranteed.", "Your terminal or check-in status is unresolved.", "Shopping would delay airline procedures."],
+      sources: [["Narita international departure procedure", "https://www.narita-airport.jp/en/airportguide/inter-dep/"], ["Narita shops and restaurants", "https://www.narita-airport.jp/en/shop/"]],
+    },
     33: {
       choose: ["You are already in Namba and want one unmistakably Osaka food-and-street scene.", "You can keep the visit to Ebisubashi, the riverwalk, and one meal.", "You will return to Nankai Namba before the displayed leave-by time."],
       avoid: ["Crowds or restaurant queues are already slowing the route.", "Your luggage is outside Namba or a nearby station area.", "Live KIX transport is disrupted."],
@@ -51,29 +66,29 @@
   };
 
   function basePlanId(id) {
+    if (id === 2801) return 28;
     if (id === 3601) return 36;
     if (id === 3701) return 37;
     return id;
   }
 
-  function improveKixPage() {
-    if (plan.airport !== "KIX") return;
-    const guidance = kixGuidance[basePlanId(plan.id)];
+  function improvePlanPage() {
+    const guidance = planGuidance[basePlanId(plan.id)];
     const heroTitle = document.querySelector(".byf-plan-hero h1");
     if (heroTitle) heroTitle.textContent = plan.name;
     const lead = document.querySelector(".byf-experience-lead");
-    if (lead) lead.textContent = `${plan.hook}. The route stays in one area and ends with a visible KIX cutoff.`;
+    if (lead) lead.textContent = `${plan.hook}. The timeline keeps a visible ${plan.airport} cutoff and never treats optional sightseeing as more important than your flight.`;
     const memory = document.querySelector(".byf-memory");
     if (memory) memory.innerHTML = `<b>What you’ll remember:</b> ${escapeHtml(plan.hook)}`;
     const preview = document.querySelector(".byf-place-preview p:not(.byf-kicker)");
-    if (preview) preview.textContent = plan.hook;
+    if (preview && plan.airportPlan) preview.textContent = plan.hook;
     const fit = document.querySelector(".byf-plan-fit");
     if (fit) {
       const definitions = fit.querySelectorAll("dd");
       if (definitions[0]) definitions[0].textContent = plan.starts.join(", ");
       if (definitions[1]) definitions[1].textContent = `${plan.min} min minimum; ${plan.recommended} min recommended`;
       if (definitions[2]) definitions[2].textContent = `${plan.startMin}–${plan.startMax} JST · ${plan.days}`;
-      if (definitions[3]) definitions[3].textContent = "Large luggage can be stored near the suggested stop; a return elsewhere is added only when you enter one.";
+      if (definitions[3]) definitions[3].textContent = "Large luggage can be stored near the suggested stop. Locker space is not guaranteed; an entered return elsewhere receives a separate conservative allowance.";
       const lists = fit.querySelectorAll("ul");
       if (guidance && lists[0]) lists[0].innerHTML = guidance.choose.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
       if (guidance && lists[1]) lists[1].innerHTML = guidance.avoid.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
@@ -82,15 +97,15 @@
     if (sources && guidance) {
       const list = sources.querySelector("ul");
       if (list) list.innerHTML = guidance.sources.map(([label, url]) => `<li><a target="_blank" rel="noopener" href="${escapeHtml(url)}">${escapeHtml(label)} ↗</a></li>`).join("");
-      const checked = sources.querySelector("small");
-      if (checked) checked.textContent = "Last checked: 2026-08-28";
     }
+    const checked = sources && sources.querySelector("small");
+    if (checked) checked.textContent = `Last checked: ${plan.checked}`;
   }
 
   function stepDescription(step) {
     if (step.isStorageDrop) return ["Use a station locker or staffed luggage-storage service near the suggested stop.", "Choose a storage point you can identify and return to easily. Locker availability is not guaranteed."];
     if (step.isPickup) return ["Use the luggage allowance already included in this plan.", "Collect every bag, check the receipt or counter, and begin the airport transfer when this step ends."];
-    if (/(?:travel|head) to (?:haneda|narita|kansai) airport/i.test(step.label)) return ["This allowance includes station access, waiting, and the airport transfer.", "Check the live route before moving and use the displayed time as a hard departure deadline."];
+    if (core.isAirportTransferStep(step)) return ["This allowance includes station access, waiting, and the airport transfer.", "Check the live route before moving and use the displayed time as a hard departure deadline."];
     if (/margin/i.test(step.label)) return ["This time is deliberately left unplanned for platform changes or small delays.", "Do not spend this margin on another stop."];
     if (/confirm|check-in|security/i.test(step.label)) return ["Verify the correct terminal and the latest instructions from your airline.", "Resolve check-in, bag-drop, or terminal questions before using time for food or shopping."];
     return [`Stay focused on this one stage for about ${step.minutes} minutes.`, "Skip queues and unplanned detours; move on when the next timeline time arrives."];
@@ -102,7 +117,7 @@
     let cursor = new Date(start);
     timeline.innerHTML = steps.map((step) => {
       const [happens, action] = stepDescription(step);
-      const airportMove = /(?:travel|head) to (?:haneda|narita|kansai) airport/i.test(step.label);
+      const airportMove = core.isAirportTransferStep(step);
       const classes = ["byf-rich-step", airportMove ? "is-airport-move" : "", step.isPickup ? "is-luggage-pickup" : "", step.isStorageDrop ? "is-luggage-drop" : ""].filter(Boolean).join(" ");
       const time = timeOnly.format(cursor);
       cursor = new Date(cursor.getTime() + Number(step.minutes || 0) * 60000);
@@ -110,7 +125,7 @@
     }).join("");
   }
 
-  improveKixPage();
+  improvePlanPage();
 
   const personalized = params.get("byf_context") === "1";
   let steps = plan.steps.map((step) => ({ ...step }));
@@ -146,31 +161,30 @@
   }
 
   renderTimeline(steps, start);
-  let cursor = new Date(start);
-  let leaveAt = null;
-  steps.forEach((step) => {
-    if (core.isAirportTransferStep(step) && !leaveAt) leaveAt = new Date(cursor);
-    cursor = new Date(cursor.getTime() + Number(step.minutes || 0) * 60000);
-  });
-  if (!leaveAt) leaveAt = start;
-
-  const keyValues = document.querySelectorAll(".byf-key-times b");
-  if (keyValues[0]) keyValues[0].textContent = formatter.format(flight);
-  if (keyValues[1]) keyValues[1].textContent = formatter.format(recommended);
-  if (keyValues[2]) keyValues[2].textContent = formatter.format(leaveAt);
-  const leaveLabel = document.querySelector(".byf-key-times .is-leave small");
-  if (leaveLabel) leaveLabel.textContent = plan.airportPlan && !steps.some(core.isAirportTransferStep) ? "Begin airport experience by" : `Leave for ${airportCode} by`;
+  const timing = core.timingFacts(steps, start, plan.airportPlan);
+  const hasAirportTravel = Boolean(timing.leaveAt);
+  const leaveAt = timing.leaveAt || start;
+  const airportArrivalAt = timing.airportArrivalAt || recommended;
+  const keyTimes = document.querySelector(".byf-key-times");
+  if (keyTimes) keyTimes.innerHTML = [
+    ["Your flight", flight],
+    ["Ready for airline procedures by", recommended],
+    ["At the airport by", airportArrivalAt],
+    [plan.airportPlan && !hasAirportTravel ? "Begin airport experience by" : `Leave for ${airportCode} by`, leaveAt],
+  ].map(([label, value], index) => `<span${index === 3 ? ' class="is-leave"' : ""}><small>${escapeHtml(label)}</small><b>${escapeHtml(formatter.format(value))}</b></span>`).join("");
   document.querySelectorAll(".byf-deadline b").forEach((node) => { node.textContent = formatter.format(leaveAt); });
   const modelHeading = document.querySelector(".byf-model h2");
   if (modelHeading) modelHeading.textContent = personalized ? `Your timeline for a ${formatter.format(flight)} ${airportCode} flight` : `Example timeline for an 8:00 PM ${airportCode} flight`;
   const modelIntro = document.querySelector(".byf-model h2 + p");
-  if (modelIntro) modelIntro.textContent = personalized ? "Calculated from your flight, starting area, and whether you need to return elsewhere for luggage." : "This example ends at the recommended airport-arrival time; check live transport and your airline before leaving.";
+  if (modelIntro) modelIntro.textContent = personalized ? "Calculated from your flight, starting area, and luggage return. ‘At the airport’ and ‘ready for airline procedures’ are shown separately." : "This example ends at the protected airline-procedure time; check live transport and your airline before leaving.";
   if (personalized) {
     const definitions = document.querySelectorAll(".byf-plan-fit dd");
     if (definitions[1]) definitions[1].textContent = `${core.totalMinutes(steps)} min for this personalized plan, including any luggage allowance`;
     if (definitions[3] && luggageFit) {
       definitions[3].textContent = luggageFit.mode === "return_elsewhere"
-        ? `Your return to ${luggageFit.storageArea} is included in the timeline.`
+        ? plan.airportPlan && params.get("start") === luggageFit.storageArea
+          ? `Your luggage pickup in ${luggageFit.storageArea} is included with a conservative allowance.`
+          : `Your return to ${luggageFit.storageArea} is included with a conservative allowance. Check the exact hotel or storage route live; it can take longer.`
         : luggageFit.mode === "store_near_stop" && !plan.airportPlan
           ? "This plan includes time to store and collect luggage near the suggested stop."
           : "No separate luggage detour is included.";
@@ -182,7 +196,7 @@
     initializePlanContext();
   } else {
     const script = document.createElement("script");
-    script.src = "/assets/planner-core.js?v=20260829-1";
+    script.src = "/assets/planner-core.js?v=20260829-2";
     script.dataset.byfPlannerCore = "1";
     script.addEventListener("load", initializePlanContext, { once: true });
     document.head.append(script);

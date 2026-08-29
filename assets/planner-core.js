@@ -45,10 +45,30 @@
     31: {
       area: "Narita Airport",
       airportPlan: true,
+      hook: "a low-complexity meal or quiet rest near your confirmed Narita terminal, without another city detour",
+      min: 125,
+      recommended: 140,
+      checked: "2026-08-29",
+      steps: [
+        { minutes: 30, label: "Travel to Narita Airport", leave: "Leave this area by" },
+        { minutes: 15, label: "Confirm your terminal and airline instructions" },
+        { minutes: 70, label: "Choose one quiet meal, cafe break, or rest near your terminal" },
+        { minutes: 10, label: "Be ready for airline check-in or security" },
+      ],
     },
     32: {
       area: "Narita Airport",
       airportPlan: true,
+      hook: "one final Japanese meal or focused souvenir browse inside Narita Airport after confirming your terminal",
+      min: 125,
+      recommended: 140,
+      checked: "2026-08-29",
+      steps: [
+        { minutes: 30, label: "Travel to Narita Airport", leave: "Leave this area by" },
+        { minutes: 15, label: "Confirm your terminal and airline instructions" },
+        { minutes: 70, label: "Choose one Japanese meal or focused souvenir browse" },
+        { minutes: 10, label: "Be ready for airline check-in or security" },
+      ],
     },
     27: {
       area: "Shinagawa",
@@ -117,7 +137,8 @@
     28: {
       area: "Haneda Airport",
       airportPlan: true,
-      hook: "arrive early, confirm your terminal, then choose one last Japanese meal, souvenir browse, or observation deck before the protected airport-arrival time",
+      checked: "2026-08-29",
+      hook: "arrive early, confirm your terminal, then choose one last Japanese meal, souvenir browse, or observation deck before the protected airline-procedure time",
       starts: ["Tokyo", "Tokyo Station", "Ginza", "Shinagawa", "Shinjuku", "Shibuya", "Ueno", "Asakusa", "Ikebukuro", "Roppongi", "Odaiba"],
       min: 125,
       recommended: 140,
@@ -127,6 +148,43 @@
         { minutes: 45, label: "Choose one: Japanese meal, souvenir browse, or observation deck" },
         { minutes: 10, label: "Proceed to airline check-in or security" },
       ],
+    },
+    98: {
+      area: "Shibuya",
+      hook: "a compact Shibuya stop: one viewpoint or coffee break, a short street-level walk, then a direct Haneda departure",
+      starts: ["Shinjuku", "Shibuya", "Roppongi"],
+      interest: ["Modern Tokyo", "Shopping", "Relax", "Food"],
+      min: 185,
+      recommended: 205,
+      checked: "2026-08-29",
+      startMin: "09:00",
+      startMax: "19:00",
+      steps: [
+        { minutes: 20, label: "Reach Shibuya Station" },
+        { minutes: 60, label: "Choose one viewpoint, cafe break, or focused shop" },
+        { minutes: 30, label: "Take a short street-level walk near Shibuya Station" },
+        { minutes: 15, label: "Reach the Haneda departure route" },
+        { minutes: 60, label: "Travel to Haneda Airport", leave: "Leave this area by" },
+        { minutes: 0, label: "Arrive at Haneda Airport" },
+      ],
+    },
+    258: {
+      hook: "Roppongi’s evening energy followed by one focused Azabudai meal or shop, with a clear return to the Haneda route",
+    },
+    254: {
+      hook: "a focused browse through Jimbocho’s specialist bookshops followed by one Kanda coffee or meal",
+    },
+    247: {
+      hook: "Harajuku’s street fashion and Omotesando’s architecture in one walkable corridor before the Haneda transfer",
+    },
+    121: {
+      hook: "a full final-day route from Tokyo Station and Nihonbashi through Tsukiji and Ginza to Tokyo Bay, only for a genuinely long window",
+    },
+    96: {
+      hook: "the forested approach and shrine precincts of Meiji Jingu, with time to return directly toward Haneda",
+    },
+    92: {
+      hook: "one focused Tsukiji Outer Market meal and short browse before returning to the Haneda corridor",
     },
     33: {
       area: "Namba",
@@ -197,6 +255,7 @@
     37: {
       area: "Kansai Airport",
       airportPlan: true,
+      checked: "2026-08-29",
       hook: "reach KIX early, confirm the terminal, then choose one Japanese meal, souvenir browse, Aeroplaza rest, or Sky View only when its shuttle schedule fits",
       starts: ["Namba", "Umeda"],
       min: 145,
@@ -323,9 +382,13 @@
 
   function pickupMinutes(startArea, luggageArea) {
     if (!luggageArea) return null;
-    if (startArea === luggageArea) return 25;
-    if (isNearby(startArea, luggageArea)) return 40;
-    return AREA_REGIONS[startArea] && AREA_REGIONS[startArea] === AREA_REGIONS[luggageArea] ? 60 : null;
+    if (startArea === luggageArea) return 35;
+    const airportArea = (area) => /Airport$/.test(area || "");
+    if (airportArea(startArea) !== airportArea(luggageArea)) {
+      return AREA_REGIONS[startArea] && AREA_REGIONS[startArea] === AREA_REGIONS[luggageArea] ? 120 : null;
+    }
+    if (isNearby(startArea, luggageArea)) return 60;
+    return AREA_REGIONS[startArea] && AREA_REGIONS[startArea] === AREA_REGIONS[luggageArea] ? 90 : null;
   }
 
   function areaMatches(plan, startArea) {
@@ -359,9 +422,17 @@
     return Boolean(step && AIRPORT_TRANSFER_PATTERN.test(step.label || ""));
   }
 
+  function prepareSteps(plan, startArea) {
+    const steps = plan.steps.map((step) => ({ ...step }));
+    if (!plan.airportPlan || startArea !== plan.area) return steps;
+    const airportIndex = steps.findIndex(isAirportTransferStep);
+    if (airportIndex === 0) steps.splice(airportIndex, 1);
+    return steps;
+  }
+
   function withLuggageStep(plan, luggage, luggageArea, startArea) {
     const mode = normalizeLuggageMode(luggage);
-    let steps = plan.steps.map((step) => ({ ...step }));
+    let steps = prepareSteps(plan, startArea);
 
     if (plan.airportPlan) {
       if (mode !== "return_elsewhere") return { compatible: true, pickupMinutes: 0, mode, storageArea: plan.area || startArea, steps };
@@ -369,7 +440,10 @@
       const airportIndex = steps.findIndex(isAirportTransferStep);
       if (airportIndex < 0) {
         const alreadyAtStorage = luggageArea === startArea || luggageArea === plan.area;
-        return { compatible: alreadyAtStorage, pickupMinutes: 0, mode, storageArea: luggageArea, steps };
+        if (!alreadyAtStorage) return { compatible: false, pickupMinutes: 0, mode, storageArea: luggageArea, steps };
+        const minutes = pickupMinutes(startArea, luggageArea);
+        steps.unshift({ minutes, label: `Collect your luggage in ${luggageArea}`, isPickup: true, leave: "", happens: "", action: "", next: "" });
+        return { compatible: true, pickupMinutes: minutes, mode, storageArea: luggageArea, steps };
       }
       const minutes = pickupMinutes(startArea, luggageArea);
       if (minutes === null) return { compatible: false, pickupMinutes: 0, mode, steps };
@@ -386,15 +460,15 @@
     }
 
     if (mode === "store_near_stop") {
-      steps.unshift({ minutes: 10, label: "Store your luggage near the suggested stop", isStorageDrop: true, leave: "", happens: "", action: "", next: "" });
+      steps.unshift({ minutes: 15, label: "Store your luggage near the suggested stop", isStorageDrop: true, leave: "", happens: "", action: "", next: "" });
       const airportIndex = steps.findIndex(isAirportTransferStep);
       const connectorIndex = airportIndex - 1;
       if (connectorIndex >= 0 && isReturnConnector(steps[connectorIndex])) {
-        steps[connectorIndex] = { ...steps[connectorIndex], label: "Collect your luggage and reach the airport transfer", isPickup: true };
+        steps[connectorIndex] = { ...steps[connectorIndex], minutes: Math.max(15, Number(steps[connectorIndex].minutes || 0)), label: "Collect your luggage and reach the airport transfer", isPickup: true };
       } else {
-        steps.splice(airportIndex >= 0 ? airportIndex : steps.length, 0, { minutes: 10, label: "Collect your luggage and begin the airport transfer", isPickup: true, leave: "", happens: "", action: "", next: "" });
+        steps.splice(airportIndex >= 0 ? airportIndex : steps.length, 0, { minutes: 15, label: "Collect your luggage and begin the airport transfer", isPickup: true, leave: "", happens: "", action: "", next: "" });
       }
-      return { compatible: true, pickupMinutes: 10, mode, storageArea: plan.area || startArea, steps };
+      return { compatible: true, pickupMinutes: 15, mode, storageArea: plan.area || startArea, steps };
     }
 
     steps = mergeGenericAirportConnector(steps);
@@ -417,6 +491,37 @@
     return steps.reduce((sum, step) => sum + Number(step.minutes || 0), 0);
   }
 
+  function timingFacts(steps, start, airportPlan) {
+    let cursor = new Date(start);
+    let leaveAt = null;
+    let airportArrivalAt = airportPlan ? new Date(start) : null;
+    steps.forEach((step) => {
+      if (isAirportTransferStep(step) && !leaveAt) {
+        leaveAt = new Date(cursor);
+        airportArrivalAt = new Date(cursor.getTime() + Number(step.minutes || 0) * 60000);
+      }
+      cursor = new Date(cursor.getTime() + Number(step.minutes || 0) * 60000);
+    });
+    return { leaveAt, airportArrivalAt, readyAt: cursor };
+  }
+
+  function scorePlan(plan, { startArea, interest, luggageMode, luggageArea, total, available }) {
+    const exact = plan.area === startArea;
+    const direct = plan.starts.includes(startArea);
+    const nearby = isNearby(plan.area, startArea);
+    let score = exact ? 90 : direct ? 55 : nearby ? 35 : 10;
+    if (interest && plan.interest.includes(interest)) score += 50;
+    if (plan.airportPlan && exact) score += 30;
+    if (luggageMode === "return_elsewhere" && luggageArea) {
+      if (plan.area === luggageArea) score += 40;
+      else if (isNearby(plan.area, luggageArea)) score += 20;
+      else if (AREA_REGIONS[plan.area] === AREA_REGIONS[luggageArea]) score -= 15;
+      if (/Airport$/.test(plan.area || "") !== /Airport$/.test(luggageArea)) score -= 30;
+    }
+    score -= Math.min(20, Math.abs(available - total) / 30);
+    return score;
+  }
+
   function onJstDate(date, hhmm) {
     const parts = new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: "Asia/Tokyo" })
       .formatToParts(date)
@@ -434,5 +539,5 @@
     return Boolean(start && Number.isFinite(start.getTime()) && start >= window.earliest && start <= window.latest);
   }
 
-  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, areaMatches, normalizeLuggageMode, isAirportTransferStep, withLuggageStep, totalMinutes, onJstDate, planWindow, isStartWithinWindow };
+  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, areaMatches, normalizeLuggageMode, isAirportTransferStep, prepareSteps, withLuggageStep, totalMinutes, timingFacts, scorePlan, onJstDate, planWindow, isStartWithinWindow };
 })(window);

@@ -21,7 +21,7 @@ function candidates({ airport, start, luggage, luggageArea = "", available }) {
 
 const cases = [
   { name: "Tokyo Station short window with local storage", input: { airport: "HND", start: "Tokyo Station", luggage: "store_near_stop", available: 150 }, expect: /Tokyo Station Last Souvenir/ },
-  { name: "Shinagawa 2-hour window with local storage", input: { airport: "HND", start: "Shinagawa", luggage: "store_near_stop", available: 120 }, expect: /Shinagawa Short Stop/ },
+  { name: "Shinagawa short window with local storage", input: { airport: "HND", start: "Shinagawa", luggage: "store_near_stop", available: 135 }, expect: /Shinagawa Short Stop/ },
   { name: "Ginza hotel return", input: { airport: "HND", start: "Ginza", luggage: "return_elsewhere", luggageArea: "Ginza", available: 210 }, expect: /Ginza|Shiodome/ },
   { name: "Shinjuku start and Shibuya luggage return", input: { airport: "HND", start: "Shinjuku", luggage: "return_elsewhere", luggageArea: "Shibuya", available: 260 }, expect: /Shibuya|Shinjuku|Meiji/ },
   { name: "Far Tokyo luggage gets a larger allowance", input: { airport: "HND", start: "Ueno", luggage: "return_elsewhere", luggageArea: "Shinagawa", available: 420 }, expect: /Ueno|Asakusa|Tokyo Station/ },
@@ -49,22 +49,22 @@ for (const testCase of cases) {
 }
 
 const localStorage = core.withLuggageStep(data.plans.find((plan) => plan.id === 89), "store_near_stop", "", "Tokyo Station");
-assert.equal(localStorage.pickupMinutes, 10);
+assert.equal(localStorage.pickupMinutes, 15);
 assert.ok(localStorage.steps[0].isStorageDrop);
 assert.ok(localStorage.steps.some((step) => step.isPickup));
 assert.ok(localStorage.steps.findIndex((step) => step.isPickup) < localStorage.steps.findIndex((step) => /Travel to Haneda Airport/.test(step.label)));
 assert.ok(!localStorage.steps.some((step) => /airport departure (?:point|route)/i.test(step.label)));
 
 const sameAreaPickup = core.withLuggageStep(data.plans.find((plan) => plan.id === 34), "return_elsewhere", "Namba", "Namba");
-assert.equal(sameAreaPickup.pickupMinutes, 25);
+assert.equal(sameAreaPickup.pickupMinutes, 35);
 assert.ok(sameAreaPickup.steps.some((step) => step.isPickup && /Namba/.test(step.label)));
 assert.ok(sameAreaPickup.steps.findIndex((step) => step.isPickup) < sameAreaPickup.steps.findIndex((step) => /Travel to Kansai Airport/.test(step.label)));
 
 const nearbyPickup = core.withLuggageStep(data.plans.find((plan) => plan.id === 35), "return_elsewhere", "Namba", "Umeda");
-assert.equal(nearbyPickup.pickupMinutes, 40);
+assert.equal(nearbyPickup.pickupMinutes, 60);
 
 const farTokyoPickup = core.withLuggageStep(data.plans.find((plan) => plan.id === 252), "return_elsewhere", "Shinagawa", "Ueno");
-assert.equal(farTokyoPickup.pickupMinutes, 60);
+assert.equal(farTokyoPickup.pickupMinutes, 90);
 assert.equal(farTokyoPickup.compatible, true);
 
 const crossRegionPickup = core.withLuggageStep(data.plans.find((plan) => plan.id === 252), "return_elsewhere", "Namba", "Ueno");
@@ -75,7 +75,7 @@ assert.equal(legacyMode.mode, "store_near_stop");
 
 const airportReturn = core.withLuggageStep(data.plans.find((plan) => plan.id === 28), "return_elsewhere", "Shinjuku", "Shinjuku");
 assert.equal(airportReturn.compatible, true);
-assert.equal(airportReturn.pickupMinutes, 25);
+assert.equal(airportReturn.pickupMinutes, 35);
 assert.ok(airportReturn.steps[0].isPickup);
 assert.ok(core.isAirportTransferStep(airportReturn.steps[1]));
 

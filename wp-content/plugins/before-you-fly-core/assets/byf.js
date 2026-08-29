@@ -79,7 +79,7 @@
       : data.messages.noPlan;
     const live = airportData.transport ? `<a class="byf-submit byf-no-primary" target="_blank" rel="noopener" href="${escapeHtml(airportData.transport)}">Check a live route to the airport →</a>` : "";
     const near = airportHome[airport] ? `<a class="byf-no-secondary" target="_blank" rel="noopener" href="${escapeHtml(airportHome[airport])}">Open official airport information →</a>` : "";
-    out.innerHTML = `<section class="byf-no"><p class="byf-kicker">SAFE FALLBACK</p><h2>${escapeHtml(fallback.title)}</h2><p>${escapeHtml(reasonCopy)}</p><p>${escapeHtml(fallback.text)}</p><div class="byf-timebar"><b>${dateFormatter.format(recommended)}</b><span>Recommended airport arrival</span><b>${dateFormatter.format(flight)}</b><span>Your flight</span></div><div class="byf-actions">${live}${near}<a href="#planner">Change my conditions</a></div></section>`;
+    out.innerHTML = `<section class="byf-no"><p class="byf-kicker">SAFE FALLBACK</p><h2>${escapeHtml(fallback.title)}</h2><p>${escapeHtml(reasonCopy)}</p><p>${escapeHtml(fallback.text)}</p><div class="byf-timebar"><b>${dateFormatter.format(recommended)}</b><span>Protected airport-ready time</span><b>${dateFormatter.format(flight)}</b><span>Your flight</span></div><div class="byf-actions">${live}${near}<a href="#planner">Change my conditions</a></div></section>`;
     track("no_plan_found", { airport, starting_area: start, available_minutes: available, luggage_state: luggage, reason });
     out.scrollIntoView({ behavior: "smooth" });
   }
@@ -130,7 +130,7 @@
           steps,
           total,
           pickupMinutes: luggageFit.pickupMinutes,
-          score: (interest && plan.interest.includes(interest) ? 60 : 0) + (plan.area === start ? 45 : plan.starts.includes(start) ? 35 : 18) + (plan.interest.includes("Relax") && interest === "Relax" ? 25 : 0) - Math.abs(available - total) / 20,
+          score: core.scorePlan(plan, { startArea: start, interest, luggageMode, luggageArea, total, available }),
         } };
       })
       .filter(Boolean)
@@ -143,16 +143,14 @@
 
     const cards = plans.slice(0, 3).map((plan, index) => {
       const candidate = plan._candidate;
-      let cursor = new Date(candidate.start);
-      let leaveAt = null;
-      candidate.steps.forEach((step) => {
-        if (core.isAirportTransferStep(step) && !leaveAt) leaveAt = new Date(cursor);
-        cursor = new Date(cursor.getTime() + Number(step.minutes || 0) * 60000);
-      });
-      const hasAirportTravel = Boolean(leaveAt);
-      if (!leaveAt) leaveAt = candidate.start;
+      const timing = core.timingFacts(candidate.steps, candidate.start, plan.airportPlan);
+      const hasAirportTravel = Boolean(timing.leaveAt);
+      const leaveAt = timing.leaveAt || candidate.start;
+      const airportArrivalAt = timing.airportArrivalAt || recommended;
       const luggageLabel = returnElsewhere
-        ? `${candidate.pickupMinutes}-min return included`
+        ? plan.airportPlan && start === luggageArea
+          ? `${candidate.pickupMinutes}-min pickup included`
+          : `${candidate.pickupMinutes}-min return included`
         : luggageMode === "store_near_stop"
           ? plan.airportPlan ? "Keep luggage with you" : "Storage handling included"
           : "No luggage detour";
@@ -160,7 +158,7 @@
       if (plan.starts.includes(start)) reasons.push(`Starts in ${start}`);
       else reasons.push(`Near ${start}`);
       if (interest && plan.interest.includes(interest)) reasons.push(`Matches ${interest}`);
-      if (returnElsewhere) reasons.push(`Return to ${luggageArea} is in the timeline`);
+      if (returnElsewhere) reasons.push(plan.airportPlan && start === luggageArea ? `Pickup in ${luggageArea} is in the timeline` : `Return to ${luggageArea} is in the timeline`);
       else if (luggageMode === "store_near_stop" && !plan.airportPlan) reasons.push("Store luggage near the suggested stop");
       reasons.push("Airport buffer protected");
       const params = new URLSearchParams({
@@ -175,11 +173,12 @@
         interest,
         plan_start_at: candidate.start.toISOString(),
       });
-      const middleLabel = plan.airportPlan && !hasAirportTravel ? "Begin airport experience by" : "Leave the final stop by";
-      return `<article class="byf-card"><div class="byf-card-top"><span>${escapeHtml(index === 0 ? "Best fit" : plan.type)}</span><small>Checked ${escapeHtml(plan.checked)}</small></div><h3>${escapeHtml(plan.name)}</h3><p class="byf-card-hook"><b>Why go:</b> ${escapeHtml(plan.hook)}</p><p class="byf-fit-reason"><b>Why this fits:</b> ${escapeHtml(reasons.slice(0, 3).join(" • "))}</p><div class="byf-card-facts"><span><b>${formatDuration(candidate.total)}</b>complete plan</span><span><b>${escapeHtml(luggageLabel)}</b>luggage</span><span><b>${escapeHtml(plan.interest.slice(0, 2).join(" · "))}</b>experience</span></div><div class="byf-card-times"><span><small>Start this plan by</small><b>${dateFormatter.format(candidate.start)}</b></span><span><small>${escapeHtml(middleLabel)}</small><b>${dateFormatter.format(leaveAt)}</b></span><span><small>Recommended airport arrival</small><b>${dateFormatter.format(recommended)}</b></span></div><p class="byf-card-arrival"><b>${dateFormatter.format(flight)}</b> flight</p><div class="byf-actions"><a data-plan-id="${plan.id}" href="${escapeHtml(plan.url)}?${escapeHtml(params.toString())}">View plan details</a><a class="byf-live-link" target="_blank" rel="noopener" href="${escapeHtml(plan.live)}">Check live transport ↗</a></div></article>`;
+      const startLabel = plan.airportPlan && !hasAirportTravel ? "Begin airport experience by" : "Start this plan by";
+      const departureLabel = hasAirportTravel ? "Leave for the airport by" : "Already at the airport";
+      return `<article class="byf-card"><div class="byf-card-top"><span>${escapeHtml(index === 0 ? "Best fit" : plan.type)}</span><small>Checked ${escapeHtml(plan.checked)}</small></div><h3>${escapeHtml(plan.name)}</h3><p class="byf-card-hook"><b>Why go:</b> ${escapeHtml(plan.hook)}</p><p class="byf-fit-reason"><b>Why this fits:</b> ${escapeHtml(reasons.slice(0, 3).join(" • "))}</p><div class="byf-card-facts"><span><b>${formatDuration(candidate.total)}</b>complete plan</span><span><b>${escapeHtml(luggageLabel)}</b>luggage</span><span><b>${escapeHtml(plan.interest.slice(0, 2).join(" · "))}</b>experience</span></div><div class="byf-card-times"><span><small>${escapeHtml(startLabel)}</small><b>${dateFormatter.format(candidate.start)}</b></span><span><small>${escapeHtml(departureLabel)}</small><b>${dateFormatter.format(leaveAt)}</b></span><span><small>At the airport by</small><b>${dateFormatter.format(airportArrivalAt)}</b></span><span><small>Ready for airline procedures by</small><b>${dateFormatter.format(recommended)}</b></span></div><p class="byf-card-arrival"><b>${dateFormatter.format(flight)}</b> flight</p><div class="byf-actions"><a data-plan-id="${plan.id}" href="${escapeHtml(plan.url)}?${escapeHtml(params.toString())}">View plan details</a><a class="byf-live-link" target="_blank" rel="noopener" href="${escapeHtml(plan.live)}">Check live transport ↗</a></div></article>`;
     }).join("");
 
-    out.innerHTML = `<div class="byf-result-head"><p class="byf-kicker">YOUR OPTIONS</p><h2>Your comfortable sightseeing window</h2><div class="byf-window"><strong>${formatDuration(available)}</strong><span>${dateFormatter.format(free)} → ${dateFormatter.format(recommended)}</span></div></div>${cards}`;
+    out.innerHTML = `<div class="byf-result-head"><p class="byf-kicker">YOUR OPTIONS</p><h2>Your comfortable sightseeing window</h2><div class="byf-window"><strong>${formatDuration(available)}</strong><span>${dateFormatter.format(free)} → protected airport-ready time ${dateFormatter.format(recommended)}</span></div></div>${cards}`;
     out.scrollIntoView({ behavior: "smooth" });
     track("planner_complete", { airport, available_minutes: available, results: plans.length });
   });
