@@ -30,6 +30,16 @@ const cases = [
   { name: "Umeda hotel return", input: { airport: "KIX", start: "Umeda", luggage: "return_elsewhere", luggageArea: "Umeda", available: 250 }, expect: /Umeda Before/ },
   { name: "Already at KIX", input: { airport: "KIX", start: "Kansai Airport", luggage: "store_near_stop", available: 75 }, expect: /KIX Terminal Mini/ },
   { name: "Rinku from KIX", input: { airport: "KIX", start: "Kansai Airport", luggage: "none", available: 150 }, expect: /Rinku Town Quick Stop/ },
+  { name: "Asakusa short cultural window", input: { airport: "HND", start: "Asakusa", luggage: "none", available: 240 }, expect: /Asakusa & Sensoji/ },
+  { name: "Ueno with Tokyo Station luggage return", input: { airport: "HND", start: "Ueno", luggage: "return_elsewhere", luggageArea: "Tokyo Station", available: 330 }, expect: /Ueno|Asakusa|Jimbocho/ },
+  { name: "Roppongi with local storage", input: { airport: "HND", start: "Roppongi", luggage: "store_near_stop", available: 180 }, expect: /Shiodome|Shinagawa|Ginza/ },
+  { name: "Odaiba start keeps an Odaiba plan", input: { airport: "HND", start: "Odaiba", luggage: "none", available: 260 }, expect: /Odaiba Waterfront/ },
+  { name: "Narita Airport short window", input: { airport: "NRT", start: "Narita Airport", luggage: "none", available: 150 }, expect: /Last Japanese Meal|Stay Near Narita/ },
+  { name: "Narita same-area luggage return", input: { airport: "NRT", start: "Narita", luggage: "return_elsewhere", luggageArea: "Narita", available: 190 }, expect: /Last Japanese Meal|Stay Near Narita/ },
+  { name: "Tokyo Station before Narita", input: { airport: "NRT", start: "Tokyo Station", luggage: "none", available: 300 }, expect: /Tokyo Station & Marunouchi/ },
+  { name: "Namba short Osaka window", input: { airport: "KIX", start: "Namba", luggage: "none", available: 190 }, expect: /Namba Last Stop|Dotonbori/ },
+  { name: "Umeda short Osaka window", input: { airport: "KIX", start: "Umeda", luggage: "none", available: 220 }, expect: /Umeda Before/ },
+  { name: "Tokyo window too short for city sightseeing", input: { airport: "HND", start: "Tokyo", luggage: "store_near_stop", available: 100 }, expect: /Haneda Terminal Mini/ },
 ];
 
 for (const testCase of cases) {
@@ -62,5 +72,33 @@ assert.equal(crossRegionPickup.compatible, false);
 
 const legacyMode = core.withLuggageStep(data.plans.find((plan) => plan.id === 26), "with_me", "", "Ginza");
 assert.equal(legacyMode.mode, "store_near_stop");
+
+const airportReturn = core.withLuggageStep(data.plans.find((plan) => plan.id === 28), "return_elsewhere", "Shinjuku", "Shinjuku");
+assert.equal(airportReturn.compatible, true);
+assert.equal(airportReturn.pickupMinutes, 25);
+assert.ok(airportReturn.steps[0].isPickup);
+assert.ok(core.isAirportTransferStep(airportReturn.steps[1]));
+
+const terminalReturn = core.withLuggageStep(data.plans.find((plan) => plan.id === 2801), "return_elsewhere", "Shinjuku", "Haneda Airport");
+assert.equal(terminalReturn.compatible, false);
+
+const naritaNearAirport = core.withLuggageStep(data.plans.find((plan) => plan.id === 31), "return_elsewhere", "Narita", "Narita");
+assert.equal(naritaNearAirport.compatible, true);
+assert.ok(naritaNearAirport.steps[0].isPickup);
+assert.ok(core.isAirportTransferStep(naritaNearAirport.steps[1]));
+
+const eveningPlan = data.plans.find((plan) => plan.id === 257);
+const overnightFree = new Date("2026-08-17T17:00:00+09:00");
+const overnightArrival = new Date("2026-08-17T21:30:00+09:00");
+const overnightWindow = core.planWindow(overnightFree, overnightArrival, core.totalMinutes(eveningPlan.steps), eveningPlan);
+assert.equal(overnightWindow.valid, true);
+assert.equal(overnightWindow.latest.toISOString(), "2026-08-17T08:35:00.000Z");
+assert.equal(core.isStartWithinWindow(new Date("2026-08-17T17:35:00+09:00"), overnightWindow), true);
+
+const openingHoursPlan = data.plans.find((plan) => plan.id === 250);
+const longFreeWindow = new Date("2026-08-13T07:30:00+09:00");
+const lateRecommendedArrival = new Date("2026-08-13T20:00:00+09:00");
+const openingWindow = core.planWindow(longFreeWindow, lateRecommendedArrival, core.totalMinutes(openingHoursPlan.steps), openingHoursPlan);
+assert.equal(openingWindow.latest.toISOString(), "2026-08-13T06:30:00.000Z");
 
 console.log(`Passed ${cases.length} traveler patterns and redesigned luggage timeline assertions.`);

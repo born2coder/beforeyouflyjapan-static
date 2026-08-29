@@ -25,12 +25,6 @@
   const weekdayFormatter = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "Asia/Tokyo" });
   const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[character]));
   const formatDuration = (minutes) => `${Math.floor(minutes / 60)} hr ${minutes % 60} min`;
-  const onFreeDate = (free, hhmm) => {
-    const parts = new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: "Asia/Tokyo" })
-      .formatToParts(free)
-      .reduce((result, part) => ({ ...result, [part.type]: part.value }), {});
-    return new Date(`${parts.year}-${parts.month}-${parts.day}T${hhmm}:00+09:00`);
-  };
 
   const ensureAreaOption = (name) => {
     [form.elements.start, form.elements.luggage_area].forEach((select) => {
@@ -128,12 +122,11 @@
         if (!luggageFit.compatible) return null;
         const steps = luggageFit.steps;
         const total = core.totalMinutes(steps);
-        const earliest = new Date(Math.max(free.getTime(), onFreeDate(free, plan.startMin).getTime()));
-        const latest = new Date(Math.min(recommended.getTime() - total * 60000, onFreeDate(free, plan.startMax).getTime()));
+        const window = core.planWindow(free, recommended, total, plan);
         const dayOk = !plan.days || /daily/i.test(plan.days) || plan.days.split(",").map((day) => day.trim().slice(0, 3)).includes(weekdayFormatter.format(free));
-        if (total > available || !dayOk || earliest > latest) return null;
+        if (total > available || !dayOk || !window.valid) return null;
         return { ...plan, _candidate: {
-          start: latest,
+          start: window.latest,
           steps,
           total,
           pickupMinutes: luggageFit.pickupMinutes,
@@ -153,7 +146,7 @@
       let cursor = new Date(candidate.start);
       let leaveAt = null;
       candidate.steps.forEach((step) => {
-        if (/(?:travel|head) to (?:haneda|narita|kansai) airport/i.test(step.label) && !leaveAt) leaveAt = new Date(cursor);
+        if (core.isAirportTransferStep(step) && !leaveAt) leaveAt = new Date(cursor);
         cursor = new Date(cursor.getTime() + Number(step.minutes || 0) * 60000);
       });
       const hasAirportTravel = Boolean(leaveAt);
@@ -180,6 +173,7 @@
         luggage,
         luggage_area: luggageArea,
         interest,
+        plan_start_at: candidate.start.toISOString(),
       });
       const middleLabel = plan.airportPlan && !hasAirportTravel ? "Begin airport experience by" : "Leave the final stop by";
       return `<article class="byf-card"><div class="byf-card-top"><span>${escapeHtml(index === 0 ? "Best fit" : plan.type)}</span><small>Checked ${escapeHtml(plan.checked)}</small></div><h3>${escapeHtml(plan.name)}</h3><p class="byf-card-hook"><b>Why go:</b> ${escapeHtml(plan.hook)}</p><p class="byf-fit-reason"><b>Why this fits:</b> ${escapeHtml(reasons.slice(0, 3).join(" • "))}</p><div class="byf-card-facts"><span><b>${formatDuration(candidate.total)}</b>complete plan</span><span><b>${escapeHtml(luggageLabel)}</b>luggage</span><span><b>${escapeHtml(plan.interest.slice(0, 2).join(" · "))}</b>experience</span></div><div class="byf-card-times"><span><small>Start this plan by</small><b>${dateFormatter.format(candidate.start)}</b></span><span><small>${escapeHtml(middleLabel)}</small><b>${dateFormatter.format(leaveAt)}</b></span><span><small>Recommended airport arrival</small><b>${dateFormatter.format(recommended)}</b></span></div><p class="byf-card-arrival"><b>${dateFormatter.format(flight)}</b> flight</p><div class="byf-actions"><a data-plan-id="${plan.id}" href="${escapeHtml(plan.url)}?${escapeHtml(params.toString())}">View plan details</a><a class="byf-live-link" target="_blank" rel="noopener" href="${escapeHtml(plan.live)}">Check live transport ↗</a></div></article>`;

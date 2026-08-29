@@ -132,8 +132,11 @@
     if (!luggageFit.compatible) return;
     steps = luggageFit.steps;
     recommended = new Date(flight.getTime() - airport.buffer * 60000);
-    start = new Date(recommended.getTime() - core.totalMinutes(steps) * 60000);
-    if (start < free) return;
+    const total = core.totalMinutes(steps);
+    const window = core.planWindow(free, recommended, total, plan);
+    if (!window.valid) return;
+    const requestedStart = params.get("plan_start_at") ? new Date(params.get("plan_start_at")) : null;
+    start = core.isStartWithinWindow(requestedStart, window) ? requestedStart : window.latest;
   } else if (plan.airport === "KIX") {
     flight = new Date("2026-08-28T20:00:00+09:00");
     recommended = new Date(flight.getTime() - data.airports.KIX.buffer * 60000);
@@ -146,7 +149,7 @@
   let cursor = new Date(start);
   let leaveAt = null;
   steps.forEach((step) => {
-    if (/(?:travel|head) to (?:haneda|narita|kansai) airport/i.test(step.label) && !leaveAt) leaveAt = new Date(cursor);
+    if (core.isAirportTransferStep(step) && !leaveAt) leaveAt = new Date(cursor);
     cursor = new Date(cursor.getTime() + Number(step.minutes || 0) * 60000);
   });
   if (!leaveAt) leaveAt = start;
@@ -156,7 +159,7 @@
   if (keyValues[1]) keyValues[1].textContent = formatter.format(recommended);
   if (keyValues[2]) keyValues[2].textContent = formatter.format(leaveAt);
   const leaveLabel = document.querySelector(".byf-key-times .is-leave small");
-  if (leaveLabel) leaveLabel.textContent = plan.airportPlan && !steps.some((step) => /(?:travel|head) to (?:haneda|narita|kansai) airport/i.test(step.label)) ? "Begin airport experience by" : `Leave for ${airportCode} by`;
+  if (leaveLabel) leaveLabel.textContent = plan.airportPlan && !steps.some(core.isAirportTransferStep) ? "Begin airport experience by" : `Leave for ${airportCode} by`;
   document.querySelectorAll(".byf-deadline b").forEach((node) => { node.textContent = formatter.format(leaveAt); });
   const modelHeading = document.querySelector(".byf-model h2");
   if (modelHeading) modelHeading.textContent = personalized ? `Your timeline for a ${formatter.format(flight)} ${airportCode} flight` : `Example timeline for an 8:00 PM ${airportCode} flight`;
@@ -179,7 +182,7 @@
     initializePlanContext();
   } else {
     const script = document.createElement("script");
-    script.src = "/assets/planner-core.js?v=20260828-3";
+    script.src = "/assets/planner-core.js?v=20260829-1";
     script.dataset.byfPlannerCore = "1";
     script.addEventListener("load", initializePlanContext, { once: true });
     document.head.append(script);
