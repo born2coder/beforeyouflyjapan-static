@@ -1,0 +1,12 @@
+{
+  "name": "beforeyouflyjapan-static",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/contact-core.mjs && node --check assets/contact.js",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.68.0"
+  }
+}

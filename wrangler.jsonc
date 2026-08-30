@@ -2,8 +2,31 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "beforeyouflyjapan-static",
   "compatibility_date": "2026-08-28",
+  "keep_vars": true,
+  "main": "./src/worker.js",
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"],
     "html_handling": "auto-trailing-slash"
-  }
+  },
+  "send_email": [
+    {
+      "name": "CONTACT_EMAIL"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "CONTACT_RATE_LIMITER",
+        "class_name": "ContactRateLimiter"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "contact-rate-limit-v1",
+      "new_sqlite_classes": ["ContactRateLimiter"]
+    }
+  ]
 }
