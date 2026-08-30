@@ -37,9 +37,9 @@ export default {
         enabled: Boolean(
           env.TURNSTILE_SITE_KEY &&
             env.TURNSTILE_SECRET_KEY &&
+            env.RESEND_API_KEY &&
             env.CONTACT_TO &&
             env.CONTACT_FROM &&
-            env.CONTACT_EMAIL &&
             env.CONTACT_RATE_LIMITER,
         ),
         siteKey: env.TURNSTILE_SITE_KEY || "",
@@ -101,13 +101,22 @@ async function handleContact(request, env) {
   });
   const subject = `[Before You Fly] ${CONTACT_TYPES[validated.data.inquiryType]}`;
   try {
-    await env.CONTACT_EMAIL.send({
-      from: { email: env.CONTACT_FROM, name: "Before You Fly Japan" },
-      to: env.CONTACT_TO,
-      replyTo: validated.data.email,
-      subject,
-      text,
+    const emailResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        authorization: `Bearer ${env.RESEND_API_KEY}`,
+        "content-type": "application/json",
+        "idempotency-key": reference,
+      },
+      body: JSON.stringify({
+        from: `Before You Fly Japan <${env.CONTACT_FROM}>`,
+        to: [env.CONTACT_TO],
+        reply_to: validated.data.email,
+        subject,
+        text,
+      }),
     });
+    if (!emailResponse.ok) return json({ ok: false, code: "unavailable" }, 503);
   } catch {
     return json({ ok: false, code: "unavailable" }, 503);
   }
@@ -137,9 +146,9 @@ async function verifyTurnstile(token, remoteIp, secret) {
 function isConfigured(env) {
   return Boolean(
     env.TURNSTILE_SECRET_KEY &&
+      env.RESEND_API_KEY &&
       env.CONTACT_TO &&
       env.CONTACT_FROM &&
-      env.CONTACT_EMAIL &&
       env.CONTACT_RATE_LIMITER,
   );
 }

@@ -20,14 +20,15 @@ The site is deployed as a Cloudflare Worker with Static Assets. The Worker serve
 
 The contact page intentionally remains unavailable until all production bindings are configured. No receiving address is stored in HTML or committed source.
 
-1. Onboard `beforeyouflyjapan.com` in Cloudflare Email Service and verify the private destination address.
+1. Create a free Resend account, add a dedicated sending subdomain such as `notify.beforeyouflyjapan.com`, and complete its DNS verification.
 2. Create a managed Turnstile widget for `beforeyouflyjapan.com` and `www.beforeyouflyjapan.com`.
 3. In the Worker settings, add `TURNSTILE_SITE_KEY` as a variable.
-4. Add `TURNSTILE_SECRET_KEY`, `CONTACT_TO`, and `CONTACT_FROM` as encrypted secrets.
-5. Keep the `CONTACT_EMAIL` send-email binding and `CONTACT_RATE_LIMITER` Durable Object binding defined in `wrangler.jsonc`.
-6. Deploy with `npx wrangler deploy`, then test one real submission and its reply-to behavior.
+4. Create a sending-only Resend API key.
+5. Add `TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`, `CONTACT_TO`, and `CONTACT_FROM` as encrypted Worker secrets.
+6. Keep the `CONTACT_RATE_LIMITER` Durable Object binding defined in `wrangler.jsonc`.
+7. Deploy with `npx wrangler deploy`, then test one real submission and its reply-to behavior.
 
-`CONTACT_FROM` must use the onboarded sending domain. `CONTACT_TO` must be a verified Cloudflare Email Service destination. The form sends no automatic reply to visitors.
+`CONTACT_FROM` must use the verified Resend sending subdomain. `CONTACT_TO` is the private receiving address. Neither address nor the API key is stored in public source. The form sends no automatic reply to visitors.
 
 ## Important files
 
