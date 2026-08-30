@@ -14,7 +14,14 @@ This repository is the recovered static version of `beforeyouflyjapan.com`.
 
 ## Hosting
 
-The site is designed for Cloudflare Pages with no build step. Publish the repository root as the output directory.
+The site runs on Cloudflare Workers Static Assets. Static pages are served directly, while `worker.mjs` handles the protected contact API.
+
+The contact form requires these Worker variables and secrets:
+
+- `RESEND_API_KEY` (secret)
+- `CONTACT_TO_EMAIL` (secret)
+- `TURNSTILE_SECRET_KEY` (secret)
+- `TURNSTILE_SITE_KEY` (plain variable)
 
 ## Important files
 
