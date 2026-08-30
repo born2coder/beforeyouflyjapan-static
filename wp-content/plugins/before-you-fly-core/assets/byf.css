@@ -136,3 +136,15 @@ body.page-for-hotels{overflow-x:hidden}.page-for-hotels .entry-content{position:
     overflow-wrap:anywhere
   }
 }
+
+/* Detailed, departure-day guidance on experience pages */
+.byf-departure-guide{margin:0 0 46px;padding-top:38px;border-top:1px solid var(--byf-line)}
+.byf-departure-guide h2,.byf-departure-check h2{margin:7px 0 18px;font-family:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",Georgia,serif;font-size:clamp(28px,4.5vw,40px);line-height:1.16}
+.byf-departure-guide h3{margin:28px 0 10px;color:var(--byf-indigo);font-size:20px}
+.byf-departure-guide p,.byf-departure-guide li,.byf-departure-check li{line-height:1.75}
+.byf-departure-guide ol{margin:14px 0 0;padding-left:24px}
+.byf-departure-guide li,.byf-departure-check li{margin:9px 0}
+.byf-departure-check{margin:0 0 46px;padding:26px 28px;border-left:4px solid var(--byf-indigo);background:#edf2f4}
+.byf-departure-check h2{margin-top:0;font-size:clamp(25px,4vw,34px)}
+.byf-departure-check ul{margin:0;padding-left:22px}
+@media(max-width:600px){.byf-departure-check{padding:22px 20px}.byf-departure-guide{padding-top:30px}}
