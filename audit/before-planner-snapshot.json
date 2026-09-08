@@ -1,0 +1,418 @@
+{
+  "generatedAt": "2026-09-08T04:08:13.015Z",
+  "sourceCommit": "46168f9",
+  "fixedFlight": "2026-09-15T12:00:00.000Z",
+  "cases": [
+    {
+      "id": "HND-01",
+      "input": {
+        "airport": "HND",
+        "start": "Shinjuku",
+        "availableMinutes": 180,
+        "luggage": "none",
+        "luggageArea": "",
+        "interest": "Culture"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Haneda Airport Experience Before Your Flight",
+      "shownPlaces": [
+        "Haneda Airport"
+      ],
+      "leaveBy": "3:55 PM",
+      "airportArrival": "4:50 PM",
+      "link": "https://beforeyouflyjapan.com/plans/haneda-airport-experience-before-your-flight/",
+      "displayedMinutes": 125,
+      "cta": "View this plan"
+    },
+    {
+      "id": "HND-02",
+      "input": {
+        "airport": "HND",
+        "start": "Shinjuku",
+        "availableMinutes": 300,
+        "luggage": "store_near_stop",
+        "luggageArea": "",
+        "interest": "Food"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Jimbocho & Kanda Before Haneda",
+      "shownPlaces": [
+        "Jimbocho"
+      ],
+      "leaveBy": "4:50 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/jimbocho-kanda-before-haneda-5/",
+      "displayedMinutes": 300,
+      "cta": "View this plan"
+    },
+    {
+      "id": "HND-03",
+      "input": {
+        "airport": "HND",
+        "start": "Ginza",
+        "availableMinutes": 180,
+        "luggage": "none",
+        "luggageArea": "",
+        "interest": "Shopping"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "A Short Nihonbashi Walk Before Haneda",
+      "shownPlaces": [
+        "Nihonbashi"
+      ],
+      "leaveBy": "4:55 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/a-short-nihonbashi-walk-before-haneda/",
+      "displayedMinutes": 180,
+      "cta": "View this plan"
+    },
+    {
+      "id": "HND-04",
+      "input": {
+        "airport": "HND",
+        "start": "Ginza",
+        "availableMinutes": 300,
+        "luggage": "return_elsewhere",
+        "luggageArea": "Ginza",
+        "interest": "Food"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Ginza Last Lunch Before Haneda",
+      "shownPlaces": [
+        "Ginza"
+      ],
+      "leaveBy": "4:15 PM",
+      "airportArrival": "5:15 PM",
+      "link": "https://beforeyouflyjapan.com/plans/ginza-last-lunch-before-haneda/",
+      "displayedMinutes": 195,
+      "cta": "View this plan"
+    },
+    {
+      "id": "HND-05",
+      "input": {
+        "airport": "HND",
+        "start": "Asakusa",
+        "availableMinutes": 300,
+        "luggage": "store_near_stop",
+        "luggageArea": "",
+        "interest": "Classic Tokyo"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Asakusa & Sensoji Before Haneda",
+      "shownPlaces": [
+        "Asakusa"
+      ],
+      "leaveBy": "4:50 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/asakusa-sensoji-before-haneda-5/",
+      "displayedMinutes": 245,
+      "cta": "View this plan"
+    },
+    {
+      "id": "HND-06",
+      "input": {
+        "airport": "HND",
+        "start": "Tokyo Station",
+        "availableMinutes": 180,
+        "luggage": "none",
+        "luggageArea": "",
+        "interest": "Shopping"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "A Short Tokyo Station & Marunouchi Stop Before Haneda",
+      "shownPlaces": [
+        "Tokyo Station"
+      ],
+      "leaveBy": "5:00 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/a-short-tokyo-station-marunouchi-stop-before-haneda-5/",
+      "displayedMinutes": 175,
+      "cta": "View this plan"
+    },
+    {
+      "id": "HND-07",
+      "input": {
+        "airport": "HND",
+        "start": "Tokyo Station",
+        "availableMinutes": 300,
+        "luggage": "return_elsewhere",
+        "luggageArea": "Tokyo Station",
+        "interest": "Food"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Ginza & Tokyo Station Before Haneda",
+      "shownPlaces": [
+        "Tokyo Station"
+      ],
+      "leaveBy": "4:40 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/ginza-tokyo-station-before-haneda-5/",
+      "displayedMinutes": 300,
+      "cta": "View this plan"
+    },
+    {
+      "id": "HND-08",
+      "input": {
+        "airport": "HND",
+        "start": "Shinagawa",
+        "availableMinutes": 180,
+        "luggage": "store_near_stop",
+        "luggageArea": "",
+        "interest": "Relax"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Shinagawa Short Stop Before Haneda",
+      "shownPlaces": [
+        "Shinagawa"
+      ],
+      "leaveBy": "5:25 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/shinagawa-short-stop-before-haneda/",
+      "displayedMinutes": 135,
+      "cta": "View this plan"
+    },
+    {
+      "id": "NRT-01",
+      "input": {
+        "airport": "NRT",
+        "start": "Ueno",
+        "availableMinutes": 180,
+        "luggage": "none",
+        "luggageArea": "",
+        "interest": "Food"
+      },
+      "result": "SAFE_FALLBACK"
+    },
+    {
+      "id": "NRT-02",
+      "input": {
+        "airport": "NRT",
+        "start": "Ueno",
+        "availableMinutes": 300,
+        "luggage": "store_near_stop",
+        "luggageArea": "",
+        "interest": "Shopping"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Akihabara Last Stop Before Narita",
+      "shownPlaces": [
+        "Akihabara"
+      ],
+      "leaveBy": "4:15 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/akihabara-last-stop-before-narita/",
+      "displayedMinutes": 300,
+      "cta": "View this plan"
+    },
+    {
+      "id": "NRT-03",
+      "input": {
+        "airport": "NRT",
+        "start": "Asakusa",
+        "availableMinutes": 300,
+        "luggage": "return_elsewhere",
+        "luggageArea": "Asakusa",
+        "interest": "Culture"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Asakusa & Sensoji Before Narita",
+      "shownPlaces": [
+        "Asakusa"
+      ],
+      "leaveBy": "4:20 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/asakusa-sensoji-before-narita-5/",
+      "displayedMinutes": 285,
+      "cta": "View this plan"
+    },
+    {
+      "id": "NRT-04",
+      "input": {
+        "airport": "NRT",
+        "start": "Tokyo Station",
+        "availableMinutes": 300,
+        "luggage": "none",
+        "luggageArea": "",
+        "interest": "Classic Tokyo"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Tokyo Station & Marunouchi Before Narita",
+      "shownPlaces": [
+        "Tokyo Station"
+      ],
+      "leaveBy": "3:45 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/tokyo-station-marunouchi-before-narita-5/",
+      "displayedMinutes": 290,
+      "cta": "View this plan"
+    },
+    {
+      "id": "NRT-05",
+      "input": {
+        "airport": "NRT",
+        "start": "Narita",
+        "availableMinutes": 300,
+        "luggage": "store_near_stop",
+        "luggageArea": "",
+        "interest": "Culture"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Naritasan & Omotesando Before Your Narita Flight",
+      "shownPlaces": [
+        "Narita"
+      ],
+      "leaveBy": "5:25 PM",
+      "airportArrival": "6:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/naritasan-omotesando-before-your-narita-flight-5/",
+      "displayedMinutes": 245,
+      "cta": "View this plan"
+    },
+    {
+      "id": "NRT-06",
+      "input": {
+        "airport": "NRT",
+        "start": "Narita Airport",
+        "availableMinutes": 180,
+        "luggage": "none",
+        "luggageArea": "",
+        "interest": "Food"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Last Japanese Meal at Narita Airport",
+      "shownPlaces": [
+        "Narita Airport"
+      ],
+      "leaveBy": "4:25 PM",
+      "airportArrival": "4:25 PM",
+      "link": "https://beforeyouflyjapan.com/plans/last-japanese-meal-at-narita-airport/",
+      "displayedMinutes": 95,
+      "cta": "View this plan"
+    },
+    {
+      "id": "KIX-01",
+      "input": {
+        "airport": "KIX",
+        "start": "Namba",
+        "availableMinutes": 180,
+        "luggage": "none",
+        "luggageArea": "",
+        "interest": "Food"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Namba Last Stop Before KIX",
+      "shownPlaces": [
+        "Namba"
+      ],
+      "leaveBy": "4:45 PM",
+      "airportArrival": "5:40 PM",
+      "link": "https://beforeyouflyjapan.com/plans/namba-last-stop-before-kix/",
+      "displayedMinutes": 180,
+      "cta": "View this plan"
+    },
+    {
+      "id": "KIX-02",
+      "input": {
+        "airport": "KIX",
+        "start": "Namba",
+        "availableMinutes": 300,
+        "luggage": "store_near_stop",
+        "luggageArea": "",
+        "interest": "Shopping"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Namba Last Stop Before KIX",
+      "shownPlaces": [
+        "Namba"
+      ],
+      "leaveBy": "4:45 PM",
+      "airportArrival": "5:40 PM",
+      "link": "https://beforeyouflyjapan.com/plans/namba-last-stop-before-kix/",
+      "displayedMinutes": 200,
+      "cta": "View this plan"
+    },
+    {
+      "id": "KIX-03",
+      "input": {
+        "airport": "KIX",
+        "start": "Umeda",
+        "availableMinutes": 300,
+        "luggage": "return_elsewhere",
+        "luggageArea": "Umeda",
+        "interest": "Relax"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Umeda Before Your KIX Flight",
+      "shownPlaces": [
+        "Umeda"
+      ],
+      "leaveBy": "4:10 PM",
+      "airportArrival": "5:40 PM",
+      "link": "https://beforeyouflyjapan.com/plans/umeda-before-your-kix-flight/",
+      "displayedMinutes": 250,
+      "cta": "View this plan"
+    },
+    {
+      "id": "KIX-04",
+      "input": {
+        "airport": "KIX",
+        "start": "Rinku Town",
+        "availableMinutes": 180,
+        "luggage": "none",
+        "luggageArea": "",
+        "interest": "Shopping"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Rinku Town Before Your KIX Flight",
+      "shownPlaces": [
+        "Rinku Town"
+      ],
+      "leaveBy": "5:30 PM",
+      "airportArrival": "5:40 PM",
+      "link": "https://beforeyouflyjapan.com/plans/rinku-town-before-your-kix-flight/",
+      "displayedMinutes": 170,
+      "cta": "View this plan"
+    },
+    {
+      "id": "KIX-05",
+      "input": {
+        "airport": "KIX",
+        "start": "Kansai Airport",
+        "availableMinutes": 180,
+        "luggage": "none",
+        "luggageArea": "",
+        "interest": "Food"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Kansai Airport Experience Before Your Flight",
+      "shownPlaces": [
+        "Kansai Airport"
+      ],
+      "leaveBy": "4:45 PM",
+      "airportArrival": "4:45 PM",
+      "link": "https://beforeyouflyjapan.com/plans/kansai-airport-experience-before-your-flight/",
+      "displayedMinutes": 75,
+      "cta": "View this plan"
+    },
+    {
+      "id": "KIX-06",
+      "input": {
+        "airport": "KIX",
+        "start": "Namba",
+        "availableMinutes": 300,
+        "luggage": "return_elsewhere",
+        "luggageArea": "Umeda",
+        "interest": "Food"
+      },
+      "result": "PLAN",
+      "recommendedPlan": "Dotonbori & Lunch Before KIX",
+      "shownPlaces": [
+        "Namba"
+      ],
+      "leaveBy": "4:10 PM",
+      "airportArrival": "5:40 PM",
+      "link": "https://beforeyouflyjapan.com/plans/dotonbori-lunch-before-kix/",
+      "displayedMinutes": 285,
+      "cta": "View this plan"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "cases": 20,
+  "behaviorChanges": [],
+  "canonicalLinkChanges": [
+    {
+      "id": "HND-02",
+      "before": "https://beforeyouflyjapan.com/plans/jimbocho-kanda-before-haneda-5/",
+      "after": "https://beforeyouflyjapan.com/plans/jimbocho-kanda-before-haneda/"
+    },
+    {
+      "id": "HND-05",
+      "before": "https://beforeyouflyjapan.com/plans/asakusa-sensoji-before-haneda-5/",
+      "after": "https://beforeyouflyjapan.com/plans/asakusa-sensoji-before-haneda/"
+    },
+    {
+      "id": "HND-06",
+      "before": "https://beforeyouflyjapan.com/plans/a-short-tokyo-station-marunouchi-stop-before-haneda-5/",
+      "after": "https://beforeyouflyjapan.com/plans/a-short-tokyo-station-marunouchi-stop-before-haneda/"
+    },
+    {
+      "id": "HND-07",
+      "before": "https://beforeyouflyjapan.com/plans/ginza-tokyo-station-before-haneda-5/",
+      "after": "https://beforeyouflyjapan.com/plans/ginza-tokyo-station-before-haneda/"
+    },
+    {
+      "id": "NRT-03",
+      "before": "https://beforeyouflyjapan.com/plans/asakusa-sensoji-before-narita-5/",
+      "after": "https://beforeyouflyjapan.com/plans/asakusa-sensoji-before-narita/"
+    },
+    {
+      "id": "NRT-04",
+      "before": "https://beforeyouflyjapan.com/plans/tokyo-station-marunouchi-before-narita-5/",
+      "after": "https://beforeyouflyjapan.com/plans/tokyo-station-marunouchi-before-narita/"
+    },
+    {
+      "id": "NRT-05",
+      "before": "https://beforeyouflyjapan.com/plans/naritasan-omotesando-before-your-narita-flight-5/",
+      "after": "https://beforeyouflyjapan.com/plans/naritasan-omotesando-before-your-narita-flight/"
+    }
+  ]
+}

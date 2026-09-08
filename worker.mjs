@@ -228,6 +228,16 @@ export default {
     const { pathname } = new URL(request.url);
     if (pathname === "/api/contact/config" && request.method === "GET") return handleConfig(env);
     if (pathname === "/api/contact") return handleContact(request, env);
+    if (/^\/(?:wp-admin|wp-login\.php|wp-json|xmlrpc\.php|comments\/feed|feed)(?:\/|$)/.test(pathname)) {
+      return new Response("This legacy WordPress endpoint has been permanently removed.", {
+        status: 410,
+        headers: {
+          "Content-Type": "text/plain; charset=utf-8",
+          "X-Robots-Tag": "noindex, nofollow",
+          "Cache-Control": "public, max-age=86400",
+        },
+      });
+    }
     return env.ASSETS.fetch(request);
   },
 };

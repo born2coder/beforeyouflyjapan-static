@@ -152,6 +152,17 @@
     if (!window.valid) return;
     const requestedStart = params.get("plan_start_at") ? new Date(params.get("plan_start_at")) : null;
     start = core.isStartWithinWindow(requestedStart, window) ? requestedStart : window.latest;
+
+    const availableMinutes = Math.max(0, Math.floor((recommended - free) / 60000));
+    const hours = Math.floor(availableMinutes / 60);
+    const minutes = availableMinutes % 60;
+    const duration = `${hours ? `${hours} hr${hours === 1 ? "" : "s"}` : ""}${hours && minutes ? " " : ""}${minutes ? `${minutes} min` : ""}`;
+    const situation = document.createElement("aside");
+    situation.className = "byf-situation";
+    situation.setAttribute("aria-label", "Your planner conditions");
+    situation.innerHTML = `<b>Your situation</b>You have about ${escapeHtml(duration || "0 min")} before the protected airport-ready time for ${escapeHtml(airportCode)}. This timeline includes your starting area and the luggage choice entered in the planner.`;
+    const model = document.querySelector(".byf-model");
+    if (model) model.before(situation);
   } else if (plan.airport === "KIX") {
     flight = new Date("2026-08-28T20:00:00+09:00");
     recommended = new Date(flight.getTime() - data.airports.KIX.buffer * 60000);

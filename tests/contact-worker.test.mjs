@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { handleContact, validatePayload } from "../worker.mjs";
+import worker, { handleContact, validatePayload } from "../worker.mjs";
 
 const validPayload = {
   type: "general",
@@ -126,4 +126,15 @@ test("escapes visitor content before building the HTML email", async () => {
   } finally {
     globalThis.fetch = originalFetch;
   }
+});
+
+test("retires legacy WordPress endpoints with 410 and noindex", async () => {
+  let assetCalls = 0;
+  const testEnv = { ASSETS: { fetch: async () => { assetCalls += 1; return new Response("asset"); } } };
+  for (const pathname of ["/wp-admin/", "/wp-login.php", "/wp-json/", "/xmlrpc.php", "/feed/"]) {
+    const response = await worker.fetch(new Request(`https://beforeyouflyjapan.com${pathname}`), testEnv);
+    assert.equal(response.status, 410, pathname);
+    assert.equal(response.headers.get("X-Robots-Tag"), "noindex, nofollow", pathname);
+  }
+  assert.equal(assetCalls, 0);
 });
