@@ -124,3 +124,10 @@ test("planner scripts load safely and result links target the personalized timel
     assert.match(html, /<script defer src="\/assets\/plan-context\.js/);
   }
 });
+
+test("homepage exposes the current Search Console verification token once", () => {
+  const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  const token = '<meta name="google-site-verification" content="HHR-KfF6i7VxLJHq3Acgiq4nZ14VRq0HYPmX6iC-IaU">';
+  assert.equal(home.split(token).length - 1, 1);
+  assert.ok(home.indexOf(token) < home.indexOf("</head>"));
+});
