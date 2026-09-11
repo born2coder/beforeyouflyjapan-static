@@ -107,7 +107,43 @@ test("priority guides contain decision support and source dates", () => {
   for (const [relative, phrases] of Object.entries(required)) {
     const html = fs.readFileSync(path.join(root, relative), "utf8");
     for (const phrase of phrases) assert.ok(html.includes(phrase), `${relative}: missing ${phrase}`);
-    assert.match(html, /2026-09-08/);
+    assert.match(html, /2026-09-(?:08|11)/);
+  }
+});
+
+test("Search Console-led Primary SEO Pages have focused metadata, answers and contextual links", () => {
+  const primary = [
+    "how-early-arrive-haneda-airport/index.html", "after-hotel-checkout-tokyo/index.html",
+    "before-late-flight-tokyo/index.html", "places/haneda-airport/index.html",
+    "places/tsukiji-outer-market/index.html", "places/tokyo-tower/index.html", "places/omotesando/index.html",
+    "places/shiodome/index.html", "places/nihonbashi/index.html", "places/naritasan-shinshoji/index.html",
+    "places/toyosu/index.html", "places/shinagawa/index.html", "places/asakusa-sensoji/index.html",
+  ];
+  assert.ok(primary.length >= 10 && primary.length <= 15);
+  for (const relative of primary) {
+    const html = fs.readFileSync(path.join(root, relative), "utf8");
+    assert.match(html, /<meta name="description" content=".{80,170}">/);
+    assert.doesNotMatch(html, /Make sure you have enough time|This is a useful place to visit|Check transport before you go/);
+    if (relative.startsWith("places/")) {
+      assert.match(html, /<b>Quick answer:<\/b>/);
+      assert.match(html, /class="byf-example-timeline"/);
+      assert.match(html, /class="byf-primary-links"/);
+    }
+  }
+});
+
+test("Primary place timing matches supported planner routes", () => {
+  const expected = {
+    "places/haneda-airport/index.html": ["180 minutes before protected airport-ready time", "HND supported"],
+    "places/nihonbashi/index.html": ["180 minutes before protected airport-ready time"],
+    "places/shinagawa/index.html": ["150 minutes before protected airport-ready time"],
+    "places/omotesando/index.html": ["290 minutes before protected airport-ready time", "HND supported"],
+    "places/naritasan-shinshoji/index.html": ["225 minutes before protected airport-ready time", "NRT supported"],
+    "places/asakusa-sensoji/index.html": ["225 minutes for HND; 250 minutes for NRT", "NRT supported"],
+  };
+  for (const [relative, phrases] of Object.entries(expected)) {
+    const html = fs.readFileSync(path.join(root, relative), "utf8");
+    for (const phrase of phrases) assert.ok(html.includes(phrase), `${relative}: missing ${phrase}`);
   }
 });
 
