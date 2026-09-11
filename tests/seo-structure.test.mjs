@@ -147,6 +147,16 @@ test("Primary place timing matches supported planner routes", () => {
   }
 });
 
+test("Primary SEO additions retain the 375/390/412 mobile layout guards", () => {
+  const css = fs.readFileSync(path.join(root, "assets/seo.css"), "utf8");
+  assert.match(css, /@media\(max-width:600px\).*?\.byf-primary-links ul\{grid-template-columns:1fr\}/s);
+  assert.match(css, /@media\(max-width:720px\).*?\.byf-verdict-grid\{grid-template-columns:1fr\}/s);
+  for (const relative of pages.filter((name) => name.startsWith("places/"))) {
+    const html = fs.readFileSync(path.join(root, relative), "utf8");
+    assert.match(html, /<meta name="viewport" content="width=device-width,initial-scale=1">/);
+  }
+});
+
 test("planner scripts load safely and result links target the personalized timeline", () => {
   const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
   const planner = fs.readFileSync(path.join(root, "assets/planner.js"), "utf8");
