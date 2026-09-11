@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-08T04:19:22.184Z",
+  "generatedAt": "2026-09-11T05:55:33.874Z",
   "sourceCommit": null,
-  "fixedFlight": "2026-09-15T12:00:00.000Z",
+  "defaultFlight": "2026-09-15T12:00:00.000Z",
   "cases": [
     {
       "id": "HND-01",
@@ -11,15 +11,16 @@
         "availableMinutes": 180,
         "luggage": "none",
         "luggageArea": "",
-        "interest": "Culture"
+        "interest": "Culture",
+        "flightAt": "2026-09-15T14:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Haneda Airport Experience Before Your Flight",
       "shownPlaces": [
         "Haneda Airport"
       ],
-      "leaveBy": "3:55 PM",
-      "airportArrival": "4:50 PM",
+      "leaveBy": "8:55 AM",
+      "airportArrival": "9:50 AM",
       "link": "https://beforeyouflyjapan.com/plans/haneda-airport-experience-before-your-flight/",
       "displayedMinutes": 125,
       "cta": "View this plan"
@@ -30,19 +31,20 @@
         "airport": "HND",
         "start": "Shinjuku",
         "availableMinutes": 300,
-        "luggage": "store_near_stop",
-        "luggageArea": "",
-        "interest": "Food"
+        "luggage": "return_elsewhere",
+        "luggageArea": "Shinjuku",
+        "interest": "Food",
+        "flightAt": "2026-09-15T23:00:00+09:00"
       },
       "result": "PLAN",
-      "recommendedPlan": "Jimbocho & Kanda Before Haneda",
+      "recommendedPlan": "Shibuya Quick Experience Before Haneda",
       "shownPlaces": [
-        "Jimbocho"
+        "Shibuya"
       ],
-      "leaveBy": "4:50 PM",
-      "airportArrival": "6:00 PM",
-      "link": "https://beforeyouflyjapan.com/plans/jimbocho-kanda-before-haneda/",
-      "displayedMinutes": 300,
+      "leaveBy": "7:00 PM",
+      "airportArrival": "8:00 PM",
+      "link": "https://beforeyouflyjapan.com/plans/shibuya-quick-experience-before-haneda/",
+      "displayedMinutes": 245,
       "cta": "View this plan"
     },
     {
@@ -53,7 +55,8 @@
         "availableMinutes": 180,
         "luggage": "none",
         "luggageArea": "",
-        "interest": "Shopping"
+        "interest": "Shopping",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "A Short Nihonbashi Walk Before Haneda",
@@ -74,7 +77,8 @@
         "availableMinutes": 300,
         "luggage": "return_elsewhere",
         "luggageArea": "Ginza",
-        "interest": "Food"
+        "interest": "Food",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Ginza Last Lunch Before Haneda",
@@ -95,7 +99,8 @@
         "availableMinutes": 300,
         "luggage": "store_near_stop",
         "luggageArea": "",
-        "interest": "Classic Tokyo"
+        "interest": "Classic Tokyo",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Asakusa & Sensoji Before Haneda",
@@ -116,7 +121,8 @@
         "availableMinutes": 180,
         "luggage": "none",
         "luggageArea": "",
-        "interest": "Shopping"
+        "interest": "Shopping",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "A Short Tokyo Station & Marunouchi Stop Before Haneda",
@@ -137,7 +143,8 @@
         "availableMinutes": 300,
         "luggage": "return_elsewhere",
         "luggageArea": "Tokyo Station",
-        "interest": "Food"
+        "interest": "Food",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Ginza & Tokyo Station Before Haneda",
@@ -158,7 +165,8 @@
         "availableMinutes": 180,
         "luggage": "store_near_stop",
         "luggageArea": "",
-        "interest": "Relax"
+        "interest": "Relax",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Shinagawa Short Stop Before Haneda",
@@ -179,7 +187,8 @@
         "availableMinutes": 180,
         "luggage": "none",
         "luggageArea": "",
-        "interest": "Food"
+        "interest": "Food",
+        "flightAt": "2026-09-15T14:00:00+09:00"
       },
       "result": "SAFE_FALLBACK"
     },
@@ -191,7 +200,8 @@
         "availableMinutes": 300,
         "luggage": "store_near_stop",
         "luggageArea": "",
-        "interest": "Shopping"
+        "interest": "Shopping",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Akihabara Last Stop Before Narita",
@@ -212,7 +222,8 @@
         "availableMinutes": 300,
         "luggage": "return_elsewhere",
         "luggageArea": "Asakusa",
-        "interest": "Culture"
+        "interest": "Culture",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Asakusa & Sensoji Before Narita",
@@ -233,7 +244,8 @@
         "availableMinutes": 300,
         "luggage": "none",
         "luggageArea": "",
-        "interest": "Classic Tokyo"
+        "interest": "Classic Tokyo",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Tokyo Station & Marunouchi Before Narita",
@@ -254,7 +266,8 @@
         "availableMinutes": 300,
         "luggage": "store_near_stop",
         "luggageArea": "",
-        "interest": "Culture"
+        "interest": "Culture",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Naritasan & Omotesando Before Your Narita Flight",
@@ -275,7 +288,8 @@
         "availableMinutes": 180,
         "luggage": "none",
         "luggageArea": "",
-        "interest": "Food"
+        "interest": "Food",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Last Japanese Meal at Narita Airport",
@@ -296,17 +310,18 @@
         "availableMinutes": 180,
         "luggage": "none",
         "luggageArea": "",
-        "interest": "Food"
+        "interest": "Food",
+        "flightAt": "2026-09-15T14:00:00+09:00"
       },
       "result": "PLAN",
-      "recommendedPlan": "Namba Last Stop Before KIX",
+      "recommendedPlan": "Kansai Airport Experience Before Your Flight",
       "shownPlaces": [
-        "Namba"
+        "Kansai Airport"
       ],
-      "leaveBy": "4:45 PM",
-      "airportArrival": "5:40 PM",
-      "link": "https://beforeyouflyjapan.com/plans/namba-last-stop-before-kix/",
-      "displayedMinutes": 180,
+      "leaveBy": "8:35 AM",
+      "airportArrival": "9:45 AM",
+      "link": "https://beforeyouflyjapan.com/plans/kansai-airport-experience-before-your-flight/",
+      "displayedMinutes": 145,
       "cta": "View this plan"
     },
     {
@@ -317,7 +332,8 @@
         "availableMinutes": 300,
         "luggage": "store_near_stop",
         "luggageArea": "",
-        "interest": "Shopping"
+        "interest": "Shopping",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Namba Last Stop Before KIX",
@@ -338,7 +354,8 @@
         "availableMinutes": 300,
         "luggage": "return_elsewhere",
         "luggageArea": "Umeda",
-        "interest": "Relax"
+        "interest": "Relax",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Umeda Before Your KIX Flight",
@@ -359,7 +376,8 @@
         "availableMinutes": 180,
         "luggage": "none",
         "luggageArea": "",
-        "interest": "Shopping"
+        "interest": "Shopping",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Rinku Town Before Your KIX Flight",
@@ -380,7 +398,8 @@
         "availableMinutes": 180,
         "luggage": "none",
         "luggageArea": "",
-        "interest": "Food"
+        "interest": "Food",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Kansai Airport Experience Before Your Flight",
@@ -401,7 +420,8 @@
         "availableMinutes": 300,
         "luggage": "return_elsewhere",
         "luggageArea": "Umeda",
-        "interest": "Food"
+        "interest": "Food",
+        "flightAt": "2026-09-15T21:00:00+09:00"
       },
       "result": "PLAN",
       "recommendedPlan": "Dotonbori & Lunch Before KIX",
