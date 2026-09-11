@@ -1,0 +1,20 @@
+{
+  "source": "Google Search Console Performance export supplied 2026-09-11",
+  "query_and_page_period": "Past 3 months (available data 2026-08-08 through 2026-09-08)",
+  "recent_28_day_total": { "period": "2026-08-12 through 2026-09-08", "clicks": 1, "impressions": 987, "ctr_percent": 0.1, "average_position": 40.0 },
+  "pages": [
+    { "url": "/how-early-arrive-haneda-airport/", "impressions": 171, "position": 8.74, "classification": "WINNER", "target_query": "how early to arrive at Haneda airport", "secondary_queries": ["Haneda international flight arrival time", "how early should I get to Haneda airport", "Haneda airport check-in time"] },
+    { "url": "/before-late-flight-tokyo/", "impressions": 30, "position": 7.8, "classification": "WINNER", "target_query": "what to do before a late flight from Tokyo", "secondary_queries": ["last day in Tokyo before flight", "late flight Tokyo itinerary", "Tokyo departure day"] },
+    { "url": "/after-hotel-checkout-tokyo/", "impressions": 40, "position": 14.2, "classification": "NEAR WINNER", "target_query": "what to do after hotel checkout in Tokyo", "secondary_queries": ["Tokyo luggage after checkout", "last day Tokyo with luggage", "Tokyo before flight"] },
+    { "url": "/places/shinagawa/", "impressions": 10, "position": 17.7, "classification": "NEAR WINNER", "target_query": "Shinagawa before Haneda flight", "secondary_queries": ["Shinagawa to Haneda departure day", "last stop before Haneda"] },
+    { "url": "/places/haneda-airport/", "impressions": 440, "position": 46.29, "classification": "WEAK", "target_query": "what to do at Haneda airport before flight", "secondary_queries": ["Haneda airport", "Tokyo Haneda airport", "Haneda airport Japan"] },
+    { "url": "/places/tsukiji-outer-market/", "impressions": 63, "position": 60.98, "classification": "WEAK", "target_query": "Tsukiji Outer Market before Haneda flight", "secondary_queries": ["Tsukiji Outer Market", "Tsukiji before flight", "Tsukiji luggage"] },
+    { "url": "/places/tokyo-tower/", "impressions": 57, "position": 70.05, "classification": "WEAK", "target_query": "Tokyo Tower before Haneda flight", "secondary_queries": ["Tokyo Tower", "Tokyo Tower luggage", "Tokyo Tower visit time"] },
+    { "url": "/places/omotesando/", "impressions": 27, "position": 67.07, "classification": "WEAK", "target_query": "Omotesando before Haneda flight", "secondary_queries": ["Omotesando", "Omotesando shopping before flight", "Harajuku to Haneda"] },
+    { "url": "/places/shiodome/", "impressions": 20, "position": 53.85, "classification": "WEAK", "target_query": "Shiodome pedestrian deck before Haneda", "secondary_queries": ["Shiodome pedestrian deck", "Shiodome", "Shiodome to Haneda"] },
+    { "url": "/places/nihonbashi/", "impressions": 20, "position": 60.7, "classification": "WEAK", "target_query": "Nihonbashi before Haneda flight", "secondary_queries": ["Nihonbashi", "Nihonbashi shopping", "Nihonbashi to Haneda"] },
+    { "url": "/places/naritasan-shinshoji/", "impressions": 16, "position": 50.38, "classification": "WEAK", "target_query": "Naritasan Shinshoji before Narita flight", "secondary_queries": ["Narita Omotesando", "Naritasan Omotesando", "Naritasan before flight"] },
+    { "url": "/places/toyosu/", "impressions": 16, "position": 58.5, "classification": "WEAK", "target_query": "Toyosu before Haneda flight", "secondary_queries": ["Toyosu Tokyo", "Toyosu market before flight", "Toyosu to Haneda"] },
+    { "url": "/places/asakusa-sensoji/", "impressions": 22, "position": 65.73, "classification": "WEAK", "target_query": "Asakusa before Haneda or Narita flight", "secondary_queries": ["Asakusa before flight", "Sensoji luggage", "Asakusa to Haneda", "Asakusa to Narita"] }
+  ]
+}
