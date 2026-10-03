@@ -417,6 +417,7 @@
   }
 
   function areaMatches(plan, startArea) {
+    if (plan.strictStarts) return plan.starts.includes(startArea);
     if (plan.area === startArea) return true;
     if (plan.starts.includes(startArea)) return true;
     if (startArea === "Tokyo" && plan.airport === "HND" && !plan.airportPlan) return true;
@@ -458,6 +459,7 @@
 
   function prepareSteps(plan, startArea) {
     const steps = plan.steps.map((step) => ({ ...step }));
+    if (plan.startConnectors?.[startArea]) steps.unshift({ ...plan.startConnectors[startArea] });
     if (!plan.airportPlan || startArea !== plan.area) return steps;
     const airportIndex = steps.findIndex(isAirportTransferStep);
     if (airportIndex === 0) steps.splice(airportIndex, 1);
@@ -494,7 +496,7 @@
     }
 
     if (mode === "store_near_stop") {
-      const storageArea = plan.area || startArea;
+      const storageArea = plan.storageArea || plan.area || startArea;
       const travelsToStorage = storageArea !== startArea;
       const firstStepReachesStorage = travelsToStorage && steps[0] && !isAirportTransferStep(steps[0]) && /^(?:travel|head|reach|walk|take)\b/i.test(steps[0].label || "");
       const dropMinutes = travelsToStorage ? 25 : 20;
@@ -502,7 +504,7 @@
       steps.splice(dropIndex, 0, { minutes: dropMinutes, label: `Store your luggage in ${storageArea}, near the suggested stop`, storageArea, isStorageDrop: true, leave: "", happens: "", action: "", next: "" });
       const airportIndex = steps.findIndex(isAirportTransferStep);
       const connectorIndex = airportIndex - 1;
-      if (connectorIndex >= 0 && isReturnConnector(steps[connectorIndex])) {
+      if (!plan.strictStarts && connectorIndex >= 0 && isReturnConnector(steps[connectorIndex])) {
         steps[connectorIndex] = { ...steps[connectorIndex], minutes: Math.max(15, Number(steps[connectorIndex].minutes || 0)), label: `Collect your luggage in ${storageArea} and reach the airport transfer`, storageArea, isPickup: true };
       } else {
         steps.splice(airportIndex >= 0 ? airportIndex : steps.length, 0, { minutes: 15, label: `Collect your luggage in ${storageArea} and begin the airport transfer`, storageArea, isPickup: true, leave: "", happens: "", action: "", next: "" });
@@ -583,6 +585,10 @@
   // Retail districts use conservative editorial windows, not guaranteed shop hours.
   const MEIJI_HOURS = [["06:40","16:20"],["06:20","16:50"],["05:40","17:20"],["05:10","17:50"],["05:00","18:10"],["05:00","18:30"],["05:00","18:20"],["05:00","18:00"],["05:20","17:20"],["05:40","16:40"],["06:10","16:10"],["06:40","16:00"]];
   function stageHours(step, date) {
+    if (step.hours) {
+      const month = Number(new Intl.DateTimeFormat("en", { month: "numeric", timeZone: "Asia/Tokyo" }).format(date));
+      return step.monthlyHours?.[month - 1] || step.hours;
+    }
     const label = step.label || "";
     if (/^(travel|head|walk|return|reach|take)\b/i.test(label)) return null;
     if (/Meiji Shrine/i.test(label)) {
@@ -594,10 +600,25 @@
     if (/shop|browse.*bookshop/i.test(label) && !/airport|souvenir/i.test(label)) return ["11:00", "19:00"];
     return null;
   }
+  function calendarAllows(calendar, date) {
+    if (!calendar) return true;
+    const key = new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: "Asia/Tokyo" }).format(date);
+    const weekday = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "Asia/Tokyo" }).format(date);
+    if ((calendar.from && key < calendar.from) || (calendar.through && key > calendar.through) || calendar.closedDates?.includes(key)) return false;
+    if (calendar.openDates?.includes(key)) return true;
+    if (calendar.closedWeekdays?.includes(weekday)) return false;
+    const day = Number(key.slice(-2)), nth = Math.ceil(day / 7);
+    if (calendar.closedNth?.some(x => x.weekday === weekday && x.nth.includes(nth))) return false;
+    if (calendar.closedAnnual?.some(x => key.slice(5) >= x.from && key.slice(5) <= x.through)) return false;
+    return true;
+  }
   function scheduleWindow(free, recommended, steps, plan) {
     const window = planWindow(free, recommended, totalMinutes(steps), plan);
     let offset = 0;
+    let facilitiesOpen = calendarAllows(plan.calendar, free);
     steps.forEach((step) => {
+      facilitiesOpen = facilitiesOpen && calendarAllows(step.calendar, free);
+      if (step.lastEntry) window.latest = new Date(Math.min(+window.latest, +onJstDate(free, step.lastEntry) - offset * 60000));
       const hours = stageHours(step, free);
       if (hours) {
         window.earliest = new Date(Math.max(window.earliest.getTime(), onJstDate(free, hours[0]).getTime() - offset * 60000));
@@ -607,12 +628,12 @@
     });
     const weekday = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "Asia/Tokyo" }).format(free);
     const dayOk = !plan.days || /daily/i.test(plan.days) || plan.days.split(",").map(day => day.trim().slice(0, 3)).includes(weekday);
-    window.valid = dayOk && window.earliest <= window.latest;
+    window.valid = dayOk && facilitiesOpen && window.earliest <= window.latest;
     return window;
   }
   const SHORT_ROUTE_IDS = new Set([27, 28, 31, 32, 35, 37, 89, 242, 2801, 3701]);
   function supportsNeeds(plan, needs) {
-    return !needs || needs === "standard" || SHORT_ROUTE_IDS.has(plan.id);
+    return !needs || needs === "standard" || plan.supportedNeeds?.includes(needs) || SHORT_ROUTE_IDS.has(plan.id);
   }
   function withTravelNeeds(steps, needs) {
     const result = steps.map((step) => ({ ...step }));
@@ -638,5 +659,5 @@
     return Boolean(start && Number.isFinite(start.getTime()) && start >= window.earliest && start <= window.latest);
   }
 
-  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, airportTransferMinimum, areaMatches, normalizeLuggageMode, isAirportTransferStep, prepareSteps, withLuggageStep, totalMinutes, timingFacts, scorePlan, onJstDate, planWindow, scheduleWindow, stageHours, supportsNeeds, withTravelNeeds, fallbackTiming, isStartWithinWindow };
+  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, airportTransferMinimum, areaMatches, normalizeLuggageMode, isAirportTransferStep, prepareSteps, withLuggageStep, totalMinutes, timingFacts, scorePlan, onJstDate, planWindow, scheduleWindow, stageHours, calendarAllows, supportsNeeds, withTravelNeeds, fallbackTiming, isStartWithinWindow };
 })(window);

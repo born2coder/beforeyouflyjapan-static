@@ -1,0 +1,75 @@
+{
+  "checks": 499,
+  "results": [
+    {
+      "id": 4001,
+      "name": "Ueno Toshogu Before Haneda",
+      "baseMinutes": 210,
+      "sameAreaStorageMinutes": 245,
+      "airportBufferMinutes": 180
+    },
+    {
+      "id": 4002,
+      "name": "Hanazono Shrine Before Haneda",
+      "baseMinutes": 190,
+      "sameAreaStorageMinutes": 225,
+      "airportBufferMinutes": 180
+    },
+    {
+      "id": 4003,
+      "name": "Animate Shinjuku Before Haneda",
+      "baseMinutes": 210,
+      "sameAreaStorageMinutes": 245,
+      "airportBufferMinutes": 180
+    },
+    {
+      "id": 4004,
+      "name": "Nakano Broadway collector stop Before Haneda",
+      "baseMinutes": 275,
+      "sameAreaStorageMinutes": 310,
+      "airportBufferMinutes": 180
+    },
+    {
+      "id": 4005,
+      "name": "Tokyo Character Street Before Haneda",
+      "baseMinutes": 210,
+      "sameAreaStorageMinutes": 245,
+      "airportBufferMinutes": 180
+    },
+    {
+      "id": 4006,
+      "name": "Tokyo Station Gallery family art stop Before Haneda",
+      "baseMinutes": 240,
+      "sameAreaStorageMinutes": 275,
+      "airportBufferMinutes": 180
+    },
+    {
+      "id": 4007,
+      "name": "Fukagawa Edo Museum family history stop Before Haneda",
+      "baseMinutes": 335,
+      "sameAreaStorageMinutes": 370,
+      "airportBufferMinutes": 180
+    },
+    {
+      "id": 4008,
+      "name": "Hozenji temple and alley Before Kansai Airport",
+      "baseMinutes": 205,
+      "sameAreaStorageMinutes": 240,
+      "airportBufferMinutes": 180
+    },
+    {
+      "id": 4009,
+      "name": "Namba Yasaka Shrine Before Kansai Airport",
+      "baseMinutes": 225,
+      "sameAreaStorageMinutes": 260,
+      "airportBufferMinutes": 180
+    },
+    {
+      "id": 4010,
+      "name": "Kamigata Ukiyoe Museum Before Kansai Airport",
+      "baseMinutes": 250,
+      "sameAreaStorageMinutes": 285,
+      "airportBufferMinutes": 180
+    }
+  ]
+}

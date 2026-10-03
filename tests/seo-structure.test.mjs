@@ -31,11 +31,11 @@ function localTarget(url) {
 }
 
 test("SEO layer and application layer are separated", () => {
-  assert.equal(pages.length, 95);
+  assert.equal(pages.length, 115);
   const planPages = pages.filter((name) => name.startsWith("plans/"));
   const placePages = pages.filter((name) => name.startsWith("places/"));
-  assert.equal(planPages.length, 46);
-  assert.equal(placePages.length, 30);
+  assert.equal(planPages.length, 56);
+  assert.equal(placePages.length, 40);
   for (const relative of planPages) {
     const html = fs.readFileSync(path.join(root, relative), "utf8");
     assert.match(metadata(html, "robots"), /noindex,follow/);
@@ -48,7 +48,7 @@ test("SEO layer and application layer are separated", () => {
     assert.match(html, /class="byf-verdict"/);
     assert.ok(sitemap.includes(`https://beforeyouflyjapan.com${pageUrl(relative)}`));
   }
-  assert.equal((sitemap.match(/<url>/g) || []).length, 46);
+  assert.equal((sitemap.match(/<url>/g) || []).length, 56);
 });
 
 test("metadata is unique, self-canonical and has one H1", () => {

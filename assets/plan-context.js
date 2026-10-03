@@ -88,7 +88,7 @@
       const definitions = fit.querySelectorAll("dd");
       if (definitions[0]) definitions[0].textContent = plan.starts.join(", ");
       if (definitions[1]) definitions[1].textContent = `${plan.min} min minimum; ${plan.recommended} min recommended`;
-      if (definitions[2]) definitions[2].textContent = `${plan.startMin}–${plan.startMax} JST · ${plan.days}`;
+      if (definitions[2]) definitions[2].textContent = plan.strictStarts ? "Calculated from opening hours, admission deadlines and the checked closure calendar." : `${plan.startMin}–${plan.startMax} JST · ${plan.days}`;
       if (definitions[3]) definitions[3].textContent = "Large luggage can be stored near the suggested stop. Locker space is not guaranteed; an entered return elsewhere receives a separate conservative allowance.";
       const lists = fit.querySelectorAll("ul");
       if (guidance && lists[0]) lists[0].innerHTML = guidance.choose.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
@@ -112,7 +112,7 @@
   function stepDescription(step) {
     if (step.isStorageDrop) return [`Use a station locker or staffed luggage-storage service in ${step.storageArea || plan.area}.`, "Choose a storage point you can identify and return to easily. Locker availability is not guaranteed."];
     if (step.isPickup) return [`Use the luggage allowance already included for ${step.storageArea || luggageFit?.storageArea || plan.area}.`, "Collect every bag, check the receipt or counter, and begin the airport transfer when this step ends."];
-    if (core.isAirportTransferStep(step)) return ["This allowance includes station access, waiting, and the airport transfer.", routeHint(plan.airport, luggageFit?.mode === "return_elsewhere" ? luggageFit.storageArea : plan.area)];
+    if (core.isAirportTransferStep(step) && !step.action) return ["This allowance includes station access, waiting, and the airport transfer.", routeHint(plan.airport, luggageFit?.mode === "return_elsewhere" ? luggageFit.storageArea : plan.area)];
     if (/^Arrive at .*Airport/i.test(step.label)) return ["You have reached the airport at the end of this plan.", "Confirm the correct terminal and proceed to your airline counter or security as instructed. Keep any remaining time for airline procedures."];
     if (step.happens || step.action) return [step.happens || step.label, step.action || "Move on at the end of this stage; skip queues."];
     if (/margin/i.test(step.label)) return ["This time is deliberately left unplanned for platform changes or small delays.", "Do not spend this margin on another stop."];
@@ -195,6 +195,12 @@
     situation.innerHTML = `<b>Your situation</b>You have about ${escapeHtml(duration || "0 min")} before the protected airport-ready time for ${escapeHtml(airportCode)}. This timeline includes your starting area and the luggage choice entered in the planner.`;
     const model = document.querySelector(".byf-model");
     if (model) model.before(situation);
+  } else if (plan.id >= 4001 && plan.id <= 4010) {
+    flight = new Date("2026-10-10T21:00:00+09:00");
+    recommended = new Date(+flight - data.airports[plan.airport].buffer * 60000);
+    const exampleWindow = core.scheduleWindow(new Date("2026-10-10T09:00:00+09:00"), recommended, steps, plan);
+    if (!exampleWindow.valid) return;
+    start = exampleWindow.latest;
   } else if (plan.airport === "KIX") {
     flight = new Date("2026-08-28T20:00:00+09:00");
     recommended = new Date(flight.getTime() - data.airports.KIX.buffer * 60000);
@@ -253,7 +259,7 @@
     initializePlanContext();
   } else {
     const script = document.createElement("script");
-    script.src = "/assets/planner-core.js?v=20260829-4";
+    script.src = "/assets/planner-core.js?v=20261004-1";
     script.dataset.byfPlannerCore = "1";
     script.addEventListener("load", initializePlanContext, { once: true });
     document.head.append(script);

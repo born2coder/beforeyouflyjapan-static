@@ -1,0 +1,908 @@
+[
+  {
+    "id": 4001,
+    "name": "Ueno Toshogu Before Haneda",
+    "url": "https://beforeyouflyjapan.com/plans/ueno-toshogu-before-haneda/",
+    "hook": "Golden architecture against the green of Ueno Park.",
+    "airport": "HND",
+    "area": "Ueno",
+    "starts": [
+      "Ueno"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Culture"
+    ],
+    "min": 210,
+    "recommended": 245,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Walk to Ueno Toshogu",
+        "minutes": 25,
+        "happens": "Walk to Ueno Toshogu.",
+        "action": "Follow the checked entrance route; walking and station navigation are included."
+      },
+      {
+        "label": "Visit Ueno Toshogu paid inner precinct",
+        "minutes": 45,
+        "happens": "Visit Ueno Toshogu paid inner precinct.",
+        "action": "Look at the gold leaf, carved gate and stone lantern approach. Shrine interiors are not open to visitors. Skip a ticket queue rather than extend the visit.",
+        "hours": [
+          "09:30",
+          "16:00"
+        ],
+        "monthlyHours": [
+          [
+            "09:30",
+            "16:00"
+          ],
+          [
+            "09:30",
+            "16:00"
+          ],
+          [
+            "09:30",
+            "17:00"
+          ],
+          [
+            "09:30",
+            "17:00"
+          ],
+          [
+            "09:30",
+            "17:00"
+          ],
+          [
+            "09:30",
+            "17:00"
+          ],
+          [
+            "09:30",
+            "17:00"
+          ],
+          [
+            "09:30",
+            "17:00"
+          ],
+          [
+            "09:30",
+            "17:00"
+          ],
+          [
+            "09:30",
+            "16:00"
+          ],
+          [
+            "09:30",
+            "16:00"
+          ],
+          [
+            "09:30",
+            "16:00"
+          ]
+        ]
+      },
+      {
+        "label": "Return to Ueno station area",
+        "minutes": 20,
+        "happens": "Return to Ueno station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Haneda Airport",
+        "minutes": 90,
+        "happens": "Head to Haneda Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use the live route via Shinagawa and Keikyu, or Hamamatsucho and the Tokyo Monorail. This 90-minute allowance includes waiting, station access and changes."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 30,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Keep 30 minutes for terminal navigation and a missed connection; do not spend it on another stop."
+      }
+    ],
+    "notice": [
+      "Golden architecture against the green of Ueno Park.",
+      "Compare the carved gate with the stone lantern approach.",
+      "Look for fine details in the gilded sanctuary exterior; this is an exterior visit."
+    ],
+    "placeSlug": "ueno-toshogu",
+    "sources": [
+      "https://www.uenotoshogu.com/"
+    ],
+    "operatingRule": "Paid precinct: 9:30–16:00 October–February; 9:30–17:00 March–September. Adult admission currently ¥700; grounds and paid precinct have different hours.",
+    "caution": "Weather or ceremonies can close the paid area. Park paths add walking; this route is not offered as a low-walking option.",
+    "checked": "2026-10-04",
+    "live": "https://tokyo-haneda.com/en/access/",
+    "type": "Focused culture",
+    "luggage": "stored"
+  },
+  {
+    "id": 4002,
+    "name": "Hanazono Shrine Before Haneda",
+    "url": "https://beforeyouflyjapan.com/plans/hanazono-shrine-before-haneda/",
+    "hook": "A compact shrine pause amid Shinjuku.",
+    "airport": "HND",
+    "area": "Shinjuku",
+    "starts": [
+      "Shinjuku",
+      "Ueno"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Culture"
+    ],
+    "min": 190,
+    "recommended": 225,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Walk to Hanazono Shrine",
+        "minutes": 20,
+        "happens": "Walk to Hanazono Shrine.",
+        "action": "Follow the checked entrance route; walking and station navigation are included."
+      },
+      {
+        "label": "Visit Hanazono Shrine grounds",
+        "minutes": 30,
+        "happens": "Visit Hanazono Shrine grounds.",
+        "action": "Notice the red shrine buildings and compact urban sanctuary. This is a grounds-only visit; no goshuin counter or event admission is promised.",
+        "hours": [
+          "09:00",
+          "16:00"
+        ]
+      },
+      {
+        "label": "Return to Shinjuku station area",
+        "minutes": 20,
+        "happens": "Return to Shinjuku station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Haneda Airport",
+        "minutes": 90,
+        "happens": "Head to Haneda Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use the live route via Shinagawa and Keikyu, or Hamamatsucho and the Tokyo Monorail. This 90-minute allowance includes waiting, station access and changes."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 30,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Keep 30 minutes for terminal navigation and a missed connection; do not spend it on another stop."
+      }
+    ],
+    "notice": [
+      "A compact shrine pause amid Shinjuku.",
+      "Compare the red sanctuary and city buildings behind it.",
+      "Notice the torii and quiet approach, without joining a counter queue."
+    ],
+    "placeSlug": "hanazono-shrine",
+    "sources": [
+      "https://hanazono-jinja.or.jp/",
+      "https://www.gotokyo.org/en/story/walks-and-tours/shinjuku/index.html"
+    ],
+    "operatingRule": "The planner uses a conservative 9:00–16:00 daylight visiting window, an editorial limit rather than verified counter hours.",
+    "caution": "Festivals can make this normally compact stop crowded. Skip it if access is restricted.",
+    "checked": "2026-10-04",
+    "startConnectors": {
+      "Ueno": {
+        "label": "Travel from Ueno to Shinjuku",
+        "minutes": 60,
+        "happens": "Travel from Ueno to Shinjuku.",
+        "action": "Check JR or metro routes live. Allow for access, waiting, transfers and the correct Shinjuku exit."
+      }
+    },
+    "live": "https://tokyo-haneda.com/en/access/",
+    "type": "Focused culture",
+    "luggage": "stored"
+  },
+  {
+    "id": 4003,
+    "name": "Animate Shinjuku Before Haneda",
+    "url": "https://beforeyouflyjapan.com/plans/animate-shinjuku-before-haneda/",
+    "hook": "One favorite series, rather than a whole-district hunt.",
+    "airport": "HND",
+    "area": "Shinjuku",
+    "starts": [
+      "Shinjuku"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Anime / Pop Culture"
+    ],
+    "min": 210,
+    "recommended": 245,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Walk to Animate Shinjuku",
+        "minutes": 20,
+        "happens": "Walk to Animate Shinjuku.",
+        "action": "Follow the checked entrance route; walking and station navigation are included."
+      },
+      {
+        "label": "Browse one favorite series at Animate Shinjuku",
+        "minutes": 50,
+        "happens": "Browse one favorite series at Animate Shinjuku.",
+        "action": "Go to Marui Men 7F. Choose one series or shelf area, then pay and pack within this stage. Skip release-day queues.",
+        "hours": [
+          "11:00",
+          "20:00"
+        ]
+      },
+      {
+        "label": "Return to Shinjuku station area",
+        "minutes": 20,
+        "happens": "Return to Shinjuku station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Haneda Airport",
+        "minutes": 90,
+        "happens": "Head to Haneda Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use the live route via Shinagawa and Keikyu, or Hamamatsucho and the Tokyo Monorail. This 90-minute allowance includes waiting, station access and changes."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 30,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Keep 30 minutes for terminal navigation and a missed connection; do not spend it on another stop."
+      }
+    ],
+    "notice": [
+      "One favorite series, rather than a whole-district hunt.",
+      "Compare current Japanese manga and character merchandise.",
+      "Choose one small keepsake and finish checkout before the stage ends."
+    ],
+    "placeSlug": "animate-shinjuku",
+    "sources": [
+      "https://www.animate.co.jp/shop/shinjuku/"
+    ],
+    "operatingRule": "11:00–20:00; Marui Men 7F. JR Shinjuku East Exit is about 9 minutes away; Shinjuku-sanchome E2 is closer.",
+    "caution": "Events and popular releases can have queues; merchandise availability is not guaranteed.",
+    "checked": "2026-10-04",
+    "live": "https://tokyo-haneda.com/en/access/",
+    "type": "Character shopping",
+    "luggage": "stored"
+  },
+  {
+    "id": 4004,
+    "name": "Nakano Broadway collector stop Before Haneda",
+    "url": "https://beforeyouflyjapan.com/plans/nakano-broadway-before-haneda/",
+    "hook": "Two specialist shops for a focused collector visit.",
+    "airport": "HND",
+    "area": "Shinjuku",
+    "starts": [
+      "Shinjuku"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Anime / Pop Culture"
+    ],
+    "min": 275,
+    "recommended": 310,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Travel from Shinjuku to Nakano Broadway",
+        "minutes": 45,
+        "happens": "Walk to Nakano Broadway collector stop.",
+        "action": "Follow the checked entrance route; walking and station navigation are included."
+      },
+      {
+        "label": "Browse two Mandarake specialist shops",
+        "minutes": 65,
+        "happens": "Browse two Mandarake specialist shops.",
+        "action": "Choose two adjacent specialist shops before arrival. Include browsing, payment and packing; no full-building or event tour.",
+        "hours": [
+          "12:00",
+          "20:00"
+        ]
+      },
+      {
+        "label": "Return to Shinjuku station area",
+        "minutes": 45,
+        "happens": "Return to Shinjuku station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Haneda Airport",
+        "minutes": 90,
+        "happens": "Head to Haneda Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use the live route via Shinagawa and Keikyu, or Hamamatsucho and the Tokyo Monorail. This 90-minute allowance includes waiting, station access and changes."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 30,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Keep 30 minutes for terminal navigation and a missed connection; do not spend it on another stop."
+      }
+    ],
+    "notice": [
+      "Two specialist shops for a focused collector visit.",
+      "Compare vintage manga or character goods with modern releases.",
+      "Notice how each Mandarake section specializes in a different collection."
+    ],
+    "placeSlug": "nakano-broadway",
+    "sources": [
+      "https://www.mandarake.co.jp/dir/nkn/"
+    ],
+    "operatingRule": "Mandarake Nakano shops generally 12:00–20:00; individual specialist sections may differ. Nakano Broadway is about 5 minutes north of JR Nakano.",
+    "caution": "The route includes a return to Shinjuku before Haneda. Stairs, shop layouts and crowds make it unsuitable for the short-walking filter.",
+    "checked": "2026-10-04",
+    "live": "https://tokyo-haneda.com/en/access/",
+    "type": "Character shopping",
+    "luggage": "stored"
+  },
+  {
+    "id": 4005,
+    "name": "Tokyo Character Street Before Haneda",
+    "url": "https://beforeyouflyjapan.com/plans/tokyo-character-street-before-haneda/",
+    "hook": "A compact character-shopping visit inside Tokyo Station First Avenue.",
+    "airport": "HND",
+    "area": "Tokyo Station",
+    "starts": [
+      "Tokyo Station",
+      "Shinjuku"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Anime / Pop Culture"
+    ],
+    "min": 210,
+    "recommended": 245,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Walk to Tokyo Character Street",
+        "minutes": 20,
+        "happens": "Walk to Tokyo Character Street.",
+        "action": "Follow the checked entrance route; walking and station navigation are included."
+      },
+      {
+        "label": "Browse two Tokyo Character Street shops",
+        "minutes": 50,
+        "happens": "Browse two Tokyo Character Street shops.",
+        "action": "Choose two shops with confirmed hours and no admission queue. Include checkout and packing; skip limited-release lines.",
+        "hours": [
+          "10:00",
+          "20:00"
+        ]
+      },
+      {
+        "label": "Return to Tokyo Station station area",
+        "minutes": 20,
+        "happens": "Return to Tokyo Station station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Haneda Airport",
+        "minutes": 90,
+        "happens": "Head to Haneda Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use the live route via Shinagawa and Keikyu, or Hamamatsucho and the Tokyo Monorail. This 90-minute allowance includes waiting, station access and changes."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 30,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Keep 30 minutes for terminal navigation and a missed connection; do not spend it on another stop."
+      }
+    ],
+    "notice": [
+      "A compact character-shopping visit inside Tokyo Station First Avenue.",
+      "Compare character storefronts and Japan-only merchandise.",
+      "Pick a small favorite without extending into another shopping district."
+    ],
+    "placeSlug": "tokyo-character-street",
+    "sources": [
+      "https://www.tokyoeki-1bangai.co.jp/tokyocharacterstreet/",
+      "https://www.tokyoeki-1bangai.co.jp/serviceguide/"
+    ],
+    "operatingRule": "The zone generally operates 10:00–20:30; the planner finishes by 20:00. Individual shops and special events vary.",
+    "caution": "Check the exact shop and floor. The First Avenue complex is outside ticket gates; do not assume every shop is on the same level.",
+    "checked": "2026-10-04",
+    "startConnectors": {
+      "Shinjuku": {
+        "label": "Travel from Shinjuku to Tokyo Station",
+        "minutes": 60,
+        "happens": "Travel from Shinjuku to Tokyo Station.",
+        "action": "Check a live JR Chuo route. Allow for waiting and the passage to the Yaesu / First Avenue side."
+      }
+    },
+    "live": "https://tokyo-haneda.com/en/access/",
+    "type": "Character shopping",
+    "luggage": "stored"
+  },
+  {
+    "id": 4006,
+    "name": "Tokyo Station Gallery family art stop Before Haneda",
+    "url": "https://beforeyouflyjapan.com/plans/tokyo-station-gallery-before-haneda/",
+    "hook": "Art and Tokyo Station’s historic brickwork in one visit.",
+    "airport": "HND",
+    "area": "Tokyo Station",
+    "starts": [
+      "Tokyo Station"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Culture"
+    ],
+    "min": 240,
+    "recommended": 275,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Walk to Tokyo Station Gallery family art stop",
+        "minutes": 15,
+        "happens": "Walk to Tokyo Station Gallery family art stop.",
+        "action": "Follow the checked entrance route; walking and station navigation are included."
+      },
+      {
+        "label": "Visit Tokyo Station Gallery",
+        "minutes": 60,
+        "happens": "Visit Tokyo Station Gallery.",
+        "action": "Choose one exhibition section and look at the historic brick walls. Use the lift where needed and ask staff about stroller access. Ticket availability is checked on arrival.",
+        "hours": [
+          "10:00",
+          "18:00"
+        ],
+        "lastEntry": "17:30",
+        "calendar": {
+          "from": "2026-09-19",
+          "through": "2026-11-08",
+          "closedWeekdays": [
+            "Mon"
+          ],
+          "openDates": [
+            "2026-09-21",
+            "2026-10-12",
+            "2026-11-02"
+          ],
+          "closedDates": [
+            "2026-10-13"
+          ]
+        }
+      },
+      {
+        "label": "Use toilets, diaper facilities and a seated break",
+        "minutes": 30,
+        "happens": "Use toilets, diaper facilities and a seated break.",
+        "action": "The gallery lists a 2F diaper station, a lift and stroller loans. Nursing space is not promised here; ask staff or use station services."
+      },
+      {
+        "label": "Return to Tokyo Station station area",
+        "minutes": 15,
+        "happens": "Return to Tokyo Station station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Haneda Airport",
+        "minutes": 90,
+        "happens": "Head to Haneda Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use the live route via Shinagawa and Keikyu, or Hamamatsucho and the Tokyo Monorail. This 90-minute allowance includes waiting, station access and changes."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 30,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Keep 30 minutes for terminal navigation and a missed connection; do not spend it on another stop."
+      }
+    ],
+    "notice": [
+      "Art and Tokyo Station’s historic brickwork in one visit.",
+      "Look at the exposed building fabric alongside the exhibition.",
+      "Choose a small number of works to discuss with your child."
+    ],
+    "placeSlug": "tokyo-station-gallery",
+    "sources": [
+      "https://www.ejrcf.or.jp/gallery/",
+      "https://www.ejrcf.or.jp/gallery/institution.html",
+      "https://www.ejrcf.or.jp/gallery/exhibition/202609_suikoden.html"
+    ],
+    "operatingRule": "10:00–18:00, Fridays to 20:00; last admission 30 minutes before closing. The planner conservatively finishes by 18:00. Verified exhibition calendar: 19 September–8 November 2026; Mondays closed except 21 September, 12 October and 2 November. 13 October closed.",
+    "caution": "This candidate is disabled outside the verified exhibition dates until its calendar is refreshed. Exhibition admission is required for the interior history / brick experience.",
+    "checked": "2026-10-04",
+    "supportedNeeds": [
+      "stroller",
+      "low_walk"
+    ],
+    "live": "https://tokyo-haneda.com/en/access/",
+    "type": "Focused culture",
+    "luggage": "stored"
+  },
+  {
+    "id": 4007,
+    "name": "Fukagawa Edo Museum family history stop Before Haneda",
+    "url": "https://beforeyouflyjapan.com/plans/fukagawa-edo-museum-before-haneda/",
+    "hook": "An indoor Edo street scene with time to pause as a family.",
+    "airport": "HND",
+    "area": "Tokyo Station",
+    "starts": [
+      "Tokyo Station"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Culture"
+    ],
+    "min": 335,
+    "recommended": 370,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Travel from Tokyo Station to Fukagawa Edo Museum",
+        "minutes": 60,
+        "happens": "Walk to Fukagawa Edo Museum family history stop.",
+        "action": "Store bags at Tokyo Station if selected. Check a live route to Kiyosumi-shirakawa and use the A3 lift access with station guidance."
+      },
+      {
+        "label": "Visit the recreated Edo neighborhood",
+        "minutes": 65,
+        "happens": "Visit the recreated Edo neighborhood.",
+        "action": "Use the museum lift with staff guidance. Notice the full-size streets, daily-life objects and changing light / sound. Choose one lane rather than every house.",
+        "hours": [
+          "09:30",
+          "17:00"
+        ],
+        "lastEntry": "16:30",
+        "calendar": {
+          "through": "2027-12-31",
+          "closedNth": [
+            {
+              "weekday": "Mon",
+              "nth": [
+                2,
+                4
+              ]
+            }
+          ],
+          "openDates": [
+            "2026-01-12",
+            "2026-02-23",
+            "2026-05-04",
+            "2026-07-20",
+            "2026-09-21",
+            "2026-10-12",
+            "2026-11-23",
+            "2027-01-11",
+            "2027-03-22",
+            "2027-05-03",
+            "2027-07-19",
+            "2027-09-20",
+            "2027-10-11",
+            "2027-01-02",
+            "2027-01-03"
+          ],
+          "closedAnnual": [
+            {
+              "from": "12-29",
+              "through": "12-31"
+            },
+            {
+              "from": "01-01",
+              "through": "01-03"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Use nursing / diaper facilities and rest",
+        "minutes": 30,
+        "happens": "Use nursing / diaper facilities and rest.",
+        "action": "Ask museum staff for the 1F nursing space and diaper facilities. Allow time for feeding and a seated break."
+      },
+      {
+        "label": "Return to Tokyo Station station area",
+        "minutes": 60,
+        "happens": "Return to Tokyo Station station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Haneda Airport",
+        "minutes": 90,
+        "happens": "Head to Haneda Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use the live route via Shinagawa and Keikyu, or Hamamatsucho and the Tokyo Monorail. This 90-minute allowance includes waiting, station access and changes."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 30,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Keep 30 minutes for terminal navigation and a missed connection; do not spend it on another stop."
+      }
+    ],
+    "notice": [
+      "An indoor Edo street scene with time to pause as a family.",
+      "Compare household objects and recreated town lanes.",
+      "Watch the lighting and sound suggest a changing day."
+    ],
+    "placeSlug": "fukagawa-edo-museum",
+    "sources": [
+      "https://www.kcf.or.jp/fukagawa/outline/",
+      "https://www.kcf.or.jp/fukagawa/outline/barrierfree/",
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+    ],
+    "operatingRule": "Exhibition 9:30–17:00; last admission 16:30. Closed second / fourth Mondays except national holidays, and 29 December–3 January; 2–3 January have special exhibition opening. Holiday exceptions are verified through 2027.",
+    "caution": "Store bags at Tokyo Station before leaving and return there to collect them. Nursing is available on 1F with staff assistance; museum lift access is confirmed, but the complete station route is not certified step-free.",
+    "checked": "2026-10-04",
+    "storageArea": "Tokyo Station",
+    "supportedNeeds": [
+      "stroller"
+    ],
+    "live": "https://tokyo-haneda.com/en/access/",
+    "type": "Focused culture",
+    "luggage": "stored"
+  },
+  {
+    "id": 4008,
+    "name": "Hozenji temple and alley Before Kansai Airport",
+    "url": "https://beforeyouflyjapan.com/plans/hozenji-before-kansai/",
+    "hook": "A small temple and stone-paved lane in central Namba.",
+    "airport": "KIX",
+    "area": "Namba",
+    "starts": [
+      "Namba"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Culture"
+    ],
+    "min": 205,
+    "recommended": 240,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Walk to Hozenji temple and alley",
+        "minutes": 15,
+        "happens": "Walk to Hozenji temple and alley.",
+        "action": "Follow the checked entrance route; walking and station navigation are included."
+      },
+      {
+        "label": "Visit Hozenji and one short alley segment",
+        "minutes": 30,
+        "happens": "Visit Hozenji and one short alley segment.",
+        "action": "Look at the moss-covered Mizukake Fudo and stone-paved lane. Follow posted prayer guidance and respect worshippers. Keep this a temple visit, rather than a restaurant queue.",
+        "hours": [
+          "09:00",
+          "17:00"
+        ]
+      },
+      {
+        "label": "Return to Namba station area",
+        "minutes": 20,
+        "happens": "Return to Namba station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Kansai Airport",
+        "minutes": 90,
+        "happens": "Head to Kansai Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use Nankai Namba to Kansai-Airport Station; this 90-minute allowance includes access, waiting and rail travel, rather than the fastest train alone."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 50,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Allow 30 minutes for airport station access / Terminal 2 shuttle navigation, plus 20 minutes of spare time. Terminal 1 passengers retain the spare time."
+      }
+    ],
+    "notice": [
+      "A small temple and stone-paved lane in central Namba.",
+      "Notice the moss-covered Mizukake Fudo image.",
+      "Compare the intimate alley with the nearby entertainment streets."
+    ],
+    "placeSlug": "hozenji",
+    "sources": [
+      "https://houzenji.jp/"
+    ],
+    "operatingRule": "Grounds are accessible 24 hours; the office is 10:00–18:00. The planner uses a 9:00–17:00 daylight grounds window and does not promise counter service.",
+    "caution": "Stone paving can be slippery in rain. This is not a verified stroller / low-walking route.",
+    "checked": "2026-10-04",
+    "live": "https://www.kansai-airport.or.jp/en/access/",
+    "type": "Focused culture",
+    "luggage": "stored"
+  },
+  {
+    "id": 4009,
+    "name": "Namba Yasaka Shrine Before Kansai Airport",
+    "url": "https://beforeyouflyjapan.com/plans/namba-yasaka-shrine-before-kansai/",
+    "hook": "A memorable lion-shaped hall on a compact shrine visit.",
+    "airport": "KIX",
+    "area": "Namba",
+    "starts": [
+      "Namba"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Culture"
+    ],
+    "min": 225,
+    "recommended": 260,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Walk to Namba Yasaka Shrine",
+        "minutes": 25,
+        "happens": "Walk to Namba Yasaka Shrine.",
+        "action": "Follow the checked entrance route; walking and station navigation are included."
+      },
+      {
+        "label": "Visit Namba Yasaka lion hall exterior",
+        "minutes": 35,
+        "happens": "Visit Namba Yasaka lion hall exterior.",
+        "action": "Look at the giant lion-shaped hall and compare its scale with the shrine grounds. Keep this an exterior / grounds visit.",
+        "hours": [
+          "06:00",
+          "17:00"
+        ]
+      },
+      {
+        "label": "Return to Namba station area",
+        "minutes": 25,
+        "happens": "Return to Namba station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Kansai Airport",
+        "minutes": 90,
+        "happens": "Head to Kansai Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use Nankai Namba to Kansai-Airport Station; this 90-minute allowance includes access, waiting and rail travel, rather than the fastest train alone."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 50,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Allow 30 minutes for airport station access / Terminal 2 shuttle navigation, plus 20 minutes of spare time. Terminal 1 passengers retain the spare time."
+      }
+    ],
+    "notice": [
+      "A memorable lion-shaped hall on a compact shrine visit.",
+      "Notice the open mouth and the hall’s scale.",
+      "Compare this unusual structure with the smaller shrine buildings."
+    ],
+    "placeSlug": "namba-yasaka-shrine",
+    "sources": [
+      "https://nambayasaka.jp/",
+      "https://osaka-info.jp/en/spot/nanbayasakajinja/"
+    ],
+    "operatingRule": "Grounds 6:00–17:00; reception 9:00–16:50. The planner requires the entire visit to finish before the gates close.",
+    "caution": "The approach adds walking from Nankai Namba. Do not add a ceremony or counter queue.",
+    "checked": "2026-10-04",
+    "live": "https://www.kansai-airport.or.jp/en/access/",
+    "type": "Focused culture",
+    "luggage": "stored"
+  },
+  {
+    "id": 4010,
+    "name": "Kamigata Ukiyoe Museum Before Kansai Airport",
+    "url": "https://beforeyouflyjapan.com/plans/kamigata-ukiyoe-museum-before-kansai/",
+    "hook": "Osaka actor prints and a nearby temple in one compact route.",
+    "airport": "KIX",
+    "area": "Namba",
+    "starts": [
+      "Namba"
+    ],
+    "strictStarts": true,
+    "interest": [
+      "Culture"
+    ],
+    "min": 250,
+    "recommended": 285,
+    "days": "Daily",
+    "startMin": "08:00",
+    "startMax": "16:00",
+    "steps": [
+      {
+        "label": "Walk to Kamigata Ukiyoe Museum",
+        "minutes": 15,
+        "happens": "Walk to Kamigata Ukiyoe Museum.",
+        "action": "Follow the checked entrance route; walking and station navigation are included."
+      },
+      {
+        "label": "Visit Kamigata Ukiyoe Museum",
+        "minutes": 55,
+        "happens": "Visit Kamigata Ukiyoe Museum.",
+        "action": "Choose a small group of Osaka actor prints and compare poses, costumes and facial expressions. Skip workshops and unplanned queues.",
+        "hours": [
+          "11:00",
+          "18:00"
+        ],
+        "lastEntry": "17:30",
+        "calendar": {
+          "through": "2027-12-31",
+          "closedWeekdays": [
+            "Mon"
+          ],
+          "openDates": [
+            "2026-01-12",
+            "2026-02-23",
+            "2026-05-04",
+            "2026-07-20",
+            "2026-09-21",
+            "2026-10-12",
+            "2026-11-23",
+            "2027-01-11",
+            "2027-03-22",
+            "2027-05-03",
+            "2027-07-19",
+            "2027-09-20",
+            "2027-10-11"
+          ],
+          "closedDates": [
+            "2026-01-13",
+            "2026-02-24",
+            "2026-05-05",
+            "2026-07-21",
+            "2026-09-22",
+            "2026-10-13",
+            "2026-11-24",
+            "2027-01-12",
+            "2027-03-23",
+            "2027-05-04",
+            "2027-07-20",
+            "2027-09-21",
+            "2027-10-12"
+          ]
+        }
+      },
+      {
+        "label": "Optional short Hozenji grounds visit",
+        "minutes": 20,
+        "happens": "Optional short Hozenji grounds visit.",
+        "action": "Look at Mizukake Fudo without joining a queue. Skip this stage if admission, checkout or walking was delayed."
+      },
+      {
+        "label": "Return to Namba station area",
+        "minutes": 20,
+        "happens": "Return to Namba station area.",
+        "action": "Return along the checked route. Storage collection is added separately when selected."
+      },
+      {
+        "label": "Head to Kansai Airport",
+        "minutes": 90,
+        "happens": "Head to Kansai Airport.",
+        "action": "Check live trains and your airline terminal before leaving. Use Nankai Namba to Kansai-Airport Station; this 90-minute allowance includes access, waiting and rail travel, rather than the fastest train alone."
+      },
+      {
+        "label": "Find your departure terminal and keep a disruption margin",
+        "minutes": 50,
+        "happens": "Find your departure terminal and keep a disruption margin.",
+        "action": "Confirm the check-in floor and airline counter. Allow 30 minutes for airport station access / Terminal 2 shuttle navigation, plus 20 minutes of spare time. Terminal 1 passengers retain the spare time."
+      }
+    ],
+    "notice": [
+      "Osaka actor prints and a nearby temple in one compact route.",
+      "Compare dramatic poses and costume details in actor prints.",
+      "Look for the regional character of Kamigata prints."
+    ],
+    "placeSlug": "kamigata-ukiyoe-museum",
+    "sources": [
+      "https://kamigata.jp/kmgt/",
+      "https://osaka-info.jp/en/spot/kamigata-ukiyoe-museum/",
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+    ],
+    "operatingRule": "11:00–18:00; last admission 17:30. Mondays closed; a Monday national holiday opens and the following day closes. Holiday exceptions verified through 2027. Adult admission currently ¥700.",
+    "caution": "The museum occupies multiple floors; a step-free interior route has not been verified. Hozenji is optional and should be skipped if delayed.",
+    "checked": "2026-10-04",
+    "live": "https://www.kansai-airport.or.jp/en/access/",
+    "type": "Focused culture",
+    "luggage": "stored"
+  }
+]
