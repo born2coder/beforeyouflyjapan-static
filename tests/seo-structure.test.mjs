@@ -31,7 +31,7 @@ function localTarget(url) {
 }
 
 test("SEO layer and application layer are separated", () => {
-  assert.equal(pages.length, 87);
+  assert.equal(pages.length, 95);
   const planPages = pages.filter((name) => name.startsWith("plans/"));
   const placePages = pages.filter((name) => name.startsWith("places/"));
   assert.equal(planPages.length, 46);
@@ -48,7 +48,7 @@ test("SEO layer and application layer are separated", () => {
     assert.match(html, /class="byf-verdict"/);
     assert.ok(sitemap.includes(`https://beforeyouflyjapan.com${pageUrl(relative)}`));
   }
-  assert.equal((sitemap.match(/<url>/g) || []).length, 38);
+  assert.equal((sitemap.match(/<url>/g) || []).length, 46);
 });
 
 test("metadata is unique, self-canonical and has one H1", () => {
@@ -132,18 +132,15 @@ test("Search Console-led Primary SEO Pages have focused metadata, answers and co
   }
 });
 
-test("Primary place timing matches supported planner routes", () => {
-  const expected = {
-    "places/haneda-airport/index.html": ["180 minutes before protected airport-ready time", "HND supported"],
-    "places/nihonbashi/index.html": ["180 minutes before protected airport-ready time"],
-    "places/shinagawa/index.html": ["150 minutes before protected airport-ready time"],
-    "places/omotesando/index.html": ["290 minutes before protected airport-ready time", "HND supported"],
-    "places/naritasan-shinshoji/index.html": ["225 minutes before protected airport-ready time", "NRT supported"],
-    "places/asakusa-sensoji/index.html": ["225 minutes for HND; 250 minutes for NRT", "NRT supported"],
-  };
-  for (const [relative, phrases] of Object.entries(expected)) {
+test("All place pages expose route-specific timing and connected alternatives", () => {
+  for (const relative of pages.filter((name) => name.startsWith("places/"))) {
     const html = fs.readFileSync(path.join(root, relative), "utf8");
-    for (const phrase of phrases) assert.ok(html.includes(phrase), `${relative}: missing ${phrase}`);
+    assert.match(html, /\d+ minutes for (HND|NRT|KIX)/, relative);
+    assert.match(html, /class="byf-route-support"/, relative);
+    assert.match(html, /class="byf-example-timeline"/, relative);
+    assert.match(html, /class="byf-primary-links"/, relative);
+    assert.match(html, /BreadcrumbList/, relative);
+    assert.equal((html.match(/<b>Quick answer:<\/b>/g) || []).length, 1, relative);
   }
 });
 

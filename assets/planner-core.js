@@ -579,9 +579,64 @@
     return { earliest, latest, valid: earliest <= latest };
   }
 
+  // Facility hours are stage constraints, separate from the flight buffer.
+  // Retail districts use conservative editorial windows, not guaranteed shop hours.
+  const MEIJI_HOURS = [["06:40","16:20"],["06:20","16:50"],["05:40","17:20"],["05:10","17:50"],["05:00","18:10"],["05:00","18:30"],["05:00","18:20"],["05:00","18:00"],["05:20","17:20"],["05:40","16:40"],["06:10","16:10"],["06:40","16:00"]];
+  function stageHours(step, date) {
+    const label = step.label || "";
+    if (/^(travel|head|walk|return|reach|take)\b/i.test(label)) return null;
+    if (/Meiji Shrine/i.test(label)) {
+      const month = Number(new Intl.DateTimeFormat("en", { month: "numeric", timeZone: "Asia/Tokyo" }).format(date));
+      return MEIJI_HOURS[month - 1];
+    }
+    if (/Kappabashi/i.test(label)) return ["10:00", "17:00"];
+    if (/Tsukiji/i.test(label)) return ["08:00", "14:00"];
+    if (/shop|browse.*bookshop/i.test(label) && !/airport|souvenir/i.test(label)) return ["11:00", "19:00"];
+    return null;
+  }
+  function scheduleWindow(free, recommended, steps, plan) {
+    const window = planWindow(free, recommended, totalMinutes(steps), plan);
+    let offset = 0;
+    steps.forEach((step) => {
+      const hours = stageHours(step, free);
+      if (hours) {
+        window.earliest = new Date(Math.max(window.earliest.getTime(), onJstDate(free, hours[0]).getTime() - offset * 60000));
+        window.latest = new Date(Math.min(window.latest.getTime(), onJstDate(free, hours[1]).getTime() - (offset + Number(step.minutes || 0)) * 60000));
+      }
+      offset += Number(step.minutes || 0);
+    });
+    const weekday = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "Asia/Tokyo" }).format(free);
+    const dayOk = !plan.days || /daily/i.test(plan.days) || plan.days.split(",").map(day => day.trim().slice(0, 3)).includes(weekday);
+    window.valid = dayOk && window.earliest <= window.latest;
+    return window;
+  }
+  const SHORT_ROUTE_IDS = new Set([27, 28, 31, 32, 35, 37, 89, 242, 2801, 3701]);
+  function supportsNeeds(plan, needs) {
+    return !needs || needs === "standard" || SHORT_ROUTE_IDS.has(plan.id);
+  }
+  function withTravelNeeds(steps, needs) {
+    const result = steps.map((step) => ({ ...step }));
+    if (needs && needs !== "standard") {
+      const index = result.findIndex(isAirportTransferStep);
+      result.splice(index < 0 ? result.length - 1 : index, 0, { label: "Rest and allow extra station navigation time", minutes: 20, isRest: true,
+        happens: "Use a seated break and extra time for lifts, toilets or a stroller.", action: "Check the exact accessible entrance with the station or airport operator; this is not a verified step-free route." });
+    }
+    return result;
+  }
+  function fallbackTiming(airport, startArea, luggage, luggageArea, recommended, free) {
+    const mode = normalizeLuggageMode(luggage);
+    const transferArea = mode === "return_elsewhere" ? luggageArea : startArea;
+    const transfer = airportTransferMinimum(airport, transferArea);
+    const pickup = mode === "return_elsewhere" ? pickupMinutes(startArea, luggageArea) : 0;
+    if (transfer === null || pickup === null) return { known: false, urgent: true };
+    const minutes = transfer + pickup + 20;
+    const leaveBy = new Date(recommended.getTime() - minutes * 60000);
+    return { known: true, minutes, leaveBy, urgent: free >= leaveBy };
+  }
+
   function isStartWithinWindow(start, window) {
     return Boolean(start && Number.isFinite(start.getTime()) && start >= window.earliest && start <= window.latest);
   }
 
-  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, airportTransferMinimum, areaMatches, normalizeLuggageMode, isAirportTransferStep, prepareSteps, withLuggageStep, totalMinutes, timingFacts, scorePlan, onJstDate, planWindow, isStartWithinWindow };
+  root.BYFPlannerCore = { enhanceData, inferArea, isNearby, pickupMinutes, airportTransferMinimum, areaMatches, normalizeLuggageMode, isAirportTransferStep, prepareSteps, withLuggageStep, totalMinutes, timingFacts, scorePlan, onJstDate, planWindow, scheduleWindow, stageHours, supportsNeeds, withTravelNeeds, fallbackTiming, isStartWithinWindow };
 })(window);

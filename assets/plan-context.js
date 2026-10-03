@@ -9,7 +9,8 @@
   const params = new URLSearchParams(window.location.search);
   const requestedId = Number(params.get("plan_id"));
   const path = window.location.pathname.replace(/\/+$/, "/");
-  const plan = data.plans.find((item) => requestedId && item.id === requestedId) || data.plans.find((item) => {
+  const plan = data.plans.find((item) => {
+    if (requestedId && item.id !== requestedId) return false;
     try {
       return new URL(item.url).pathname.replace(/\/+$/, "/") === path;
     } catch {
@@ -102,13 +103,34 @@
     if (checked) checked.textContent = `Last checked: ${plan.checked}`;
   }
 
+  function routeHint(airport, area) {
+    if (airport === "KIX") return area === "Umeda" ? "Compare the JR airport route from Osaka Station with the official airport bus. Confirm the platform, terminal and service time before leaving." : "From Namba, check the Nankai airport route; from Rinku, check the airport-bound train. Confirm the destination, terminal and service time before boarding.";
+    if (airport === "NRT") return /Narita/.test(area) ? "Check the airport-bound JR or Keisei service from Narita town. Confirm your terminal station before boarding." : /Ueno|Akihabara/.test(area) ? "Compare Keisei from Keisei-Ueno with the live airport route. Ueno and Keisei-Ueno are different stations; allow walking between them." : "Compare Narita Express, Keisei and the official airport bus from your exact location. Confirm the airport terminal and departure point.";
+    return area === "Shinagawa" ? "Use the Keikyu airport route from Shinagawa. Confirm the train destination and your Haneda terminal station before boarding." : "Compare Keikyu via Shinagawa or the Tokyo Monorail via Hamamatsucho with a live route. Confirm your Haneda terminal and the train destination.";
+  }
+
   function stepDescription(step) {
     if (step.isStorageDrop) return [`Use a station locker or staffed luggage-storage service in ${step.storageArea || plan.area}.`, "Choose a storage point you can identify and return to easily. Locker availability is not guaranteed."];
     if (step.isPickup) return [`Use the luggage allowance already included for ${step.storageArea || luggageFit?.storageArea || plan.area}.`, "Collect every bag, check the receipt or counter, and begin the airport transfer when this step ends."];
-    if (core.isAirportTransferStep(step)) return ["This allowance includes station access, waiting, and the airport transfer.", "Check the live route before moving and use the displayed time as a hard departure deadline."];
+    if (core.isAirportTransferStep(step)) return ["This allowance includes station access, waiting, and the airport transfer.", routeHint(plan.airport, luggageFit?.mode === "return_elsewhere" ? luggageFit.storageArea : plan.area)];
+    if (step.happens || step.action) return [step.happens || step.label, step.action || "Move on at the end of this stage; skip queues."];
     if (/margin/i.test(step.label)) return ["This time is deliberately left unplanned for platform changes or small delays.", "Do not spend this margin on another stop."];
     if (/confirm|check-in|security/i.test(step.label)) return ["Verify the correct terminal and the latest instructions from your airline.", "Resolve check-in, bag-drop, or terminal questions before using time for food or shopping."];
-    return [`Stay focused on this one stage for about ${step.minutes} minutes.`, "Skip queues and unplanned detours; move on when the next timeline time arrives."];
+    const editorial = [
+      [/Kappabashi/i, "Browse two nearby kitchenware shops for one chosen product.", "Check those shops’ opening hours before arriving. Finish by the planning cutoff; knives need airline-approved packing."],
+      [/Meiji Shrine/i, "Follow the shrine approach to the main sanctuary and return toward Harajuku.", "Use the current month’s closing time. Skip the museum or garden unless you have checked their separate hours."],
+      [/Sensoji|Nakamise/i, "Choose the temple grounds and one short shopping street pass.", "Shops have separate hours. Keep the route compact and use a nearby exit if crowds build."],
+      [/Tsukiji/i, "Choose one food priority in the outer market.", "Check the market calendar and your target stall. Switch to a no-queue meal instead of waiting."],
+      [/Akihabara/i, "Choose one electronics or anime shop rather than browsing every floor.", "Confirm its hours, set a purchase limit and leave enough time to repack."],
+      [/Dotonbori|Ebisubashi|Hozenji/i, "Follow a compact Namba street loop with one photo stop.", "Crowds can slow walking. Return toward Nankai Namba instead of adding another district."],
+      [/Marunouchi|red-brick|facade/i, "See the Marunouchi station facade and nearby plaza.", "Remember which side of Tokyo Station you need for the airport journey."],
+      [/Rinku|seaside/i, "Choose the bay view or one shopping zone close to the station.", "Check the return train and weather first; stop if the airport-island crossing is disrupted."],
+      [/meal|lunch|dinner|eat|coffee/i, "Choose one nearby meal or seated break.", "Use a place with immediate seating. Choose takeaway or an airport meal if there is a queue."],
+      [/shop|souvenir/i, "Choose one shopping zone and one purchase priority.", "Check the selected store’s hours, allow packing time and stop at the stage end."],
+      [/travel|walk|reach|return|take/i, "Follow the next connection shown in this stage.", "Check the precise station entrance and platform on a live map before walking. Lift routes may take longer."],
+    ].find(([pattern]) => pattern.test(step.label));
+    return editorial ? editorial.slice(1) : [step.label, "Keep this stop focused; skip queues and leave when the next timeline stage begins."];
+
   }
 
   function renderTimeline(steps, start) {
@@ -135,6 +157,12 @@
   let airportCode = plan.airport;
   let luggageFit = null;
 
+  function showInvalid() {
+    const notice = document.createElement("aside");
+    notice.className = "byf-alert";
+    notice.innerHTML = 'This saved plan no longer fits the entered conditions or opening-hour limits. <a href="/#planner">Recalculate your options</a>. The timeline below is a general example.';
+    document.querySelector(".byf-model")?.before(notice);
+  }
   if (personalized) {
     const flightAt = params.get("flight_at");
     const freeAt = params.get("free_at");
@@ -142,14 +170,17 @@
     const airport = data.airports[airportCode];
     flight = flightAt ? new Date(`${flightAt}:00+09:00`) : null;
     const free = freeAt ? new Date(`${freeAt}:00+09:00`) : null;
-    if (!airport || !flight || !free || !Number.isFinite(flight.getTime()) || !Number.isFinite(free.getTime())) return;
+    if (!airport || airportCode !== plan.airport || !flight || !free || flight <= free || !Number.isFinite(flight.getTime()) || !Number.isFinite(free.getTime())) { showInvalid(); return; }
     luggageFit = core.withLuggageStep(plan, params.get("luggage") || "", params.get("luggage_area") || "", params.get("start") || "");
-    if (!luggageFit.compatible) return;
-    steps = luggageFit.steps;
+    if (!luggageFit.compatible || !core.areaMatches(plan, params.get("start") || "")) { showInvalid(); return; }
+    steps = core.withTravelNeeds(luggageFit.steps, params.get("needs") || "standard");
     recommended = new Date(flight.getTime() - airport.buffer * 60000);
     const total = core.totalMinutes(steps);
-    const window = core.planWindow(free, recommended, total, plan);
-    if (!window.valid) return;
+    const window = core.scheduleWindow(free, recommended, steps, plan);
+    if (!window.valid || !core.supportsNeeds(plan, params.get("needs"))) {
+      showInvalid();
+      return;
+    }
     const requestedStart = params.get("plan_start_at") ? new Date(params.get("plan_start_at")) : null;
     start = core.isStartWithinWindow(requestedStart, window) ? requestedStart : window.latest;
 
@@ -172,6 +203,20 @@
   }
 
   renderTimeline(steps, start);
+  if (personalized) {
+    const controls = document.createElement("div");
+    controls.className = "byf-plan-tools";
+    const back = new URLSearchParams(params);
+    ["byf_context", "plan_id", "plan_start_at"].forEach((key) => back.delete(key));
+    controls.innerHTML = `<a href="/?${escapeHtml(back.toString())}#planner">Change my conditions</a><button type="button" data-copy-plan>Copy plan link</button><button type="button" data-print-plan>Print / save PDF</button><span role="status"></span>`;
+    controls.querySelector("[data-copy-plan]").addEventListener("click", async () => {
+      const status = controls.querySelector('[role="status"]');
+      try { await navigator.clipboard.writeText(window.location.href); status.textContent = "Plan link copied. It includes your flight and luggage conditions."; }
+      catch { status.textContent = "Copy the address from your browser to share these conditions."; }
+    });
+    controls.querySelector("[data-print-plan]").addEventListener("click", () => window.print());
+    document.querySelector(".byf-model")?.prepend(controls);
+  }
   const timing = core.timingFacts(steps, start, plan.airportPlan);
   const hasAirportTravel = Boolean(timing.leaveAt);
   const leaveAt = timing.leaveAt || start;
