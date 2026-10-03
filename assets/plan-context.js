@@ -113,6 +113,7 @@
     if (step.isStorageDrop) return [`Use a station locker or staffed luggage-storage service in ${step.storageArea || plan.area}.`, "Choose a storage point you can identify and return to easily. Locker availability is not guaranteed."];
     if (step.isPickup) return [`Use the luggage allowance already included for ${step.storageArea || luggageFit?.storageArea || plan.area}.`, "Collect every bag, check the receipt or counter, and begin the airport transfer when this step ends."];
     if (core.isAirportTransferStep(step)) return ["This allowance includes station access, waiting, and the airport transfer.", routeHint(plan.airport, luggageFit?.mode === "return_elsewhere" ? luggageFit.storageArea : plan.area)];
+    if (/^Arrive at .*Airport/i.test(step.label)) return ["You have reached the airport at the end of this plan.", "Confirm the correct terminal and proceed to your airline counter or security as instructed. Keep any remaining time for airline procedures."];
     if (step.happens || step.action) return [step.happens || step.label, step.action || "Move on at the end of this stage; skip queues."];
     if (/margin/i.test(step.label)) return ["This time is deliberately left unplanned for platform changes or small delays.", "Do not spend this margin on another stop."];
     if (/confirm|check-in|security/i.test(step.label)) return ["Verify the correct terminal and the latest instructions from your airline.", "Resolve check-in, bag-drop, or terminal questions before using time for food or shopping."];
