@@ -237,7 +237,7 @@
   ].map(([label, value], index) => `<span${index === 3 ? ' class="is-leave"' : ""}><small>${escapeHtml(label)}</small><b>${escapeHtml(formatter.format(value))}</b></span>`).join("");
   document.querySelectorAll(".byf-deadline b").forEach((node) => { node.textContent = formatter.format(leaveAt); });
   const modelHeading = document.querySelector(".byf-model h2");
-  if (modelHeading) modelHeading.textContent = personalized ? `Your timeline for a ${formatter.format(flight)} ${airportCode} flight` : `Example timeline for an 8:00 PM ${airportCode} flight`;
+  if (modelHeading) modelHeading.textContent = personalized ? `Your timeline for a ${formatter.format(flight)} ${airportCode} flight` : `Example timeline for a ${formatter.format(flight)} ${airportCode} flight`;
   const modelIntro = document.querySelector(".byf-model h2 + p");
   if (modelIntro) modelIntro.textContent = personalized ? "Calculated from your flight, starting area, and luggage return. ‘At the airport’ and ‘ready for airline procedures’ are shown separately." : "This example ends at the protected airline-procedure time; check live transport and your airline before leaving.";
   if (personalized) {
@@ -249,7 +249,7 @@
           ? `Your luggage pickup in ${luggageFit.storageArea} is included with a conservative allowance.`
           : `Your return to ${luggageFit.storageArea} is included with a conservative allowance. Check the exact hotel or storage route live; it can take longer.`
         : luggageFit.mode === "store_near_stop" && !plan.airportPlan
-          ? `This plan includes ${luggageFit.dropMinutes} minutes to store luggage and time to collect it again in ${luggageFit.storageArea}. You do not return to ${params.get("start")} unless it is the same area.`
+          ? `This plan includes ${luggageFit.dropMinutes} minutes to store luggage in ${luggageFit.storageArea}, the return journey to that storage area, and a separate collection allowance before the airport transfer.`
           : "No separate luggage detour is included.";
     }
   }
