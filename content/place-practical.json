@@ -1,0 +1,622 @@
+{
+  "akihabara": {
+    "name": "Akihabara: anime shopping before a flight",
+    "anchor": "Akihabara Station, Electric Town side",
+    "access": "Use the Electric Town side for Radio Kaikan. Stay on the station side of Chuo-dori if the return walk is becoming slow.",
+    "visit": "Make Radio Kaikan the whole shopping stop: choose one character or hobby category before entering. A single building is easier to leave on time than a hunt across several stores.",
+    "cost": "Browsing is free; purchases and cafés are extra.",
+    "source": "https://www.gotokyo.org/en/destinations/central-tokyo/akihabara/index.html",
+    "wiki": "Akihabara",
+    "photoAlt": "Akihabara Electric Town streets and buildings",
+    "locker": {
+      "station": "Akihabara",
+      "fees": [
+        500,
+        600,
+        900
+      ],
+      "map": "https://www.tokyometro.jp/station/akihabara/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat102",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "asakusa-sensoji": {
+    "name": "Asakusa and Sensoji before Haneda or Narita",
+    "anchor": "Asakusa Station and Kaminarimon",
+    "access": "Identify your actual Asakusa operator before leaving: the Tobu, Tokyo Metro and Toei stations are separate from the Tsukuba Express station.",
+    "visit": "Walk Kaminarimon → Nakamise → Sensoji, then retrace the approach. Buy one ningyo-yaki snack only if the queue fits; skip the river cruise on this compact route.",
+    "cost": "The temple approach is free; food and purchases are extra.",
+    "source": "https://www.gotokyo.org/en/destinations/eastern-tokyo/asakusa/",
+    "wiki": "Sensō-ji",
+    "photoAlt": "Sensoji temple and its approach in Asakusa",
+    "locker": {
+      "station": "Asakusa",
+      "fees": [
+        500,
+        600,
+        900,
+        1000
+      ],
+      "map": "https://www.tokyometro.jp/station/asakusa/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat33",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "animate-shinjuku": {
+    "name": "Animate Shinjuku before a Haneda flight",
+    "anchor": "Shinjuku Station, east side",
+    "access": "Use the store's current access map; Shinjuku's east side is different from the west-side airport bus area.",
+    "visit": "Take a screenshot of the series or character you want before entering Animate Shinjuku. Check one relevant floor and leave time to pack purchases rather than browsing every floor.",
+    "cost": "Shop entry is free; merchandise and paid events are extra.",
+    "source": "https://www.animate.co.jp/shop/shinjuku/",
+    "wiki": "Shinjuku",
+    "photoAlt": "Shinjuku district; area view, not the Animate store",
+    "locker": {
+      "station": "Shinjuku-sanchome",
+      "fees": [
+        500,
+        600
+      ],
+      "map": "https://www.tokyometro.jp/station/shinjuku-sanchome/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat95",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "fukagawa-edo-museum": {
+    "name": "Fukagawa Edo Museum with children before a flight",
+    "anchor": "Kiyosumi-shirakawa Station",
+    "access": "Keep the museum as the only attraction. Use the museum's barrier-free map for the entrance and lifts rather than adding Kiyosumi Garden to the same visit.",
+    "visit": "Explore the recreated Edo streets at Fukagawa Edo Museum, choosing a few houses and shopfronts to discuss with your child. Keep the separate toilet and rest stage in your plan.",
+    "cost": "Paid museum admission; current ticket categories are on the official site.",
+    "source": "https://www.kcf.or.jp/fukagawa/outline/",
+    "wiki": "Fukagawa_Edo_Museum",
+    "photoAlt": "Fukagawa Edo Museum entrance and exterior"
+  },
+  "ginza": {
+    "name": "Ginza shopping before a Haneda flight",
+    "anchor": "Ginza Station, Ginza 4-chome crossing",
+    "access": "Choose your return station first. Ginza Station is not Tokyo Station, and a department-store basement can add extra time to reach the street.",
+    "visit": "Use Ginza Mitsukoshi for a single food-hall or souvenir stop near the 4-chome crossing. If you prefer stationery, choose Itoya instead; do not try to do both on a short departure-day visit.",
+    "cost": "Street browsing is free; food, shopping and exhibitions have separate charges.",
+    "source": "https://www.ginza.jp/en/",
+    "wiki": "Ginza",
+    "photoAlt": "Ginza shopping street and Ginza 4-chome buildings",
+    "locker": {
+      "station": "Ginza",
+      "fees": [
+        500,
+        600,
+        900,
+        1000
+      ],
+      "map": "https://www.tokyometro.jp/station/ginza/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat81",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "ginza-evening": {
+    "name": "Ginza dinner before a late Haneda flight",
+    "anchor": "Ginza Station, Ginza 4-chome crossing",
+    "access": "Start and finish on the same side of the district. Confirm the restaurant's last order as well as its closing time.",
+    "visit": "Choose one restaurant in Ginza Mitsukoshi or another single building with immediate seating. Ask for the expected finish time before ordering; a long tasting menu is a poor fit for a fixed airport departure.",
+    "cost": "Restaurant menu prices vary; no meal price or reservation is included in the planner.",
+    "source": "https://www.ginza.jp/en/",
+    "wiki": "Ginza",
+    "photoAlt": "Ginza district in Tokyo; general area view",
+    "locker": {
+      "station": "Ginza",
+      "fees": [
+        500,
+        600,
+        900,
+        1000
+      ],
+      "map": "https://www.tokyometro.jp/station/ginza/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat81",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "hamamatsucho-zojoji": {
+    "name": "Zojoji and Hamamatsucho before Haneda",
+    "anchor": "Hamamatsucho Station and Daimon",
+    "access": "Keep Hamamatsucho's Tokyo Monorail entrance as your return anchor. Daimon subway and JR entrances do not lead directly to the monorail platform.",
+    "visit": "Walk to Zojoji's main approach and look back toward Tokyo Tower. For the short route, enjoy the exterior view and return; do not add a deck ticket on arrival.",
+    "cost": "Exterior sightseeing does not include paid temple exhibitions or Tokyo Tower admission.",
+    "source": "https://www.gotokyo.org/en/destinations/central-tokyo/hamamatsucho/index.html",
+    "wiki": "Zōjō-ji",
+    "photoAlt": "Main hall of Zojoji temple in Tokyo"
+  },
+  "hanazono-shrine": {
+    "name": "Hanazono Shrine: a short Shinjuku stop before Haneda",
+    "anchor": "Shinjuku-sanchome Station",
+    "access": "Use the shrine's access map and return to the station used by your airport route. Do not treat a nearby subway entrance as the JR airport connection.",
+    "visit": "At Hanazono Shrine, choose the main hall and a short look at the torii-lined side shrine. Festival stalls can transform the space; keep the visit short when an event fills the grounds.",
+    "cost": "The outdoor shrine visit has no general admission ticket; optional offerings and event purchases are extra.",
+    "source": "https://hanazono-jinja.or.jp/",
+    "wiki": "Hanazono_Shrine",
+    "photoAlt": "Hanazono Shrine in Shinjuku",
+    "locker": {
+      "station": "Shinjuku-sanchome",
+      "fees": [
+        500,
+        600
+      ],
+      "map": "https://www.tokyometro.jp/station/shinjuku-sanchome/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat95",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "haneda-airport": {
+    "name": "Haneda Airport: food, shops and views before departure",
+    "anchor": "Your airline's Haneda terminal",
+    "access": "Confirm Terminal 2 or 3 for international departures from your booking. Stay landside or airside according to your next procedure; terminal changes consume time.",
+    "visit": "If you are departing from Terminal 3 and still landside, consider Edo Ko-ji for one meal or the observation deck for a short view. Do not travel to Terminal 3 just for this if your flight uses another terminal.",
+    "cost": "Food and purchases are extra; terminal-specific opening notices apply.",
+    "source": "https://tokyo-haneda.com/en/",
+    "wiki": "Haneda_Airport",
+    "photoAlt": "Aerial view of Haneda Airport"
+  },
+  "harajuku": {
+    "name": "Harajuku shopping before a Haneda flight",
+    "anchor": "Harajuku Station, Takeshita Street side",
+    "access": "Use Takeshita Street as the turnaround point rather than continuing to Shibuya. Photograph the station entrance you intend to return to.",
+    "visit": "Pick one shop on Takeshita Street and one short street pass. When the crowd stops moving freely, turn back rather than trying to reach every shop.",
+    "cost": "Street entry is free; shopping and cafés are extra.",
+    "source": "https://www.gotokyo.org/en/destinations/western-tokyo/harajuku/index.html",
+    "wiki": "Harajuku",
+    "photoAlt": "Harajuku Station and the surrounding street",
+    "locker": {
+      "station": "Meiji-jingumae",
+      "fees": [
+        500,
+        600,
+        900,
+        1000
+      ],
+      "map": "https://www.tokyometro.jp/station/meiji-jingumae/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat143",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "hozenji": {
+    "name": "Hozenji and its alley before a KIX flight",
+    "anchor": "Namba Station, Hozenji Yokocho",
+    "access": "Locate Nankai Namba for the airport train before walking toward Hozenji. Metro Namba and Osaka-Namba are different station areas.",
+    "visit": "Visit Hozenji's moss-covered Fudo statue and the short stone-paved Hozenji Yokocho. Treat a meal as optional: a restaurant queue should not become another timed attraction.",
+    "cost": "The outdoor temple-and-alley visit has no general admission ticket; offerings and meals are extra.",
+    "source": "https://houzenji.jp/",
+    "wiki": "Hōzen-ji",
+    "photoAlt": "Hozenji temple and its moss-covered statue",
+    "commonsFile": "Hozenji (Osaka Chuo-ku) Temple hdsr S5 30.jpg"
+  },
+  "kamigata-ukiyoe-museum": {
+    "name": "Kamigata Ukiyoe Museum before a KIX flight",
+    "anchor": "Namba Station, Hozenji area",
+    "access": "Use the museum's access directions near Hozenji. Keep Nankai Namba as the final return point for the airport railway.",
+    "visit": "Choose a few Osaka actor prints in Kamigata Ukiyoe Museum and compare their faces and costumes. Do the museum first; make the nearby alley optional if the visit runs long.",
+    "cost": "Paid museum admission; workshops have separate prices and reservations.",
+    "source": "https://kamigata.jp/kmgt/",
+    "wiki": "Kamigata_Ukiyo-e_Museum",
+    "photoAlt": "Hozenji beside the museum route; this shows the neighboring temple, not the museum interior",
+    "commonsFile": "Hozenji (Osaka Chuo-ku) Temple hdsr S5 30.jpg"
+  },
+  "kanda-jimbocho": {
+    "name": "Jimbocho bookshops before a Haneda flight",
+    "anchor": "Jimbocho Station, bookshop district",
+    "access": "Keep the walk around Yasukuni-dori. Kanda and Jimbocho are different stations; choose your airport connection before leaving the area.",
+    "visit": "Choose a topic before entering the Jimbocho bookshop district. Browse two neighboring shops on Yasukuni-dori, then stop with one purchase to pack rather than extending the search into another street.",
+    "cost": "Browsing is free; books and cafés are extra. Individual shops set their own holidays.",
+    "source": "https://www.gotokyo.org/en/destinations/central-tokyo/kanda-and-jimbocho/index.html",
+    "wiki": "Jinbōchō",
+    "photoAlt": "Secondhand books beside a walkway in Jimbocho",
+    "commonsFile": "Books along a walkway in the Kanda-Jimbocho area of Tokyo.JPG",
+    "locker": {
+      "station": "Jimbocho",
+      "fees": [
+        300,
+        500,
+        600
+      ],
+      "map": "https://www.tokyometro.jp/station/jimbocho/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat168",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "kansai-airport": {
+    "name": "Kansai Airport: a last stop near your KIX terminal",
+    "anchor": "Kansai-Airport Station and your departure terminal",
+    "access": "Railway passengers arrive by Terminal 1 and Aeroplaza. Terminal 2 needs the official onward access route; include it before choosing a meal.",
+    "visit": "For a low-transfer final stop, stay in your departure terminal or Aeroplaza for one seated meal. Sky View is a separate outing with a bus journey, not a walk from the check-in counter.",
+    "cost": "Meals and shopping are extra; check the correct terminal's public and restricted areas.",
+    "source": "https://www.kansai-airport.or.jp/en/",
+    "wiki": "Kansai_International_Airport",
+    "photoAlt": "Kansai International Airport terminal and airport island"
+  },
+  "kappabashi": {
+    "name": "Kappabashi kitchenware shopping before Haneda",
+    "anchor": "Tawaramachi Station and Kappabashi Dougu Street",
+    "access": "Use the street association's access map. The Asakusa starting area in the planner includes an approach allowance; it is not the same as already standing in a shop.",
+    "visit": "Choose one category, such as bowls, chopsticks or food replicas. Use the official store directory to pick two nearby shops before arriving, and leave packing time for breakable items.",
+    "cost": "Street browsing is free. Shop hours vary; the association says only about 30% of stores open on Sundays.",
+    "source": "https://www.kappabashi.or.jp/en/qa/",
+    "wiki": "Kappabashi-dōri",
+    "photoAlt": "The southern entrance to Kappabashi kitchenware street",
+    "commonsFile": "Kappabashi-dori streetcorner (Kitchen town - southern end) Tokyo Japan.jpg",
+    "locker": {
+      "station": "Asakusa",
+      "fees": [
+        500,
+        600,
+        900,
+        1000
+      ],
+      "map": "https://www.tokyometro.jp/station/asakusa/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat33",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "meiji-shrine": {
+    "name": "Meiji Jingu before a Haneda flight",
+    "anchor": "Harajuku Station and Meiji Jingu south entrance",
+    "access": "Use the south entrance near Harajuku for an out-and-back visit. The woodland approach is part of the walking budget, not instant access to the sanctuary.",
+    "visit": "Walk the south approach to the main sanctuary, pause at the torii and return the same way. Save the museum and inner garden for a day without a flight deadline.",
+    "cost": "The main shrine grounds are free; the inner garden and museum are separate paid visits. Grounds hours vary by month.",
+    "source": "https://www.meijijingu.or.jp/en/",
+    "wiki": "Meiji_Shrine",
+    "photoAlt": "Meiji Jingu main shrine area",
+    "locker": {
+      "station": "Meiji-jingumae",
+      "fees": [
+        500,
+        600,
+        900,
+        1000
+      ],
+      "map": "https://www.tokyometro.jp/station/meiji-jingumae/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat143",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "nakano-broadway": {
+    "name": "Nakano Broadway collector shopping before Haneda",
+    "anchor": "Nakano Station, north side",
+    "access": "Go through Nakano Sunmall toward Nakano Broadway and return to Nakano Station. The linked departure plan starts in Shinjuku and includes the outward journey to Nakano; change the starting area if you are already elsewhere.",
+    "visit": "Pick two specialist Mandarake shops or categories before entering Nakano Broadway. Start after your chosen shops open and avoid waiting for a rare item to be located.",
+    "cost": "Building browsing is free; shop opening times differ and purchases are extra.",
+    "source": "https://www.mandarake.co.jp/dir/nkn/",
+    "wiki": "Nakano_Broadway",
+    "photoAlt": "Nakano Broadway shopping complex"
+  },
+  "namba": {
+    "name": "Namba before KIX: a meal close to the airport train",
+    "anchor": "Nankai Namba Station",
+    "access": "Record the Nankai entrance and platform approach first. JR Namba, Osaka-Namba and Metro Namba are not the same airport departure point.",
+    "visit": "Use Namba CITY for a single meal or food purchase close to Nankai Namba. Choose Hozenji only when you have time for the return walk; do not add Dotonbori automatically.",
+    "cost": "Public browsing is free; dining and shopping are extra.",
+    "source": "https://osaka-info.jp/en/areas/namba/",
+    "wiki": "Namba",
+    "photoAlt": "Namba station area in Osaka"
+  },
+  "namba-yasaka-shrine": {
+    "name": "Namba Yasaka Shrine before a KIX flight",
+    "anchor": "Nankai Namba Station and Namba Yasaka Shrine",
+    "access": "Follow the shrine's access map from Namba. Keep the return to Nankai Namba separate from the shrine visit in your timeline.",
+    "visit": "Make the lion-shaped hall at Namba Yasaka Shrine the whole cultural stop. Photograph it, visit the grounds respectfully and return; adding Dotonbori makes a different itinerary.",
+    "cost": "The shrine grounds have no general admission ticket; optional offerings are extra.",
+    "source": "https://nambayasaka.jp/",
+    "wiki": "Namba_Yasaka_Jinja",
+    "photoAlt": "Entrance to Namba Yasaka Shrine, with the lion hall beyond",
+    "commonsFile": "Namba-Yasaka-Shrine-entrance seeing lion head.jpg"
+  },
+  "narita-airport": {
+    "name": "Narita Airport: what to do before your flight",
+    "anchor": "Your airline's Narita terminal",
+    "access": "Confirm Terminal 1, 2 or 3 before boarding the train. Terminal 3 uses the Terminal 2 station plus the official onward route.",
+    "visit": "Use one meal, souvenir shop or seated rest in your own terminal after resolving check-in and baggage questions. Stay at the airport rather than returning to Narita town once airline deadlines become uncertain.",
+    "cost": "Food, shopping and paid facilities have separate charges; public areas and post-security areas differ.",
+    "source": "https://www.narita-airport.jp/en/",
+    "wiki": "Narita_International_Airport",
+    "photoAlt": "Aerial view of Narita International Airport"
+  },
+  "narita-omotesando": {
+    "name": "Narita Omotesando before a Narita flight",
+    "anchor": "JR Narita or Keisei Narita Station",
+    "access": "Choose JR or Keisei according to your airport train. The Omotesando approach slopes toward Naritasan, so leave energy and time for the walk back.",
+    "visit": "Choose a short stretch of Narita Omotesando and one unagi restaurant with immediate seating. If lunch has a long queue, keep the street walk and eat at the airport.",
+    "cost": "Street browsing is free; unagi meals vary by restaurant and are not included in the planner.",
+    "source": "https://www.nrtk.jp/translate/index.php?lang=en",
+    "wiki": "Narita,_Chiba",
+    "photoAlt": "Narita town and the Naritasan approach"
+  },
+  "naritasan-shinshoji": {
+    "name": "Naritasan Shinshoji before a Narita flight",
+    "anchor": "JR Narita or Keisei Narita Station",
+    "access": "Walk the Omotesando approach toward Naritasan Shinshoji and return to your chosen station. For reduced mobility, use the temple's official access information rather than assuming every stair has a nearby lift.",
+    "visit": "Choose the main temple approach and one courtyard. Leave the large park for another visit if it would push the return walk past your leave-by time.",
+    "cost": "The temple grounds have no general admission ticket; some facilities, events and offerings are separate.",
+    "source": "https://www.naritasan.or.jp/",
+    "wiki": "Narita-san",
+    "photoAlt": "Naritasan Shinshoji temple buildings"
+  },
+  "nihonbashi": {
+    "name": "Nihonbashi bridge and shopping before a flight",
+    "anchor": "Nihonbashi or Mitsukoshimae Station",
+    "access": "Choose which station serves your airport route before walking. Mitsukoshimae and Nihonbashi are not interchangeable entrances to the same platform.",
+    "visit": "See Nihonbashi Bridge, then choose one food or craft stop in the COREDO Muromachi area. Keep the return route on the same side of the district instead of adding Tokyo Station shopping.",
+    "cost": "The bridge walk is free; food, shopping and exhibitions are extra.",
+    "source": "https://www.gotokyo.org/en/destinations/central-tokyo/nihombashi/index.html",
+    "wiki": "Nihonbashi",
+    "photoAlt": "Chuo-dori near Nihonbashi in Tokyo",
+    "locker": {
+      "station": "Mitsukoshimae",
+      "fees": [
+        500,
+        600,
+        900,
+        1000
+      ],
+      "map": "https://www.tokyometro.jp/station/mitsukoshimae/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat78",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "odaiba": {
+    "name": "Odaiba waterfront before a Haneda flight",
+    "anchor": "Daiba or Tokyo Teleport Station",
+    "access": "Choose the station for your checked airport route before starting. The waterfront and malls span a large area; a bridge walk to the mainland is outside this short-stop plan.",
+    "visit": "Use Odaiba Marine Park for one Rainbow Bridge view. If rain makes the waterfront unpleasant, choose a nearby indoor break at AQUA CiTY rather than adding a second attraction.",
+    "cost": "The public waterfront walk is free; shopping, dining and indoor attractions are extra.",
+    "source": "https://www.gotokyo.org/en/destinations/southern-tokyo/odaiba/index.html",
+    "wiki": "Odaiba",
+    "photoAlt": "Odaiba waterfront and Rainbow Bridge view"
+  },
+  "omotesando": {
+    "name": "Omotesando shopping before a Haneda flight",
+    "anchor": "Harajuku or Omotesando Station",
+    "access": "Keep the avenue walk between your chosen shop and the station used by your return route. A full Harajuku-to-Shibuya walk is outside this short stop.",
+    "visit": "Choose Omotesando Hills or one design shop along the avenue. Decide which item you want before browsing, then stop with time left for packing.",
+    "cost": "A street walk is free; shopping, cafés and ticketed events are extra.",
+    "source": "https://www.gotokyo.org/en/destinations/western-tokyo/aoyama-and-omotesando/index.html",
+    "wiki": "Omotesandō",
+    "photoAlt": "Omotesando avenue in Tokyo",
+    "locker": {
+      "station": "Omotesando",
+      "fees": [
+        500,
+        600,
+        900
+      ],
+      "map": "https://www.tokyometro.jp/station/omote-sando/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat142",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "rinku-town": {
+    "name": "Rinku Town before KIX: outlets or a seaside walk",
+    "anchor": "Rinku-Town Station",
+    "access": "Return to Rinku-Town Station for an airport-bound service. Confirm the airport-island connection before starting, especially in bad weather.",
+    "visit": "Choose one section of Rinku Premium Outlets or a short Rinku Park seaside view. Do not try to combine a full outlet shopping trip with the waterfront loop.",
+    "cost": "The outdoor walk is free; purchases and paid attractions are extra.",
+    "source": "https://visitizumisanojpn.com/en/",
+    "wiki": "Rinku_Town",
+    "photoAlt": "Rinku-Town Station near Kansai Airport",
+    "commonsFile": "Rinku-town st01s3200.jpg"
+  },
+  "roppongi-azabudai": {
+    "name": "Roppongi or Azabudai before a Haneda flight",
+    "anchor": "Roppongi Station or Kamiyacho Station",
+    "access": "Choose one district and its return station. Walking between Roppongi Hills and Azabudai Hills is additional travel, not a single station-side stop.",
+    "visit": "For the compact option choose one public space or café at Azabudai Hills. A museum or observation ticket needs a confirmed time slot and its own budget; do not assume a public viewing floor is freely available.",
+    "cost": "Public-area browsing differs from paid exhibitions and viewing facilities; check the chosen facility.",
+    "source": "https://www.azabudai-hills.com/en/",
+    "wiki": "Azabudai_Hills",
+    "photoAlt": "Azabudai Hills buildings; general complex view",
+    "locker": {
+      "station": "Roppongi",
+      "fees": [
+        500,
+        600,
+        900
+      ],
+      "map": "https://www.tokyometro.jp/station/roppongi/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat111",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "shibuya": {
+    "name": "Shibuya Crossing before a Haneda flight",
+    "anchor": "Shibuya Station, Hachiko side",
+    "access": "Locate the Hachiko side and the entrance for your return service. Shibuya's JR, private rail and subway platforms occupy different levels.",
+    "visit": "See Hachiko and Shibuya Crossing, then take one seated break. SHIBUYA SKY is a separate timed-ticket visit; only add it when its slot fits your entire airport plan.",
+    "cost": "The crossing and Hachiko area are free; the viewpoint, meals and purchases are extra.",
+    "source": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+    "wiki": "Shibuya",
+    "photoAlt": "Shibuya skyline viewed from the Harajuku area",
+    "locker": {
+      "station": "Shibuya",
+      "fees": [
+        300,
+        500,
+        600,
+        900,
+        1000
+      ],
+      "map": "https://www.tokyometro.jp/station/shibuya/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat163",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "shinagawa": {
+    "name": "Shinagawa before Haneda: a meal near the train",
+    "anchor": "Shinagawa Station, JR and Keikyu concourse",
+    "access": "Choose your meal on the side of the gates you can legally access. ecute Shinagawa is inside JR gates; the Keikyu airport route has its own gate and platform.",
+    "visit": "Use ecute Shinagawa for one food purchase if you already have access to the JR paid area. Otherwise choose a station-side meal outside the gates; do not buy a rail ticket just to reach a food shop.",
+    "cost": "Food and purchases are extra. JR-gated shops may require a valid ticket or admission, unlike an outside-gate café.",
+    "source": "https://www.ecute.jp/shinagawa",
+    "wiki": "Shinagawa_Station",
+    "photoAlt": "Shinagawa Station building and station area"
+  },
+  "shiodome": {
+    "name": "Shiodome and Shimbashi before a Haneda flight",
+    "anchor": "Shimbashi Station and Shiodome pedestrian decks",
+    "access": "Record the exit and level used to reach the deck. Shimbashi railway platforms, underground passages and Shiodome Station are separate navigation tasks.",
+    "visit": "Choose Caretta Shiodome or one short deck-level walk, followed by a seated break. Keep the airport return on the same level where practical rather than adding Hamarikyu as a second attraction.",
+    "cost": "The public walk is free; cafés, restaurants and paid attractions have separate charges.",
+    "source": "https://www.gotokyo.org/en/destinations/central-tokyo/shiodome-and-shimbashi/index.html",
+    "wiki": "Shiodome",
+    "photoAlt": "Shiodome buildings and pedestrian area",
+    "locker": {
+      "station": "Shimbashi",
+      "fees": [
+        500,
+        600,
+        900
+      ],
+      "map": "https://www.tokyometro.jp/station/shimbashi/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat82",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "tokyo-character-street": {
+    "name": "Tokyo Character Street before a Haneda flight",
+    "anchor": "Tokyo Station, Yaesu side B1",
+    "access": "Tokyo Character Street is in Tokyo Station First Avenue outside the JR ticket gates. Do not enter the paid area expecting to reach the shops.",
+    "visit": "Pick two favorite character shops at Tokyo Character Street rather than checking every storefront. Allow time for payment and packing before returning to your luggage or airport connection.",
+    "cost": "Browsing is free; merchandise and events are extra. Each shop's current opening notice takes priority.",
+    "source": "https://www.tokyoeki-1bangai.co.jp/tokyocharacterstreet/",
+    "wiki": "Tokyo_Station",
+    "photoAlt": "Tokyo Station; exterior area view, not the Character Street interior"
+  },
+  "tokyo-station-gallery": {
+    "name": "Tokyo Station Gallery before a Haneda flight",
+    "anchor": "Tokyo Station, Marunouchi North entrance",
+    "access": "The gallery is on the Marunouchi North side, outside the JR ticket gates. Keep Yaesu-side airport buses and shopping separate from the entrance decision.",
+    "visit": "Choose a few works and look at the station's exposed brickwork inside Tokyo Station Gallery. Keep the exhibition visit and the family rest stage; do not replace the rest stage with more station shopping.",
+    "cost": "Exhibition admission is required; prices depend on the exhibition. The planner only offers dates in its verified exhibition calendar.",
+    "source": "https://www.ejrcf.or.jp/gallery/institution.html",
+    "wiki": "Tokyo_Station_Gallery",
+    "photoAlt": "Tokyo Station Gallery entrance and historic station building"
+  },
+  "tokyo-station-marunouchi": {
+    "name": "Tokyo Station and Marunouchi before a flight",
+    "anchor": "Tokyo Station, Marunouchi side",
+    "access": "The red-brick facade is on the Marunouchi side. Many airport buses use the Yaesu side; allow a separate station crossing if that is your booked route.",
+    "visit": "See the red-brick facade from the Marunouchi station square, then choose one souvenir zone. Keep Tokyo Character Street on the Yaesu side as an alternative, not an automatic extra.",
+    "cost": "The station-square walk is free; paid-gate shops require the appropriate access and purchases are extra.",
+    "source": "https://www.gotokyo.org/en/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html",
+    "wiki": "Tokyo_Station",
+    "photoAlt": "Tokyo Station Marunouchi red-brick facade"
+  },
+  "tokyo-tower": {
+    "name": "Tokyo Tower before Haneda: exterior or a deck visit",
+    "anchor": "Onarimon, Akabanebashi or Hamamatsucho",
+    "access": "Choose the station used by your return airport route. The tower is not directly on Hamamatsucho's monorail platform; retain the walking allowance.",
+    "visit": "Choose either the Tokyo Tower exterior with Zojoji or a reserved observation-deck visit. If ticket queues are uncertain, enjoy the exterior view and return on schedule.",
+    "cost": "Exterior viewing is free; observation decks require tickets and have different products and prices.",
+    "source": "https://www.tokyotower.co.jp/en.html",
+    "wiki": "Tokyo_Tower",
+    "photoAlt": "Tokyo Tower and its surroundings"
+  },
+  "toyosu": {
+    "name": "Toyosu Market before a Haneda flight",
+    "anchor": "Shijo-mae Station and the market visitor route",
+    "access": "Use the market's designated visitor entrances from Shijo-mae. Toyosu Station, the market buildings and the bay waterfront are not a single entrance.",
+    "visit": "Choose one restaurant in Toyosu Market and a short visitor-route look. Do not assume a planned breakfast also includes tuna-auction viewing or its separate procedures.",
+    "cost": "Visitor routes and restaurant meals have different conditions; meals are extra and market holidays affect the visit.",
+    "source": "https://www.gotokyo.org/en/destinations/eastern-tokyo/toyosu/index.html",
+    "wiki": "Toyosu_Market",
+    "photoAlt": "Toyosu Market buildings in Tokyo",
+    "locker": {
+      "station": "Toyosu",
+      "fees": [
+        500,
+        600,
+        900,
+        1000
+      ],
+      "map": "https://www.tokyometro.jp/station/toyosu/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat161",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "tsukiji-outer-market": {
+    "name": "Tsukiji Outer Market before a Haneda flight",
+    "anchor": "Tsukiji or Tsukijishijo Station",
+    "access": "Use the outer-market street map for your chosen stall and return station. This is not Toyosu Market and does not include a trip to the tuna auction.",
+    "visit": "Choose one food priority and one short browsing lane in Tsukiji Outer Market. If the famous stall has a long queue, buy from an open alternative or eat at the airport.",
+    "cost": "Street browsing is free; food prices and shop hours vary. Use the market calendar before choosing a date.",
+    "source": "https://www.tsukiji.or.jp/english/",
+    "wiki": "Tsukiji",
+    "photoAlt": "A food stall at Tsukiji Outer Market",
+    "commonsFile": "Tsukiji Outer Market -04.jpg"
+  },
+  "ueno-ameyoko": {
+    "name": "Ueno and Ameyoko before a Haneda or Narita flight",
+    "anchor": "JR Ueno or Keisei-Ueno Station",
+    "access": "Choose JR Ueno or Keisei-Ueno before storing bags. The Ameyoko shopping streets sit between Ueno and Okachimachi, not inside the Skyliner terminal.",
+    "visit": "Make one pass through Ameyoko and choose a no-queue snack or meal. A museum in Ueno Park is a separate admission and closing-time commitment, not a free extra.",
+    "cost": "Market browsing is free; meals, purchases and museum tickets are extra.",
+    "source": "https://www.gotokyo.org/en/destinations/northern-tokyo/ueno/index.html",
+    "wiki": "Ameya-Yokochō",
+    "photoAlt": "Ameyoko shopping street near Ueno"
+  },
+  "ueno-toshogu": {
+    "name": "Ueno Toshogu before a Haneda flight",
+    "anchor": "Ueno Station and Ueno Park",
+    "access": "Use the shrine's current access map through Ueno Park. Keep the return to your chosen Ueno station in the timeline instead of walking toward another museum.",
+    "visit": "At Ueno Toshogu, focus on the carved gate, gold decoration and lantern approach. The paid precinct is distinct from entering the shrine buildings, which are not open for a casual interior visit.",
+    "cost": "The inner precinct requires admission; the peony garden and special events are separate. Check current ticket categories.",
+    "source": "https://www.uenotoshogu.com/",
+    "wiki": "Ueno_Tōshō-gū",
+    "photoAlt": "Ueno Toshogu shrine gate and precinct",
+    "locker": {
+      "station": "Ueno",
+      "fees": [
+        300,
+        500,
+        600,
+        900
+      ],
+      "map": "https://www.tokyometro.jp/station/ueno/yardmap/index.html",
+      "source": "https://www.metocan.co.jp/locker/#cat77",
+      "sourceDate": "2026-10-01",
+      "checked": "2026-10-27"
+    }
+  },
+  "umeda": {
+    "name": "Umeda and Osaka Station before a KIX flight",
+    "anchor": "JR Osaka Station or your booked airport bus stop",
+    "access": "Choose the JR airport-train platform or exact airport-bus stop before shopping. Osaka, Osaka-Umeda and Umeda are several connected stations, not one departure gate.",
+    "visit": "Choose Osaka Station City for one seated meal or a short public-space pause. Keep an observation attraction as an alternative only when a booked slot and return walk fit.",
+    "cost": "Public-area browsing is free; dining, shopping and paid observation facilities are extra.",
+    "source": "https://osaka-info.jp/en/areas/umeda/",
+    "wiki": "Osaka_Station",
+    "photoAlt": "Osaka Station City buildings and station area"
+  },
+  "dotonbori": {
+    "name": "Dotonbori before KIX: one riverwalk and food stop",
+    "anchor": "Namba Station and Ebisubashi Bridge",
+    "access": "Keep Nankai Namba as the airport return station. The Dotonbori riverwalk is not beside the KIX train platform.",
+    "visit": "See the Glico sign from Ebisubashi and choose one short riverwalk section. Pick a takoyaki stall with a short queue and skip the river cruise on this compact route.",
+    "cost": "The riverwalk is free; food, cruises and purchases are extra.",
+    "source": "https://osaka-info.jp/en/spot/dotonbori/",
+    "wiki": "Dōtonbori",
+    "photoAlt": "Dotonbori canal and signs in Osaka"
+  }
+}

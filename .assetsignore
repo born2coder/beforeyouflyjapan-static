@@ -5,3 +5,9 @@ wrangler.jsonc
 .assetsignore
 tests/
 worker.mjs
+
+audit/
+content/
+scripts/
+.openai/
+preview-dist/

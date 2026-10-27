@@ -1,0 +1,317 @@
+{
+  "date": "2026-10-27",
+  "placeGuides": 40,
+  "contextualRoutes": 44,
+  "reachableSearchTargets": 56,
+  "closedGalleryDates": 2,
+  "evidence": [
+    {
+      "slug": "akihabara",
+      "airport": "HND",
+      "start": "Akihabara",
+      "topPlan": 104,
+      "targetProtected": true
+    },
+    {
+      "slug": "akihabara",
+      "airport": "NRT",
+      "start": "Akihabara",
+      "topPlan": 115,
+      "targetProtected": true
+    },
+    {
+      "slug": "asakusa-sensoji",
+      "airport": "HND",
+      "start": "Asakusa",
+      "topPlan": 251,
+      "targetProtected": true
+    },
+    {
+      "slug": "asakusa-sensoji",
+      "airport": "NRT",
+      "start": "Asakusa",
+      "topPlan": 263,
+      "targetProtected": true
+    },
+    {
+      "slug": "animate-shinjuku",
+      "airport": "HND",
+      "start": "Shinjuku",
+      "topPlan": 4003,
+      "targetProtected": true
+    },
+    {
+      "slug": "fukagawa-edo-museum",
+      "airport": "HND",
+      "start": "Tokyo Station",
+      "topPlan": 4007,
+      "targetProtected": true
+    },
+    {
+      "slug": "ginza",
+      "airport": "HND",
+      "start": "Ginza",
+      "topPlan": 235,
+      "targetProtected": true
+    },
+    {
+      "slug": "ginza-evening",
+      "airport": "HND",
+      "start": "Ginza",
+      "topPlan": 109,
+      "targetProtected": true
+    },
+    {
+      "slug": "hamamatsucho-zojoji",
+      "airport": "HND",
+      "start": "Hamamatsucho",
+      "topPlan": 244,
+      "targetProtected": true
+    },
+    {
+      "slug": "hanazono-shrine",
+      "airport": "HND",
+      "start": "Shinjuku",
+      "topPlan": 4002,
+      "targetProtected": true
+    },
+    {
+      "slug": "haneda-airport",
+      "airport": "HND",
+      "start": "Haneda Airport",
+      "topPlan": 28,
+      "targetProtected": true
+    },
+    {
+      "slug": "harajuku",
+      "airport": "HND",
+      "start": "Shibuya",
+      "topPlan": 249,
+      "targetProtected": true
+    },
+    {
+      "slug": "hozenji",
+      "airport": "KIX",
+      "start": "Namba",
+      "topPlan": 4008,
+      "targetProtected": true
+    },
+    {
+      "slug": "kamigata-ukiyoe-museum",
+      "airport": "KIX",
+      "start": "Namba",
+      "topPlan": 4010,
+      "targetProtected": true
+    },
+    {
+      "slug": "kanda-jimbocho",
+      "airport": "HND",
+      "start": "Jimbocho",
+      "topPlan": 254,
+      "targetProtected": true
+    },
+    {
+      "slug": "kansai-airport",
+      "airport": "KIX",
+      "start": "Kansai Airport",
+      "topPlan": 37,
+      "targetProtected": true
+    },
+    {
+      "slug": "kappabashi",
+      "airport": "HND",
+      "start": "Asakusa",
+      "topPlan": 251,
+      "targetProtected": true
+    },
+    {
+      "slug": "meiji-shrine",
+      "airport": "HND",
+      "start": "Harajuku",
+      "topPlan": 234,
+      "targetProtected": true
+    },
+    {
+      "slug": "nakano-broadway",
+      "airport": "HND",
+      "start": "Shinjuku",
+      "topPlan": 4004,
+      "targetProtected": true
+    },
+    {
+      "slug": "namba",
+      "airport": "KIX",
+      "start": "Namba",
+      "topPlan": 33,
+      "targetProtected": true
+    },
+    {
+      "slug": "namba-yasaka-shrine",
+      "airport": "KIX",
+      "start": "Namba",
+      "topPlan": 4009,
+      "targetProtected": true
+    },
+    {
+      "slug": "narita-airport",
+      "airport": "NRT",
+      "start": "Narita Airport",
+      "topPlan": 32,
+      "targetProtected": true
+    },
+    {
+      "slug": "narita-omotesando",
+      "airport": "NRT",
+      "start": "Narita",
+      "topPlan": 265,
+      "targetProtected": true
+    },
+    {
+      "slug": "naritasan-shinshoji",
+      "airport": "NRT",
+      "start": "Narita",
+      "topPlan": 265,
+      "targetProtected": true
+    },
+    {
+      "slug": "nihonbashi",
+      "airport": "HND",
+      "start": "Nihonbashi",
+      "topPlan": 90,
+      "targetProtected": true
+    },
+    {
+      "slug": "odaiba",
+      "airport": "HND",
+      "start": "Odaiba",
+      "topPlan": 255,
+      "targetProtected": true
+    },
+    {
+      "slug": "omotesando",
+      "airport": "HND",
+      "start": "Harajuku",
+      "topPlan": 247,
+      "targetProtected": true
+    },
+    {
+      "slug": "rinku-town",
+      "airport": "KIX",
+      "start": "Rinku Town",
+      "topPlan": 36,
+      "targetProtected": true
+    },
+    {
+      "slug": "roppongi-azabudai",
+      "airport": "HND",
+      "start": "Roppongi",
+      "topPlan": 258,
+      "targetProtected": true
+    },
+    {
+      "slug": "shibuya",
+      "airport": "HND",
+      "start": "Shibuya",
+      "topPlan": 259,
+      "targetProtected": true
+    },
+    {
+      "slug": "shinagawa",
+      "airport": "HND",
+      "start": "Shinagawa",
+      "topPlan": 27,
+      "targetProtected": true
+    },
+    {
+      "slug": "shiodome",
+      "airport": "HND",
+      "start": "Ginza",
+      "topPlan": 95,
+      "targetProtected": true
+    },
+    {
+      "slug": "tokyo-character-street",
+      "airport": "HND",
+      "start": "Tokyo Station",
+      "topPlan": 4005,
+      "targetProtected": true
+    },
+    {
+      "slug": "tokyo-station-gallery",
+      "airport": "HND",
+      "start": "Tokyo Station",
+      "topPlan": 4006,
+      "targetProtected": true
+    },
+    {
+      "slug": "tokyo-station-marunouchi",
+      "airport": "HND",
+      "start": "Tokyo Station",
+      "topPlan": 253,
+      "targetProtected": true
+    },
+    {
+      "slug": "tokyo-station-marunouchi",
+      "airport": "NRT",
+      "start": "Tokyo Station",
+      "topPlan": 262,
+      "targetProtected": true
+    },
+    {
+      "slug": "tokyo-tower",
+      "airport": "HND",
+      "start": "Hamamatsucho",
+      "topPlan": 244,
+      "targetProtected": true
+    },
+    {
+      "slug": "toyosu",
+      "airport": "HND",
+      "start": "Toyosu",
+      "topPlan": 256,
+      "targetProtected": true
+    },
+    {
+      "slug": "tsukiji-outer-market",
+      "airport": "HND",
+      "start": "Tsukiji",
+      "topPlan": 92,
+      "targetProtected": true
+    },
+    {
+      "slug": "ueno-ameyoko",
+      "airport": "HND",
+      "start": "Ueno",
+      "topPlan": 260,
+      "targetProtected": true
+    },
+    {
+      "slug": "ueno-ameyoko",
+      "airport": "NRT",
+      "start": "Ueno",
+      "topPlan": 264,
+      "targetProtected": true
+    },
+    {
+      "slug": "ueno-toshogu",
+      "airport": "HND",
+      "start": "Ueno",
+      "topPlan": 4001,
+      "targetProtected": true
+    },
+    {
+      "slug": "umeda",
+      "airport": "KIX",
+      "start": "Umeda",
+      "topPlan": 35,
+      "targetProtected": true
+    },
+    {
+      "slug": "dotonbori",
+      "airport": "KIX",
+      "start": "Namba",
+      "topPlan": 33,
+      "targetProtected": true
+    }
+  ]
+}

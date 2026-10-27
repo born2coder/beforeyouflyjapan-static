@@ -5,13 +5,12 @@
   if (!source) return;
 
   const track = (event, details = {}) => {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event, ...details });
+    if (window.BYFTrack) window.BYFTrack(event, details);
   };
   if (source.isPlan) track("plan_viewed", { plan_id: source.planId });
   document.addEventListener("click", (event) => {
     const target = event.target.closest("[data-event]");
-    if (target) track(target.dataset.event, { link_url: target.href || "" });
+    if (target) track(target.dataset.event, { link_path: target.pathname || "" });
   });
 
   const form = document.getElementById("byf-form");
@@ -37,6 +36,10 @@
   };
   ensureAreaOption("Haneda Airport");
   ensureAreaOption("Rinku Town");
+  data.plans.forEach((plan) => {
+    ensureAreaOption(plan.area);
+    (plan.starts || []).forEach(ensureAreaOption);
+  });
 
   const luggageLocation = form.querySelector(".byf-luggage-location");
   const luggageSelect = form.elements.luggage_area;
@@ -55,6 +58,7 @@
 
   const savedFields = ["airport", "flight_at", "free_at", "start", "luggage", "luggage_area", "interest", "needs"];
   const incoming = new URLSearchParams(window.location.search);
+  const requestedPlace = window.BYF_VISITS?.[incoming.get("place")];
   let previous = {};
   try { previous = JSON.parse(sessionStorage.getItem("byf-conditions") || "{}"); } catch {}
   savedFields.forEach((name) => {
@@ -64,6 +68,13 @@
     else if (form.elements[name]) form.elements[name].value = value;
   });
   updateLuggage();
+  if (requestedPlace) {
+    const notice = document.createElement("p");
+    notice.className = "byf-context-notice";
+    notice.textContent = `Checking ${requestedPlace.name}. The link has set an airport and starting area; change them if needed, then enter your flight, free time and luggage. All times are in Japan Standard Time.`;
+    form.querySelector(".byf-form-head").after(notice);
+    track("place_planner_loaded", { place: incoming.get("place") });
+  }
   const saveConditions = () => {
     const values = new FormData(form);
     try { sessionStorage.setItem("byf-conditions", JSON.stringify(Object.fromEntries(savedFields.map((name) => [name, values.get(name) || ""])))); } catch {}
@@ -160,7 +171,7 @@
           steps,
           total,
           pickupMinutes: luggageFit.pickupMinutes,
-          score: core.scorePlan(plan, { startArea: start, interest, luggageMode, luggageArea, total, available }),
+          score: core.scorePlan(plan, { startArea: start, interest, luggageMode, luggageArea, total, available }) + (requestedPlace?.ids.includes(plan.id) ? 1000 : 0),
         } };
       })
       .filter(Boolean)
@@ -171,6 +182,8 @@
       return;
     }
 
+    const requestedPlaceFits = !requestedPlace || plans.some((plan) => requestedPlace.ids.includes(plan.id));
+    const placeNote = requestedPlace && !requestedPlaceFits ? `<p class="byf-alert">${escapeHtml(requestedPlace.name)} does not fit these conditions. Its opening dates, full route, starting area, airport or walking needs may rule it out. The options below are alternatives; your airport buffer is still protected.</p>` : "";
     const hasInterestMatch = !interest || plans.some((plan) => plan.interest.includes(interest));
     const preferenceNote = !hasInterestMatch ? `<p class="byf-alert">No time-safe option matches ${escapeHtml(interest)} from this starting area. These are alternatives; change the area or preference to compare again.</p>` : interest && !plans[0].interest.includes(interest) ? `<p class="byf-alert">The top option favors your starting area and luggage route. It does not match ${escapeHtml(interest)}; matching options may appear below.</p>` : "";
     const needsNote = needs !== "standard" ? `<p class="byf-alert">Showing shorter routes with 20 extra minutes for rest and station navigation. Lift access, seating and stroller suitability need a live check.</p>` : "";
@@ -213,9 +226,9 @@
       return `<article class="byf-card"><div class="byf-card-top"><span>${escapeHtml(index === 0 ? (interest && !plan.interest.includes(interest) ? "Practical alternative" : "Best fit") : plan.type)}</span><small>Checked ${escapeHtml(plan.checked)}</small></div><h3>${escapeHtml(plan.name)}</h3><p class="byf-card-hook"><b>Why go:</b> ${escapeHtml(plan.hook)}</p><p class="byf-fit-reason"><b>Why this fits:</b> ${escapeHtml(reasons.slice(0, 3).join(" • "))}</p><div class="byf-card-facts"><span><b>${formatDuration(candidate.total)}</b>complete plan</span><span><b>${escapeHtml(luggageLabel)}</b>luggage</span><span><b>${escapeHtml(plan.interest.slice(0, 2).join(" · "))}</b>experience</span></div><div class="byf-card-times"><span><small>${escapeHtml(startLabel)}</small><b>${dateFormatter.format(candidate.start)}</b></span><span><small>${escapeHtml(departureLabel)}</small><b>${dateFormatter.format(leaveAt)}</b></span><span><small>At the airport by</small><b>${dateFormatter.format(airportArrivalAt)}</b></span><span><small>Ready for airline procedures by</small><b>${dateFormatter.format(recommended)}</b></span></div><p class="byf-card-arrival"><b>${dateFormatter.format(flight)}</b> flight</p><div class="byf-actions"><a data-plan-id="${plan.id}" href="${escapeHtml(plan.url)}?${escapeHtml(params.toString())}#your-timeline">View plan details</a><a class="byf-live-link" target="_blank" rel="noopener" href="${escapeHtml(plan.live)}">Check live transport ↗</a></div></article>`;
     }).join("");
 
-    out.innerHTML = `<div class="byf-result-head"><p class="byf-kicker">YOUR OPTIONS</p><h2>Your time for the complete plan</h2><div class="byf-window"><strong>${formatDuration(available)}</strong><span>${dateFormatter.format(free)} → protected airport-ready time ${dateFormatter.format(recommended)}</span></div><p>This window includes luggage, sightseeing and the airport transfer. It is not all sightseeing time.</p></div>${preferenceNote}${needsNote}${cards}`;
+    out.innerHTML = `<div class="byf-result-head"><p class="byf-kicker">YOUR OPTIONS</p><h2>Your time for the complete plan</h2><div class="byf-window"><strong>${formatDuration(available)}</strong><span>${dateFormatter.format(free)} → protected airport-ready time ${dateFormatter.format(recommended)}</span></div><p>This window includes luggage, sightseeing and the airport transfer. It is not all sightseeing time.</p></div>${placeNote}${preferenceNote}${needsNote}${cards}`;
     out.scrollIntoView({ behavior: "smooth" });
-    track("planner_complete", { airport, available_minutes: available, results: plans.length });
+    track("planner_complete", { airport, available_minutes: available, results: plans.length, ...(requestedPlace ? {place: incoming.get("place")} : {}) });
   });
 
   out.addEventListener("click", (event) => {

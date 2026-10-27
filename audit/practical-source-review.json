@@ -1,0 +1,688 @@
+[
+  {
+    "slug": "akihabara",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/central-tokyo/akihabara/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/akihabara.webp",
+      "width": 1000,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Sotokanda,_Akihabara_Electric_Town_at_night_20231114.png",
+      "author": "Phineyes",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "alt": "Akihabara Electric Town streets and buildings"
+    },
+    "textChars": 7656
+  },
+  {
+    "slug": "asakusa-sensoji",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/asakusa/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/asakusa-sensoji.webp",
+      "width": 1000,
+      "height": 714,
+      "source": "https://commons.wikimedia.org/wiki/File:Sensoji_2023.jpg",
+      "author": "Akonnchiroll",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "alt": "Sensoji temple and its approach in Asakusa"
+    },
+    "textChars": 8405
+  },
+  {
+    "slug": "animate-shinjuku",
+    "checked": "2026-10-27",
+    "url": "https://www.animate.co.jp/shop/shinjuku/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/animate-shinjuku.webp",
+      "width": 1000,
+      "height": 533,
+      "source": "https://commons.wikimedia.org/wiki/File:Skyscrapers_of_Shinjuku_2009_January.jpg",
+      "author": "Morio",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "alt": "Shinjuku district; area view, not the Animate store"
+    },
+    "textChars": 1567
+  },
+  {
+    "slug": "fukagawa-edo-museum",
+    "checked": "2026-10-27",
+    "url": "https://www.kcf.or.jp/fukagawa/outline/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/fukagawa-edo-museum.webp",
+      "width": 1000,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Fukagawa_Edo_Museum.JPG",
+      "author": "Abasaa",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "alt": "Fukagawa Edo Museum entrance and exterior"
+    },
+    "textChars": 885
+  },
+  {
+    "slug": "ginza",
+    "checked": "2026-10-27",
+    "url": "https://www.ginza.jp/en/",
+    "fetched": false,
+    "photo": {
+      "path": "/assets/places/ginza.webp",
+      "width": 1000,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Ginza-WAKO_at_night.jpg",
+      "author": "Kakidai",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Ginza shopping street and Ginza 4-chome buildings"
+    },
+    "textChars": 0,
+    "note": "The direct response did not contain readable main content. Do not label this as a freshly verified operating source."
+  },
+  {
+    "slug": "ginza-evening",
+    "checked": "2026-10-27",
+    "url": "https://www.ginza.jp/en/",
+    "fetched": false,
+    "photo": {
+      "path": "/assets/places/ginza-evening.webp",
+      "width": 1000,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Ginza-WAKO_at_night.jpg",
+      "author": "Kakidai",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Ginza district in Tokyo; general area view"
+    },
+    "textChars": 0,
+    "note": "The direct response did not contain readable main content. Do not label this as a freshly verified operating source."
+  },
+  {
+    "slug": "hamamatsucho-zojoji",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/central-tokyo/hamamatsucho/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/hamamatsucho-zojoji.webp",
+      "width": 1000,
+      "height": 666,
+      "source": "https://commons.wikimedia.org/wiki/File:Z%C5%8Dj%C5%8D-ji_20241021.jpg",
+      "author": "This Photo was taken by Supanut Arunoprayote . Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่ง ข้อความบอกกล่าวด้วย ) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved. Please if you think that any changes should be required, please inform the author. Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract .",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "alt": "Main hall of Zojoji temple in Tokyo"
+    },
+    "textChars": 6917
+  },
+  {
+    "slug": "hanazono-shrine",
+    "checked": "2026-10-27",
+    "url": "https://hanazono-jinja.or.jp/",
+    "fetched": false,
+    "error": "HTTP Error 503: Service Unavailable",
+    "photo": {
+      "path": "/assets/places/hanazono-shrine.webp",
+      "width": 1000,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Hanazono-jinja_haiden.jpeg",
+      "author": "nnh",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "alt": "Hanazono Shrine in Shinjuku"
+    },
+    "textChars": 0
+  },
+  {
+    "slug": "haneda-airport",
+    "checked": "2026-10-27",
+    "url": "https://tokyo-haneda.com/en/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/haneda-airport.webp",
+      "width": 1000,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:All_haneda.jpg",
+      "author": "ブルーノ・プラス",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "alt": "Aerial view of Haneda Airport"
+    },
+    "textChars": 5990
+  },
+  {
+    "slug": "harajuku",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/western-tokyo/harajuku/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/harajuku.webp",
+      "width": 1000,
+      "height": 667,
+      "source": "https://commons.wikimedia.org/wiki/File:JRE-Harajuku-Station-07.jpg",
+      "author": "Rs1421",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Harajuku Station and the surrounding street"
+    },
+    "textChars": 13798
+  },
+  {
+    "slug": "hozenji",
+    "checked": "2026-10-27",
+    "url": "https://houzenji.jp/",
+    "fetched": false,
+    "error": "HTTP Error 403: Forbidden",
+    "photo": {
+      "path": "/assets/places/hozenji.webp",
+      "width": 999,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Hozenji_(Osaka_Chuo-ku)_Temple_hdsr_S5_30.jpg",
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "alt": "Hozenji temple and its moss-covered statue"
+    },
+    "textChars": 0
+  },
+  {
+    "slug": "kamigata-ukiyoe-museum",
+    "checked": "2026-10-27",
+    "url": "https://kamigata.jp/kmgt/",
+    "fetched": false,
+    "error": "HTTP Error 503: Service Unavailable",
+    "photo": {
+      "path": "/assets/places/kamigata-ukiyoe-museum.webp",
+      "width": 999,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Hozenji_(Osaka_Chuo-ku)_Temple_hdsr_S5_30.jpg",
+      "author": "Hyppolyte de Saint-Rambert",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "alt": "Hozenji beside the museum route; this shows the neighboring temple, not the museum interior"
+    },
+    "textChars": 0
+  },
+  {
+    "slug": "kanda-jimbocho",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/central-tokyo/kanda-and-jimbocho/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/kanda-jimbocho.webp",
+      "width": 1000,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Books_along_a_walkway_in_the_Kanda-Jimbocho_area_of_Tokyo.JPG",
+      "author": "Nick-D",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Secondhand books beside a walkway in Jimbocho"
+    },
+    "textChars": 7385
+  },
+  {
+    "slug": "kansai-airport",
+    "checked": "2026-10-27",
+    "url": "https://www.kansai-airport.or.jp/en/",
+    "fetched": false,
+    "error": "HTTP Error 403: Forbidden",
+    "photo": {
+      "path": "/assets/places/kansai-airport.webp",
+      "width": 1000,
+      "height": 666,
+      "source": "https://commons.wikimedia.org/wiki/File:%E9%96%A2%E8%A5%BF%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF%E5%85%A8%E4%BD%93%E5%86%99%E7%9C%9F20220811.jpg",
+      "author": "Ankou1192",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Kansai International Airport terminal and airport island"
+    },
+    "textChars": 0
+  },
+  {
+    "slug": "kappabashi",
+    "checked": "2026-10-27",
+    "url": "https://www.kappabashi.or.jp/en/qa/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/kappabashi.webp",
+      "width": 1000,
+      "height": 722,
+      "source": "https://commons.wikimedia.org/wiki/File:Kappabashi-dori_streetcorner_(Kitchen_town_-_southern_end)_Tokyo_Japan.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "The southern entrance to Kappabashi kitchenware street"
+    },
+    "textChars": 992
+  },
+  {
+    "slug": "meiji-shrine",
+    "checked": "2026-10-27",
+    "url": "https://www.meijijingu.or.jp/en/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/meiji-shrine.webp",
+      "width": 1000,
+      "height": 563,
+      "source": "https://commons.wikimedia.org/wiki/File:Meiji_Jingu_2023-3.jpg",
+      "author": "Akonnchiroll",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Meiji Jingu main shrine area"
+    },
+    "textChars": 149
+  },
+  {
+    "slug": "nakano-broadway",
+    "checked": "2026-10-27",
+    "url": "https://www.mandarake.co.jp/dir/nkn/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/nakano-broadway.webp",
+      "width": 562,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Nakano_broadway_entrance.JPG",
+      "author": "User:Kentin",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Nakano Broadway shopping complex"
+    },
+    "textChars": 1679
+  },
+  {
+    "slug": "namba",
+    "checked": "2026-10-27",
+    "url": "https://osaka-info.jp/en/areas/namba/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/namba.webp",
+      "width": 1000,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Namba_Station.JPG",
+      "author": "Own work",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Namba station area in Osaka"
+    },
+    "textChars": 246
+  },
+  {
+    "slug": "namba-yasaka-shrine",
+    "checked": "2026-10-27",
+    "url": "https://nambayasaka.jp/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/namba-yasaka-shrine.webp",
+      "width": 562,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Namba-Yasaka-Shrine-entrance_seeing_lion_head.jpg",
+      "author": "Immanuelle",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "alt": "Entrance to Namba Yasaka Shrine, with the lion hall beyond"
+    },
+    "textChars": 571
+  },
+  {
+    "slug": "narita-airport",
+    "checked": "2026-10-27",
+    "url": "https://www.narita-airport.jp/en/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/narita-airport.webp",
+      "width": 710,
+      "height": 472,
+      "source": "https://commons.wikimedia.org/wiki/File:Narita_Nemzetk%C3%B6zi_Rep%C3%BCl%C5%91t%C3%A9r.jpg",
+      "author": "Petra.G09",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Aerial view of Narita International Airport"
+    },
+    "textChars": 1121
+  },
+  {
+    "slug": "narita-omotesando",
+    "checked": "2026-10-27",
+    "url": "https://www.nrtk.jp/translate/index.php?lang=en",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/narita-omotesando.webp",
+      "width": 506,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Narita_montage.jpg",
+      "author": "Hoku-sou-san katorisi katorisi Captainm Unaaari",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Narita town and the Naritasan approach"
+    },
+    "textChars": 1618
+  },
+  {
+    "slug": "naritasan-shinshoji",
+    "checked": "2026-10-27",
+    "url": "https://www.naritasan.or.jp/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/naritasan-shinshoji.webp",
+      "width": 800,
+      "height": 450,
+      "source": "https://commons.wikimedia.org/wiki/File:Naritasan-Shinshoji-Temple.Great-Main-Hall.jpg",
+      "author": "Hoku-sou-san at Japanese Wikipedia",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "alt": "Naritasan Shinshoji temple buildings"
+    },
+    "textChars": 1149
+  },
+  {
+    "slug": "nihonbashi",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/central-tokyo/nihombashi/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/nihonbashi.webp",
+      "width": 1000,
+      "height": 668,
+      "source": "https://commons.wikimedia.org/wiki/File:Chuo-dori_from_Nihonbashi.jpg",
+      "author": "Sitao Xiang",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Chuo-dori near Nihonbashi in Tokyo"
+    },
+    "textChars": 7625
+  },
+  {
+    "slug": "odaiba",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/southern-tokyo/odaiba/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/odaiba.webp",
+      "width": 1000,
+      "height": 523,
+      "source": "https://commons.wikimedia.org/wiki/File:Odaiba_close_up_-_2025_Jan_14_01-27PM.jpeg",
+      "author": "Nesnad",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "alt": "Odaiba waterfront and Rainbow Bridge view"
+    },
+    "textChars": 8665
+  },
+  {
+    "slug": "omotesando",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/western-tokyo/aoyama-and-omotesando/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/omotesando.webp",
+      "width": 1000,
+      "height": 609,
+      "source": "https://commons.wikimedia.org/wiki/File:Omotesando_Tokyo_spring_2012.JPG",
+      "author": "Kakidai",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Omotesando avenue in Tokyo"
+    },
+    "textChars": 8705
+  },
+  {
+    "slug": "rinku-town",
+    "checked": "2026-10-27",
+    "url": "https://visitizumisanojpn.com/en/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/rinku-town.webp",
+      "width": 1000,
+      "height": 670,
+      "source": "https://commons.wikimedia.org/wiki/File:Rinku-town_st01s3200.jpg",
+      "author": "663highland",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "alt": "Rinku-Town Station near Kansai Airport"
+    },
+    "textChars": 5400
+  },
+  {
+    "slug": "roppongi-azabudai",
+    "checked": "2026-10-27",
+    "url": "https://www.azabudai-hills.com/en/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/roppongi-azabudai.webp",
+      "width": 750,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Azabudai_Hills_(Garden_Plaza_B,_towers,_and_sign;_2025-11-06).jpg",
+      "author": "William L. McGough",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Azabudai Hills buildings; general complex view"
+    },
+    "textChars": 1868
+  },
+  {
+    "slug": "shibuya",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/shibuya.webp",
+      "width": 1000,
+      "height": 666,
+      "source": "https://commons.wikimedia.org/wiki/File:Shibuya_skyline_from_Tokyu_Plaza_in_Omotesando,_Harajuku,_Tokyo,_2024_May.jpg",
+      "author": "Ximonic (Simo Räsänen)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Shibuya skyline viewed from the Harajuku area"
+    },
+    "textChars": 9393
+  },
+  {
+    "slug": "shinagawa",
+    "checked": "2026-10-27",
+    "url": "https://www.ecute.jp/shinagawa",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/shinagawa.webp",
+      "width": 1000,
+      "height": 619,
+      "source": "https://commons.wikimedia.org/wiki/File:Shinagawa_Station_-01.jpg",
+      "author": "Aimaimyi",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Shinagawa Station building and station area"
+    },
+    "textChars": 4499
+  },
+  {
+    "slug": "shiodome",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/central-tokyo/shiodome-and-shimbashi/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/shiodome.webp",
+      "width": 1000,
+      "height": 724,
+      "source": "https://commons.wikimedia.org/wiki/File:Shiodome_Area_from_Tokyo_Tower.jpg",
+      "author": "Photo by Chris 73",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Shiodome buildings and pedestrian area"
+    },
+    "textChars": 11777
+  },
+  {
+    "slug": "tokyo-character-street",
+    "checked": "2026-10-27",
+    "url": "https://www.tokyoeki-1bangai.co.jp/tokyocharacterstreet/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/tokyo-character-street.webp",
+      "width": 1000,
+      "height": 666,
+      "source": "https://commons.wikimedia.org/wiki/File:Tokyo-STA_Marunouchi-Entrance_2023.jpg",
+      "author": "MaedaAkihiko",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Tokyo Station; exterior area view, not the Character Street interior"
+    },
+    "textChars": 7711
+  },
+  {
+    "slug": "tokyo-station-gallery",
+    "checked": "2026-10-27",
+    "url": "https://www.ejrcf.or.jp/gallery/institution.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/tokyo-station-gallery.webp",
+      "width": 640,
+      "height": 480,
+      "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Station_Gallery.jpg",
+      "author": "Lover of Romance~commonswiki",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "alt": "Tokyo Station Gallery entrance and historic station building"
+    },
+    "textChars": 8222
+  },
+  {
+    "slug": "tokyo-station-marunouchi",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/tokyo-station-marunouchi.webp",
+      "width": 1000,
+      "height": 666,
+      "source": "https://commons.wikimedia.org/wiki/File:Tokyo-STA_Marunouchi-Entrance_2023.jpg",
+      "author": "MaedaAkihiko",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Tokyo Station Marunouchi red-brick facade"
+    },
+    "textChars": 13131
+  },
+  {
+    "slug": "tokyo-tower",
+    "checked": "2026-10-27",
+    "url": "https://www.tokyotower.co.jp/en.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/tokyo-tower.webp",
+      "width": 562,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_2023.jpg",
+      "author": "Akonnchiroll",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "alt": "Tokyo Tower and its surroundings"
+    },
+    "textChars": 9
+  },
+  {
+    "slug": "toyosu",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/toyosu/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/toyosu.webp",
+      "width": 1000,
+      "height": 562,
+      "source": "https://commons.wikimedia.org/wiki/File:Toyosu_Market_Tokyo_2.jpg",
+      "author": "Arne Müseler",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "alt": "Toyosu Market buildings in Tokyo"
+    },
+    "textChars": 7491
+  },
+  {
+    "slug": "tsukiji-outer-market",
+    "checked": "2026-10-27",
+    "url": "https://www.tsukiji.or.jp/english/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/tsukiji-outer-market.webp",
+      "width": 1000,
+      "height": 750,
+      "source": "https://commons.wikimedia.org/wiki/File:Tsukiji_Outer_Market_-04.jpg",
+      "author": "Aimaimyi",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "A food stall at Tsukiji Outer Market"
+    },
+    "textChars": 4295
+  },
+  {
+    "slug": "ueno-ameyoko",
+    "checked": "2026-10-27",
+    "url": "https://www.gotokyo.org/en/destinations/northern-tokyo/ueno/index.html",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/ueno-ameyoko.webp",
+      "width": 1000,
+      "height": 563,
+      "source": "https://commons.wikimedia.org/wiki/File:Ueno_20241210_133139.jpg",
+      "author": "Ka23 13",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "alt": "Ameyoko shopping street near Ueno"
+    },
+    "textChars": 9031
+  },
+  {
+    "slug": "ueno-toshogu",
+    "checked": "2026-10-27",
+    "url": "https://www.uenotoshogu.com/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/ueno-toshogu.webp",
+      "width": 1000,
+      "height": 664,
+      "source": "https://commons.wikimedia.org/wiki/File:Toshogu_Shrine_06_(15567282757).jpg",
+      "author": "Joe Mabel on Flickr as Joe Mabel from Seattle, US",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Ueno Toshogu shrine gate and precinct"
+    },
+    "textChars": 787
+  },
+  {
+    "slug": "umeda",
+    "checked": "2026-10-27",
+    "url": "https://osaka-info.jp/en/areas/umeda/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/umeda.webp",
+      "width": 1000,
+      "height": 666,
+      "source": "https://commons.wikimedia.org/wiki/File:JR_Osaka_Station_2026.jpg",
+      "author": "Sakai Yayoi",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "alt": "Osaka Station City buildings and station area"
+    },
+    "textChars": 246
+  },
+  {
+    "slug": "dotonbori",
+    "checked": "2026-10-27",
+    "url": "https://osaka-info.jp/en/spot/dotonbori/",
+    "fetched": true,
+    "photo": {
+      "path": "/assets/places/dotonbori.webp",
+      "width": 1000,
+      "height": 665,
+      "source": "https://commons.wikimedia.org/wiki/File:Osaka_Dotonbori_Ebisu_Bridge.jpg",
+      "author": "Type specimen",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "alt": "Dotonbori canal and signs in Osaka"
+    },
+    "textChars": 2135
+  }
+]

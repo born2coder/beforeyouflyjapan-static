@@ -5,7 +5,7 @@ This repository is the recovered static version of `beforeyouflyjapan.com`.
 ## What is preserved
 
 - The public design and editorial pages
-- 46 flight-day plans and 30 place guides
+- 56 flight-day plans and 40 place guides
 - The original planner ranking and safety calculations
 - Plan detail personalization through URL parameters
 - Hotel POP downloads (PNG, A4 PDF, and A5 PDF)
@@ -31,6 +31,25 @@ The contact form requires these Worker variables and secrets:
 - `sitemap.xml` — canonical static sitemap
 - `_redirects` — legacy URL redirects
 - `_headers` — static security headers
+- `content/place-practical.json` — authored visit, access, storage and photo choices
+- `scripts/build-search-experience.mjs` — rebuild the site-wide search and planner-entry improvements
+
+## Search and planner-entry release (27 October 2026)
+
+All 40 destination guides now have a compact visit, access and baggage guidance, a map link, an attributed real photograph, and links that set an airport and starting area. The airport directory exposes all 40 guides in static HTML. The 56 personalized plan pages remain `noindex,follow` and outside the 56-URL search sitemap.
+
+Run `node scripts/build-search-experience.mjs` after editing the practical content. Review official sources before changing prices or opening calendars. `scripts/collect-practical-sources.py` is an optional editorial collection helper and requires BeautifulSoup and Pillow; its review output deliberately retains metadata, not copies of entire source pages. Some operator sites cannot be fetched from this environment; the public page distinguishes those from freshly reviewed sources.
+
+The timing engine is unchanged. A requested destination receives priority only after airport, start, luggage, opening dates and available-time checks pass. Unknown flight and free-time dates are never invented.
+
+For the complete test suite with Node 24+, install the DOM test dependency outside the checkout and run:
+
+```sh
+npm install --prefix /tmp/byf-test-deps --no-save --ignore-scripts jsdom
+BYF_TEST_DEPS=/tmp/byf-test-deps node --test tests/*.test.*
+```
+
+Custom analytics events use the existing Google tag through `gtag('event', ...)`. Unit tests verify dispatch, parameter limits and omission of flight/free-time timestamps from custom events. This does not by itself establish receipt in a Google Analytics property.
 
 ## Recovery note
 
