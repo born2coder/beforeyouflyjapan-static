@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const domain='https://beforeyouflyjapan.com';
-const version='20261027-1';
+const version='20261027-2';
 const practical=JSON.parse(fs.readFileSync('content/place-practical.json','utf8'));
 const sources=Object.fromEntries(JSON.parse(fs.readFileSync('audit/practical-source-review.json','utf8')).map(row=>[row.slug,row]));
 const ctx={window:{}}; vm.createContext(ctx);
@@ -121,6 +121,16 @@ for(const file of fs.globSync('guides/*/index.html')){
 
 for(const file of allPages){
  let html=read(file);
+ if(file.startsWith('plans/')){
+  const route=data.plans.find(p=>new URL(p.url).pathname==='/'+file.replace('index.html',''));
+  if(!route)throw Error('Missing route '+file);
+  const minutes=core.totalMinutes(core.withLuggageStep(route,'none','',route.area).steps);
+  html=html.replace(/<div class="byf-facts">([\s\S]*?)<\/div>/,(_,inner)=>{
+   let index=0;return '<div class="byf-facts">'+inner.replace(/<span>[\s\S]*?<\/span>/g,span=>index++===1?`<span><b>${minutes} min</b> complete model</span>`:span)+'</div>';
+  });
+  html=html.replace(/(<dt>Time needed<\/dt><dd>)[\s\S]*?(<\/dd>)/,`$1${minutes} min complete model from ${esc(route.area)}, before airport-ready time; luggage and a different start can add time$2`);
+  html=html.replace(/You have at least [^<]*before your recommended airport arrival time\./g,'Your available time covers the complete route, including luggage and the airport journey, before your airport-ready target.');
+ }
  if(!html.includes('/assets/analytics.js'))html=html.replace('</head>',`<script defer src="/assets/analytics.js?v=${version}"></script></head>`);
  html=html.replace(/(\/assets\/(?:seo\.css|planner\.js|plan-context\.js)\?v=)[^"&]+/g,`$1${version}`);
  fs.writeFileSync(file,html);

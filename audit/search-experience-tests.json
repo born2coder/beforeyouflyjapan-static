@@ -4,6 +4,8 @@
   "contextualRoutes": 44,
   "reachableSearchTargets": 56,
   "closedGalleryDates": 2,
+  "basePlanDurationLabels": 56,
+  "personalizedDurationLabels": 118,
   "evidence": [
     {
       "slug": "akihabara",

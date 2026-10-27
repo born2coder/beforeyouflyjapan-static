@@ -87,13 +87,19 @@
     if (fit) {
       const definitions = fit.querySelectorAll("dd");
       if (definitions[0]) definitions[0].textContent = plan.starts.join(", ");
-      if (definitions[1]) definitions[1].textContent = `${plan.min} min minimum; ${plan.recommended} min recommended`;
+      const baseMinutes = core.totalMinutes(core.withLuggageStep(plan, "none", "", plan.area).steps);
+      if (definitions[1]) definitions[1].textContent = `${baseMinutes} min complete model from ${plan.area}, before airport-ready time; luggage and a different start can add time`;
       if (definitions[2]) definitions[2].textContent = plan.strictStarts ? "Calculated from opening hours, admission deadlines and the checked closure calendar." : `${plan.startMin}–${plan.startMax} JST · ${plan.days}`;
       if (definitions[3]) definitions[3].textContent = "Large luggage can be stored near the suggested stop. Locker space is not guaranteed; an entered return elsewhere receives a separate conservative allowance.";
       const lists = fit.querySelectorAll("ul");
       if (guidance && lists[0]) lists[0].innerHTML = guidance.choose.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
       if (guidance && lists[1]) lists[1].innerHTML = guidance.avoid.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+      fit.querySelectorAll("li").forEach((item) => {
+        if (/^You have at least .*before your recommended airport arrival time\./.test(item.textContent)) item.textContent = "Your available time covers the complete route, including luggage and the airport journey, before your airport-ready target.";
+      });
     }
+    const baseFact = document.querySelectorAll(".byf-facts > span")[1];
+    if (baseFact) baseFact.innerHTML = `<b>${core.totalMinutes(core.withLuggageStep(plan, "none", "", plan.area).steps)} min</b> complete model`;
     const sources = document.querySelector(".byf-source");
     if (sources && guidance) {
       const list = sources.querySelector("ul");
@@ -242,6 +248,8 @@
   if (modelIntro) modelIntro.textContent = personalized ? "Calculated from your flight, starting area, and luggage return. ‘At the airport’ and ‘ready for airline procedures’ are shown separately." : "This example ends at the protected airline-procedure time; check live transport and your airline before leaving.";
   if (personalized) {
     const definitions = document.querySelectorAll(".byf-plan-fit dd");
+    const durationFact = document.querySelectorAll(".byf-facts > span")[1];
+    if (durationFact) durationFact.innerHTML = `<b>${core.totalMinutes(steps)} min</b> your complete plan`;
     if (definitions[1]) definitions[1].textContent = `${core.totalMinutes(steps)} min for this personalized plan, including any luggage allowance`;
     if (definitions[3] && luggageFit) {
       definitions[3].textContent = luggageFit.mode === "return_elsewhere"

@@ -22,8 +22,11 @@
 - Existing ten-plan time audit: 499 assertions, including 1-minute boundaries, luggage variants, hours, holidays, extra family/rest time and JST.
 - Existing 20 simulated traveller situations and 70 additional planner scenarios passed. These are simulations, not interviews or measured user satisfaction.
 - New DOM tests: all 40 guides, 44 planner-entry routes, all 56 HTML-reachable search targets, requested-visit priority, closed/unverified gallery dates, urgent fallback and custom-event command dispatch.
+- Production inspection exposed a pre-existing duration-label mismatch: the Shinagawa card calculated 110 minutes while the plan header still said 150. All 56 plan-page base labels now use the timing engine's complete model, and personalized headers use the actual luggage/start calculation. Regression checks cover 56 base labels and 118 feasible personalized variants.
 - Unique anchors, one photograph and one shared analytics loader on every place page.
 - Browser preview: Shinagawa guide → prefilled planner → 30 October 21:00 Haneda flight, 12:00 free time, no luggage → 16:10 plan start, 17:15 airport departure, 18:00 airport-ready target.
 - Browser mobile frames: 375/390/412-pixel outer widths, matching document/viewport widths without horizontal overflow on old and new guide templates. Image and attribution display inspected.
 
-Search-engine registration and ranking are external outcomes. Deployment checks and indexing-request results are recorded separately after publication. Dispatch tests do not prove Analytics-property receipt.
+The first production deployment succeeded on Cloudflare. In GA4's Before You Fly property (549060225), the realtime event table showed `place_planner_click`, `planner_start` and `planner_complete` after browser testing, confirming reception as well as dispatch. Raw totals include QA activity and must not be treated as visitor growth.
+
+Search-engine registration and ranking are external outcomes. Final deployment checks and indexing-request results are recorded separately after publication.

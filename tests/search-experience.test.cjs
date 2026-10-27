@@ -95,5 +95,34 @@ const targets=[...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new
 for(const target of targets)assert.ok(urls.has(target),'Homepage cannot reach '+target);
 const directory=new JSDOM(read('guides/index.html')).window.document;
 assert.equal(new Set([...directory.querySelectorAll('#places a[href]')].map(a=>a.getAttribute('href'))).size,40);
-fs.writeFileSync(path.join(root,'audit/search-experience-tests.json'),JSON.stringify({date:'2026-10-27',placeGuides:40,contextualRoutes:routes,reachableSearchTargets:targets.length,closedGalleryDates:2,evidence},null,2)+'\n');
-console.log(`Passed all 40 guides, ${routes} contextual planner routes, all ${targets.length} discoverable search targets, closed/unverified dates, airport-ready times and event dispatch.`);
+const engine=planner(origin),core=engine.w.BYFPlannerCore,plans=core.enhanceData(engine.w.BYF_STATIC_DATA).plans;
+let baseLabels=0,personalizedLabels=0;
+const staticPaths=new Set();
+for(const p of plans){
+ const relative=new URL(p.url).pathname.slice(1)+'index.html';
+ const base=core.totalMinutes(core.withLuggageStep(p,'none','',p.area).steps);
+ if(!staticPaths.has(relative)){
+  staticPaths.add(relative);
+  const staticDoc=new JSDOM(read(relative)).window.document;
+  const staticFact=staticDoc.querySelectorAll('.byf-facts > span')[1];
+  if(staticFact)assert.match(staticFact.textContent,new RegExp('^'+base+' min'),p.name+' static hero');
+  assert.match(staticDoc.querySelectorAll('.byf-plan-fit dd')[1].textContent,new RegExp('^'+base+' min'),p.name+' static details');
+  baseLabels++;
+ }
+ for(const luggage of ['none','store_near_stop']){
+  const fit=core.withLuggageStep(p,luggage,'',p.area);if(!fit.compatible)continue;
+  const free=new Date('2026-10-30T08:00:00+09:00'),ready=new Date('2026-10-30T20:30:00+09:00');
+  const window=core.scheduleWindow(free,ready,fit.steps,p);if(!window.valid)continue;
+  const params=new URLSearchParams({byf_context:'1',plan_id:String(p.id),airport:p.airport,flight_at:'2026-10-30T23:30',free_at:'2026-10-30T08:00',start:p.area,luggage,needs:'standard',plan_start_at:window.latest.toISOString()});
+  const dom=new JSDOM(read(relative),{url:p.url+'?'+params,runScripts:'outside-only'}),w=dom.window;
+  for(const file of ['planner-data','planner-core','plan-context'])w.eval(read('assets/'+file+'.js'));
+  const total=core.totalMinutes(fit.steps),fact=w.document.querySelectorAll('.byf-facts > span')[1];
+  if(fact)assert.match(fact.textContent,new RegExp('^'+total+' min'),p.name+' hero duration');
+  assert.match(w.document.querySelectorAll('.byf-plan-fit dd')[1].textContent,new RegExp('^'+total+' min'),p.name+' detail duration');
+  assert.doesNotMatch(w.document.querySelector('.byf-plan-fit').textContent,/You have at least .*before your recommended airport arrival time\./);
+  personalizedLabels++;w.close();
+ }
+}
+assert.equal(baseLabels,56);assert.ok(personalizedLabels>=100);engine.w.close();
+fs.writeFileSync(path.join(root,'audit/search-experience-tests.json'),JSON.stringify({date:'2026-10-27',placeGuides:40,contextualRoutes:routes,reachableSearchTargets:targets.length,closedGalleryDates:2,basePlanDurationLabels:baseLabels,personalizedDurationLabels:personalizedLabels,evidence},null,2)+'\n');
+console.log(`Passed all 40 guides, ${routes} contextual planner routes, all ${targets.length} discoverable search targets, ${baseLabels} base / ${personalizedLabels} personalized duration labels, closed/unverified dates, airport-ready times and event dispatch.`);
