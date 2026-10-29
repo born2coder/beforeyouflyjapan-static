@@ -31,7 +31,7 @@ function localTarget(url) {
 }
 
 test("SEO layer and application layer are separated", () => {
-  assert.equal(pages.length, 115);
+  assert.equal(pages.length, 117);
   const planPages = pages.filter((name) => name.startsWith("plans/"));
   const placePages = pages.filter((name) => name.startsWith("places/"));
   assert.equal(planPages.length, 56);
@@ -48,7 +48,7 @@ test("SEO layer and application layer are separated", () => {
     assert.match(html, /class="byf-verdict"/);
     assert.ok(sitemap.includes(`https://beforeyouflyjapan.com${pageUrl(relative)}`));
   }
-  assert.equal((sitemap.match(/<url>/g) || []).length, 56);
+  assert.equal((sitemap.match(/<url>/g) || []).length, 58);
 });
 
 test("metadata is unique, self-canonical and has one H1", () => {
@@ -100,14 +100,14 @@ test("redirects are one hop and targets exist", () => {
 test("priority guides contain decision support and source dates", () => {
   const required = {
     "before-late-flight-tokyo/index.html": ["Quick answer", "Example timeline", "What can go wrong", "Safer alternative", "Official sources"],
-    "how-early-arrive-haneda-airport/index.html": ["Quick answer", "Recommended buffer", "Example:", "Transfer risk", "Official sources"],
+    "how-early-arrive-haneda-airport/index.html": ["3 hours before departure", "Which time", "Worked example", "Rail disruption", "Sources and what these times mean"],
     "after-hotel-checkout-tokyo/index.html": ["Quick answer", "Choose the luggage plan", "Calculate usable time", "Official sources"],
     "how-we-check/index.html": ["Sources we prioritize", "What the timing includes", "Our risk labels", "Correction policy"],
   };
   for (const [relative, phrases] of Object.entries(required)) {
     const html = fs.readFileSync(path.join(root, relative), "utf8");
     for (const phrase of phrases) assert.ok(html.includes(phrase), `${relative}: missing ${phrase}`);
-    assert.match(html, /2026-09-(?:08|11)/);
+    assert.match(html, relative.startsWith("how-early-arrive-haneda") ? /2026-10-30/ : /2026-09-(?:08|11)/);
   }
 });
 

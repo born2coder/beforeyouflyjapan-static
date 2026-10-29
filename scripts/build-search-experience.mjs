@@ -141,3 +141,7 @@ const changed=new Set(['/', '/guides/',...primaryFiles.map(f=>'/'+f.replace('ind
 sitemap=sitemap.replace(/<url>([\s\S]*?)<\/url>/g,(whole,inside)=>{const url=inside.match(/<loc>(.*?)<\/loc>/)?.[1];if(!url||!changed.has(new URL(url).pathname))return whole;return `<url>${inside.replace(/<lastmod>.*?<\/lastmod>/g,'')}<lastmod>2026-10-27</lastmod></url>`;});
 fs.writeFileSync('sitemap.xml',sitemap);
 console.log(`Built ${Object.keys(visits).length} practical guides, airport directory, contextual CTAs, analytics and ${changed.size} editorial URLs.`);
+
+// Keep the newer, question-led editorial layer after regenerating older templates.
+import { execFileSync } from 'node:child_process';
+execFileSync('python3', ['scripts/build-query-guides.py'], {stdio:'inherit'});

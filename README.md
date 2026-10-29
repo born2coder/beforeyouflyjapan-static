@@ -54,3 +54,7 @@ Custom analytics events use the existing Google tag through `gtag('event', ...)`
 ## Recovery note
 
 The original WordPress installation and database should be retained as an offline backup until the static deployment and DNS cutover have been fully verified.
+
+## Search-question guides (30 October 2026)
+
+12 editorial pages across 10 initiatives: 2 new Haneda guides and 10 refreshed pages. 117 HTML pages; 58 sitemap URLs. Authored content and source links live in `scripts/build-query-guides.py`; run `python3 scripts/build-query-guides.py` after editing. The existing search-experience builder also reapplies this layer. Editorial examples explicitly separate local visits, complete journeys and airport-ready targets. No live timetable or universal airline deadline is claimed.

@@ -1,0 +1,241 @@
+[
+  {
+    "url": "https://en.tokyotower.co.jp/access/",
+    "status": 200,
+    "final": "https://en.tokyotower.co.jp/access/",
+    "title": "ACCESS | TOKYO TOWER",
+    "soft404": false
+  },
+  {
+    "url": "https://en.tokyotower.co.jp/fee/",
+    "status": 200,
+    "final": "https://en.tokyotower.co.jp/fee/",
+    "title": "FEES, BUSINESS HOURS | TOKYO TOWER",
+    "soft404": false
+  },
+  {
+    "url": "https://www.ana.co.jp/en/jp/guide/prepare/airport-guide/international/hnd-terminal-info/",
+    "status": 200,
+    "final": "https://www.ana.co.jp/en/jp/guide/prepare/airport-guide/international/hnd-terminal-info/",
+    "title": "ANA expands international flight services from Tokyo Haneda Airport Terminal 2 from March 31, 2024! Please check the terminal of your flight|Airport Guide|International flights|ANA",
+    "soft404": false
+  },
+  {
+    "url": "https://www.gotokyo.org/en/destinations/central-tokyo/nihombashi/",
+    "status": 200,
+    "final": "https://www.gotokyo.org/en/destinations/central-tokyo/nihombashi/",
+    "title": "Nihonbashi – a bridge between traditional and modern Tokyo | The Official Tokyo Travel Guide, GO TOKYO",
+    "soft404": false
+  },
+  {
+    "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/asakusa/",
+    "status": 200,
+    "final": "https://www.gotokyo.org/en/destinations/eastern-tokyo/asakusa/",
+    "title": "A guide to Asakusa - an area of true Japanese tradition | The Official Tokyo Travel Guide, GO TOKYO",
+    "soft404": false
+  },
+  {
+    "url": "https://www.gotokyo.org/en/spot/44/index.html",
+    "status": 200,
+    "final": "https://www.gotokyo.org/en/spot/44/index.html",
+    "title": "Nihonbashi Bridge | The Official Tokyo Travel Guide, GO TOKYO",
+    "soft404": false
+  },
+  {
+    "url": "https://www.haneda-tokyo-access.com/en/haneda-airport/to-terminal.html",
+    "status": 200,
+    "final": "https://www.haneda-tokyo-access.com/en/haneda-airport/to-terminal.html",
+    "title": "From station to terminal | Airport Access | Haneda Airport Access Guide",
+    "soft404": false
+  },
+  {
+    "url": "https://www.japan.travel/en/destinations/kanto/tokyo/ginza-and-nihombashi/",
+    "status": 200,
+    "final": "https://www.japan.travel/en/destinations/kanto/tokyo/ginza-and-nihombashi/",
+    "title": "Ginza & Nihonbashi | Tokyo | Kanto | Destinations | Travel Japan - Japan National Tourism Organization (Official Site)",
+    "soft404": false
+  },
+  {
+    "url": "https://www.japan.travel/en/spot/1549/",
+    "status": 200,
+    "final": "https://www.japan.travel/en/spot/1549/",
+    "title": "Naritasan Shinsho-ji Temple | Travel Japan - Japan National Tourism Organization (Official Site)",
+    "soft404": false
+  },
+  {
+    "url": "https://www.japan.travel/en/spot/368/",
+    "status": 200,
+    "final": "https://www.japan.travel/en/spot/368/",
+    "title": "Shiodome | Travel Japan - Japan National Tourism Organization (Official Site)",
+    "soft404": false
+  },
+  {
+    "url": "https://www.kansai-airport.or.jp/en/access/t2",
+    "error": "HTTP Error 403: Forbidden",
+    "verification_note": "Official content retrieved through web search; direct automated HTTP fetch returned 403. Not treated as a confirmed broken link."
+  },
+  {
+    "url": "https://www.kansai-airport.or.jp/en/flight/route/t2_dep",
+    "error": "HTTP Error 403: Forbidden",
+    "verification_note": "Official content retrieved through web search; direct automated HTTP fetch returned 403. Not treated as a confirmed broken link."
+  },
+  {
+    "url": "https://www.kansai-airport.or.jp/en/flight/route/transit",
+    "error": "HTTP Error 403: Forbidden",
+    "verification_note": "Official content retrieved through web search; direct automated HTTP fetch returned 403. Not treated as a confirmed broken link."
+  },
+  {
+    "url": "https://www.narita-airport.jp/en/access/shuttlebus/",
+    "status": 200,
+    "final": "https://www.narita-airport.jp/en/access/shuttlebus/",
+    "title": "Traveling Between Terminals | NARITA INTERNATIONAL AIRPORT",
+    "soft404": false
+  },
+  {
+    "url": "https://www.narita-airport.jp/en/airportguide/inter-dep/",
+    "status": 200,
+    "final": "https://www.narita-airport.jp/en/airportguide/inter-dep/",
+    "title": "Departure procedure: International flights | NARITA INTERNATIONAL AIRPORT",
+    "soft404": false
+  },
+  {
+    "url": "https://www.narita-airport.jp/ja/access/shuttlebus/walking-through/",
+    "status": 200,
+    "final": "https://www.narita-airport.jp/ja/access/shuttlebus/walking-through/",
+    "title": "アクセス通路を経由した徒歩移動について | 交通アクセス情報 | 成田国際空港",
+    "soft404": false
+  },
+  {
+    "url": "https://www.naritasan.or.jp/",
+    "status": 200,
+    "final": "https://www.naritasan.or.jp/",
+    "title": "大本山成田山新勝寺",
+    "soft404": false
+  },
+  {
+    "url": "https://www.naritasan.or.jp/access/",
+    "status": 200,
+    "final": "https://www.naritasan.or.jp/access/",
+    "title": "アクセス | 大本山成田山新勝寺",
+    "soft404": false
+  },
+  {
+    "url": "https://www.senso-ji.jp/english/",
+    "status": 200,
+    "final": "https://www.senso-ji.jp/english/",
+    "title": "ASAKUSA KANNON SENSOJI",
+    "soft404": false
+  },
+  {
+    "url": "https://www.senso-ji.jp/visit/",
+    "status": 200,
+    "final": "https://www.senso-ji.jp/visit/",
+    "title": "ご参拝 - 浅草寺",
+    "soft404": false
+  },
+  {
+    "url": "https://www.shiodome-cc.com/en/",
+    "status": 200,
+    "final": "https://www.shiodome-cc.com/en/",
+    "title": "Shiodome City Center",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/access/bus/",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/access/bus/index.html",
+    "title": "Express Bus & Route Bus | Access | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/access/taxi/",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/access/taxi/index.html",
+    "title": "Taxi | Access | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/access/train/",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/access/train/index.html",
+    "title": "Train & Monorail | Access | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/faq/terminal_details.html",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/faq/terminal_details.html",
+    "title": "Frequently Asked Questions | Terminal Usage | Frequently Asked Questions | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+    "title": "Departure Procedures | Use International | Flights | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/floor/terminal3/",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/floor/floor-guide.html?area=9&tab=terminal3",
+    "title": "Floor Guide | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/service/facilities/coin_locker.html",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/service/facilities/coin_locker.html",
+    "title": "Coin Lockers | List of Services | Service Guide | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/service/facilities/hotel.html",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/service/facilities/hotel.html",
+    "title": "Hotel | List of Services | Service Guide | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/service/facilities/lounge.html",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/service/facilities/lounge.html",
+    "title": "Card Lounge | List of Services | Service Guide | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tokyo-haneda.com/en/service/facilities/observation_deck.html",
+    "status": 200,
+    "final": "https://www.tokyo-haneda.com/en/service/facilities/observation_deck.html",
+    "title": "Observation Deck | List of Services | Service Guide | Haneda Airport Passenger Terminal",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tsukiji.or.jp/english/access/",
+    "status": 200,
+    "final": "https://www.tsukiji.or.jp/english/access/",
+    "title": "Access Map｜The Tsukiji Outer Market - Official Website",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tsukiji.or.jp/english/calendar/",
+    "status": 200,
+    "final": "https://www.tsukiji.or.jp/english/calendar/",
+    "title": "Calendar｜The Tsukiji Outer Market - Official Website",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tsukiji.or.jp/english/plattsukiji/",
+    "status": 200,
+    "final": "https://www.tsukiji.or.jp/english/plattsukiji/",
+    "title": "Plat Tsukiji｜The Tsukiji Outer Market - Official Website",
+    "soft404": false
+  },
+  {
+    "url": "https://www.tsukiji.or.jp/english/shoplist/",
+    "status": 200,
+    "final": "https://www.tsukiji.or.jp/english/shoplist/",
+    "title": "Store List｜The Tsukiji Outer Market - Official Website",
+    "soft404": false
+  }
+]

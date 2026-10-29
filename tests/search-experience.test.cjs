@@ -124,5 +124,5 @@ for(const p of plans){
  }
 }
 assert.equal(baseLabels,56);assert.ok(personalizedLabels>=100);engine.w.close();
-fs.writeFileSync(path.join(root,'audit/search-experience-tests.json'),JSON.stringify({date:'2026-10-27',placeGuides:40,contextualRoutes:routes,reachableSearchTargets:targets.length,closedGalleryDates:2,basePlanDurationLabels:baseLabels,personalizedDurationLabels:personalizedLabels,evidence},null,2)+'\n');
+fs.writeFileSync(path.join(root,'audit/search-experience-tests.json'),JSON.stringify({date:'2026-10-30',placeGuides:40,contextualRoutes:routes,reachableSearchTargets:targets.length,closedGalleryDates:2,basePlanDurationLabels:baseLabels,personalizedDurationLabels:personalizedLabels,evidence},null,2)+'\n');
 console.log(`Passed all 40 guides, ${routes} contextual planner routes, all ${targets.length} discoverable search targets, ${baseLabels} base / ${personalizedLabels} personalized duration labels, closed/unverified dates, airport-ready times and event dispatch.`);
