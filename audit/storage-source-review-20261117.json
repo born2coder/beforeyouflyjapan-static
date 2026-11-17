@@ -1,0 +1,540 @@
+{
+  "reviewed_on": "2026-11-17",
+  "method": "Grouped review of official operator, facility, airport and tourism-board sources. Published information dates are retained separately from retrieval dates. No site visit, bag-fit test, live locker vacancy or provider booking was performed.",
+  "scope": "40 place-page storage contexts only; source JSON schema preserved.",
+  "main_corrections": [
+    "Metro list moved from October to 1 November 2026 rates, with nonzero station price columns only.",
+    "Haneda T3 separated from lower T1/T2 rates.",
+    "GRANSTA B1 20:30 collection note retained separately from 21:00 closing.",
+    "Gallery, Fukagawa, Tokyo Tower, AQUA CiTY and Rinku facility storage replaces generic distant-counter advice.",
+    "Narita town Japanese FAQ used instead of a fragile translation path.",
+    "JR-only facility existence and KIX indexed retrieval are not labelled as direct live price verification."
+  ],
+  "groups": [
+    {
+      "slugs": [
+        "asakusa-sensoji",
+        "shibuya",
+        "shiodome",
+        "ginza-evening",
+        "omotesando",
+        "toyosu",
+        "hanazono-shrine",
+        "kanda-jimbocho",
+        "harajuku",
+        "roppongi-azabudai",
+        "kappabashi",
+        "nihonbashi",
+        "akihabara",
+        "ueno-toshogu",
+        "ginza",
+        "meiji-shrine",
+        "animate-shinjuku"
+      ],
+      "official_sources": [
+        "https://www.metocan.co.jp/locker/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": "2026-11-01",
+      "retrieval": "Direct official HTML; station tables parsed by anchor and only nonzero compartment columns included.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "station_fee_columns_yen": {
+          "asakusa-sensoji": [
+            600,
+            800,
+            1000,
+            1600
+          ],
+          "shibuya": [
+            300,
+            600,
+            800,
+            1000,
+            1600
+          ],
+          "shiodome": [
+            600,
+            800,
+            1000
+          ],
+          "ginza-evening": [
+            600,
+            800,
+            1000,
+            1600
+          ],
+          "omotesando": [
+            600,
+            800,
+            1000
+          ],
+          "toyosu": [
+            600,
+            800,
+            1000,
+            1600
+          ],
+          "hanazono-shrine": [
+            600,
+            800
+          ],
+          "kanda-jimbocho": [
+            300,
+            600,
+            800
+          ],
+          "harajuku": [
+            600,
+            800,
+            1000,
+            1600
+          ],
+          "roppongi-azabudai": [
+            600,
+            800,
+            1000
+          ],
+          "kappabashi": [
+            600,
+            800,
+            1000,
+            1600
+          ],
+          "nihonbashi": [
+            600,
+            800,
+            1000,
+            1600
+          ],
+          "akihabara": [
+            600,
+            800,
+            1000
+          ],
+          "ueno-toshogu": [
+            300,
+            600,
+            800,
+            1000
+          ],
+          "ginza": [
+            600,
+            800,
+            1000,
+            1600
+          ],
+          "meiji-shrine": [
+            600,
+            800,
+            1000,
+            1600
+          ],
+          "animate-shinjuku": [
+            600,
+            800
+          ]
+        },
+        "table_date": "2026-11-01"
+      },
+      "limitations": "Directory prices are not a live availability feed. JR and other operators can have different fees; each station map controls gate-side access."
+    },
+    {
+      "slugs": [
+        "haneda-airport"
+      ],
+      "official_sources": [
+        "https://www.tokyo-haneda.com/en/service/facilities/coin_locker.html"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct official directory, including terminal tabs.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "T1_T2_yen_per_24h": [
+          400,
+          500,
+          600,
+          1000,
+          1500
+        ],
+        "T3_yen_per_24h": [
+          500,
+          700,
+          900
+        ],
+        "T3_3F_south_XXL_yen": 2000,
+        "maximum_days": 7,
+        "access": "before security"
+      },
+      "limitations": "Not every bank has every size. T1/T2 rates must not be presented as T3 rates; vacancy is not checked."
+    },
+    {
+      "slugs": [
+        "tokyo-station-gallery"
+      ],
+      "official_sources": [
+        "https://www.ejrcf.or.jp/gallery/institution.html"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct museum facility page.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "location": "1F",
+        "fee": "free",
+        "fallback": "Reception holds oversized bags or bags when lockers are full."
+      },
+      "limitations": "Use is for the museum visit. No storage after leaving, capacity guarantee or locker dimensions established."
+    },
+    {
+      "slugs": [
+        "tokyo-character-street",
+        "tokyo-station-marunouchi"
+      ],
+      "official_sources": [
+        "https://www.gransta.jp/news/info/cloakservice/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": "2025-05-23",
+      "retrieval": "Direct official article.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "outside_JR_1F": "08:30–20:00",
+        "inside_JR_B1_opening": "08:30–21:00",
+        "inside_JR_same_day_note": "20:30",
+        "S_M_L_yen": [
+          500,
+          1000,
+          2000
+        ],
+        "size_bands_total_cm": [
+          "up to 100",
+          "up to 200",
+          "over 200"
+        ],
+        "acceptance": "total under 250 cm; longest side at most 2 m; weight under 30 kg"
+      },
+      "limitations": "Article information date is 23 May 2025. Conflicting B1 opening/collection wording requires the earlier 20:30 planning deadline and the receipt deadline, not a 21:00 collection promise."
+    },
+    {
+      "slugs": [
+        "shinagawa"
+      ],
+      "official_sources": [
+        "https://multiecube.com/location/1043/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct locker operator location page.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "access": "inside JR gates, south passage near platforms 7/8 stairs",
+        "usage_yen": [
+          500,
+          700,
+          900,
+          1400
+        ],
+        "reservation_surcharge_yen": 500,
+        "hours": "first to last train"
+      },
+      "limitations": "A paid-area gate crossing may be needed. No live vacancy count or exact first/last service time copied."
+    },
+    {
+      "slugs": [
+        "namba",
+        "hozenji",
+        "namba-yasaka-shrine",
+        "kamigata-ukiyoe-museum",
+        "dotonbori"
+      ],
+      "official_sources": [
+        "https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-namba-station/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": "2025-10-01",
+      "retrieval": "Direct official tourism-board facility listing and map.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "counter": "n・e・s・t Nankai Namba",
+        "floor": "2F",
+        "hours": "09:00–21:00",
+        "yen_per_item_per_day": 800,
+        "limits": "three-side total up to 220 cm; up to 30 kg; no perishables"
+      },
+      "limitations": "Tourism-board information date 1 October 2025 is retained; capacity and actual closing disruptions are not checked."
+    },
+    {
+      "slugs": [
+        "umeda"
+      ],
+      "official_sources": [
+        "https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-osaka-station/",
+        "https://handsfree-japan.com/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": "2025-10-01",
+      "retrieval": "Direct official tourism-board listing; its operator link identified.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "counter": "Crosta Osaka",
+        "hours": "09:00–20:00",
+        "yen_per_item": 1000
+      },
+      "limitations": "Fee/hours quoted from the tourism-board entry dated 1 October 2025; not represented as new operator pricing."
+    },
+    {
+      "slugs": [
+        "ueno-ameyoko"
+      ],
+      "official_sources": [
+        "https://keiseitravel.co.jp/en/f/other-service/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct operator service page.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "height_cm_max": [
+          53,
+          63,
+          70
+        ],
+        "yen": [
+          600,
+          1000,
+          1500
+        ],
+        "oversize_yen": 2000,
+        "collection": "during business hours; extra charges can apply after the agreed collection day"
+      },
+      "limitations": "No exact counter closing clock time established on this page. Height-based categories must not be treated as three-side-total categories."
+    },
+    {
+      "slugs": [
+        "naritasan-shinshoji",
+        "narita-omotesando"
+      ],
+      "official_sources": [
+        "https://www.nrtk.jp/plan/questions/10.html"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct official Japanese FAQ.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "locations": [
+          "JR Narita station passage",
+          "JR Narita Central/Omotesando exit",
+          "Keisei Narita Central/Omotesando exit"
+        ],
+        "temple_area": "no lockers or baggage storage near Naritasan temple"
+      },
+      "limitations": "No prices, dimensions, locker access hours or live vacancies stated. Old translated URL not reused."
+    },
+    {
+      "slugs": [
+        "narita-airport"
+      ],
+      "official_sources": [
+        "https://www.narita-airport.jp/en/service/delivery/storage/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct airport storage directory.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "JAL_ABC_T1_departures": "4F, 07:00–21:00",
+        "JAL_ABC_T2_departures": "3F, 07:00–21:00",
+        "fees": "vary by provider and bag size"
+      },
+      "limitations": "Hours vary by counter. No T3 staffed counter or single airport-wide rate inferred; terminal transfer must be allowed."
+    },
+    {
+      "slugs": [
+        "kansai-airport"
+      ],
+      "official_sources": [
+        "https://www.kansai-airport.or.jp/en/service/delivery/locker"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Official search-indexed airport listing; direct page returned HTTP 403.",
+      "confidence": "medium",
+      "confirmed_facts": {
+        "locations": [
+          "T1 1F/2F",
+          "T2 1F public areas",
+          "Aeroplaza 2F"
+        ],
+        "size_yen_SS_S_M_L_LW": [
+          300,
+          500,
+          700,
+          900,
+          1200
+        ],
+        "daily_turnover": "02:00",
+        "maximum_days_including_start": 10,
+        "directory_access": "24H"
+      },
+      "limitations": "Direct retrieval unavailable. Indexed information can lag; current posted fees, access and charging boundary control. The public copy does not promise a directly verified tariff."
+    },
+    {
+      "slugs": [
+        "tsukiji-outer-market"
+      ],
+      "official_sources": [
+        "https://www.tsukiji.or.jp/english/plattsukiji/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct market operator facility page.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "locker_sizes": [
+          "S",
+          "M",
+          "L"
+        ],
+        "locations_in_building": 2
+      },
+      "limitations": "No fees, dimensions or locker collection times established. Counter 14:00 closing and lounge 16:00 closing must not be repurposed as locker access hours."
+    },
+    {
+      "slugs": [
+        "rinku-town"
+      ],
+      "official_sources": [
+        "https://www.premiumoutlets.co.jp/en/rinku/service/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct outlet operator service directory.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "Main_Side_foodcourt_yen_examples": [
+          300,
+          500,
+          1000
+        ],
+        "Sea_Side_LOGOS_yen": [
+          300,
+          400,
+          500,
+          800
+        ],
+        "staffed_oversize_yen_per_day": 1000,
+        "staffed_payment": "cash only",
+        "normal_shop_closing": "March–January 20:00; February 19:00"
+      },
+      "limitations": "Different locker banks have different sizes/rates. Special closing hours and closure days take priority; no station storage assumption."
+    },
+    {
+      "slugs": [
+        "tokyo-tower"
+      ],
+      "official_sources": [
+        "https://en.tokyotower.co.jp/foottown/2o51o3dqnzz.html",
+        "https://en.tokyotower.co.jp/access/barrierfree/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct dedicated facility page; official accessibility listing compared.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "location": "FootTown 1F",
+        "size_fees_yen": [
+          100,
+          200,
+          300
+        ],
+        "dedicated_page_access": "09:00–22:30",
+        "largest_cm_H_W_D": [
+          84.3,
+          35.5,
+          64.5
+        ]
+      },
+      "limitations": "Official pages conflict on 22:30 versus 23:00 access end. Earlier dedicated-page time is used, with posted locker hours controlling; no bag-fit guarantee."
+    },
+    {
+      "slugs": [
+        "hamamatsucho-zojoji"
+      ],
+      "official_sources": [
+        "https://www.jreast.co.jp/estation/station/info.aspx?StationCD=1248",
+        "https://www.jreast.co.jp/e/stations/e1248.html"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Official station facility listing and linked map.",
+      "confidence": "medium",
+      "confirmed_facts": {
+        "station": "JR Hamamatsucho",
+        "coin_lockers": "listed as available station facilities"
+      },
+      "limitations": "Facility existence is confirmed, not real-time availability. Exact fee, bank location relative to gates and collection hours remain unverified."
+    },
+    {
+      "slugs": [
+        "odaiba"
+      ],
+      "official_sources": [
+        "https://www.aquacity.jp/facility/travel/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Direct mall operator facility page.",
+      "confidence": "high",
+      "confirmed_facts": {
+        "floor": "3F",
+        "sizes": [
+          "small",
+          "medium",
+          "large"
+        ],
+        "late_banks_access": "11:00–23:00",
+        "Iwakura_Oakley_access": "11:00–20:00 weekdays; 11:00–21:00 weekends/holidays"
+      },
+      "limitations": "No published fee or dimension claim. Some banks close earlier than others; not station lockers or live vacancy information."
+    },
+    {
+      "slugs": [
+        "nakano-broadway"
+      ],
+      "official_sources": [
+        "https://www.jreast.co.jp/estation/station/info.aspx?StationCD=1104",
+        "https://www.jreast.co.jp/en/estation/stations/1104.html"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Official station facility listing and linked map.",
+      "confidence": "medium",
+      "confirmed_facts": {
+        "station": "JR Nakano",
+        "coin_lockers": "listed as available station facilities"
+      },
+      "limitations": "No price, dimension, gate-side or current vacancy inference. Removed the unhelpful generic Shinjuku collection recommendation."
+    },
+    {
+      "slugs": [
+        "fukagawa-edo-museum"
+      ],
+      "official_sources": [
+        "https://www.kcf.or.jp/contact/",
+        "https://www.kcf.or.jp/fukagawa/outline/service/"
+      ],
+      "reviewed_on": "2026-11-17",
+      "source_publication_date": null,
+      "retrieval": "Official operator FAQ search-indexed text; museum service page reviewed separately.",
+      "confidence": "medium",
+      "confirmed_facts": {
+        "fee": "free",
+        "facility": "Fukagawa Edo Museum is explicitly included in the operator FAQ"
+      },
+      "limitations": "No exact locker floor, dimensions, available count or reception oversized-bag service confirmed. Does not promise suitcase capacity."
+    }
+  ]
+}

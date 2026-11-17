@@ -23,16 +23,16 @@ const cases = [
   { name: "Tokyo Station short window with local storage", input: { airport: "HND", start: "Tokyo Station", luggage: "store_near_stop", available: 150 }, expect: /Tokyo Station Last Souvenir/ },
   { name: "Shinagawa short window with local storage", input: { airport: "HND", start: "Shinagawa", luggage: "store_near_stop", available: 135 }, expect: /Shinagawa Short Stop/ },
   { name: "Ginza hotel return", input: { airport: "HND", start: "Ginza", luggage: "return_elsewhere", luggageArea: "Ginza", available: 210 }, expect: /Ginza|Shiodome/ },
-  { name: "Shinjuku start and Shibuya luggage return", input: { airport: "HND", start: "Shinjuku", luggage: "return_elsewhere", luggageArea: "Shibuya", available: 260 }, expect: /Shibuya|Shinjuku|Meiji/ },
+  { name: "Shinjuku start and Shibuya luggage return", input: { airport: "HND", start: "Shinjuku", luggage: "return_elsewhere", luggageArea: "Shibuya", available: 260 }, expect: /Hanazono Shrine|Haneda Airport Experience/ },
   { name: "Far Tokyo luggage gets a larger allowance", input: { airport: "HND", start: "Ueno", luggage: "return_elsewhere", luggageArea: "Shinagawa", available: 420 }, expect: /Ueno|Asakusa|Tokyo Station/ },
   { name: "Already at Haneda", input: { airport: "HND", start: "Haneda Airport", luggage: "store_near_stop", available: 75 }, expect: /Haneda Terminal Mini/ },
   { name: "Namba storage near the stop", input: { airport: "KIX", start: "Namba", luggage: "store_near_stop", available: 220 }, expect: /Namba Last Stop|Dotonbori/ },
   { name: "Umeda hotel return", input: { airport: "KIX", start: "Umeda", luggage: "return_elsewhere", luggageArea: "Umeda", available: 250 }, expect: /Umeda Before/ },
   { name: "Already at KIX", input: { airport: "KIX", start: "Kansai Airport", luggage: "store_near_stop", available: 75 }, expect: /KIX Terminal Mini/ },
-  { name: "Rinku from KIX", input: { airport: "KIX", start: "Kansai Airport", luggage: "none", available: 150 }, expect: /Rinku Town Quick Stop/ },
+  { name: "Short KIX window stays in the terminal rather than assuming a free Rinku connector", input: { airport: "KIX", start: "Kansai Airport", luggage: "none", available: 150 }, expect: /KIX Terminal Mini|Kansai Airport Experience/ },
   { name: "Asakusa short cultural window", input: { airport: "HND", start: "Asakusa", luggage: "none", available: 240 }, expect: /Asakusa & Sensoji/ },
   { name: "Ueno with Tokyo Station luggage return", input: { airport: "HND", start: "Ueno", luggage: "return_elsewhere", luggageArea: "Tokyo Station", available: 330 }, expect: /Ueno|Asakusa|Jimbocho/ },
-  { name: "Roppongi with local storage", input: { airport: "HND", start: "Roppongi", luggage: "store_near_stop", available: 180 }, expect: /Shiodome|Shinagawa|Ginza/ },
+  { name: "Roppongi with local storage", input: { airport: "HND", start: "Roppongi", luggage: "store_near_stop", available: 180 }, expect: /Haneda Airport Experience/ },
   { name: "Odaiba start keeps an Odaiba plan", input: { airport: "HND", start: "Odaiba", luggage: "none", available: 260 }, expect: /Odaiba Waterfront/ },
   { name: "Narita Airport short window", input: { airport: "NRT", start: "Narita Airport", luggage: "none", available: 150 }, expect: /Last Japanese Meal|Stay Near Narita/ },
   { name: "Narita same-area luggage return", input: { airport: "NRT", start: "Narita", luggage: "return_elsewhere", luggageArea: "Narita", available: 190 }, expect: /Last Japanese Meal|Stay Near Narita/ },
@@ -57,22 +57,22 @@ assert.ok(localStorage.steps.some((step) => step.isPickup));
 assert.ok(localStorage.steps.findIndex((step) => step.isPickup) < localStorage.steps.findIndex((step) => /Travel to Haneda Airport/.test(step.label)));
 assert.ok(!localStorage.steps.some((step) => /airport departure (?:point|route)/i.test(step.label)));
 
-const destinationStorage = core.withLuggageStep(data.plans.find((plan) => plan.id === 98), "store_near_stop", "", "Roppongi");
-assert.equal(destinationStorage.storageArea, "Shibuya");
-assert.equal(destinationStorage.dropMinutes, 25);
-assert.equal(destinationStorage.steps[0].label, "Reach Shibuya Station");
+// Unsupported city starts must be rejected by both candidate matching and the
+// public luggage helper, rather than retaining the old 20-minute city approach.
+for (const [id,start] of [[98,"Roppongi"],[252,"Shinjuku"],[27,"Tokyo Station"]]) {
+  const plan=data.plans.find(p=>p.id===id);
+  assert.equal(core.areaMatches(plan,start),false);
+  assert.equal(core.withLuggageStep(plan,"store_near_stop","",start).compatible,false);
+}
+// A genuinely authored connector remains available and precedes storage.
+const connected=data.plans.find(p=>p.id===4005);
+const destinationStorage=core.withLuggageStep(connected,"store_near_stop","","Shinjuku");
+assert.equal(destinationStorage.compatible,true);
+assert.equal(destinationStorage.storageArea,"Tokyo Station");
+assert.equal(destinationStorage.steps[0].minutes,60);
+assert.match(destinationStorage.steps[0].label,/Shinjuku to Tokyo Station/);
 assert.ok(destinationStorage.steps[1].isStorageDrop);
-assert.match(destinationStorage.steps[1].label, /Store your luggage in Shibuya/);
-assert.ok(destinationStorage.steps.some((step) => step.isPickup && /in Shibuya/.test(step.label)));
-assert.ok(!destinationStorage.steps.some((step) => /return to Roppongi/i.test(step.label)));
-
-const shinjukuToUenoStorage = core.withLuggageStep(data.plans.find((plan) => plan.id === 252), "store_near_stop", "", "Shinjuku");
-assert.equal(shinjukuToUenoStorage.storageArea, "Ueno");
-assert.match(shinjukuToUenoStorage.steps[0].label, /Travel to Ueno/);
-assert.match(shinjukuToUenoStorage.steps[1].label, /Store your luggage in Ueno/);
-assert.ok(shinjukuToUenoStorage.steps.some((step) => step.isPickup && /in Ueno/.test(step.label)));
-assert.ok(!shinjukuToUenoStorage.steps.some((step) => /return to Shinjuku/i.test(step.label)));
-assert.equal(core.totalMinutes(shinjukuToUenoStorage.steps), core.totalMinutes(data.plans.find((plan) => plan.id === 252).steps) + 25);
+assert.ok(destinationStorage.steps.some(step=>step.isPickup));
 
 const sameAreaPickup = core.withLuggageStep(data.plans.find((plan) => plan.id === 34), "return_elsewhere", "Namba", "Namba");
 assert.equal(sameAreaPickup.pickupMinutes, 35);

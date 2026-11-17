@@ -20,7 +20,7 @@ function rankedCandidates(persona) {
     const fit = core.withLuggageStep(plan, persona.luggage, persona.luggageArea, persona.start);
     if (!fit.compatible) return null;
     const total = core.totalMinutes(fit.steps);
-    const window = core.planWindow(free, recommended, total, plan);
+    const window = core.scheduleWindow(free, recommended, fit.steps, plan);
     if (total > persona.available || !window.valid) return null;
     const score = core.scorePlan(plan, {
       startArea: persona.start,
@@ -66,7 +66,14 @@ for (const plan of data.plans.filter((item) => !item.airportPlan)) {
     if (plan.area !== start && dropIndex > 0) destinationStorageRoutes += 1;
   }
 }
-assert.ok(destinationStorageRoutes > 20, "destination-storage routing was not exercised broadly");
+const authoredConnections=data.plans.filter(p=>!p.airportPlan).reduce((n,p)=>n+Object.keys(p.startConnectors||{}).length,0);
+assert.ok(authoredConnections>0);
+assert.equal(destinationStorageRoutes,authoredConnections,"exercise every explicitly authored cross-area connector");
+for(const plan of data.plans.filter(p=>!p.airportPlan)) {
+ for(const area of Object.keys(data.areas)) {
+  assert.equal(core.areaMatches(plan,area),area===plan.area||Boolean(plan.startConnectors?.[area]),`unbudgeted start accepted: ${plan.id}/${area}`);
+ }
+}
 
 const airportStarts = {
   HND: ["Tokyo Station", "Shinjuku", "Shibuya", "Ueno", "Haneda Airport", "Roppongi"],
@@ -130,7 +137,11 @@ const roppongiRelax = rankedCandidates({
   airport: "HND", start: "Roppongi", luggage: "return_elsewhere", luggageArea: "Shibuya",
   interest: "Relax", available: 330, flight: "2026-09-15T21:00:00+09:00",
 });
-assert.equal(roppongiRelax[0].plan.id, 98, "Shibuya route should outrank a Ginza detour");
+assert.ok(roppongiRelax.length);
+assert.ok(roppongiRelax[0].plan.airportPlan,"when no authored city connector fits, use an airport plan");
+assert.ok(!roppongiRelax.some(candidate=>candidate.plan.id===98),"do not offer Shibuya without a Roppongi connector");
+const shifted=roppongiRelax[0].fit.steps.find(core.isAirportTransferStep);
+assert.ok(shifted.minutes>=core.airportTransferMinimum("HND","Shibuya"),"post-pickup transfer uses actual collection area");
 
 assert.equal(core.pickupMinutes("Haneda Airport", "Shinjuku"), 120);
 assert.equal(core.pickupMinutes("Kansai Airport", "Namba"), 120);
@@ -140,7 +151,7 @@ assert.equal(core.airportTransferMinimum("KIX", "Namba"), 70);
 const terminalMini = data.plans.find((plan) => plan.id === 2801);
 assert.equal(core.areaMatches(terminalMini, "Tokyo"), false, "a Tokyo start must not be treated as already at Haneda");
 
-const rinkuReturn = core.withLuggageStep(data.plans.find((plan) => plan.id === 3601), "return_elsewhere", "Namba", "Kansai Airport");
+const rinkuReturn = core.withLuggageStep(data.plans.find((plan) => plan.id === 3601), "return_elsewhere", "Namba", "Rinku Town");
 const rinkuAirportStep = rinkuReturn.steps.find(core.isAirportTransferStep);
 assert.ok(rinkuAirportStep.minutes >= 70, "airport transfer must be recalculated from the luggage area");
 

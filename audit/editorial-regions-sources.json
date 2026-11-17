@@ -1,0 +1,860 @@
+{
+  "reviewed": "2026-11-17",
+  "method": "Official operators, municipal facility records and official tourism sources reviewed via web search. Suggested local visit times are editorial allowances, not field measurements. No first-person visits claimed.",
+  "entries": {
+    "haneda-airport": {
+      "sources": [
+        {
+          "url": "https://www.tokyo-haneda.com/en/service/facilities/amusement.html",
+          "label": "Haneda: Edo Ko-ji, Haneda Nihonbashi and TIAT Sky Road",
+          "checked": "2026-11-17",
+          "note": "Verified named public facilities and floors; simulator listed as closed and not recommended."
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/service/facilities/observation_deck.html",
+          "label": "Haneda: observation-deck floors and hours",
+          "checked": "2026-11-17",
+          "note": "T1/T2 06:30–22:00; T3 24h; weather/security restrictions apply."
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+          "label": "Haneda: international departure procedures",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "hozenji": {
+      "sources": [
+        {
+          "url": "https://www.houzenji.jp/",
+          "label": "Hozenji: precinct hours, office service and B16/B18 access",
+          "checked": "2026-11-17",
+          "note": "Current official site gives24h grounds,10–18office and named exits."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "kamigata-ukiyoe-museum": {
+      "sources": [
+        {
+          "url": "https://www.manabi.city.osaka.lg.jp/yoyaku/shisetsuInfoDetailInfo.html?shisetsu_code=262",
+          "label": "Osaka City: museum prices, hours and entrance",
+          "checked": "2026-11-17",
+          "note": "Operator homepage returned502during review; municipal listing verifies¥700/500/300,hours11–18,last17:30,Mondays,nextdayholiday exception and exit16."
+        },
+        {
+          "url": "https://www.houzenji.jp/",
+          "label": "Hozenji: neighboring B16 exit",
+          "checked": "2026-11-17",
+          "note": "Used to identify the neighboring B16 label; not an interior museum survey."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "kansai-airport": {
+      "sources": [
+        {
+          "url": "https://www.kansai-airport.or.jp/en/shop-and-dine/dine",
+          "label": "KIX: dining directory",
+          "checked": "2026-11-17",
+          "note": "Verified NAKAU Aeroplaza3F public-side24hours via search; directHTTP may restrict automated fetches."
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/shop-and-dine/shop",
+          "label": "KIX: shop directory",
+          "checked": "2026-11-17",
+          "note": "Verified Lawson Aeroplaza2F24hours."
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/shop-and-dine/skyview/access",
+          "label": "KIX: Sky View hours and bus",
+          "checked": "2026-11-17",
+          "note": "10–17hall,11–16museum,T1busstop1,approx6minride."
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/access/t2",
+          "label": "KIX: T2 shuttle approach",
+          "checked": "2026-11-17",
+          "note": "Airport states7–9minride; walking/waitingextra."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "namba": {
+      "sources": [
+        {
+          "url": "https://nambacity.com/access",
+          "label": "Namba CITY: railway approaches and opening hours",
+          "checked": "2026-11-17",
+          "note": "Nankaiconnected;Midosuji2min,JR OCATnorth10min are operatorapproaches,not timed airport routes."
+        },
+        {
+          "url": "https://nambacity.com/information",
+          "label": "Namba CITY: information desks and visitor services",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://shinpachi-shokudo.com/",
+          "label": "Shinpachi Shokudo: Namba Nankai Street location",
+          "checked": "2026-11-17",
+          "note": "Named meal alternative outside Namba CITY; not claimed inside the complex."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "namba-yasaka-shrine": {
+      "sources": [
+        {
+          "url": "https://nambayasaka.jp/",
+          "label": "Namba Yasaka Shrine: address and current notices",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://osaka-info.jp/special/dc/event/detail12/",
+          "label": "Osaka tourism campaign: grounds and office hours",
+          "checked": "2026-11-17",
+          "note": "Grounds06–17,office09–16:50,approx6minwalk; other unofficialsitesconflict,notused."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "narita-airport": {
+      "sources": [
+        {
+          "url": "https://www.narita-airport.jp/en/fun/view/",
+          "label": "Narita: deck floors and seasonal hours",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.narita-airport.jp/en/shop/shop-search/?areas=BSC&category=shop&terminals=T1",
+          "label": "Narita: public-side T1 shops",
+          "checked": "2026-11-17",
+          "note": "TRAVELERS FACTORYAIRPORT4F beforesecurityverified;directorycurrenthoursnotpromised."
+        },
+        {
+          "url": "https://www.narita-airport.jp/ja/access/shuttlebus/walking-through/",
+          "label": "Narita: T2 station to T3 corridor",
+          "checked": "2026-11-17",
+          "note": "13minstationgate-toinformationcounter,notcounterprocedures."
+        },
+        {
+          "url": "https://www.narita-airport.jp/en/shop/malllist-t1/",
+          "label": "Narita: T1 airside shopping area",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "narita-omotesando": {
+      "sources": [
+        {
+          "url": "https://unagi-kawatoyo.com/access/",
+          "label": "Kawatoyo Honten: address, approach and last orders",
+          "checked": "2026-11-17",
+          "note": "Officialaccess12min;shop11min. Reportedroughly11–12,noexactguarantee."
+        },
+        {
+          "url": "https://www.nrtk.jp/mypage/00002.html",
+          "label": "Narita tourism association: Kawatoyo and temple-town street",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.naritasan.or.jp/access/",
+          "label": "Naritasan: town-station and airport connections",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "naritasan-shinshoji": {
+      "sources": [
+        {
+          "url": "https://www.naritasan.or.jp/access/",
+          "label": "Naritasan: ten-minute station approach and access map",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.naritasan.or.jp/",
+          "label": "Naritasan: current notices and service information",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.japan.travel/en/spot/1549/",
+          "label": "JNTO: temple, town approach and park",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "rinku-town": {
+      "sources": [
+        {
+          "url": "https://www.premiumoutlets.co.jp/en/rinku/",
+          "label": "Rinku Premium Outlets: hours, map and annual closure",
+          "checked": "2026-11-17",
+          "note": "Nextclosure2027-02-25verified17Nov2026."
+        },
+        {
+          "url": "https://www.premiumoutlets.co.jp/en/rinku/access/access_bus.html",
+          "label": "Rinku Premium Outlets: station approach",
+          "checked": "2026-11-17",
+          "note": "Operatorquotes6minwalkfromRinkuTown;notwholevisit."
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/access/t2",
+          "label": "KIX: onward route to Terminal2",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "tokyo-character-street": {
+      "sources": [
+        {
+          "url": "https://www.tokyoeki-1bangai.co.jp/serviceguide/",
+          "label": "Tokyo Station First Avenue: public-side access and hours",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.tokyoeki-1bangai.co.jp/shop/?area=area2&floor=b1f",
+          "label": "Character Street: current shops and floors",
+          "checked": "2026-11-17",
+          "note": "Reviewed directory lists Pokémon/DragonBall1F,selectedotherstoresB1;thiscorrectsall-B1assumption."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "tokyo-station-gallery": {
+      "sources": [
+        {
+          "url": "https://www.ejrcf.or.jp/gallery/english/",
+          "label": "Tokyo Station Gallery: hours, closures and exhibition prices",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.ejrcf.or.jp/gallery/english/access.html",
+          "label": "Tokyo Station Gallery: Marunouchi North and M12 approach",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.ejrcf.or.jp/gallery/institution.html",
+          "label": "Tokyo Station Gallery: brickwork, lift, toilets and bag facilities",
+          "checked": "2026-11-17",
+          "note": "Verified1Flockers/receptionoversize,one lift,toilets1F2F,accessible2Fwithbabyfacilities."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "tokyo-station-marunouchi": {
+      "sources": [
+        {
+          "url": "https://marunouchi.jp-kitte.jp/gb/information.jsp",
+          "label": "KITTE:6F garden hours and station view",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://marunouchi.jp-kitte.jp/guide/facilities.jsp",
+          "label": "KITTE: free garden admission and weather restrictions",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.gotokyo.org/en/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html",
+          "label": "GO TOKYO: Marunouchi station area",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "tokyo-tower": {
+      "sources": [
+        {
+          "url": "https://en.tokyotower.co.jp/fee/",
+          "label": "Tokyo Tower: deck tickets and hours",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://en.tokyotower.co.jp/access/",
+          "label": "Tokyo Tower: station exits and parking-stair photography restriction",
+          "checked": "2026-11-17",
+          "note": "Verifiednamedexits5/7/6/10/15minoperatorapproaches."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "toyosu": {
+      "sources": [
+        {
+          "url": "https://www.english.metro.tokyo.lg.jp/w/016-101-003992",
+          "label": "Tokyo Metropolitan Government: market visitor rules, calendar and auction process",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/pamphlet-english",
+          "label": "Toyosu official English visitor map (PDF)",
+          "checked": "2026-11-17",
+          "note": "Mapshows3blocks,visitorrouteandgoodsarea/rooflift."
+        },
+        {
+          "url": "https://www.gotokyo.org/en/spot/1743/index.html",
+          "label": "GO TOKYO: market buildings, Uogashi Yokocho and rooftop",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://toyosu-kanko.com/about/%E3%82%B0%E3%83%AB%E3%83%A1%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88/",
+          "label": "Toyosu market tourism association: restaurant buildings and choices",
+          "checked": "2026-11-17",
+          "note": "Verified Iwasa Sushi in seafood intermediate building and Tenfusa in fruit/vegetable building; no queue or same-day seating guarantee."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "tsukiji-outer-market": {
+      "sources": [
+        {
+          "url": "https://www.tsukiji.or.jp/english/access/",
+          "label": "Tsukiji market association: station approaches and map",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.tsukiji.or.jp/english/plattsukiji/",
+          "label": "Plat Tsukiji: information, lockers and counter hours",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.tsukiji.or.jp/english/calendar/",
+          "label": "Tsukiji market calendar",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.tsukiji.or.jp/english/shoplist/",
+          "label": "Tsukiji official shop directory",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.tsukiji.or.jp/english/shoplist/cat-c/cat-10/466/",
+          "label": "Tsukiji Yamacho: address and listed shop hours",
+          "checked": "2026-11-17",
+          "note": "Named example from market association; menu price and current queue not claimed."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "ueno-ameyoko": {
+      "sources": [
+        {
+          "url": "https://t-navi.city.taito.lg.jp/spot/1033",
+          "label": "Taito City: Ameyoko location and station access",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.gotokyo.org/en/destinations/northern-tokyo/ueno/index.html",
+          "label": "GO TOKYO: Ueno district and park context",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://www.ueno-ameyoko.jp/shop/shop_7497/",
+          "label": "Ameyoko association: Niki no Kashi Daiichi Eigyosho",
+          "checked": "2026-11-17",
+          "note": "Verified named shop address and published hours; not a personally tested quality ranking."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "ueno-toshogu": {
+      "sources": [
+        {
+          "url": "https://www.uenotoshogu.com/",
+          "label": "Ueno Toshogu: current prices and separate grounds/precinct hours",
+          "checked": "2026-11-17",
+          "note": "OfficialJapanese has¥700adult,¥300elementary,groundsandpaidwindowsspecified."
+        },
+        {
+          "url": "https://www.uenotoshogu.com/en/?lang=en",
+          "label": "Ueno Toshogu: English access and interior restriction",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "umeda": {
+      "sources": [
+        {
+          "url": "https://osakastationcity.com/green/toki/",
+          "label": "Osaka Station City: Toki-no-hiroba floor and hours",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        },
+        {
+          "url": "https://osaka-info.jp/experience/en/osaka/spot/544",
+          "label": "Osaka tourism: free public plaza and railway setting",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    },
+    "dotonbori": {
+      "sources": [
+        {
+          "url": "https://www.dotonbori.or.jp/shoppingstreet_access.html",
+          "label": "Ebisubashi-suji association: Nankai and subway approaches",
+          "checked": "2026-11-17",
+          "note": "Verifiedarcadegeometry,NankaiTakashimayaapproach,exits12/13andE3."
+        },
+        {
+          "url": "https://www.osaka-info.jp/en/spot/dotonbori/",
+          "label": "Osaka tourism: Dotonbori district and individual shop hours",
+          "checked": "2026-11-17",
+          "note": "Official operator information reviewed; visit allowances are editorial estimates."
+        }
+      ],
+      "limitations": [
+        "No live queue, locker availability or current rail departure is guaranteed.",
+        "Airport complete models are supplied by the shared timing engine, not by these local-visit allowances."
+      ]
+    }
+  },
+  "important_updates": [
+    "Ueno Toshogu adult precinct fee¥700 and separate winter paid/grounds hours.",
+    "Hozenji canonical officialwwwsite verifiesB16/B18,24hgrounds/10–18office.",
+    "Character Street operator currently lists PokémonandDragonBallon1F;selectedB1examplesidentified.",
+    "Rinku next annual closure2027-02-25.",
+    "Tokyo Station Gallery official facilities include1Ffreelockers/oversizereception,lift,toilets1F2F and accessible2Fbabyfacilities.",
+    "Kamigata operator website502;currentOsakaCitylistingusedforhours,feeandexit16.",
+    "Toyosu special auctiondeck requires advanceapplication distinctfromgeneralwalkway."
+  ],
+  "http_checks": [
+    {
+      "url": "https://en.tokyotower.co.jp/access/",
+      "status": 200,
+      "final": "https://en.tokyotower.co.jp/access/",
+      "title": "ACCESS | TOKYO TOWER",
+      "soft404": false
+    },
+    {
+      "url": "https://en.tokyotower.co.jp/fee/",
+      "status": 200,
+      "final": "https://en.tokyotower.co.jp/fee/",
+      "title": "FEES, BUSINESS HOURS | TOKYO TOWER",
+      "soft404": false
+    },
+    {
+      "url": "https://marunouchi.jp-kitte.jp/gb/information.jsp",
+      "status": 200,
+      "final": "https://marunouchi.jp-kitte.jp/gb/information.jsp",
+      "title": "information | KITTE Marunouchi (for english)",
+      "soft404": false
+    },
+    {
+      "url": "https://marunouchi.jp-kitte.jp/guide/facilities.jsp",
+      "status": 200,
+      "final": "https://marunouchi.jp-kitte.jp/guide/facilities.jsp",
+      "title": "その他施設｜ＫＩＴＴＥ丸の内 | JR・丸ノ内線 東京駅に直結したショッピングセンター「キッテ」",
+      "soft404": false
+    },
+    {
+      "url": "https://nambacity.com/access",
+      "status": 200,
+      "final": "https://nambacity.com/access",
+      "title": "アクセス | なんばCITY（なんばシティ）",
+      "soft404": false
+    },
+    {
+      "url": "https://nambacity.com/information",
+      "status": 200,
+      "final": "https://nambacity.com/information",
+      "title": "インフォメーション | なんばCITY（なんばシティ）",
+      "soft404": false
+    },
+    {
+      "url": "https://nambayasaka.jp/",
+      "status": 200,
+      "final": "https://nambayasaka.jp/",
+      "title": "難波八阪神社公式ホームページ",
+      "soft404": false
+    },
+    {
+      "url": "https://osaka-info.jp/experience/en/osaka/spot/544",
+      "status": 200,
+      "final": "https://osaka-info.jp/experience/en/osaka/spot/544",
+      "title": "Toki-no-hiroba Plaza｜Osaka-Osaka City Kita Area(Umeda, Fukushima, Temma)|OSAKA-INFO EXPERIENCE",
+      "soft404": false
+    },
+    {
+      "url": "https://osaka-info.jp/special/dc/event/detail12/",
+      "status": 200,
+      "final": "https://osaka-info.jp/special/dc/event/detail12/",
+      "title": "難波八阪神社 | 体験・イベント・スポット | 来てな！オモロイがいっぱい大阪旅 | 大阪デスティネーションキャンペーン - 大阪観光情報",
+      "soft404": false
+    },
+    {
+      "url": "https://osakastationcity.com/green/toki/",
+      "status": 200,
+      "final": "https://osakastationcity.com/green/toki/",
+      "title": "時空（とき）の広場 | 大阪ステーションシティ",
+      "soft404": false
+    },
+    {
+      "url": "https://shinpachi-shokudo.com/",
+      "status": 200,
+      "final": "https://shinpachi-shokudo.com/",
+      "title": "炭火焼干物定食　しんぱち食堂（公式サイト）",
+      "soft404": false
+    },
+    {
+      "url": "https://t-navi.city.taito.lg.jp/spot/1033",
+      "status": 200,
+      "final": "https://t-navi.city.taito.lg.jp/spot/1033",
+      "title": "アメ横商店街｜体験・観光スポット｜台東区公式観光情報サイト",
+      "soft404": false
+    },
+    {
+      "url": "https://toyosu-kanko.com/about/%E3%82%B0%E3%83%AB%E3%83%A1%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88/",
+      "status": 200,
+      "final": "https://toyosu-kanko.com/about/%E3%82%B0%E3%83%AB%E3%83%A1%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88/",
+      "title": "グルメスポット | 豊洲市場について | 一般社団法人豊洲市場観光協会",
+      "soft404": false
+    },
+    {
+      "url": "https://unagi-kawatoyo.com/access/",
+      "status": 200,
+      "final": "https://unagi-kawatoyo.com/access/",
+      "title": "�A�N�Z�X&nbsp;�b&nbsp;���c�̌��c���Ȃ����X ��L�{�X�ikawatoyo�j",
+      "soft404": false
+    },
+    {
+      "url": "https://www.dotonbori.or.jp/shoppingstreet_access.html",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "url": "https://www.ejrcf.or.jp/gallery/english/",
+      "status": 200,
+      "final": "https://www.ejrcf.or.jp/gallery/english/",
+      "title": "TOKYO STATION GALLERY",
+      "soft404": false
+    },
+    {
+      "url": "https://www.ejrcf.or.jp/gallery/english/access.html",
+      "status": 200,
+      "final": "https://www.ejrcf.or.jp/gallery/english/access.html",
+      "title": "Access | TOKYO STATION GALLERY",
+      "soft404": false
+    },
+    {
+      "url": "https://www.ejrcf.or.jp/gallery/institution.html",
+      "status": 200,
+      "final": "https://www.ejrcf.or.jp/gallery/institution.html",
+      "title": "施設案内 | 東京ステーションギャラリー",
+      "soft404": false
+    },
+    {
+      "url": "https://www.english.metro.tokyo.lg.jp/w/016-101-003992",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.gotokyo.org/en/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html",
+      "title": "Tokyo Station &amp; Marunouchi area travel guide | The Official Tokyo Travel Guide, GO TOKYO",
+      "soft404": false
+    },
+    {
+      "url": "https://www.gotokyo.org/en/destinations/northern-tokyo/ueno/index.html",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/destinations/northern-tokyo/ueno/index.html",
+      "title": "Ueno travel guide - from Ameyoko to Ueno Park | The Official Tokyo Travel Guide, GO TOKYO",
+      "soft404": false
+    },
+    {
+      "url": "https://www.gotokyo.org/en/spot/1743/index.html",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/spot/1743/index.html",
+      "title": "Tokyo Metropolitan Wholesale Market Toyosu Market | The Official Tokyo Travel Guide, GO TOKYO",
+      "soft404": false
+    },
+    {
+      "url": "https://www.houzenji.jp/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.japan.travel/en/spot/1549/",
+      "status": 200,
+      "final": "https://www.japan.travel/en/spot/1549/",
+      "title": "Naritasan Shinsho-ji Temple | Travel Japan - Japan National Tourism Organization (Official Site)",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kansai-airport.or.jp/en/access/t2",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.kansai-airport.or.jp/en/shop-and-dine/dine",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.kansai-airport.or.jp/en/shop-and-dine/shop",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.kansai-airport.or.jp/en/shop-and-dine/skyview/access",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.manabi.city.osaka.lg.jp/yoyaku/shisetsuInfoDetailInfo.html?shisetsu_code=262",
+      "status": 200,
+      "final": "https://www.manabi.city.osaka.lg.jp/yoyaku/shisetsuInfoDetailInfo.html?shisetsu_code=262",
+      "title": "上方浮世絵館",
+      "soft404": false
+    },
+    {
+      "url": "https://www.narita-airport.jp/en/fun/view/",
+      "status": 200,
+      "final": "https://www.narita-airport.jp/en/fun/view/",
+      "title": "Best View Point | NARITA INTERNATIONAL AIRPORT",
+      "soft404": false
+    },
+    {
+      "url": "https://www.narita-airport.jp/en/shop/malllist-t1/",
+      "status": 200,
+      "final": "https://www.narita-airport.jp/en/shop/malllist-t1/",
+      "title": "T1 Airside (international flights) | Shopping Area Information | NARITA INTERNATIONAL AIRPORT",
+      "soft404": false
+    },
+    {
+      "url": "https://www.narita-airport.jp/en/shop/shop-search/?areas=BSC&category=shop&terminals=T1",
+      "status": 200,
+      "final": "https://www.narita-airport.jp/en/shop/shop-search/?areas=BSC&category=shop&terminals=T1",
+      "title": "Restaurants and Shops | NARITA INTERNATIONAL AIRPORT",
+      "soft404": false
+    },
+    {
+      "url": "https://www.narita-airport.jp/ja/access/shuttlebus/walking-through/",
+      "status": 200,
+      "final": "https://www.narita-airport.jp/ja/access/shuttlebus/walking-through/",
+      "title": "アクセス通路を経由した徒歩移動について | 交通アクセス情報 | 成田国際空港",
+      "soft404": false
+    },
+    {
+      "url": "https://www.naritasan.or.jp/",
+      "status": 200,
+      "final": "https://www.naritasan.or.jp/",
+      "title": "大本山成田山新勝寺",
+      "soft404": false
+    },
+    {
+      "url": "https://www.naritasan.or.jp/access/",
+      "status": 200,
+      "final": "https://www.naritasan.or.jp/access/",
+      "title": "アクセス | 大本山成田山新勝寺",
+      "soft404": false
+    },
+    {
+      "url": "https://www.nrtk.jp/mypage/00002.html",
+      "status": 200,
+      "final": "https://www.nrtk.jp/mypage/00002.html",
+      "title": "川豊本店 |FEEL成田 成田市観光協会公式サイト",
+      "soft404": false
+    },
+    {
+      "url": "https://www.osaka-info.jp/en/spot/dotonbori/",
+      "status": 200,
+      "final": "https://www.osaka-info.jp/en/spot/dotonbori/",
+      "title": "Dotonbori Tourist Guide | Enjoy giant billboards and gourmet food at this popular spot in Osaka's Minami area!",
+      "soft404": false
+    },
+    {
+      "url": "https://www.premiumoutlets.co.jp/en/rinku/",
+      "status": 200,
+      "final": "https://www.premiumoutlets.co.jp/en/rinku/",
+      "title": "RINKU PREMIUM OUTLETS&reg; - PREMIUM OUTLETS&reg;",
+      "soft404": false
+    },
+    {
+      "url": "https://www.premiumoutlets.co.jp/en/rinku/access/access_bus.html",
+      "status": 200,
+      "final": "https://www.premiumoutlets.co.jp/en/rinku/access/access_bus.html",
+      "title": "By Train / Bus - RINKU PREMIUM OUTLETS&reg; - PREMIUM OUTLETS&reg;",
+      "soft404": false
+    },
+    {
+      "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/pamphlet-english",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+      "status": 200,
+      "final": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+      "title": "Departure Procedures | Use International | Flights | Haneda Airport Passenger Terminal",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tokyo-haneda.com/en/service/facilities/amusement.html",
+      "status": 200,
+      "final": "https://www.tokyo-haneda.com/en/service/facilities/amusement.html",
+      "title": "Amusements | List of Services | Service Guide | Haneda Airport Passenger Terminal",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tokyo-haneda.com/en/service/facilities/observation_deck.html",
+      "status": 200,
+      "final": "https://www.tokyo-haneda.com/en/service/facilities/observation_deck.html",
+      "title": "Observation Deck | List of Services | Service Guide | Haneda Airport Passenger Terminal",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tokyoeki-1bangai.co.jp/serviceguide/",
+      "status": 200,
+      "final": "https://www.tokyoeki-1bangai.co.jp/serviceguide/",
+      "title": "サービスガイド ｜ 東京駅一番街",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tokyoeki-1bangai.co.jp/shop/?area=area2&floor=b1f",
+      "status": 200,
+      "final": "https://www.tokyoeki-1bangai.co.jp/shop/?area=area2&floor=b1f",
+      "title": "東京キャラクターストリート ｜ フロアガイド ｜ 東京駅一番街",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tsukiji.or.jp/english/access/",
+      "status": 200,
+      "final": "https://www.tsukiji.or.jp/english/access/",
+      "title": "Access Map｜The Tsukiji Outer Market - Official Website",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tsukiji.or.jp/english/calendar/",
+      "status": 200,
+      "final": "https://www.tsukiji.or.jp/english/calendar/",
+      "title": "Calendar｜The Tsukiji Outer Market - Official Website",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tsukiji.or.jp/english/plattsukiji/",
+      "status": 200,
+      "final": "https://www.tsukiji.or.jp/english/plattsukiji/",
+      "title": "Plat Tsukiji｜The Tsukiji Outer Market - Official Website",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tsukiji.or.jp/english/shoplist/",
+      "status": 200,
+      "final": "https://www.tsukiji.or.jp/english/shoplist/",
+      "title": "Store List｜The Tsukiji Outer Market - Official Website",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tsukiji.or.jp/english/shoplist/cat-c/cat-10/466/",
+      "status": 200,
+      "final": "https://www.tsukiji.or.jp/english/shoplist/cat-c/cat-10/466/",
+      "title": "Tsukiji Yamacho | Tamagoyaki | Processed Foods | Store List｜The Tsukiji Outer Market - Official Website",
+      "soft404": false
+    },
+    {
+      "url": "https://www.ueno-ameyoko.jp/shop/shop_7497/",
+      "status": 200,
+      "final": "https://www.ueno-ameyoko.jp/shop/shop_7497/",
+      "title": "二木の菓子 第一営業所│上野 アメ横表通り商店街",
+      "soft404": false
+    },
+    {
+      "url": "https://www.uenotoshogu.com/",
+      "status": 200,
+      "final": "https://www.uenotoshogu.com/",
+      "title": "上野東照宮公式ホームページ",
+      "soft404": false
+    },
+    {
+      "url": "https://www.uenotoshogu.com/en/?lang=en",
+      "status": 200,
+      "final": "https://www.uenotoshogu.com/en/?lang=en",
+      "title": "Ueno Toshogu Website",
+      "soft404": false
+    }
+  ]
+}

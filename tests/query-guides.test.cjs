@@ -9,10 +9,10 @@ for(const row of manifest.pages){
  const ids=[...d.querySelectorAll('[id]')].map(e=>e.id);
  assert.equal(new Set(ids).size,ids.length,row.path+' duplicate anchors');
  for(const a of d.querySelectorAll('.byf-answer-nav a'))assert.ok(d.getElementById(a.hash.slice(1)),row.path+' broken section link');
- assert.equal(d.querySelectorAll('.byf-query-content').length,1);
+ assert.equal(d.querySelectorAll(row.path.startsWith('/places/')?'.byf-editorial-body':'.byf-query-content').length,1);
  const article=[...d.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent)).filter(s=>s['@type']==='Article');
  assert.equal(article.length,1);assert.equal(article[0].headline,d.querySelector('h1').textContent);
- assert.equal(article[0].dateModified,'2026-10-30');
+ assert.equal(article[0].dateModified,'2026-11-17');
  const cta=d.querySelector('.byf-guide-cta a');
  if(cta)assert.ok(['HND','NRT','KIX'].includes(new URL(cta.getAttribute('href'),'https://beforeyouflyjapan.com').searchParams.get('airport')));
 }

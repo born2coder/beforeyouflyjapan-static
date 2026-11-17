@@ -46,7 +46,7 @@
   },
   "animate-shinjuku": {
     "name": "Animate Shinjuku before a Haneda flight",
-    "anchor": "Shinjuku Station, east side",
+    "anchor": "Animate Shinjuku, Shinjuku Marui Men 7F",
     "access": "Use the store's current access map; Shinjuku's east side is different from the west-side airport bus area.",
     "visit": "Take a screenshot of the series or character you want before entering Animate Shinjuku. Check one relevant floor and leave time to pack purchases rather than browsing every floor.",
     "cost": "Shop entry is free; merchandise and paid events are extra.",
@@ -154,7 +154,7 @@
   },
   "haneda-airport": {
     "name": "Haneda Airport: food, shops and views before departure",
-    "anchor": "Your airline's Haneda terminal",
+    "anchor": "Haneda Airport, Tokyo",
     "access": "Confirm Terminal 2 or 3 for international departures from your booking. Stay landside or airside according to your next procedure; terminal changes consume time.",
     "visit": "If you are departing from Terminal 3 and still landside, consider Edo Ko-ji for one meal or the observation deck for a short view. Do not travel to Terminal 3 just for this if your flight uses another terminal.",
     "cost": "Food and purchases are extra; terminal-specific opening notices apply.",
@@ -187,7 +187,7 @@
   },
   "hozenji": {
     "name": "Hozenji and its alley before a KIX flight",
-    "anchor": "Namba Station, Hozenji Yokocho",
+    "anchor": "Hozenji Temple, Namba, Osaka",
     "access": "Locate Nankai Namba for the airport train before walking toward Hozenji. Metro Namba and Osaka-Namba are different station areas.",
     "visit": "Visit Hozenji's moss-covered Fudo statue and the short stone-paved Hozenji Yokocho. Treat a meal as optional: a restaurant queue should not become another timed attraction.",
     "cost": "The outdoor temple-and-alley visit has no general admission ticket; offerings and meals are extra.",
@@ -232,7 +232,7 @@
   },
   "kansai-airport": {
     "name": "Kansai Airport: a last stop near your KIX terminal",
-    "anchor": "Kansai-Airport Station and your departure terminal",
+    "anchor": "Kansai International Airport",
     "access": "Railway passengers arrive by Terminal 1 and Aeroplaza. Terminal 2 needs the official onward access route; include it before choosing a meal.",
     "visit": "For a low-transfer final stop, stay in your departure terminal or Aeroplaza for one seated meal. Sky View is a separate outing with a bus journey, not a walk from the check-in counter.",
     "cost": "Meals and shopping are extra; check the correct terminal's public and restricted areas.",
@@ -320,7 +320,7 @@
   },
   "narita-airport": {
     "name": "Narita Airport: what to do before your flight",
-    "anchor": "Your airline's Narita terminal",
+    "anchor": "Narita International Airport",
     "access": "Confirm Terminal 1, 2 or 3 before boarding the train. Terminal 3 uses the Terminal 2 station plus the official onward route.",
     "visit": "Use one meal, souvenir shop or seated rest in your own terminal after resolving check-in and baggage questions. Stay at the airport rather than returning to Narita town once airline deadlines become uncertain.",
     "cost": "Food, shopping and paid facilities have separate charges; public areas and post-security areas differ.",
@@ -383,7 +383,7 @@
   },
   "omotesando": {
     "name": "Omotesando shopping before a Haneda flight",
-    "anchor": "Harajuku or Omotesando Station",
+    "anchor": "Omotesando Hills, Tokyo",
     "access": "Keep the avenue walk between your chosen shop and the station used by your return route. A full Harajuku-to-Shibuya walk is outside this short stop.",
     "visit": "Choose Omotesando Hills or one design shop along the avenue. Decide which item you want before browsing, then stop with time left for packing.",
     "cost": "A street walk is free; shopping, cafés and ticketed events are extra.",
@@ -462,7 +462,7 @@
   },
   "shinagawa": {
     "name": "Shinagawa before Haneda: a meal near the train",
-    "anchor": "Shinagawa Station, JR and Keikyu concourse",
+    "anchor": "Shinagawa Station, Tokyo",
     "access": "Choose your meal on the side of the gates you can legally access. ecute Shinagawa is inside JR gates; the Keikyu airport route has its own gate and platform.",
     "visit": "Use ecute Shinagawa for one food purchase if you already have access to the JR paid area. Otherwise choose a station-side meal outside the gates; do not buy a rail ticket just to reach a food shop.",
     "cost": "Food and purchases are extra. JR-gated shops may require a valid ticket or admission, unlike an outside-gate café.",
@@ -494,7 +494,7 @@
   },
   "tokyo-character-street": {
     "name": "Tokyo Character Street before a Haneda flight",
-    "anchor": "Tokyo Station, Yaesu side B1",
+    "anchor": "Tokyo Character Street, Tokyo Station First Avenue",
     "access": "Tokyo Character Street is in Tokyo Station First Avenue outside the JR ticket gates. Do not enter the paid area expecting to reach the shops.",
     "visit": "Pick two favorite character shops at Tokyo Character Street rather than checking every storefront. Allow time for payment and packing before returning to your luggage or airport connection.",
     "cost": "Browsing is free; merchandise and events are extra. Each shop's current opening notice takes priority.",
@@ -504,7 +504,7 @@
   },
   "tokyo-station-gallery": {
     "name": "Tokyo Station Gallery before a Haneda flight",
-    "anchor": "Tokyo Station, Marunouchi North entrance",
+    "anchor": "Tokyo Station Gallery, Marunouchi North Entrance",
     "access": "The gallery is on the Marunouchi North side, outside the JR ticket gates. Keep Yaesu-side airport buses and shopping separate from the entrance decision.",
     "visit": "Choose a few works and look at the station's exposed brickwork inside Tokyo Station Gallery. Keep the exhibition visit and the family rest stage; do not replace the rest stage with more station shopping.",
     "cost": "Exhibition admission is required; prices depend on the exhibition. The planner only offers dates in its verified exhibition calendar.",
@@ -578,7 +578,7 @@
   },
   "ueno-toshogu": {
     "name": "Ueno Toshogu before a Haneda flight",
-    "anchor": "Ueno Station and Ueno Park",
+    "anchor": "Ueno Toshogu Shrine, Ueno Park",
     "access": "Use the shrine's current access map through Ueno Park. Keep the return to your chosen Ueno station in the timeline instead of walking toward another museum.",
     "visit": "At Ueno Toshogu, focus on the carved gate, gold decoration and lantern approach. The paid precinct is distinct from entering the shrine buildings, which are not open for a casual interior visit.",
     "cost": "The inner precinct requires admission; the peony garden and special events are separate. Check current ticket categories.",

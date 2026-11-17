@@ -1,0 +1,842 @@
+{
+  "reviewed": "2026-11-17",
+  "method": "Public official operator, shrine/museum, local tourism and district-association pages checked with web retrieval. Proposed local visit ranges are editorial planning allowances, not field measurements. No claim of personal visits or guaranteed live stock, seats or transport.",
+  "pages": {
+    "akihabara": {
+      "sources": [
+        {
+          "url": "https://akihabara-radiokaikan.co.jp/access/",
+          "label": "Radio Kaikan: access, hours and shop floors",
+          "checked": "2026-11-17",
+          "note": "Operator page lists 10:00–20:00 and reviewed tenant floors; basement has separate hours."
+        },
+        {
+          "url": "https://visit-chiyoda.tokyo/app/en/spot/detail/441",
+          "label": "Chiyoda Tourism: JR Electric Town approach",
+          "checked": "2026-11-17",
+          "note": "Official district tourism listing identifies JR Electric Town exit."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "asakusa-sensoji": {
+      "sources": [
+        {
+          "url": "https://www.senso-ji.jp/visit/",
+          "label": "Sensoji: main-hall hours",
+          "checked": "2026-11-17",
+          "note": "Temple states seasonal opening and 17:00 closing; other facilities have separate hours."
+        },
+        {
+          "url": "https://www.senso-ji.jp/english/",
+          "label": "Sensoji: English temple guide",
+          "checked": "2026-11-17",
+          "note": "Temple’s own account of the principal gates, halls and history."
+        },
+        {
+          "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/asakusa/",
+          "label": "GO TOKYO: Asakusa area and transport",
+          "checked": "2026-11-17",
+          "note": "Official metropolitan tourism source for district access; local time range is editorial."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "animate-shinjuku": {
+      "sources": [
+        {
+          "url": "https://www.animate.co.jp/en/shop/shinjuku/",
+          "label": "Animate Shinjuku: address, hours and station approaches",
+          "checked": "2026-11-17",
+          "note": "Official page confirms Marui Men 7F, 11:00–20:00, E2 2-minute/JR East Exit 9-minute estimates."
+        },
+        {
+          "url": "https://www.animate.co.jp/en/shop/shinjuku/access/",
+          "label": "Animate: illustrated access guide",
+          "checked": "2026-11-17",
+          "note": "Use the shop’s route photographs to locate the correct Marui entrance."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "fukagawa-edo-museum": {
+      "sources": [
+        {
+          "url": "https://www.kcf.or.jp/fukagawa/outline/",
+          "label": "Fukagawa Edo Museum: exhibition and operating calendar",
+          "checked": "2026-11-17",
+          "note": "Operator confirms full-scale late Edo streetscape, 09:30–17:00, 16:30 admission and normal closure pattern."
+        },
+        {
+          "url": "https://www.kcf.or.jp/fukagawa/outline/fee/",
+          "label": "Museum: current admission categories",
+          "checked": "2026-11-17",
+          "note": "¥400 adult; ¥50 elementary/junior-high/high-school or equivalent on reviewed table."
+        },
+        {
+          "url": "https://www.kcf.or.jp/fukagawa/access/",
+          "label": "Museum: access map",
+          "checked": "2026-11-17",
+          "note": "Official map is image-based; no unsupported exit number or measured walking time added."
+        },
+        {
+          "url": "https://www.kcf.or.jp/fukagawa/outline/barrierfree/",
+          "label": "Museum: barrier-free facilities",
+          "checked": "2026-11-17",
+          "note": "Operator provides route/facility diagrams; no blanket step-free station-to-exhibit certification claimed."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "ginza": {
+      "sources": [
+        {
+          "url": "https://www.mistore.jp/store/ginza/access.html",
+          "label": "Ginza Mitsukoshi: hours and station access",
+          "checked": "2026-11-17",
+          "note": "Current general hours 10:00–20:00; operator gives 4-chome gate and Higashi-ginza approaches."
+        },
+        {
+          "url": "https://www.mistore.jp/store/ginza/shops.html",
+          "label": "Mitsukoshi: food floors and facilities",
+          "checked": "2026-11-17",
+          "note": "Official floor guide places food departments on B2/B3 and gives separate restaurant floors."
+        },
+        {
+          "url": "https://www.ito-ya.co.jp/ext/lang/en/information.html",
+          "label": "Itoya: store and stationery information",
+          "checked": "2026-11-17",
+          "note": "Official English information page confirms Ginza main store, stationery, A13 two-minute approach and Sunday/holiday earlier closing."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "ginza-evening": {
+      "sources": [
+        {
+          "url": "https://www.mistore.jp/store/ginza/shops.html",
+          "label": "Ginza Mitsukoshi: restaurant floors",
+          "checked": "2026-11-17",
+          "note": "Operator floor guide confirms restaurant departments on 11F/12F and their cuisines."
+        },
+        {
+          "url": "https://www.mistore.jp/store/ginza/access.html",
+          "label": "Mitsukoshi: access and separate dining-hours links",
+          "checked": "2026-11-17",
+          "note": "Retail closing and restaurant hours distinguished; no fixed restaurant last order asserted."
+        },
+        {
+          "url": "https://www.ginza.jp/en/",
+          "label": "Ginza official: district information",
+          "checked": "2026-11-17",
+          "note": "Local district source; visit allowance and queue decision are editorial."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "hamamatsucho-zojoji": {
+      "sources": [
+        {
+          "url": "https://www.zojoji.or.jp/map/",
+          "label": "Zojoji: official access map",
+          "checked": "2026-11-17",
+          "note": "Temple lists Hamamatsucho 10-minute and Daimon 5-minute walking approaches."
+        },
+        {
+          "url": "https://www.zojoji.or.jp/en/",
+          "label": "Zojoji: English temple guide",
+          "checked": "2026-11-17",
+          "note": "Temple context and principal buildings; paid exhibition areas distinct."
+        },
+        {
+          "url": "https://www.gotokyo.org/en/spot/47/index.html",
+          "label": "GO TOKYO: Zojoji and current gate works",
+          "checked": "2026-11-17",
+          "note": "Current metropolitan tourism notice says Sangedatsumon conservation/repair is ongoing."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "hanazono-shrine": {
+      "sources": [
+        {
+          "url": "https://www.kanko-shinjuku.jp/spot/c005/article_369.html",
+          "label": "Shinjuku tourism association: shrine access",
+          "checked": "2026-11-17",
+          "note": "Official local tourism source gives E2 immediate access and JR East Exit seven-minute approach."
+        },
+        {
+          "url": "https://hanazono-jinja.or.jp/",
+          "label": "Hanazono Shrine: current events and shrine information",
+          "checked": "2026-11-17",
+          "note": "Official domain returned HTTP 503 in direct check on 17 November; office hours and current event dates were therefore not asserted. Landmark/access facts are supported by Shinjuku Tourism Association."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "harajuku": {
+      "sources": [
+        {
+          "url": "https://www.takeshita-street.com/map.html",
+          "label": "Takeshita Street association: illustrated map",
+          "checked": "2026-11-17",
+          "note": "Association map identifies shop positions and street entrance; route allowance is editorial."
+        },
+        {
+          "url": "https://www.takeshita-street.com/shop.html",
+          "label": "Takeshita Street: current member directory",
+          "checked": "2026-11-17",
+          "note": "Shop hours differ; no district-wide opening time inferred."
+        },
+        {
+          "url": "https://www.marion.co.jp/store/tokyo/",
+          "label": "Marion Crepes: Tokyo shop directory",
+          "checked": "2026-11-17",
+          "note": "Operator confirms the Harajuku Takeshita-dori location; no menu price or queue time promised."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "kanda-jimbocho": {
+      "sources": [
+        {
+          "url": "https://www.shosen.co.jp/grande/",
+          "label": "Shosen Grande: shop and A7 access directions",
+          "checked": "2026-11-17",
+          "note": "Operator gives A7, eastward Yasukuni-dori approach and approximately one-minute exit-to-shop walk."
+        },
+        {
+          "url": "https://www.tokyodo-web.co.jp/floor/",
+          "label": "Books Tokyodo: store and floor information",
+          "checked": "2026-11-17",
+          "note": "Named second bookshop; exact stock and event hours are not guaranteed."
+        },
+        {
+          "url": "https://visit-chiyoda.tokyo/app/en/spot/detail/705",
+          "label": "Chiyoda tourism association: Book House Cafe",
+          "checked": "2026-11-17",
+          "note": "Official district listing supports the picture-book/café alternative."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "kappabashi": {
+      "sources": [
+        {
+          "url": "https://www.kappabashi.or.jp/en/access/",
+          "label": "Kappabashi association: station approaches",
+          "checked": "2026-11-17",
+          "note": "Five-minute district approach from Tawaramachi; district boundary not every shop."
+        },
+        {
+          "url": "https://www.kappabashi.or.jp/en/shops/143/",
+          "label": "Niimi: location and trading days",
+          "checked": "2026-11-17",
+          "note": "Association tenant page confirms southern entrance, giant chef and Sunday/holiday closure."
+        },
+        {
+          "url": "https://www.kappabashi.or.jp/en/shops/148/",
+          "label": "Hashitou: chopsticks and trading days",
+          "checked": "2026-11-17",
+          "note": "Association tenant page supports named category and Sunday/holiday closure."
+        },
+        {
+          "url": "https://www.ganso-sample.com/en/shop/kappabashi/",
+          "label": "Ganso: actual shop approaches and hours",
+          "checked": "2026-11-17",
+          "note": "Operator gives 12 minutes Tawaramachi Exit 3 and 5 minutes TX Asakusa A2."
+        },
+        {
+          "url": "https://www.kappabashi.or.jp/en/shops/96/",
+          "label": "Ganso: products and reservations",
+          "checked": "2026-11-17",
+          "note": "Association confirms workshops require reservation; Sunday/holiday hours listed."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "meiji-shrine": {
+      "sources": [
+        {
+          "url": "https://www.meijijingu.or.jp/en/access/",
+          "label": "Meiji Jingu: entrance and sanctuary access",
+          "checked": "2026-11-17",
+          "note": "Operator explicitly distinguishes station-to-entrance access from at least ten further minutes to main buildings."
+        },
+        {
+          "url": "https://www.meijijingu.or.jp/en/opening/",
+          "label": "Meiji Jingu: monthly opening table",
+          "checked": "2026-11-17",
+          "note": "Official November/December hours, daily grounds access and separate facility hours."
+        },
+        {
+          "url": "https://www.meijijingu.or.jp/en/visit/",
+          "label": "Meiji Jingu: visiting guidance",
+          "checked": "2026-11-17",
+          "note": "Free ordinary grounds entry and visitor guidance; route duration is an editorial estimate."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "nakano-broadway": {
+      "sources": [
+        {
+          "url": "https://www.mandarake.co.jp/dir/nkn/",
+          "label": "Mandarake Nakano: current store information",
+          "checked": "2026-11-17",
+          "note": "Operator lists noon-to-20:00 hours and JR North Exit five-minute approach."
+        },
+        {
+          "url": "https://www.mandarake.co.jp/shop/nkn/floor_guide.html",
+          "label": "Mandarake: specialist shop floors",
+          "checked": "2026-11-17",
+          "note": "Official floor guide lists main store on 3F and Henya on 4F."
+        },
+        {
+          "url": "https://www.mandarake.co.jp/shop/nkn/henya.html",
+          "label": "Mandarake Henya: vintage-toy focus",
+          "checked": "2026-11-17",
+          "note": "Product categories confirmed; operator warns example stock may already be sold."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "nihonbashi": {
+      "sources": [
+        {
+          "url": "https://www.gotokyo.org/en/spot/44/index.html",
+          "label": "GO TOKYO: bridge history and location",
+          "checked": "2026-11-17",
+          "note": "Metropolitan tourism source for road origin and bridge location."
+        },
+        {
+          "url": "https://www.nihonbashi-tokyo.jp/en/sights/",
+          "label": "Nihonbashi: district sights",
+          "checked": "2026-11-17",
+          "note": "Local district source supports name and historical context."
+        },
+        {
+          "url": "https://mitsui-shopping-park.com/en/urban/muromachi/store/600234.html",
+          "label": "COREDO: Ninben shop and dashi bar",
+          "checked": "2026-11-17",
+          "note": "Operator listing confirms Ninben in COREDO Muromachi 1 1F and dashi-bar concept."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "odaiba": {
+      "sources": [
+        {
+          "url": "https://www.tptc.co.jp/park/01_02/access",
+          "label": "Park operator: Odaiba access and facilities map",
+          "checked": "2026-11-17",
+          "note": "Official park map supports station choices and waterfront geography; no unsupported precise local walk quoted."
+        },
+        {
+          "url": "https://www.gotokyo.org/en/spot/39/index.html",
+          "label": "GO TOKYO: Odaiba Marine Park",
+          "checked": "2026-11-17",
+          "note": "Public metropolitan tourism source identifies the waterfront and Statue of Liberty replica."
+        },
+        {
+          "url": "https://www.aquacity.jp/access/",
+          "label": "AQUA CiTY ODAIBA: access",
+          "checked": "2026-11-17",
+          "note": "Named indoor landmark and official approach map."
+        },
+        {
+          "url": "https://www.gotokyo.org/en/see-and-do/attractions/beach-and-pool/index.html",
+          "label": "GO TOKYO: beach swimming rules",
+          "checked": "2026-11-17",
+          "note": "Metropolitan tourism guidance explicitly says Odaiba does not allow swimming."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "omotesando": {
+      "sources": [
+        {
+          "url": "https://www.omotesandohills.com/access/train.html",
+          "label": "Omotesando Hills: station approach",
+          "checked": "2026-11-17",
+          "note": "Official operator gives Omotesando A2 two-minute approach."
+        },
+        {
+          "url": "https://www.omotesandohills.com/information/opening_hour.html",
+          "label": "Omotesando Hills: current hours",
+          "checked": "2026-11-17",
+          "note": "Operator lists shops/cafés 11:00–20:00 and distinct restaurant hours/exceptions."
+        },
+        {
+          "url": "https://www.gotokyo.org/en/destinations/western-tokyo/aoyama-and-omotesando/index.html",
+          "label": "GO TOKYO: avenue and district",
+          "checked": "2026-11-17",
+          "note": "Metropolitan tourism context for architecture and avenue; itinerary choices are editorial."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "roppongi-azabudai": {
+      "sources": [
+        {
+          "url": "https://www.azabudai-hills.com/access/",
+          "label": "Azabudai Hills: station exits and approach times",
+          "checked": "2026-11-17",
+          "note": "Operator lists direct Kamiyacho 5/Roppongi-itchome 4 and ten-minute Roppongi approaches."
+        },
+        {
+          "url": "https://www.azabudai-hills.com/en/azabudaihillsmarket/index.html",
+          "label": "Azabudai Hills Market: location and general hours",
+          "checked": "2026-11-17",
+          "note": "Operator page lists Garden Plaza C 1F/B1 and 10:00–20:00, shop exceptions."
+        },
+        {
+          "url": "https://www.azabudai-hills.com/en/",
+          "label": "Azabudai Hills: public spaces and facility directory",
+          "checked": "2026-11-17",
+          "note": "Current facility directory; no unverified access to tower observation floors promised."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "shibuya": {
+      "sources": [
+        {
+          "url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+          "label": "GO TOKYO: crossing, Hachiko and district",
+          "checked": "2026-11-17",
+          "note": "Official metropolitan tourism source supports compact street-level landmarks."
+        },
+        {
+          "url": "https://www.shibuya-scramble-square.com/sky/access/",
+          "label": "SHIBUYA SKY: correct building and 14F entrance",
+          "checked": "2026-11-17",
+          "note": "Operator explicitly distinguishes SKY from Hikarie Sky Lobby and provides approach maps."
+        },
+        {
+          "url": "https://shibuya-scramble-square.com/sky/ticket",
+          "label": "SHIBUYA SKY: current booking and baggage conditions",
+          "checked": "2026-11-17",
+          "note": "Time-sensitive ticket categories; no frozen price given, separate visit required."
+        },
+        {
+          "url": "https://www.shibuya-scramble-square.com/sky/faq/",
+          "label": "SHIBUYA SKY: admission and weather guidance",
+          "checked": "2026-11-17",
+          "note": "Operator FAQ governs access; no guaranteed roof opening or immediate admission claimed."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "shinagawa": {
+      "sources": [
+        {
+          "url": "https://www.ecute.jp/shinagawa/access",
+          "label": "Ecute Shinagawa: gate conditions and opening categories",
+          "checked": "2026-11-17",
+          "note": "Operator confirms JR paid-area access, admission/IC arrangements and two-hour entry limit; hours differ by category."
+        },
+        {
+          "url": "https://www.ecute.jp/shinagawa/",
+          "label": "Ecute: current tenant directory",
+          "checked": "2026-11-17",
+          "note": "Use named complex with live tenants; no unverified seat availability or fixed menu cost."
+        },
+        {
+          "url": "https://www.haneda-tokyo-access.com/en/",
+          "label": "Keikyu: Haneda access and terminal guidance",
+          "checked": "2026-11-17",
+          "note": "Airport rail operator source; do not freeze construction-sensitive platform numbers."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    },
+    "shiodome": {
+      "sources": [
+        {
+          "url": "https://www.shiodome-cc.com/en/",
+          "label": "Shiodome City Center: access, map and services",
+          "checked": "2026-11-17",
+          "note": "Operator gives specific station exit approaches and distinguishes public services from paid high-floor restaurants."
+        },
+        {
+          "url": "https://www.japan.travel/en/spot/368/",
+          "label": "JNTO: Shiodome district",
+          "checked": "2026-11-17",
+          "note": "Official national tourism context; the compact walkway route and local allowance are editorial, not a surveyed accessible trail."
+        }
+      ],
+      "estimate_basis": "Local visit range is an editorial allocation for the named limited activity; excludes airport transfer and luggage stages."
+    }
+  },
+  "material_corrections": [
+    "Animate Shinjuku is a single store at Marui Men 7F, not a multi-floor Animate building.",
+    "Zojoji Sangedatsumon conservation work is disclosed; an unobstructed historic gate view is not promised.",
+    "Omotesando Hills-only local visit is explicitly separate from a combined Harajuku planner model.",
+    "Kappabashi district access is distinguished from the longer approach to Ganso; TX Asakusa differs from Tobu/Toei Asakusa.",
+    "Meiji Jingu November and December closing times are shown separately; shrine-entrance time excludes at least ten more minutes to main buildings.",
+    "Paid-area access to ecute Shinagawa and two-hour admission-entry conditions are explicit."
+  ],
+  "uncertainties": [
+    "No exact walking times or exit numbers added where reviewed official evidence was not textual or sufficiently clear.",
+    "Fukagawa access and barrier-free maps are image-led; no unsupported station exit number or complete step-free certification asserted.",
+    "Hanazono shrine-office hours and overnight grounds access were not asserted; festival conditions vary.",
+    "Shiodome walkway loop is not surveyed for continuous shelter, all-night access or step-free continuity.",
+    "Shop prices, stock and queue duration remain item/date dependent.",
+    "Hanazono Shrine official website returned HTTP 503 during direct verification; only tourism-association-backed access and general shrine advice were asserted, with no current festival dates or office hours."
+  ],
+  "source_http_check": [
+    {
+      "url": "https://akihabara-radiokaikan.co.jp/access/",
+      "status": 200,
+      "final": "https://akihabara-radiokaikan.co.jp/access/",
+      "soft404": false
+    },
+    {
+      "url": "https://hanazono-jinja.or.jp/",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://mitsui-shopping-park.com/en/urban/muromachi/store/600234.html",
+      "status": 200,
+      "final": "https://mitsui-shopping-park.com/en/urban/muromachi/store/600234.html",
+      "soft404": false
+    },
+    {
+      "url": "https://shibuya-scramble-square.com/sky/ticket",
+      "status": 200,
+      "final": "https://shibuya-scramble-square.com/sky/ticket/",
+      "soft404": false
+    },
+    {
+      "url": "https://visit-chiyoda.tokyo/app/en/spot/detail/441",
+      "status": 200,
+      "final": "https://visit-chiyoda.tokyo/app/en/spot/detail/441",
+      "soft404": false
+    },
+    {
+      "url": "https://visit-chiyoda.tokyo/app/en/spot/detail/705",
+      "status": 200,
+      "final": "https://visit-chiyoda.tokyo/app/en/spot/detail/705",
+      "soft404": false
+    },
+    {
+      "url": "https://www.animate.co.jp/en/shop/shinjuku/",
+      "status": 200,
+      "final": "https://www.animate.co.jp/en/shop/shinjuku/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.animate.co.jp/en/shop/shinjuku/access/",
+      "status": 200,
+      "final": "https://www.animate.co.jp/en/shop/shinjuku/access/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.aquacity.jp/access/",
+      "status": 200,
+      "final": "https://www.aquacity.jp/access/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.azabudai-hills.com/access/",
+      "status": 200,
+      "final": "https://www.azabudai-hills.com/access/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.azabudai-hills.com/en/",
+      "status": 200,
+      "final": "https://www.azabudai-hills.com/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.azabudai-hills.com/en/azabudaihillsmarket/index.html",
+      "status": 200,
+      "final": "https://www.azabudai-hills.com/azabudaihillsmarket/index.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.ecute.jp/shinagawa/",
+      "status": 200,
+      "final": "https://www.ecute.jp/shinagawa/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.ecute.jp/shinagawa/access",
+      "status": 200,
+      "final": "https://www.ecute.jp/shinagawa/access",
+      "soft404": false
+    },
+    {
+      "url": "https://www.ganso-sample.com/en/shop/kappabashi/",
+      "status": 200,
+      "final": "https://www.ganso-sample.com/en/shop/kappabashi/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.ginza.jp/en/",
+      "status": 200,
+      "final": "https://www.ginza.jp/en/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/asakusa/",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/destinations/eastern-tokyo/asakusa/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.gotokyo.org/en/destinations/western-tokyo/aoyama-and-omotesando/index.html",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/destinations/western-tokyo/aoyama-and-omotesando/index.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.gotokyo.org/en/see-and-do/attractions/beach-and-pool/index.html",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/see-and-do/attractions/beach-and-pool/index.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.gotokyo.org/en/spot/39/index.html",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/spot/39/index.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.gotokyo.org/en/spot/44/index.html",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/spot/44/index.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.gotokyo.org/en/spot/47/index.html",
+      "status": 200,
+      "final": "https://www.gotokyo.org/en/spot/47/index.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.haneda-tokyo-access.com/en/",
+      "status": 200,
+      "final": "https://www.haneda-tokyo-access.com/en/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.japan.travel/en/spot/368/",
+      "status": 200,
+      "final": "https://www.japan.travel/en/spot/368/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kanko-shinjuku.jp/spot/c005/article_369.html",
+      "status": 200,
+      "final": "https://www.kanko-shinjuku.jp/spot/c005/article_369.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kappabashi.or.jp/en/access/",
+      "status": 200,
+      "final": "https://www.kappabashi.or.jp/en/access/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kappabashi.or.jp/en/shops/143/",
+      "status": 200,
+      "final": "https://www.kappabashi.or.jp/en/shops/143/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kappabashi.or.jp/en/shops/148/",
+      "status": 200,
+      "final": "https://www.kappabashi.or.jp/en/shops/148/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kappabashi.or.jp/en/shops/96/",
+      "status": 200,
+      "final": "https://www.kappabashi.or.jp/en/shops/96/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kcf.or.jp/fukagawa/access/",
+      "status": 200,
+      "final": "https://www.kcf.or.jp/fukagawa/access/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kcf.or.jp/fukagawa/outline/",
+      "status": 200,
+      "final": "https://www.kcf.or.jp/fukagawa/outline/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kcf.or.jp/fukagawa/outline/barrierfree/",
+      "status": 200,
+      "final": "https://www.kcf.or.jp/fukagawa/outline/barrierfree/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.kcf.or.jp/fukagawa/outline/fee/",
+      "status": 200,
+      "final": "https://www.kcf.or.jp/fukagawa/outline/fee/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.mandarake.co.jp/dir/nkn/",
+      "status": 200,
+      "final": "https://www.mandarake.co.jp/dir/nkn/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.mandarake.co.jp/shop/nkn/floor_guide.html",
+      "status": 200,
+      "final": "https://www.mandarake.co.jp/shop/nkn/floor_guide.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.mandarake.co.jp/shop/nkn/henya.html",
+      "status": 200,
+      "final": "https://www.mandarake.co.jp/shop/nkn/henya.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.marion.co.jp/store/tokyo/",
+      "status": 200,
+      "final": "https://www.marion.co.jp/store/tokyo/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.meijijingu.or.jp/en/access/",
+      "status": 200,
+      "final": "https://www.meijijingu.or.jp/en/access/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.meijijingu.or.jp/en/opening/",
+      "status": 200,
+      "final": "https://www.meijijingu.or.jp/en/opening/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.meijijingu.or.jp/en/visit/",
+      "status": 200,
+      "final": "https://www.meijijingu.or.jp/en/visit/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.mistore.jp/store/ginza/access.html",
+      "status": 200,
+      "final": "https://www.mistore.jp/store/ginza/access.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.mistore.jp/store/ginza/shops.html",
+      "status": 200,
+      "final": "https://www.mistore.jp/store/ginza/shops.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.nihonbashi-tokyo.jp/en/sights/",
+      "status": 200,
+      "final": "https://www.nihonbashi-tokyo.jp/en/sights/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.omotesandohills.com/access/train.html",
+      "status": 200,
+      "final": "https://www.omotesandohills.com/access/train.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.omotesandohills.com/information/opening_hour.html",
+      "status": 200,
+      "final": "https://www.omotesandohills.com/information/opening_hour.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.senso-ji.jp/english/",
+      "status": 200,
+      "final": "https://www.senso-ji.jp/english/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.senso-ji.jp/visit/",
+      "status": 200,
+      "final": "https://www.senso-ji.jp/visit/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.shibuya-scramble-square.com/sky/access/",
+      "status": 200,
+      "final": "https://www.shibuya-scramble-square.com/sky/access/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.shibuya-scramble-square.com/sky/faq/",
+      "status": 200,
+      "final": "https://www.shibuya-scramble-square.com/sky/faq/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.shiodome-cc.com/en/",
+      "status": 200,
+      "final": "https://www.shiodome-cc.com/en/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.shosen.co.jp/grande/",
+      "status": 200,
+      "final": "https://www.shosen.co.jp/grande/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.takeshita-street.com/map.html",
+      "status": 200,
+      "final": "https://www.takeshita-street.com/map.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.takeshita-street.com/shop.html",
+      "status": 200,
+      "final": "https://www.takeshita-street.com/shop.html",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tokyodo-web.co.jp/floor/",
+      "status": 200,
+      "final": "https://www.tokyodo-web.co.jp/floor/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.tptc.co.jp/park/01_02/access",
+      "status": 200,
+      "final": "https://www.tptc.co.jp/park/01_02/access",
+      "soft404": false
+    },
+    {
+      "url": "https://www.zojoji.or.jp/en/",
+      "status": 200,
+      "final": "https://www.zojoji.or.jp/en/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.zojoji.or.jp/map/",
+      "status": 200,
+      "final": "https://www.zojoji.or.jp/map/",
+      "soft404": false
+    },
+    {
+      "url": "https://www.ito-ya.co.jp/ext/lang/en/information.html",
+      "status": 200,
+      "final": "https://www.ito-ya.co.jp/ext/lang/en/information.html",
+      "soft404": false
+    }
+  ]
+}

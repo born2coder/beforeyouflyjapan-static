@@ -1,0 +1,68 @@
+{
+  "reviewed": "2026-11-17",
+  "publisher": "ca-pub-6391747094534886",
+  "publisherEvidence": "The same existing publisher ID appeared in 116 tracked HTML ad loaders before this change. No new account was created.",
+  "roles": {
+    "allow": "Indexable destination pages, nested editorial guides and the three root timing/checkout guides.",
+    "exclude": [
+      "homepage/planner",
+      "all plan application pages",
+      "guide directory",
+      "about",
+      "method",
+      "contact",
+      "legal/privacy",
+      "hotel resource"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://support.google.com/adsense/answer/7584263?hl=en",
+      "fact": "Google documents meta-tag verification as an option when publishers do not want the AdSense runtime on the homepage, and says the entire site is reviewed."
+    },
+    {
+      "url": "https://support.google.com/adsense/answer/12171612?hl=en",
+      "fact": "ads.txt is recommended, not mandatory; the direct Google seller line format is documented."
+    },
+    {
+      "url": "https://support.google.com/publisherpolicies/answer/11112688?hl=en",
+      "fact": "Ad placement is restricted on low-value, construction, alert/navigation and behavioral-purpose screens."
+    },
+    {
+      "url": "https://support.google.com/adsense/answer/12176698?hl=en",
+      "fact": "Enough valuable unique content, usability and navigation are part of readiness; ad access/ownership are separate checks."
+    },
+    {
+      "url": "https://developers.google.com/analytics/devguides/collection/ga4/views?client_type=gtag",
+      "fact": "The config command sends a page_view by default. page_location can override the default full location.href; history enhanced measurement is a separate property setting."
+    },
+    {
+      "url": "https://developers.google.com/analytics/devguides/collection/ga4/reference/config",
+      "fact": "page_location/page_referrer are configurable page context fields."
+    }
+  ],
+  "codeEvidence": [
+    "assets/analytics.js restricts custom event fields; no flight/free timestamps on its allowlist.",
+    "assets/planner.js stores byf-conditions in sessionStorage.",
+    "assets/plan-context.js uses query-based shared plan links.",
+    "worker.mjs validates the contact form, checks Turnstile, rate-limits email/IP hash keys and sends via Resend."
+  ],
+  "changes": [
+    "Single main landmark and honest publisher/method copy in assigned support pages.",
+    "No fabricated field visit, professional credentials, person or legal entity.",
+    "Read-only source review, calculation and simulated traveller testing explicitly distinguished.",
+    "Ad runtime limited by role; all HTML retains publisher verification meta.",
+    "Google Analytics page_location and page_referrer remove query strings and fragments before config; original shared URLs remain visible to browser/hosting.",
+    "Privacy does not assert an unimplemented consent interface or certified CMP."
+  ],
+  "limits": [
+    "AdSense approval and account-side auto-ad/CMP settings were not changed or verified.",
+    "The ad allowlist is an editorial placement decision; it does not promise pages outside it are excluded from site review.",
+    "This change does not certify EU consent compliance or configure Google account-side enhanced measurement."
+  ],
+  "commands": [
+    "python3 scripts/apply-editorial-policy.py",
+    "python3 scripts/apply-editorial-policy.py --check",
+    "node --test tests/editorial-policy.test.cjs"
+  ]
+}

@@ -1,0 +1,848 @@
+{
+  "reviewed": "2026-11-17",
+  "scope": "13 English departure guides; source-linked official facts and distinct editorial decisions",
+  "pages": [
+    {
+      "path": "/after-hotel-checkout-tokyo/",
+      "title": "What to Do After Hotel Checkout in Tokyo Before a Flight",
+      "wordCountApprox": 666,
+      "sourceIds": [
+        "gransta",
+        "keikyu",
+        "nex",
+        "skyliner"
+      ],
+      "sources": [
+        {
+          "url": "https://www.gransta.jp/news/info/cloakservice/",
+          "label": "GRANSTA: storage gate sides, sizes, fees and time conditions (Japanese; listing dated 23 May 2025)",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.haneda-tokyo-access.com/en/haneda-airport/",
+          "label": "Keikyu: airport access and live journey search",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.jreast.co.jp/en/multi/nex/",
+          "label": "JR East: Narita Express routes and reservations",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.keisei.co.jp/keisei/tetudou/skyliner/us/directions/ueno.php",
+          "label": "Keisei: Ueno airport route and limits of quoted journey times",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "HND"
+    },
+    {
+      "path": "/before-late-flight-tokyo/",
+      "title": "What to Do Before a Late Flight from Tokyo",
+      "wordCountApprox": 567,
+      "sourceIds": [
+        "keikyu",
+        "nex",
+        "skyliner",
+        "hnd-dep"
+      ],
+      "sources": [
+        {
+          "url": "https://www.haneda-tokyo-access.com/en/haneda-airport/",
+          "label": "Keikyu: airport access and live journey search",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.jreast.co.jp/en/multi/nex/",
+          "label": "JR East: Narita Express routes and reservations",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.keisei.co.jp/keisei/tetudou/skyliner/us/directions/ueno.php",
+          "label": "Keisei: Ueno airport route and limits of quoted journey times",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+          "label": "Haneda: international departure floors and procedures",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "HND"
+    },
+    {
+      "path": "/how-early-arrive-haneda-airport/",
+      "title": "How Early to Arrive at Haneda for an International Flight",
+      "wordCountApprox": 534,
+      "sourceIds": [
+        "hnd-dep",
+        "keikyu-floor",
+        "hnd-hours"
+      ],
+      "sources": [
+        {
+          "url": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+          "label": "Haneda: international departure floors and procedures",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.haneda-tokyo-access.com/en/haneda-airport/to-terminal.html",
+          "label": "Keikyu: from each airport station to the terminal",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/faq/terminal_details.html",
+          "label": "Haneda: terminal hours and overnight eligibility",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "HND"
+    },
+    {
+      "path": "/guides/how-early-arrive-narita-airport/",
+      "title": "How Early to Arrive at Narita for an International Flight",
+      "wordCountApprox": 523,
+      "sourceIds": [
+        "nrt-dep",
+        "nrt-walk",
+        "nrt-shuttle",
+        "nex",
+        "skyliner"
+      ],
+      "sources": [
+        {
+          "url": "https://www.narita-airport.jp/en/airportguide/inter-dep/",
+          "label": "Narita: at-least-two-hour guidance, counters and departure procedure",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.narita-airport.jp/en/access/shuttlebus/walking-through/",
+          "label": "Narita: approximately 13-minute T2 station–T3 corridor",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.narita-airport.jp/en/access/shuttlebus/",
+          "label": "Narita: shuttle routes and terminal stops",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.jreast.co.jp/en/multi/nex/",
+          "label": "JR East: Narita Express routes and reservations",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.keisei.co.jp/keisei/tetudou/skyliner/us/directions/ueno.php",
+          "label": "Keisei: Ueno airport route and limits of quoted journey times",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "NRT"
+    },
+    {
+      "path": "/guides/how-early-arrive-kansai-airport/",
+      "title": "How Early to Arrive at Kansai (KIX) for an International Flight",
+      "wordCountApprox": 492,
+      "sourceIds": [
+        "kix-train",
+        "kix-t2",
+        "kix-transit",
+        "nankai"
+      ],
+      "sources": [
+        {
+          "url": "https://www.kansai-airport.or.jp/en/access/to-airport/train",
+          "label": "KIX: station connection to T1 and Aeroplaza",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/access/t2",
+          "label": "KIX: Aeroplaza 1F shuttle and 7–9-minute ride",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/flight/route/transit",
+          "label": "KIX: terminal floors and connection guidance",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.nankai.co.jp/en_railway/access-timetable",
+          "label": "Nankai: Rapi:t and Airport Express services",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "KIX"
+    },
+    {
+      "path": "/guides/haneda-departure-day/",
+      "title": "Haneda Departure Day: Choose a Last Tokyo Stop",
+      "wordCountApprox": 513,
+      "sourceIds": [
+        "hnd-dep",
+        "keikyu",
+        "keikyu-floor",
+        "gransta"
+      ],
+      "sources": [
+        {
+          "url": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+          "label": "Haneda: international departure floors and procedures",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.haneda-tokyo-access.com/en/haneda-airport/",
+          "label": "Keikyu: airport access and live journey search",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.haneda-tokyo-access.com/en/haneda-airport/to-terminal.html",
+          "label": "Keikyu: from each airport station to the terminal",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.gransta.jp/news/info/cloakservice/",
+          "label": "GRANSTA: storage gate sides, sizes, fees and time conditions (Japanese; listing dated 23 May 2025)",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "HND"
+    },
+    {
+      "path": "/guides/narita-departure-day/",
+      "title": "Narita Departure Day: Tokyo, Narita Town or the Airport?",
+      "wordCountApprox": 463,
+      "sourceIds": [
+        "nex",
+        "skyliner",
+        "naritasan",
+        "nrt-walk",
+        "nrt-dep"
+      ],
+      "sources": [
+        {
+          "url": "https://www.jreast.co.jp/en/multi/nex/",
+          "label": "JR East: Narita Express routes and reservations",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.keisei.co.jp/keisei/tetudou/skyliner/us/directions/ueno.php",
+          "label": "Keisei: Ueno airport route and limits of quoted journey times",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.naritasan.or.jp/access/",
+          "label": "Naritasan: station approach and temple access (Japanese)",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.narita-airport.jp/en/access/shuttlebus/walking-through/",
+          "label": "Narita: approximately 13-minute T2 station–T3 corridor",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.narita-airport.jp/en/airportguide/inter-dep/",
+          "label": "Narita: at-least-two-hour guidance, counters and departure procedure",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "NRT"
+    },
+    {
+      "path": "/guides/kansai-departure-day/",
+      "title": "KIX Departure Day: Namba, Umeda, Rinku or the Airport",
+      "wordCountApprox": 418,
+      "sourceIds": [
+        "nankai",
+        "kix-train",
+        "kix-t2",
+        "namba-bags",
+        "crosta"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nankai.co.jp/en_railway/access-timetable",
+          "label": "Nankai: Rapi:t and Airport Express services",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/access/to-airport/train",
+          "label": "KIX: station connection to T1 and Aeroplaza",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/access/t2",
+          "label": "KIX: Aeroplaza 1F shuttle and 7–9-minute ride",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-namba-station/",
+          "label": "Osaka tourism: Namba storage map; listing dated 1 October 2025",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://handsfree-japan.com/en/osaka/",
+          "label": "Crosta Osaka: outside-gate location, storage hours and price",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "KIX"
+    },
+    {
+      "path": "/guides/after-hotel-checkout-osaka/",
+      "title": "After Hotel Checkout in Osaka Before a Flight",
+      "wordCountApprox": 540,
+      "sourceIds": [
+        "namba-bags",
+        "crosta",
+        "nankai",
+        "kix-t2"
+      ],
+      "sources": [
+        {
+          "url": "https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-namba-station/",
+          "label": "Osaka tourism: Namba storage map; listing dated 1 October 2025",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://handsfree-japan.com/en/osaka/",
+          "label": "Crosta Osaka: outside-gate location, storage hours and price",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.nankai.co.jp/en_railway/access-timetable",
+          "label": "Nankai: Rapi:t and Airport Express services",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/access/t2",
+          "label": "KIX: Aeroplaza 1F shuttle and 7–9-minute ride",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "KIX"
+    },
+    {
+      "path": "/guides/before-late-flight-osaka/",
+      "title": "What to Do Before a Late Flight from Osaka",
+      "wordCountApprox": 510,
+      "sourceIds": [
+        "nankai",
+        "kix-train",
+        "kix-t2",
+        "kix-transit"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nankai.co.jp/en_railway/access-timetable",
+          "label": "Nankai: Rapi:t and Airport Express services",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/access/to-airport/train",
+          "label": "KIX: station connection to T1 and Aeroplaza",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/access/t2",
+          "label": "KIX: Aeroplaza 1F shuttle and 7–9-minute ride",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.kansai-airport.or.jp/en/flight/route/transit",
+          "label": "KIX: terminal floors and connection guidance",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "KIX"
+    },
+    {
+      "path": "/guides/luggage-before-flight-japan/",
+      "title": "Luggage Storage Before a Flight in Japan: Avoid Backtracking",
+      "wordCountApprox": 599,
+      "sourceIds": [
+        "gransta",
+        "namba-bags",
+        "crosta",
+        "hnd-locker",
+        "nrt-storage"
+      ],
+      "sources": [
+        {
+          "url": "https://www.gransta.jp/news/info/cloakservice/",
+          "label": "GRANSTA: storage gate sides, sizes, fees and time conditions (Japanese; listing dated 23 May 2025)",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-namba-station/",
+          "label": "Osaka tourism: Namba storage map; listing dated 1 October 2025",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://handsfree-japan.com/en/osaka/",
+          "label": "Crosta Osaka: outside-gate location, storage hours and price",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/service/facilities/coin_locker.html",
+          "label": "Haneda: locker locations, access and current charges",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.narita-airport.jp/en/service/delivery/storage/",
+          "label": "Narita: storage providers by terminal",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "HND"
+    },
+    {
+      "path": "/guides/haneda-terminal-3-departure-guide/",
+      "title": "Haneda Terminal 3 Departures: Floors, Map & What to Do",
+      "wordCountApprox": 533,
+      "sourceIds": [
+        "hnd-dep",
+        "hnd-map",
+        "keikyu-floor",
+        "hnd-locker",
+        "hnd-lounge",
+        "hnd-deck"
+      ],
+      "sources": [
+        {
+          "url": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+          "label": "Haneda: international departure floors and procedures",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/floor/terminal3/",
+          "label": "Haneda: Terminal 3 floor guide",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.haneda-tokyo-access.com/en/haneda-airport/to-terminal.html",
+          "label": "Keikyu: from each airport station to the terminal",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/service/facilities/coin_locker.html",
+          "label": "Haneda: locker locations, access and current charges",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/service/facilities/lounge.html",
+          "label": "Haneda: lounge location and access conditions",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/service/facilities/observation_deck.html",
+          "label": "Haneda: observation-deck hours and weather restrictions",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "HND"
+    },
+    {
+      "path": "/guides/haneda-airport-open-24-hours/",
+      "title": "Is Haneda Airport Open 24 Hours? Overnight & Early Flights",
+      "wordCountApprox": 589,
+      "sourceIds": [
+        "hnd-hours",
+        "hnd-hotel",
+        "keikyu",
+        "hnd-deck"
+      ],
+      "sources": [
+        {
+          "url": "https://www.tokyo-haneda.com/en/faq/terminal_details.html",
+          "label": "Haneda: terminal hours and overnight eligibility",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/service/facilities/hotel.html",
+          "label": "Haneda: terminal hotel directory",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.haneda-tokyo-access.com/en/haneda-airport/",
+          "label": "Keikyu: airport access and live journey search",
+          "checked": "2026-11-17"
+        },
+        {
+          "url": "https://www.tokyo-haneda.com/en/service/facilities/observation_deck.html",
+          "label": "Haneda: observation-deck hours and weather restrictions",
+          "checked": "2026-11-17"
+        }
+      ],
+      "airportCTA": "HND"
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Haneda: Shinagawa pickup 20 + station/wait 15 + rail allowance 30 + terminal navigation 20",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Station and waiting",
+          "minutes": 15
+        },
+        {
+          "label": "Rail allowance",
+          "minutes": 30
+        },
+        {
+          "label": "Terminal navigation",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 85,
+      "endSightseeingJST": "2026-11-20T16:35"
+    },
+    {
+      "label": "Haneda: Shinjuku pickup 20 + station approach 15 + wait 15 + rail/connections 65 + terminal navigation 20",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Station approach",
+          "minutes": 15
+        },
+        {
+          "label": "Waiting",
+          "minutes": 15
+        },
+        {
+          "label": "Rail and connections",
+          "minutes": 65
+        },
+        {
+          "label": "Terminal navigation",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 135,
+      "endSightseeingJST": "2026-11-20T15:45"
+    },
+    {
+      "label": "Collect bags 20 + walk/platform 15 + wait 20 + rail/connections 60 + terminal navigation 20",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Station approach",
+          "minutes": 15
+        },
+        {
+          "label": "Waiting",
+          "minutes": 20
+        },
+        {
+          "label": "Rail and connections",
+          "minutes": 60
+        },
+        {
+          "label": "Terminal navigation",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 135,
+      "endSightseeingJST": "2026-11-20T15:45"
+    },
+    {
+      "label": "Already in Shinagawa: pickup 20 + station/wait 15 + rail allowance 30 + terminal movement 20",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Station and waiting",
+          "minutes": 15
+        },
+        {
+          "label": "Rail allowance",
+          "minutes": 30
+        },
+        {
+          "label": "Terminal movement",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 85,
+      "endSightseeingJST": "2026-11-20T16:35"
+    },
+    {
+      "label": "Back at a Shinjuku hotel: pickup 20 + station walk 15 + wait 15 + rail/connections 65 + terminal movement 20",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Station walk",
+          "minutes": 15
+        },
+        {
+          "label": "Waiting",
+          "minutes": 15
+        },
+        {
+          "label": "Rail and connections",
+          "minutes": 65
+        },
+        {
+          "label": "Terminal movement",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 135,
+      "endSightseeingJST": "2026-11-20T15:45"
+    },
+    {
+      "label": "Tokyo Station: pickup 20 + platform/walk 10 + wait 20 + rail allowance 75 + terminal movement 20",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Platform approach",
+          "minutes": 10
+        },
+        {
+          "label": "Waiting",
+          "minutes": 20
+        },
+        {
+          "label": "Rail allowance",
+          "minutes": 75
+        },
+        {
+          "label": "Terminal movement",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 145,
+      "endSightseeingJST": "2026-11-20T15:35"
+    },
+    {
+      "label": "Keisei-Ueno corridor: pickup 20 + approach 15 + wait 20 + rail allowance 55 + terminal movement 20",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Approach",
+          "minutes": 15
+        },
+        {
+          "label": "Waiting",
+          "minutes": 20
+        },
+        {
+          "label": "Rail allowance",
+          "minutes": 55
+        },
+        {
+          "label": "Terminal movement",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 130,
+      "endSightseeingJST": "2026-11-20T15:50"
+    },
+    {
+      "label": "Namba → T1: pickup 20 + approach 15 + wait 20 + rail allowance 50 + terminal movement 20",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Approach",
+          "minutes": 15
+        },
+        {
+          "label": "Waiting",
+          "minutes": 20
+        },
+        {
+          "label": "Rail allowance",
+          "minutes": 50
+        },
+        {
+          "label": "T1 terminal movement",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 125,
+      "endSightseeingJST": "2026-11-20T15:55"
+    },
+    {
+      "label": "Namba → T2: pickup 20 + approach 15 + wait 20 + rail allowance 50 + shuttle/wait/walk allowance 50",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Approach",
+          "minutes": 15
+        },
+        {
+          "label": "Waiting",
+          "minutes": 20
+        },
+        {
+          "label": "Rail allowance",
+          "minutes": 50
+        },
+        {
+          "label": "T2 shuttle waiting walking",
+          "minutes": 50
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 155,
+      "endSightseeingJST": "2026-11-20T15:25"
+    },
+    {
+      "label": "Namba T1 example: pickup 20 + station walk 15 + wait 20 + rail allowance 50 + terminal movement 20",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Station walk",
+          "minutes": 15
+        },
+        {
+          "label": "Waiting",
+          "minutes": 20
+        },
+        {
+          "label": "Rail allowance",
+          "minutes": 50
+        },
+        {
+          "label": "T1 terminal movement",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 125,
+      "endSightseeingJST": "2026-11-20T15:55"
+    },
+    {
+      "label": "HND midnight example",
+      "flightJST": "2026-11-21T00:30",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T21:30",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Complete journey",
+          "minutes": 90
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 110,
+      "endSightseeingJST": "2026-11-20T19:40"
+    },
+    {
+      "label": "KIX midnight example",
+      "flightJST": "2026-11-21T00:30",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T21:30",
+      "stages": [
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Complete journey",
+          "minutes": 120
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 140,
+      "endSightseeingJST": "2026-11-20T19:10"
+    },
+    {
+      "label": "KIX restaurant latest exit example",
+      "flightJST": "2026-11-20T21:00",
+      "bufferMinutes": 180,
+      "airportReadyJST": "2026-11-20T18:00",
+      "stages": [
+        {
+          "label": "Restaurant to pickup walk",
+          "minutes": 15
+        },
+        {
+          "label": "Bag pickup",
+          "minutes": 20
+        },
+        {
+          "label": "Station walk",
+          "minutes": 15
+        },
+        {
+          "label": "Waiting",
+          "minutes": 20
+        },
+        {
+          "label": "Rail allowance",
+          "minutes": 50
+        },
+        {
+          "label": "Terminal movement",
+          "minutes": 20
+        }
+      ],
+      "totalBeforeAirportReadyMinutes": 140,
+      "endSightseeingJST": "2026-11-20T15:40"
+    }
+  ],
+  "sourceLimitations": [
+    "Storage listing dates are older than the review date and are explicitly disclosed.",
+    "No source confirms live locker/counter capacity or a passenger-specific queue.",
+    "KIX official content was retrieved with web search; automated direct HTTP can return 403.",
+    "No live departure, fee quote or firsthand visit is implied by an editorial calculation."
+  ]
+}

@@ -37,7 +37,8 @@ for(const [slug,row] of Object.entries(places)){
  assert.equal(d.querySelectorAll('.byf-practical').length,1);
  assert.equal(d.querySelectorAll('.byf-visit-nav').length,1);
  assert.ok(d.querySelector('.byf-map-link').href.startsWith('https://www.google.com/maps/search/?api=1&query='));
- assert.ok(d.querySelector('.byf-practical').textContent.includes(row.visit));
+ const authored={...JSON.parse(read('content/editorial-tokyo.json')),...JSON.parse(read('content/editorial-regions.json'))}[slug];
+ assert.ok(d.querySelector('.byf-editorial-hero').textContent.includes(authored.opening),slug+' reviewed visit');
  for(const link of d.querySelectorAll('.byf-place-links a[data-byf-event=place_planner_click]')){
   const url=new URL(link.getAttribute('href'),origin),env=planner(url.href),{w,form,calls}=env;
   for(const key of ['airport','start','interest'])assert.equal(form.elements[key].value,url.searchParams.get(key),`${slug}: ${key} prefill`);

@@ -1,0 +1,162 @@
+{
+  "haneda-airport": {
+    "html": "<p>Use a locker in your own terminal, outside security. Haneda lists T1/T2 prices of ¥400/¥500/¥600/¥1,000 per 24 hours, with ¥1,500 XXL compartments at selected banks. T3 is different: S/M/L cost ¥500/¥700/¥900; the 3F south bank also lists ¥2,000 XXL compartments. Storage is limited to seven days. Collect your bag before entering security; a locker in another terminal adds a transfer and a second collection stop.</p><a href=\"https://www.tokyo-haneda.com/en/service/facilities/coin_locker.html\" rel=\"noopener\" target=\"_blank\">Haneda terminal-by-terminal locker sizes, prices and maps ↗</a>",
+    "basis": "Haneda terminal-specific locker fees checked on 17 November 2026. Available sizes differ by bank; posted rates and collection terms apply."
+  },
+  "tokyo-station-gallery": {
+    "html": "<p>For the gallery visit itself, use the free lockers on 1F. The museum says reception can hold bags that do not fit or when the lockers are full. This avoids a separate Tokyo Station cloakroom trip. Collect everything before leaving the museum; these visitor facilities are not an all-day drop-off for a later stop elsewhere.</p><a href=\"https://www.ejrcf.or.jp/gallery/institution.html\" rel=\"noopener\" target=\"_blank\">Tokyo Station Gallery lockers and reception facilities ↗</a>",
+    "basis": "Museum locker and reception services checked on 17 November 2026. Collect belongings before leaving the gallery."
+  },
+  "naritasan-shinshoji": {
+    "html": "<p>Narita's tourism association identifies lockers in the JR Narita station passage, by JR Narita's Central/Omotesando exit and by Keisei Narita's Central/Omotesando exit. It specifically says there are no lockers or baggage storage near Naritasan temple. Store a large suitcase at your airport or hotel when practical, or use the station for the railway you will return on. The association does not publish prices or dimensions here; read the bank's posted terms before storing.</p><a href=\"https://www.nrtk.jp/plan/questions/10.html\" rel=\"noopener\" target=\"_blank\">Narita tourism association: station lockers and temple-area limitations ↗</a>",
+    "basis": "Narita tourism association FAQ checked on 17 November 2026. Locker fees, dimensions and availability are not published there."
+  },
+  "hamamatsucho-zojoji": {
+    "html": "<p>JR East confirms coin lockers at Hamamatsucho Station. If the station is on your airport route, storing there can keep collection beside the Monorail connection instead of adding a separate neighbourhood return. Use the station map for the bank you can reach, and keep the key or receipt until collection. The JR facility listing does not establish current bank prices or bag dimensions, so these are not quoted as verified fees.</p><a href=\"https://www.jreast.co.jp/e/stations/e1248.html\" rel=\"noopener\" target=\"_blank\">JR Hamamatsucho station locker and interchange map ↗</a>",
+    "basis": "JR station locker facilities checked on 17 November 2026. Exact bank prices, dimensions and gate-side access are not confirmed."
+  },
+  "tokyo-character-street": {
+    "html": "<p>Both this stop and the 1F JR EAST Travel Service Center for foreign visitors are outside the JR gates. That counter lists 08:30–20:00. The B1 GRANSTA cloakroom is inside the JR gates: it lists 08:30–21:00 opening, but its same-day baggage note gives 20:30, so plan collection by the earlier limit. Published S/M/L fees are ¥500/¥1,000/¥2,000 per item, based on the sum of the three sides. Accepted bags must total less than 250 cm, have no side longer than 2 m and weigh less than 30 kg. Keep the collection deadline on your receipt; entering the JR paid area just for storage can add an unnecessary gate crossing.</p><a href=\"https://www.gransta.jp/news/info/cloakservice/\" rel=\"noopener\" target=\"_blank\">Tokyo Station storage gates, fees and collection conditions ↗</a>",
+    "basis": "GRANSTA article reviewed on 17 November 2026; its information is dated 23 May 2025. The counter receipt and earlier collection deadline take priority."
+  },
+  "kamigata-ukiyoe-museum": {
+    "html": "<p>For a Nankai airport return, n・e・s・t at Nankai Namba is one staffed option. Osaka's tourism-board map places it on 2F and lists ¥800 per item per day, 09:00–21:00. Its published limits are a three-side total up to 220 cm and weight up to 30 kg; perishables are excluded. Return for your bag before the counter closes, then continue to the airport train. This listing is dated 1 October 2025, so the counter's current terms take priority.</p><a href=\"https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-namba-station/\" rel=\"noopener\" target=\"_blank\">Nankai Namba storage floors, locker map and counter terms ↗</a>",
+    "basis": "Osaka tourism-board listing reviewed on 17 November 2026; its information is dated 1 October 2025. Current counter prices and collection terms apply."
+  },
+  "asakusa-sensoji": {
+    "html": "<p>If your route uses Tokyo Metro Asakusa, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 / ¥1,600 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/asakusa/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Asakusa station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat33\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "shibuya": {
+    "html": "<p>If your route uses Tokyo Metro Shibuya, the operator's 1 November 2026 listing has lockers priced ¥300 / ¥600 / ¥800 / ¥1,000 / ¥1,600 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/shibuya/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Shibuya station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat163\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "narita-airport": {
+    "html": "<p>Narita's storage directory lists counters by terminal and floor, with prices set by each provider and bag size. For example, JAL ABC departure-floor counters are listed at T1 4F and T2 3F, 07:00–21:00. Arrival-floor counters can have different hours. Collect before security and allow time to reach your actual departure terminal; T3 passengers should not treat a T2 collection stop as being in the same building.</p><a href=\"https://www.narita-airport.jp/en/service/delivery/storage/\" rel=\"noopener\" target=\"_blank\">Narita storage operators, terminal floors and counter hours ↗</a>",
+    "basis": "Narita airport counter directory checked on 17 November 2026. Hours and charges vary by provider, floor and terminal."
+  },
+  "fukagawa-edo-museum": {
+    "html": "<p>The museum’s operator says its history and cultural facilities, including Fukagawa Edo Museum, have free lockers. For a visit here, that is a more direct option than dropping a bag at Tokyo Station first. Locker dimensions and an oversized-bag service are not established in the FAQ: keep large suitcases at your hotel or another confirmed counter if needed, and collect your belongings before leaving the museum.</p><a href=\"https://www.kcf.or.jp/contact/\" rel=\"noopener\" target=\"_blank\">Museum operator’s baggage and free-locker FAQ ↗</a>",
+    "basis": "Museum operator’s free-locker FAQ reviewed on 17 November 2026. Locker dimensions and oversized-bag handling are not confirmed."
+  },
+  "shiodome": {
+    "html": "<p>If your route uses Tokyo Metro Shimbashi, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/shimbashi/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Shimbashi station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat82\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "ginza-evening": {
+    "html": "<p>If your route uses Tokyo Metro Ginza, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 / ¥1,600 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/ginza/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Ginza station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat81\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "omotesando": {
+    "html": "<p>If your route uses Tokyo Metro Omotesando, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/omote-sando/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Omotesando station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat142\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "toyosu": {
+    "html": "<p>If your route uses Tokyo Metro Toyosu, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 / ¥1,600 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/toyosu/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Toyosu station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat161\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "hanazono-shrine": {
+    "html": "<p>If your route uses Tokyo Metro Shinjuku-sanchome, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/shinjuku-sanchome/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Shinjuku-sanchome station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat95\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "narita-omotesando": {
+    "html": "<p>Narita's tourism association identifies lockers in the JR Narita station passage, by JR Narita's Central/Omotesando exit and by Keisei Narita's Central/Omotesando exit. It specifically says there are no lockers or baggage storage near Naritasan temple. Store a large suitcase at your airport or hotel when practical, or use the station for the railway you will return on. The association does not publish prices or dimensions here; read the bank's posted terms before storing.</p><a href=\"https://www.nrtk.jp/plan/questions/10.html\" rel=\"noopener\" target=\"_blank\">Narita tourism association: station lockers and temple-area limitations ↗</a>",
+    "basis": "Narita tourism association FAQ checked on 17 November 2026. Locker fees, dimensions and availability are not published there."
+  },
+  "kanda-jimbocho": {
+    "html": "<p>If your route uses Tokyo Metro Jimbocho, the operator's 1 November 2026 listing has lockers priced ¥300 / ¥600 / ¥800 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/jimbocho/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Jimbocho station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat168\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "harajuku": {
+    "html": "<p>If your route uses Tokyo Metro Meiji-jingumae, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 / ¥1,600 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/meiji-jingumae/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Meiji-jingumae station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat143\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "roppongi-azabudai": {
+    "html": "<p>If your route uses Tokyo Metro Roppongi, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/roppongi/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Roppongi station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat111\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "tsukiji-outer-market": {
+    "html": "<p>PLAT TSUKIJI has small, medium and large coin lockers in two locations in the building. This keeps a market visit closer to your bag than a separate Tokyo Station drop-off. The official facility page does not publish locker prices or collection hours. Collect as you leave the market; for an evening pickup, use another storage option with a stated deadline rather than assuming the information desk or lounge hours also cover the lockers.</p><a href=\"https://www.tsukiji.or.jp/english/plattsukiji/\" rel=\"noopener\" target=\"_blank\">PLAT TSUKIJI locker locations and visitor facilities ↗</a>",
+    "basis": "PLAT TSUKIJI locker facilities checked on 17 November 2026. The official page does not state locker prices or collection hours."
+  },
+  "kappabashi": {
+    "html": "<p>If your route uses Tokyo Metro Asakusa, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 / ¥1,600 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/asakusa/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Asakusa station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat33\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "dotonbori": {
+    "html": "<p>For a Nankai airport return, n・e・s・t at Nankai Namba is one staffed option. Osaka's tourism-board map places it on 2F and lists ¥800 per item per day, 09:00–21:00. Its published limits are a three-side total up to 220 cm and weight up to 30 kg; perishables are excluded. Return for your bag before the counter closes, then continue to the airport train. This listing is dated 1 October 2025, so the counter's current terms take priority.</p><a href=\"https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-namba-station/\" rel=\"noopener\" target=\"_blank\">Nankai Namba storage floors, locker map and counter terms ↗</a>",
+    "basis": "Osaka tourism-board listing reviewed on 17 November 2026; its information is dated 1 October 2025. Current counter prices and collection terms apply."
+  },
+  "odaiba": {
+    "html": "<p>AQUA CiTY Odaiba lists lockers on 3F, including small, medium and large compartments. Banks by the west lift behind Puma, in front of musée de peau and at Aqua Plaza’s east lift are listed for 11:00–23:00. Banks beside Iwakura and in front of Oakley close earlier: 20:00 on weekdays and 21:00 on weekends and holidays. Choose a bank that will still be accessible when you return; the facility page does not state locker prices, and these are mall lockers rather than Tokyo Teleport or Daiba station lockers.</p><a href=\"https://www.aquacity.jp/facility/travel/\" rel=\"noopener\" target=\"_blank\">AQUA CiTY 3F locker locations, payment methods and collection hours ↗</a>",
+    "basis": "AQUA CiTY locker locations and bank-specific hours checked on 17 November 2026. Prices and compartment dimensions are not published on this page."
+  },
+  "ueno-ameyoko": {
+    "html": "<p>For a Skyliner return, the Keisei-Ueno baggage counter keeps collection beside your airport railway rather than at JR Ueno. Keisei Travel lists ¥600/¥1,000/¥1,500 for bags up to 53/63/70 cm high, and ¥2,000 for oversized items. Collection must be during the counter’s business hours; late pickup can incur an extra charge. The service page does not give a reliable clock-time deadline, so use the closing time on your receipt and leave time to reach your train.</p><a href=\"https://keiseitravel.co.jp/en/f/other-service/\" rel=\"noopener\" target=\"_blank\">Keisei-Ueno storage sizes, charges and collection terms ↗</a>",
+    "basis": "Keisei Travel storage charges and size categories checked on 17 November 2026. Collect during the business hours given by the counter."
+  },
+  "tokyo-tower": {
+    "html": "<p>Tokyo Tower has lockers in FootTown 1F; the dedicated locker page lists ¥100/¥200/¥300 sizes and access from 09:00 to 22:30. The largest listed compartment is 84.3 cm high × 35.5 cm wide × 64.5 cm deep, so a broad suitcase may still not fit. Take your bag when you leave the tower, rather than adding a return trip after visiting another neighbourhood, and follow the hours posted at the bank.</p><a href=\"https://en.tokyotower.co.jp/foottown/2o51o3dqnzz.html\" rel=\"noopener\" target=\"_blank\">Tokyo Tower FootTown locker sizes, fees and access hours ↗</a>",
+    "basis": "Tokyo Tower locker page checked on 17 November 2026. Plan collection before its stated 22:30 limit and follow the hours posted at the locker bank."
+  },
+  "nihonbashi": {
+    "html": "<p>If your route uses Tokyo Metro Mitsukoshimae, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 / ¥1,600 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/mitsukoshimae/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Mitsukoshimae station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat78\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "akihabara": {
+    "html": "<p>If your route uses Tokyo Metro Akihabara, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/akihabara/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Akihabara station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat102\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "tokyo-station-marunouchi": {
+    "html": "<p>Both this stop and the 1F JR EAST Travel Service Center for foreign visitors are outside the JR gates. That counter lists 08:30–20:00. The B1 GRANSTA cloakroom is inside the JR gates: it lists 08:30–21:00 opening, but its same-day baggage note gives 20:30, so plan collection by the earlier limit. Published S/M/L fees are ¥500/¥1,000/¥2,000 per item, based on the sum of the three sides. Accepted bags must total less than 250 cm, have no side longer than 2 m and weigh less than 30 kg. Keep the collection deadline on your receipt; entering the JR paid area just for storage can add an unnecessary gate crossing.</p><a href=\"https://www.gransta.jp/news/info/cloakservice/\" rel=\"noopener\" target=\"_blank\">Tokyo Station storage gates, fees and collection conditions ↗</a>",
+    "basis": "GRANSTA article reviewed on 17 November 2026; its information is dated 23 May 2025. The counter receipt and earlier collection deadline take priority."
+  },
+  "rinku-town": {
+    "html": "<p>For the outlets, use the facilities at Rinku Premium Outlets rather than returning to an unrelated city counter. Main Side 1F food-court lockers include ¥300 small, ¥500 large and ¥1,000 wide-large compartments. Sea Side near LOGOS has ¥300/¥400/¥500/¥800 sizes. Oversized baggage can be left at Main Side’s Information Center or Sea Side’s Welcome Center for ¥1,000 per day, cash only. Collect before the outlet closes: shops normally close at 20:00 from March to January and 19:00 in February; special hours and closure days can differ.</p><a href=\"https://www.premiumoutlets.co.jp/en/rinku/service/\" rel=\"noopener\" target=\"_blank\">Rinku outlet locker locations, sizes and oversized-bag counters ↗</a>",
+    "basis": "Rinku outlet storage prices and locations checked on 17 November 2026. Collect before the facility closes; posted terms and special hours apply."
+  },
+  "shinagawa": {
+    "html": "<p>The Multi ecube bank is inside the JR gates, on ecute Shinagawa's south passage near the stairs to platforms 7 and 8. S/M/L/LW usage charges are ¥500/¥700/¥900/¥1,400; reserving online adds ¥500, giving totals of ¥1,000/¥1,200/¥1,400/¥1,900. The operator lists access from the first to the last train. Collect before leaving the JR paid area for Keikyu; this bank is not an outside-gate Keikyu locker.</p><a href=\"https://multiecube.com/location/1043/\" rel=\"noopener\" target=\"_blank\">Exact Shinagawa locker location, reservation fees and availability ↗</a>",
+    "basis": "Shinagawa locker location and usage/reservation fees checked on 17 November 2026. JR paid-area access is required; posted collection terms apply."
+  },
+  "nakano-broadway": {
+    "html": "<p>JR East lists coin lockers at Nakano Station. If you arrive with a suitcase, a suitable station locker can avoid taking it through Broadway’s narrower shop corridors. Store only after finding a compartment that fits, then collect on the same station route before your airport journey. The official facility listing does not establish prices, dimensions or the gate side of a specific bank; use the station map and the bank’s posted terms rather than assuming a large locker will be free.</p><a href=\"https://www.jreast.co.jp/en/estation/stations/1104.html\" rel=\"noopener\" target=\"_blank\">JR Nakano station map and locker facilities ↗</a>",
+    "basis": "JR station locker facilities checked on 17 November 2026. Exact bank prices, dimensions and gate-side access are not confirmed."
+  },
+  "namba-yasaka-shrine": {
+    "html": "<p>For a Nankai airport return, n・e・s・t at Nankai Namba is one staffed option. Osaka's tourism-board map places it on 2F and lists ¥800 per item per day, 09:00–21:00. Its published limits are a three-side total up to 220 cm and weight up to 30 kg; perishables are excluded. Return for your bag before the counter closes, then continue to the airport train. This listing is dated 1 October 2025, so the counter's current terms take priority.</p><a href=\"https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-namba-station/\" rel=\"noopener\" target=\"_blank\">Nankai Namba storage floors, locker map and counter terms ↗</a>",
+    "basis": "Osaka tourism-board listing reviewed on 17 November 2026; its information is dated 1 October 2025. Current counter prices and collection terms apply."
+  },
+  "namba": {
+    "html": "<p>For a Nankai airport return, n・e・s・t at Nankai Namba is one staffed option. Osaka's tourism-board map places it on 2F and lists ¥800 per item per day, 09:00–21:00. Its published limits are a three-side total up to 220 cm and weight up to 30 kg; perishables are excluded. Return for your bag before the counter closes, then continue to the airport train. This listing is dated 1 October 2025, so the counter's current terms take priority.</p><a href=\"https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-namba-station/\" rel=\"noopener\" target=\"_blank\">Nankai Namba storage floors, locker map and counter terms ↗</a>",
+    "basis": "Osaka tourism-board listing reviewed on 17 November 2026; its information is dated 1 October 2025. Current counter prices and collection terms apply."
+  },
+  "ueno-toshogu": {
+    "html": "<p>If your route uses Tokyo Metro Ueno, the operator's 1 November 2026 listing has lockers priced ¥300 / ¥600 / ¥800 / ¥1,000 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/ueno/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Ueno station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat77\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "ginza": {
+    "html": "<p>If your route uses Tokyo Metro Ginza, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 / ¥1,600 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/ginza/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Ginza station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat81\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "kansai-airport": {
+    "html": "<p>KIX lists public-area lockers at T1 1F/2F, T2 1F and Aeroplaza 2F. Its published directory lists SS/S/M/L/LW at ¥300/¥500/¥700/¥900/¥1,200, with a new daily charge at 02:00 rather than after each 24-hour period. The listed storage limit is ten consecutive days including the first day. Choose your departure terminal or a bank on your route, and collect before security. Treat these directory figures as a planning reference and use the price and collection terms displayed on the locker.</p><a href=\"https://www.kansai-airport.or.jp/en/service/delivery/locker\" rel=\"noopener\" target=\"_blank\">KIX locker locations, daily charging boundary and storage limits ↗</a>",
+    "basis": "Rates shown in the airport directory, reviewed on 17 November 2026; the daily charge renews at 02:00 and posted collection terms apply."
+  },
+  "umeda": {
+    "html": "<p>Osaka's tourism-board map lists Crosta Osaka at JR Osaka Station, 09:00–20:00, at ¥1,000 per item for temporary storage. Its information date is 1 October 2025. For an airport bus or a different station operator, include the walk back to this counter in your route: Umeda is a station district, not one shared concourse. Collect before 20:00 and use the counter's current receipt and conditions if they differ.</p><a href=\"https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-osaka-station/\" rel=\"noopener\" target=\"_blank\">Osaka/Umeda storage counter locations and listed charges ↗</a>",
+    "basis": "Osaka tourism-board listing reviewed on 17 November 2026; the Crosta entry is dated 1 October 2025. Current counter prices and collection terms apply."
+  },
+  "meiji-shrine": {
+    "html": "<p>If your route uses Tokyo Metro Meiji-jingumae, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 / ¥1,000 / ¥1,600 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/meiji-jingumae/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Meiji-jingumae station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat143\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "animate-shinjuku": {
+    "html": "<p>If your route uses Tokyo Metro Shinjuku-sanchome, the operator's 1 November 2026 listing has lockers priced ¥600 / ¥800 depending on the compartment. These rates apply to the listed Metro locker banks. Keep collection on your chosen route and check the posted charging period and gate side.</p><p><a href=\"https://www.tokyometro.jp/station/shinjuku-sanchome/yardmap/index.html\" rel=\"noopener\" target=\"_blank\">Shinjuku-sanchome station map ↗</a> · <a href=\"https://www.metocan.co.jp/locker/#cat95\" rel=\"noopener\" target=\"_blank\">Operator's local prices and locker listing ↗</a></p>",
+    "basis": "Metro storage prices checked on 17 November 2026 against the listing dated 1 November 2026. Posted rates, gate access and collection terms apply."
+  },
+  "hozenji": {
+    "html": "<p>For a Nankai airport return, n・e・s・t at Nankai Namba is one staffed option. Osaka's tourism-board map places it on 2F and lists ¥800 per item per day, 09:00–21:00. Its published limits are a three-side total up to 220 cm and weight up to 30 kg; perishables are excluded. Return for your bag before the counter closes, then continue to the airport train. This listing is dated 1 October 2025, so the counter's current terms take priority.</p><a href=\"https://osaka-info.jp/en/handsfreetravel-osaka/sightseeing-from-namba-station/\" rel=\"noopener\" target=\"_blank\">Nankai Namba storage floors, locker map and counter terms ↗</a>",
+    "basis": "Osaka tourism-board listing reviewed on 17 November 2026; its information is dated 1 October 2025. Current counter prices and collection terms apply."
+  }
+}

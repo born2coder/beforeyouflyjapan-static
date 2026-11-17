@@ -1,6 +1,116 @@
 (function () {
   "use strict";
 
+  // Shared by the static renderer and the browser. Durations and stage times
+  // always come from the enhanced planner engine, not a second HTML template.
+  const presentation = (() => {
+    const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+    const clock = date => new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit',hour12:true,timeZone:'Asia/Tokyo'}).format(date);
+    const stamp = date => new Intl.DateTimeFormat('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true,timeZone:'Asia/Tokyo'}).format(date);
+    const intention = {
+      Shinagawa:'Use the station for a meal and one small purchase, with the Keikyu departure route close at hand. ecute is inside the JR gates; choose an outside-gate alternative if you are not entitled to enter.',
+      'Tokyo Station':'See the Marunouchi red-brick frontage, then choose one shopping zone. Tokyo Character Street is on the Yaesu / First Avenue side outside JR gates; GRANSTA shops can be inside the gates.',
+      Ginza:'Keep the visit around the Ginza 4-chome crossing and one food or shopping destination such as Ginza Mitsukoshi. A restaurant queue is a reason to shorten the browse, not delay the airport trip.',
+      Shibuya:'Use Hachiko and the scramble crossing for orientation, then choose a nearby café or shop. A timed rooftop attraction is a separate commitment; do not join a ticket queue without time to finish it.',
+      Harajuku:'Use the Takeshita Street side for fashion shopping, then follow the named street stages. Meiji Jingu is a separate shrine route with seasonal closing limits; this shopping stage does not include it.',
+      Hamamatsucho:'Use Zojoji and the Tokyo Tower exterior as the compact visit. Going up the tower is a separate paid activity; skip it if the queue would take the airport-transfer time.',
+      Roppongi:'Choose one public-space or café stop in the Roppongi / Azabudai corridor. Observation facilities have separate tickets and opening rules; the street walk does not include their admission.',
+      Ueno:'For a station-side food visit, keep to Ameyoko and the route back to your airport train. A park museum is another timed activity, not an automatic addition to this market stop.',
+      Asakusa:'Follow Kaminarimon, Nakamise and the Sensoji approach, then return to the station for your airport route. The grounds, main hall and individual shops have different hours.',
+      Akihabara:'Make Radio Kaikan or one other named shop the main shopping target. Leave time for checkout and packing rather than trying to cover every floor and another building.',
+      Tsukiji:'Use the outer-market lanes for one food priority and a small browse. The market calendar and individual shop hours matter; Toyosu is a different location and is not part of this stop.',
+      Toyosu:'Choose the market visitor area or a bay-side walk, according to what is open. This route does not include entry to a tuna-auction viewing programme or a reserved attraction.',
+      Nihonbashi:'See Nihonbashi Bridge, then make one food or craft stop toward COREDO Muromachi. The bridge itself is a short public-street visit; department-store browsing needs its own time.',
+      Jimbocho:'Start with one subject or kind of book in the Jimbocho bookshop district. A compact browse beats crossing between many specialist shops whose hours can differ.',
+      Odaiba:'Choose Odaiba Marine Park for a bay view or one indoor shopping building in poor weather. Keep the final stop on the side of the station used for the airport route.',
+      Narita:'Use Narita Omotesando for a short food-and-street visit, with Naritasan as the priority only when the separate temple stage fits. The sloping return to the station needs time.',
+      Namba:'Keep the visit in Minami around Nankai Namba, Hozenji or Ebisubashi according to the route. Return to Nankai Namba for the airport train; Osaka Metro Namba is not the same platform.',
+      Umeda:'Stay within the Osaka Station City / Umeda station complex for a meal, food shopping or a short public-space pause. Umeda Sky Building is a separate walk and ticketed visit.',
+      Omotesando:'Choose Omotesando Hills or one design shop on the avenue. Keep checkout and packing inside the visit allowance and use your actual return station.',
+      'Rinku Town':'Choose one outlet zone or a short Rinku Park sea view. Return to Rinku Town station for the airport-bound service; allow for the separate T2 shuttle if your flight needs it.',
+      'Haneda Airport':'Stay in your airline’s departure terminal. For T3, Edo Ko-ji and the observation deck are on the public side; a T2 flight is not a reason to travel to T3 for a meal.',
+      'Narita Airport':'Stay in the terminal used by your flight, with a meal or souvenir shop near the next required procedure. Do not add a Narita town excursion after arriving at the airport.',
+      'Kansai Airport':'Stay in your departure terminal or Aeroplaza as appropriate. Sky View is a separate excursion with transport and opening constraints; it is not built into this meal stop.'
+    };
+    const names = ['Tokyo Station','Shinagawa','Ginza','Shibuya','Harajuku','Hamamatsucho','Roppongi','Ueno','Asakusa','Akihabara','Tsukiji','Toyosu','Nihonbashi','Jimbocho','Odaiba','Narita','Namba','Umeda','Rinku Town','Omotesando'];
+    function stageArea(plan, steps, index) {
+      let area=plan.area;
+      for(let i=0;i<=index;i++) {
+        const label=steps[i].label || '';
+        if(/airport/i.test(label)) continue;
+        const found=names.find(n=>label.toLowerCase().includes(n.toLowerCase()));
+        if(found)area=found;
+      }
+      return area;
+    }
+    function airportRoute(airport,area) {
+      if(airport==='KIX') return area==='Umeda' ? 'From JR Osaka, compare the airport-bound JR service with the official airport bus from the stop you can actually reach. Confirm T1 or the Aeroplaza shuttle connection for T2; station arrival is not T2 counter arrival.' : area==='Rinku Town' ? 'Use an airport-bound train from Rinku Town. Kansai-airport Station serves T1 / Aeroplaza; T2 requires its free shuttle, plus walking and waiting.' : 'Use the Nankai airport route from Nankai Namba. Check the train destination and your terminal; after Kansai-airport Station, T2 needs the Aeroplaza shuttle.';
+      if(airport==='NRT') return /Narita/.test(area) ? 'From JR Narita or Keisei Narita, use the airport-bound service for your terminal. T3 passengers use Airport Terminal 2 station, then the signed walk or shuttle; do not stop the calculation at the railway gate.' : /Ueno|Akihabara/.test(area) ? 'Compare Keisei from Keisei-Ueno with the airport route from your exact position. JR Ueno and Keisei-Ueno are different stations; include the walk before a reserved train.' : 'From Tokyo Station, compare Narita Express with the official airport-bus departure point. Another starting area needs its own live connection. Match the terminal station, then allow the path to your airline counter.';
+      return area==='Shinagawa' ? 'Follow the Keikyu airport route from Shinagawa and check the train destination before boarding. Use your flight’s HND terminal station; the JR and Keikyu gates are different.' : area==='Hamamatsucho' ? 'Follow the Tokyo Monorail connection at Hamamatsucho and use the station for your flight’s terminal. Include the platform wait and the walk from the airport station to the airline area.' : 'Compare the route via Shinagawa and Keikyu with the Tokyo Monorail via Hamamatsucho from the actual last stop. Check your Haneda terminal station and the train destination; a rail ride alone is not the full allowance.';
+    }
+    function directions(core,plan,steps,index,storageArea) {
+      const step=steps[index],label=step.label||'',area=stageArea(plan,steps,index);
+      if(step.isStorageDrop)return `Leave bags at a suitable locker or staffed counter in ${step.storageArea||storageArea||plan.area}. Note its gate side and collection limit before walking away. If there is no suitable compartment, shorten the stop rather than search across another station.`;
+      if(step.isPickup)return `Collect all bags at ${step.storageArea||storageArea||plan.area} and keep the collection receipt available. This stage includes the modeled return/pickup allowance; an exact hotel or locker route can take longer. Start the airport journey when this stage ends.`;
+      if(core.isAirportTransferStep(step))return airportRoute(plan.airport,area)+` The ${Number(step.minutes||0)} minutes shown are the route’s planning allowance, including its assigned walking, waiting and connections; they are not a published train ride or guaranteed departure.`;
+      if(/^Arrive at .*Airport/i.test(label))return 'The modeled airport journey is complete. Follow signs to the correct terminal and airline counter; any separately shown terminal-navigation stage still comes next. Keep the airline’s required arrival and boarding times ahead of optional shopping.';
+      if(/margin|disruption|terminal navigation/i.test(label))return step.action||'Use this allowance for the path to the correct terminal/counter, a missed connection or a small delay. It is deliberately not assigned to another attraction.';
+      if(/terminal and airline|check-in|security/i.test(label))return step.action||'Read the departure display for the flight number, terminal and counter. Confirm when the airline accepts check-in and baggage before choosing a public-area activity. If already after security, use facilities near the gate.';
+      if(step.action && !/Follow the checked entrance route|Return along the checked route/i.test(step.action))return step.action;
+      if(/Tokyo Character Street/i.test(label))return 'Use Tokyo Station First Avenue on the Yaesu side, outside JR ticket gates. Keep to two character shops and include checkout and packing; limited-release queues can use the entire visit.';
+      if(/Gallery/i.test(label))return 'Use the Tokyo Station Gallery entrance by the Marunouchi North Exit. The interior requires exhibition admission; follow the checked exhibition calendar, and use the station facade as the alternative when it is closed.';
+      if(/Fukagawa/i.test(label))return 'Use the Fukagawa Edo Museum entrance for the reconstructed Edo streets. The local station approach and return are separate stages; keep enough time for entry, facilities and the airport connection.';
+      if(/Hanazono/i.test(label))return 'Use Hanazono Shrine’s public approach for a compact shrine visit in Shinjuku. Keep to the grounds and return toward the station you will actually use; events or stalls can change the available space.';
+      if(/Toshogu/i.test(label))return 'Use Ueno Park’s approach to Ueno Toshogu. Distinguish the public approach from the paid area and its closing time; if paid entry no longer fits, keep the visit outside.';
+      if(/Animate/i.test(label))return 'Use Animate Shinjuku on Shinjuku Marui Men’s 7F for one series or product category, including checkout time. The official shop route is from Shinjuku-sanchome E2 or JR Shinjuku’s East Exit. A release-event or purchase queue is a reason to switch to a short browse, not extend the airport deadline.';
+      if(/Nakano Broadway/i.test(label))return 'From Nakano’s north side, use the Sun Mall approach to Nakano Broadway and identify two shops before browsing. Individual shop days and hours differ; return on the same familiar route.';
+      if(/Kamigata/i.test(label))return 'Use the Kamigata Ukiyoe Museum near Hozenji for a focused look at Osaka actor prints. Admission and access through the museum’s floors are separate from the free alley walk; skip Hozenji if delayed.';
+      if(/Yasaka/i.test(label))return 'Use Namba Yasaka Shrine’s public entrance for the lion-shaped hall and a short grounds visit. Return toward Nankai Namba; it is not next to every station entrance labelled Namba.';
+      if(/Hozenji/i.test(label))return 'Find Hozenji’s small temple space and the neighboring stone-paved alley, then return toward Nankai Namba. Stay considerate of worshippers and restaurant entrances; a long meal is not included in this short walk.';
+      if(/Meiji Shrine/i.test(label))return 'From the Harajuku side, follow Meiji Jingu’s south approach toward the main sanctuary and return along the approach. Finish before the official seasonal grounds closing time; the museum and garden need separate admission/time.';
+      if(/Sensoji|Nakamise/i.test(label))return 'Follow Kaminarimon and Nakamise toward Sensoji, then return to your chosen Asakusa station. The main hall closes at 17:00; an evening stage is a grounds/exterior walk, with individual shops conditional on their own hours.';
+      if(/Kappabashi/i.test(label))return 'Choose one category—bowls, chopsticks or food replicas—and browse nearby specialist shops on Kappabashi. A closed target shop is a reason to switch locally; knives need suitable checked-baggage packing.';
+      if(/Shiodome/i.test(label))return 'Use Shiodome City Center and the signed public walkways for orientation from Shimbashi’s Shiodome side. Choose a short outward section and return; building terraces and high-floor restaurants have their own access rules.';
+      if(/^(?:travel|head|walk|reach|return|take)\b/i.test(label)) {
+        if(/(?:return|reach).*airport|departure (?:route|point|station)/i.test(label))return airportRoute(plan.airport,area)+' This is the approach to the departure route; the airport journey is accounted for by its own stage below.';
+        if(/return.*station/i.test(label))return `Return to the station entrance saved for your ${area} airport connection. Pick the correct operator and gate side rather than the nearest station-name pin; any bag collection is shown separately when selected.`;
+        return `Reach the named ${area} stop using the station approach in its destination guide. This stage is an editorial allowance for walking and local orientation, not a scheduled transport service. ${intention[area]||'Keep the stop within the named district.'}`;
+      }
+      if(/bookshop|Jimbocho/i.test(label))return intention.Jimbocho;
+      if(/Tsukiji/i.test(label))return intention.Tsukiji+' Do not assume every shop opens on a calendar closure day; change to a station or airport meal if the target is closed.';
+      if(/Tokyo Station|Marunouchi|red-brick|souvenir zone/i.test(label))return intention['Tokyo Station'];
+      if(/Tokyo Tower|Zojoji/i.test(label))return intention.Hamamatsucho;
+      if(/Shibuya|viewpoint/i.test(label))return intention.Shibuya;
+      if(/Harajuku/i.test(label))return intention.Harajuku;
+      if(/Omotesando/i.test(label))return 'Choose Omotesando Hills or one design shop on the avenue and leave checkout/packing time. This is Tokyo’s Omotesando, not Narita’s temple approach; keep the return station on the airport route.';
+      if(/Rinku|seaside/i.test(label))return intention['Rinku Town'];
+      if(/Dotonbori|Ebisubashi/i.test(label))return intention.Namba;
+      if(plan.airportPlan)return intention[plan.area];
+      return intention[area]||`Keep this ${area} visit within the named stop. If a queue uses the remaining local allowance, move to the station-side alternative rather than adding another attraction.`;
+    }
+    function example(core,plan,data) {
+      const flight=new Date('2026-10-10T23:30:00+09:00'),target=new Date(+flight-data.airports[plan.airport].buffer*60000);
+      const fit=core.withLuggageStep(plan,'none','',plan.area),steps=fit.steps;
+      const window=core.scheduleWindow(new Date('2026-10-10T08:00:00+09:00'),target,steps,plan);
+      if(!window.valid)throw new Error('No checked example window for '+plan.id);
+      return {flight,target,start:window.latest,steps};
+    }
+    function timeline(core,plan,steps,start,storageArea) {
+      let cursor=new Date(start);
+      return steps.map((step,index)=>{
+        const begin=new Date(cursor);cursor=new Date(+cursor+Number(step.minutes||0)*60000);
+        const classes=['byf-rich-step',core.isAirportTransferStep(step)?'is-airport-move':'',step.isPickup?'is-luggage-pickup':'',step.isStorageDrop?'is-luggage-drop':''].filter(Boolean).join(' ');
+        return `<article class="${classes}" data-minutes="${Number(step.minutes||0)}" data-start-at="${begin.toISOString()}" data-end-at="${cursor.toISOString()}"><time datetime="${begin.toISOString()}">${escape(clock(begin))}</time><div><h3>${escape(step.label)}</h3><p>${escape(directions(core,plan,steps,index,storageArea))}</p><p class="byf-duration">${Number(step.minutes||0) ? 'Planning allowance: '+Number(step.minutes||0)+' minutes' : 'Arrival milestone · no additional activity time'}</p></div></article>`;
+      }).join('')+`<p class="byf-complete-time" data-completed-at="${cursor.toISOString()}"><b>Complete route ends:</b> ${escape(stamp(cursor))} JST. Any time remaining before the airport-ready target stays spare.</p>`;
+    }
+    function keyTimes(core,plan,steps,start,flight,target) {
+      const timing=core.timingFacts(steps,start,plan.airportPlan);
+      return [['Example flight',flight],['Ready for airline procedures by',target],['At the airport by',timing.airportArrivalAt||target],[plan.airportPlan&&!timing.leaveAt?'Begin airport experience by':`Leave for ${plan.airport} by`,timing.leaveAt||start]].map(([label,value],i)=>`<span${i===3?' class="is-leave"':''}><small>${escape(label)}</small><b>${escape(stamp(value))}</b></span>`).join('');
+    }
+    return {escape,clock,stamp,intention,directions,example,timeline,keyTimes};
+  })();
+  window.BYFPlanPresentation=presentation;
+
   function initializePlanContext() {
   const core = window.BYFPlannerCore;
   const source = window.BYF_STATIC_DATA;
@@ -78,7 +188,7 @@
     const heroTitle = document.querySelector(".byf-plan-hero h1");
     if (heroTitle) heroTitle.textContent = plan.name;
     const lead = document.querySelector(".byf-experience-lead");
-    if (lead) lead.textContent = `${plan.hook}. The timeline keeps a visible ${plan.airport} cutoff and never treats optional sightseeing as more important than your flight.`;
+    if (lead) lead.textContent = presentation.intention[plan.area] || plan.hook;
     const memory = document.querySelector(".byf-memory");
     if (memory) memory.innerHTML = `<b>What you’ll remember:</b> ${escapeHtml(plan.hook)}`;
     const preview = document.querySelector(".byf-place-preview p:not(.byf-kicker)");
@@ -106,52 +216,12 @@
       if (list) list.innerHTML = guidance.sources.map(([label, url]) => `<li><a target="_blank" rel="noopener" href="${escapeHtml(url)}">${escapeHtml(label)} ↗</a></li>`).join("");
     }
     const checked = sources && sources.querySelector("small");
-    if (checked) checked.textContent = `Last checked: ${plan.checked}`;
-  }
-
-  function routeHint(airport, area) {
-    if (airport === "KIX") return area === "Umeda" ? "Compare the JR airport route from Osaka Station with the official airport bus. Confirm the platform, terminal and service time before leaving." : "From Namba, check the Nankai airport route; from Rinku, check the airport-bound train. Confirm the destination, terminal and service time before boarding.";
-    if (airport === "NRT") return /Narita/.test(area) ? "Check the airport-bound JR or Keisei service from Narita town. Confirm your terminal station before boarding." : /Ueno|Akihabara/.test(area) ? "Compare Keisei from Keisei-Ueno with the live airport route. Ueno and Keisei-Ueno are different stations; allow walking between them." : "Compare Narita Express, Keisei and the official airport bus from your exact location. Confirm the airport terminal and departure point.";
-    return area === "Shinagawa" ? "Use the Keikyu airport route from Shinagawa. Confirm the train destination and your Haneda terminal station before boarding." : "Compare Keikyu via Shinagawa or the Tokyo Monorail via Hamamatsucho with a live route. Confirm your Haneda terminal and the train destination.";
-  }
-
-  function stepDescription(step) {
-    if (step.isStorageDrop) return [`Use a station locker or staffed luggage-storage service in ${step.storageArea || plan.area}.`, "Choose a storage point you can identify and return to easily. Locker availability is not guaranteed."];
-    if (step.isPickup) return [`Use the luggage allowance already included for ${step.storageArea || luggageFit?.storageArea || plan.area}.`, "Collect every bag, check the receipt or counter, and begin the airport transfer when this step ends."];
-    if (core.isAirportTransferStep(step) && !step.action) return ["This allowance includes station access, waiting, and the airport transfer.", routeHint(plan.airport, luggageFit?.mode === "return_elsewhere" ? luggageFit.storageArea : plan.area)];
-    if (/^Arrive at .*Airport/i.test(step.label)) return ["You have reached the airport at the end of this plan.", "Confirm the correct terminal and proceed to your airline counter or security as instructed. Keep any remaining time for airline procedures."];
-    if (step.happens || step.action) return [step.happens || step.label, step.action || "Move on at the end of this stage; skip queues."];
-    if (/margin/i.test(step.label)) return ["This time is deliberately left unplanned for platform changes or small delays.", "Do not spend this margin on another stop."];
-    if (/confirm|check-in|security/i.test(step.label)) return ["Verify the correct terminal and the latest instructions from your airline.", "Resolve check-in, bag-drop, or terminal questions before using time for food or shopping."];
-    const editorial = [
-      [/Kappabashi/i, "Browse two nearby kitchenware shops for one chosen product.", "Check those shops’ opening hours before arriving. Finish by the planning cutoff; knives need airline-approved packing."],
-      [/Meiji Shrine/i, "Follow the shrine approach to the main sanctuary and return toward Harajuku.", "Use the current month’s closing time. Skip the museum or garden unless you have checked their separate hours."],
-      [/Sensoji|Nakamise/i, "Choose the temple grounds and one short shopping street pass.", "Shops have separate hours. Keep the route compact and use a nearby exit if crowds build."],
-      [/Tsukiji/i, "Choose one food priority in the outer market.", "Check the market calendar and your target stall. Switch to a no-queue meal instead of waiting."],
-      [/Akihabara/i, "Choose one electronics or anime shop rather than browsing every floor.", "Confirm its hours, set a purchase limit and leave enough time to repack."],
-      [/Dotonbori|Ebisubashi|Hozenji/i, "Follow a compact Namba street loop with one photo stop.", "Crowds can slow walking. Return toward Nankai Namba instead of adding another district."],
-      [/Marunouchi|red-brick|facade/i, "See the Marunouchi station facade and nearby plaza.", "Remember which side of Tokyo Station you need for the airport journey."],
-      [/Rinku|seaside/i, "Choose the bay view or one shopping zone close to the station.", "Check the return train and weather first; stop if the airport-island crossing is disrupted."],
-      [/meal|lunch|dinner|eat|coffee/i, "Choose one nearby meal or seated break.", "Use a place with immediate seating. Choose takeaway or an airport meal if there is a queue."],
-      [/shop|souvenir/i, "Choose one shopping zone and one purchase priority.", "Check the selected store’s hours, allow packing time and stop at the stage end."],
-      [/travel|walk|reach|return|take/i, "Follow the next connection shown in this stage.", "Check the precise station entrance and platform on a live map before walking. Lift routes may take longer."],
-    ].find(([pattern]) => pattern.test(step.label));
-    return editorial ? editorial.slice(1) : [step.label, "Keep this stop focused; skip queues and leave when the next timeline stage begins."];
-
+    if (checked) checked.textContent = `Route-source review recorded: ${plan.checked}. Example arithmetic and page consistency rebuilt: 17 November 2026. The arithmetic rebuild is not a new on-site verification.`;
   }
 
   function renderTimeline(steps, start) {
     const timeline = document.querySelector(".byf-rich-timeline");
-    if (!timeline) return;
-    let cursor = new Date(start);
-    timeline.innerHTML = steps.map((step) => {
-      const [happens, action] = stepDescription(step);
-      const airportMove = core.isAirportTransferStep(step);
-      const classes = ["byf-rich-step", airportMove ? "is-airport-move" : "", step.isPickup ? "is-luggage-pickup" : "", step.isStorageDrop ? "is-luggage-drop" : ""].filter(Boolean).join(" ");
-      const time = timeOnly.format(cursor);
-      cursor = new Date(cursor.getTime() + Number(step.minutes || 0) * 60000);
-      return `<article class="${classes}"><time>${escapeHtml(time)}</time><div><h3>${escapeHtml(step.label)}</h3><h4>What happens next</h4><p>${escapeHtml(happens)}</p><h4>What to do</h4><p>${escapeHtml(action)}</p><p class="byf-duration">Allow about: ${Number(step.minutes || 0)} minutes</p></div></article>`;
-    }).join("");
+    if (timeline) timeline.innerHTML = presentation.timeline(core, plan, steps, start, luggageFit?.storageArea);
   }
 
   improvePlanPage();
@@ -167,7 +237,7 @@
   function showInvalid() {
     const notice = document.createElement("aside");
     notice.className = "byf-alert";
-    notice.innerHTML = 'This saved plan no longer fits the entered conditions or opening-hour limits. <a href="/#planner">Recalculate your options</a>. The timeline below is a general example.';
+    notice.innerHTML = 'This saved plan no longer fits the entered conditions, supported starting areas or opening-hour limits. <a href="/#planner">Recalculate your options</a>. The timeline below is a general example.';
     document.querySelector(".byf-model")?.before(notice);
   }
   if (personalized) {
@@ -201,18 +271,9 @@
     situation.innerHTML = `<b>Your situation</b>You have about ${escapeHtml(duration || "0 min")} before the protected airport-ready time for ${escapeHtml(airportCode)}. This timeline includes your starting area and the luggage choice entered in the planner.`;
     const model = document.querySelector(".byf-model");
     if (model) model.before(situation);
-  } else if (plan.id >= 4001 && plan.id <= 4010) {
-    flight = new Date("2026-10-10T21:00:00+09:00");
-    recommended = new Date(+flight - data.airports[plan.airport].buffer * 60000);
-    const exampleWindow = core.scheduleWindow(new Date("2026-10-10T09:00:00+09:00"), recommended, steps, plan);
-    if (!exampleWindow.valid) return;
-    start = exampleWindow.latest;
-  } else if (plan.airport === "KIX") {
-    flight = new Date("2026-08-28T20:00:00+09:00");
-    recommended = new Date(flight.getTime() - data.airports.KIX.buffer * 60000);
-    start = new Date(recommended.getTime() - core.totalMinutes(steps) * 60000);
   } else {
-    return;
+    const example=presentation.example(core,plan,data);
+    flight=example.flight; recommended=example.target; start=example.start; steps=example.steps;
   }
 
   renderTimeline(steps, start);
@@ -236,16 +297,16 @@
   const airportArrivalAt = timing.airportArrivalAt || recommended;
   const keyTimes = document.querySelector(".byf-key-times");
   if (keyTimes) keyTimes.innerHTML = [
-    ["Your flight", flight],
+    [personalized ? "Your flight" : "Example flight", flight],
     ["Ready for airline procedures by", recommended],
     ["At the airport by", airportArrivalAt],
     [plan.airportPlan && !hasAirportTravel ? "Begin airport experience by" : `Leave for ${airportCode} by`, leaveAt],
   ].map(([label, value], index) => `<span${index === 3 ? ' class="is-leave"' : ""}><small>${escapeHtml(label)}</small><b>${escapeHtml(formatter.format(value))}</b></span>`).join("");
   document.querySelectorAll(".byf-deadline b").forEach((node) => { node.textContent = formatter.format(leaveAt); });
   const modelHeading = document.querySelector(".byf-model h2");
-  if (modelHeading) modelHeading.textContent = personalized ? `Your timeline for a ${formatter.format(flight)} ${airportCode} flight` : `Example timeline for a ${formatter.format(flight)} ${airportCode} flight`;
+  if (modelHeading) modelHeading.textContent = personalized ? `Your timeline for the ${formatter.format(flight)} ${airportCode} flight` : `Example timeline · ${formatter.format(flight)} ${airportCode} flight`;
   const modelIntro = document.querySelector(".byf-model h2 + p");
-  if (modelIntro) modelIntro.textContent = personalized ? "Calculated from your flight, starting area, and luggage return. ‘At the airport’ and ‘ready for airline procedures’ are shown separately." : "This example ends at the protected airline-procedure time; check live transport and your airline before leaving.";
+  if (modelIntro) modelIntro.textContent = personalized ? "Calculated from your flight, starting area, and luggage return. ‘At the airport’ and ‘ready for airline procedures’ are shown separately." : "Worked example for 10 October 2026, beginning in " + plan.area + " with no luggage detour. It illustrates the checked model and is not a current opening-hours or train-service promise. Enter your actual travel date to check availability.";
   if (personalized) {
     const definitions = document.querySelectorAll(".byf-plan-fit dd");
     const durationFact = document.querySelectorAll(".byf-facts > span")[1];
@@ -263,6 +324,7 @@
   }
   }
 
+  if (typeof document === "undefined") return;
   if (window.BYFPlannerCore) {
     initializePlanContext();
   } else {

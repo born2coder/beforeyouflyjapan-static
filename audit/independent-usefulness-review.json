@@ -1,0 +1,125 @@
+{
+  "reviewed": "2026-11-17",
+  "phase": "integrated editorial independent review complete; publication verification remains root responsibility",
+  "findings": [
+    {
+      "id": "different-start-connectors",
+      "severity": "high",
+      "evidence": "planner-core prepareSteps only adds an explicit startConnectors entry. Legacy plan27 accepts Tokyo Station/Ginza/Shinagawa with identical110minutes and10minute Shinagawa approach.",
+      "action": "Add conservative named connectors or restrict accepted starting areas. Verify total and first-stage differences.",
+      "status": "plan_timing implemented; sample legacy/airport pathways reviewed, full regressions owned by plan_timing/root"
+    },
+    {
+      "id": "airport-plan-luggage-origin",
+      "severity": "high",
+      "evidence": "withLuggageStep airportPlan branch inserts pickup but does not raise subsequent airport transfer minimum for the actual luggage area. Plan28 has55minutes HND ride after Odaiba pickup though airportTransferMinimum sets75.",
+      "action": "Use post-pickup origin for transfer allowance; cover airportPlan start variants.",
+      "status": "plan_timing implemented; sample legacy/airport pathways reviewed, full regressions owned by plan_timing/root"
+    },
+    {
+      "id": "ga-page-location",
+      "severity": "medium",
+      "evidence": "Filtering custom-event params does not sanitize default gtag config/page_view page_location containing flight/free date URL params.",
+      "action": "Sanitize page_location and page_referrer and align privacy.",
+      "status": "trust_ads implementation reported; automated verification owned by trust_ads/root"
+    },
+    {
+      "id": "fixed-airport-buffer",
+      "severity": "medium",
+      "evidence": "Planner subtracts airport.buffer=180; no input for an airline that explicitly asks4hours.",
+      "action": "Describe model basis without claiming exact carrier deadline; provide practical instructions for earlier requirements.",
+      "status": "resolved in guides disclosure: fixed3h and no earlier-airline-target field stated"
+    },
+    {
+      "id": "ground-vs-shop-hours",
+      "severity": "medium",
+      "evidence": "stageHours does not constrain Sensoji hall opening or check Tsukiji per-shop/market closure dates; source route names can imply both will be available.",
+      "action": "Use accurate grounds/conditional-shop wording or explicit constraints rather than blanket verification.",
+      "status": "generic Harajuku shrine suggestion removed; site still has authored conditional retail windows rather than live shop status, explicitly disclosed"
+    },
+    {
+      "id": "gallery-expired-calendar",
+      "severity": "medium",
+      "evidence": "Gallery plan4006 verified calendar ends2026-11-08; current date17Nov. Engine rightly excludes later dates.",
+      "action": "Show current candidate unavailability prominently with historical model example label.",
+      "status": "resolved in rendered destination and dated worked example: explicit unavailable notice"
+    },
+    {
+      "id": "compact-visit-vs-engine-model",
+      "severity": "medium",
+      "evidence": "Omotesando one-shop local advice75minutes maps to full Harajuku+Omotesando290minute itinerary; do not imply planner implements newly described compact route.",
+      "action": "State local visit and complete route separately with exact includedstops or adapt model mapping.",
+      "status": "resolved in unified spot layout: local time and actual complete-model stages shown separately"
+    }
+  ],
+  "method": "Independent desk review of authored English copy and source/engine alignment. Not a field visit or a study with recruited travellers.",
+  "spot_review": {
+    "deep_read": [
+      "shinagawa",
+      "omotesando",
+      "tsukiji-outer-market",
+      "ueno-toshogu",
+      "tokyo-character-street",
+      "narita-omotesando",
+      "hozenji",
+      "tokyo-station-gallery"
+    ],
+    "additional_targeted_read": [
+      "shiodome",
+      "roppongi-azabudai",
+      "meiji-shrine",
+      "nihonbashi",
+      "namba",
+      "narita-airport",
+      "kansai-airport",
+      "kamigata-ukiyoe-museum",
+      "rinku-town"
+    ],
+    "skim": "All40 openings, section headings and source lists inspected. Additional full-section extract was read with truncated output; not claimed as a full line-by-line review of all40.",
+    "observations": [
+      "New spot layout removes the previous new-article-plus-old-template duplication.",
+      "Named operator exits and attractions give first-time readers concrete destinations.",
+      "Local visit ranges are explicitly separate from complete airport models, which show included stages.",
+      "Gallery calendar expiry is prominently shown before the photo; article does not claim current exhibition availability.",
+      "Shinagawa JR gate/Keikyu distinction and Hozenji B16/B18 direction are concrete.",
+      "Some public storage-review metadata and typography can be simplified; forwarded to root."
+    ],
+    "independent_fact_check": {
+      "url": "https://www.kcf.or.jp/fukagawa/outline/fee/",
+      "fact": "Current official fee table confirms adult¥400 and elementary/junior-high/high-school equivalent¥50.",
+      "retrieved": "2026-11-17"
+    }
+  },
+  "plan_sample_review": {
+    "read": [
+      "shinagawa-short-stop-before-haneda",
+      "harajuku-omotesando-before-haneda",
+      "tokyo-station-gallery-before-haneda",
+      "haneda-airport-experience-before-your-flight"
+    ],
+    "observations": [
+      "Shinagawa example now sums110min, matching heading.",
+      "Gallery historical-calendar basis now described.",
+      "Harajuku generic copy suggested shrine during an example that runs beyond October shrine closing; forwarded to plan_timing for correction.",
+      "Walk-to-Omotesando step repeated arrival-at-Harajuku guidance; forwarded for correction."
+    ]
+  },
+  "guide_review": {
+    "read": "All13 newly rendered departure-guide main texts read; no recruited-user observation",
+    "concrete_checks": [
+      "Tokyo bag-location arithmetic85/135minutes ->16:35/15:45 for18:00target is correct; extra hotel detour explicitlyexcluded.",
+      "KIXT1/T2 example125/155minutes ->15:55/15:25 is correct;7–9minute bus ride separated from50minute wholeconnection.",
+      "Narita station terminalT3 corridor13minutes explicitly stops atinformationcounter, notgate.",
+      "Midnight21November00:30 example correctly uses20November21:30airporttarget and19:40collectionstart for90+20minutes.",
+      "Osaka restaurant latestseating14:55 +45meal +15walk ->15:55collection correctlycomputed.",
+      "Earlier airline instructions and fixed3h model limitation explicit.",
+      "Storage provider price/source dates and gate sides now specific."
+    ],
+    "minor_copy_issue": "Haneda hub phrase “See two worked...shows” can be smoothed; no decision impact."
+  },
+  "resolved_semantic_plan_findings": [
+    "Harajuku shopping route no longer offers Meiji Shrine during its16:05–17:20October stage.",
+    "WalktoOmotesando names actualOmotesando destination and returnstation."
+  ],
+  "review_conclusion": "No remaining publication blocker found in the editorial samples reviewed. This is an independent desk review, not a guarantee of AdSense approval, measured trip feasibility, or field-tested accessibility. Root must complete build/browser/live checks."
+}

@@ -1,0 +1,868 @@
+{
+  "akihabara": {
+    "opening": "For a first Akihabara stop, make Radio Kaikan the destination rather than trying to cover Electric Town. It puts figures, character goods and hobby shops in one building beside the JR station, with an easy decision about when to leave.",
+    "visitMinutes": "45–60",
+    "suitableFor": "A focused figure or character-goods purchase near JR Akihabara.",
+    "skipIf": "You need to compare rare stock across several buildings, or would arrive before the shops open.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Radio Kaikan: one category, two floors",
+        "html": "<p>Start with the building directory, then pick the floor that matches your interest. The reviewed directory lists <strong>AmiAmi on 4F</strong>, <strong>K-BOOKS on 3F</strong> and <strong>Kaiyodo Hobby Lobby Tokyo on 5F</strong>. A figure fan could begin at AmiAmi and add Kaiyodo; someone looking for character goods can keep the visit to K-BOOKS instead.</p><p>Use roughly 30–40 minutes for browsing and the rest for payment and getting back outside. That is our suggested local allowance, not a shop service guarantee. Keep packaging size in mind: an attractive figure box may be much harder to carry than a postcard or key ring. Ask before photographing displays.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Arrive on the Electric Town side",
+        "html": "<p>Use <strong>JR Akihabara’s Electric Town exit</strong> and the operator’s map for Radio Kaikan at <strong>1-15-16 Sotokanda</strong>. The building is on the station’s Electric Town side; you do not need a long walk along Chuo-dori for this stop. The Hibiya Line and Tsukuba Express approaches are different, so include their walk to the JR side when using those services.</p><p>Before going upstairs, note the entrance you will use on the way out. Returning to the station should be the next move after paying, not the beginning of another hunt for a particular shop.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Good in rain; less useful before opening",
+        "html": "<p>The main shopping hours are listed as <strong>10:00–20:00</strong>; the basement restaurant has a separate schedule. Browsing the shops has no building admission charge, while merchandise prices depend on the item and condition. Compare the actual label rather than assuming every secondhand item is cheaper.</p><p>In rain, stay within this building rather than crossing the district with a suitcase. If the desired stock is unavailable, finish with what you found or leave without buying. A last-day visit is a poor moment to promise yourself an exhaustive search.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://akihabara-radiokaikan.co.jp/access/",
+        "label": "Radio Kaikan: access, hours and shop floors",
+        "checked": "2026-11-17",
+        "note": "Operator page lists 10:00–20:00 and reviewed tenant floors; basement has separate hours."
+      },
+      {
+        "url": "https://visit-chiyoda.tokyo/app/en/spot/detail/441",
+        "label": "Chiyoda Tourism: JR Electric Town approach",
+        "checked": "2026-11-17",
+        "note": "Official district tourism listing identifies JR Electric Town exit."
+      }
+    ]
+  },
+  "asakusa-sensoji": {
+    "opening": "Come to Sensoji for the temple approach, or for the temple plus Nakamise shopping—but choose the time accordingly. The main hall opens much earlier than most shopping activity, and closes before an evening walk is over.",
+    "visitMinutes": "60–90",
+    "suitableFor": "A first temple visit with one pass along Nakamise.",
+    "skipIf": "Your main aim is shopping very early in the morning, or entering the main hall after it has closed.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Kaminarimon to the main hall, then back",
+        "html": "<p>Begin at <strong>Kaminarimon</strong>, walk along <strong>Nakamise</strong>, pass through <strong>Hozomon</strong> and continue to the main hall. This gives the visit a clear end point instead of an ever-expanding list of side streets. On the return, buy a small souvenir or <em>ningyo-yaki</em> cake only if the line is short.</p><p>Allow around 60–90 minutes locally for this walk, pauses and limited browsing. Leave more room if crowds are moving slowly. A river cruise, kimono rental and Tokyo Skytree are separate activities; including one means building a different day rather than squeezing it into the same visit.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Return to the Asakusa station you actually need",
+        "html": "<p>Asakusa is served by Tokyo Metro, Toei, Tobu and Tsukuba Express, but they are not one shared set of platforms. Save the entrance for the operator used on your next journey before heading to Kaminarimon. In particular, a sign for Tsukuba Express does not take you to the Toei Asakusa Line.</p><p>The temple approach can be crowded and is not a convenient place to wheel a large case. With a stroller or someone who tires easily, keep to this direct out-and-back route, allow longer for crossings and use the station’s accessible-exit map rather than the nearest staircase.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "The hall, the grounds and the shops keep different hours",
+        "html": "<p>Sensoji gives main-hall hours of <strong>06:00–17:00 from April to September</strong> and <strong>06:30–17:00 from October to March</strong>. These are hall hours, not Nakamise’s opening hours. The ordinary temple approach does not require a general admission ticket; offerings, food and purchases are extra.</p><p>Early morning suits a temple-focused visit without promising open shops. After 17:00, treat it as an exterior and neighborhood walk, not entry to the main hall. If rain or congestion makes the approach uncomfortable, shorten the browsing rather than missing the return station.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.senso-ji.jp/visit/",
+        "label": "Sensoji: main-hall hours",
+        "checked": "2026-11-17",
+        "note": "Temple states seasonal opening and 17:00 closing; other facilities have separate hours."
+      },
+      {
+        "url": "https://www.senso-ji.jp/english/",
+        "label": "Sensoji: English temple guide",
+        "checked": "2026-11-17",
+        "note": "Temple’s own account of the principal gates, halls and history."
+      },
+      {
+        "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/asakusa/",
+        "label": "GO TOKYO: Asakusa area and transport",
+        "checked": "2026-11-17",
+        "note": "Official metropolitan tourism source for district access; local time range is editorial."
+      }
+    ]
+  },
+  "animate-shinjuku": {
+    "opening": "Animate Shinjuku is a focused anime-goods stop on the 7th floor of Shinjuku Marui Men. It is a single shop, not a whole tower of Animate floors: come with a series or character in mind and keep time for the lift and checkout.",
+    "visitMinutes": "35–50",
+    "suitableFor": "A specific current anime or manga merchandise purchase while already in Shinjuku.",
+    "skipIf": "You need a guaranteed rare item, or a complete anime-shopping tour across several districts.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Go straight to Marui Men 7F",
+        "html": "<p>Take the building lift or escalators to <strong>7F</strong>, then use the shop’s floor guide to locate books, character goods or the event area. A screenshot of the Japanese series title or character is more useful to staff than an uncertain English pronunciation. Browse that category first; use remaining minutes for nearby merchandise rather than restarting the whole shop.</p><p>Allow roughly 35–50 minutes for the shop visit, including getting upstairs and paying. Limited fairs can have their own entry conditions, queues or sold-out goods. This suggestion is for ordinary shopping and does not include an event reservation.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Shinjuku-sanchome E2 is the short approach",
+        "html": "<p>The official shop page places the store at <strong>Shinjuku Marui Men, 5-16-4 Shinjuku</strong>. It quotes <strong>2 minutes from Shinjuku-sanchome Exit E2</strong>, compared with <strong>9 minutes from JR Shinjuku’s East Exit</strong>. These are the operator’s walking estimates; platform and lift time are additional.</p><p>If your onward journey uses JR or the west-side airport bus area, you still have to return there after shopping. Do not mistake E2 for a shortcut directly to those departure points. Keep the address saved so you do not head to another Marui building.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Buy what fits in the bag you already have",
+        "html": "<p>Published shop hours are <strong>11:00–20:00</strong>. Ordinary entry is free; merchandise and any separately ticketed events cost extra. Stock is not guaranteed, even when a product appears in promotional material.</p><p>Flat goods, books and small accessories are easier last-day purchases than a large boxed figure. Compare the price and condition, then leave room to pack without blocking an aisle. If your chosen series has little stock, avoid automatically adding Ikebukuro: that is a different journey. A short visit to nearby Hanazono Shrine is an alternative only if your remaining route still allows it.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.animate.co.jp/en/shop/shinjuku/",
+        "label": "Animate Shinjuku: address, hours and station approaches",
+        "checked": "2026-11-17",
+        "note": "Official page confirms Marui Men 7F, 11:00–20:00, E2 2-minute/JR East Exit 9-minute estimates."
+      },
+      {
+        "url": "https://www.animate.co.jp/en/shop/shinjuku/access/",
+        "label": "Animate: illustrated access guide",
+        "checked": "2026-11-17",
+        "note": "Use the shop’s route photographs to locate the correct Marui entrance."
+      }
+    ]
+  },
+  "fukagawa-edo-museum": {
+    "opening": "Fukagawa Edo Museum works best as one indoor visit: descend into a reconstructed Edo neighborhood, explore a few rooms and leave before the exhibits become tiring. It is a smaller, more manageable choice than trying to combine several museums before a flight.",
+    "visitMinutes": "60–80",
+    "suitableFor": "Families or history-curious visitors who want an indoor stop with a clear beginning and end.",
+    "skipIf": "You would arrive after last admission, or the museum’s actual closure calendar does not fit your date.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Look for a home, a shop and a changing sky",
+        "html": "<p>The main exhibition recreates <strong>Fukagawa Saga-cho in the late Edo period at full scale</strong>. Start by looking across the street scene, then choose a dwelling and a shopfront to explore. Notice how lighting and sound suggest different times of day; everyday tools make a useful conversation starter with children.</p><p>Budget about 45–60 minutes in the exhibition and another 15–20 minutes for tickets, toilets and a pause. Follow the current signs about entering rooms and handling objects. The museum is the activity here; Kiyosumi Garden and a café crawl are optional separate visits, not free additions to the same allowance.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Use the museum entrance in Shirakawa",
+        "html": "<p>Set the destination to <strong>Fukagawa Edo Museum, 1-3-28 Shirakawa, Koto City</strong>, near Kiyosumi-shirakawa Station. Use the museum’s access and barrier-free diagrams for the station approach and the lift to exhibition level. A route via stairs may not suit a stroller or a large case.</p><p>On arrival, deal with tickets and the toilet before starting the reconstructed street. For a child who wants to spend longer inside a room, cut another room rather than making the return journey faster. The flight-aware plan includes a separate family/rest allowance; the local estimate here does not replace it.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Tickets and the closing-day trap",
+        "html": "<p>The reviewed tariff is <strong>¥400 for adults</strong> and <strong>¥50 for elementary, junior-high and high-school students or equivalent</strong>. Exhibition hours are <strong>09:30–17:00, last admission 16:30</strong>. The second and fourth Mondays are normally closed except national holidays, with year-end and temporary closures also listed by the museum.</p><p>This is a good rain option only on a day it actually opens. If closed, do not substitute an unfamiliar distant museum at the last minute. Keep to a nearby open café or head toward your airport route. English-speaking volunteer assistance may be available, but an English tour is not included or guaranteed.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.kcf.or.jp/fukagawa/outline/",
+        "label": "Fukagawa Edo Museum: exhibition and operating calendar",
+        "checked": "2026-11-17",
+        "note": "Operator confirms full-scale late Edo streetscape, 09:30–17:00, 16:30 admission and normal closure pattern."
+      },
+      {
+        "url": "https://www.kcf.or.jp/fukagawa/outline/fee/",
+        "label": "Museum: current admission categories",
+        "checked": "2026-11-17",
+        "note": "¥400 adult; ¥50 elementary/junior-high/high-school or equivalent on reviewed table."
+      },
+      {
+        "url": "https://www.kcf.or.jp/fukagawa/access/",
+        "label": "Museum: access map",
+        "checked": "2026-11-17",
+        "note": "Official map is image-based; no unsupported exit number or measured walking time added."
+      },
+      {
+        "url": "https://www.kcf.or.jp/fukagawa/outline/barrierfree/",
+        "label": "Museum: barrier-free facilities",
+        "checked": "2026-11-17",
+        "note": "Operator provides route/facility diagrams; no blanket step-free station-to-exhibit certification claimed."
+      }
+    ]
+  },
+  "ginza": {
+    "opening": "For useful last-day Ginza shopping, choose one building: Ginza Mitsukoshi for food gifts, or Itoya for stationery. A single purchase mission near the 4-chome crossing is easier to finish than a district-wide shopping list.",
+    "visitMinutes": "45–70",
+    "suitableFor": "Packable food gifts or a small stationery purchase, with a clear return station.",
+    "skipIf": "You need several luxury appointments, tax-free queues and a full meal within the same short stop.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Food gifts at Mitsukoshi, or stationery at Itoya",
+        "html": "<p>At <strong>Ginza Mitsukoshi</strong>, use the <strong>B2/B3 food floors</strong> for packaged sweets or food, rather than touring the fashion departments first. Decide whether the purchase is for the journey or for home: perishable food, liquids and delicate boxes have different packing needs. Read the storage and expiry label before buying.</p><p>If stationery is the purpose, make <strong>Ginza Itoya</strong> the destination instead and select a notebook, pen or paper item. Do not promise both buildings in a 45-minute stop. Allow the last part of your visit for payment and getting back to street or station level.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "The 4-chome crossing is a useful anchor",
+        "html": "<p>Mitsukoshi is at <strong>4-6-16 Ginza</strong>, beside the 4-chome crossing. Its operator quotes a one-minute approach from Ginza Station’s <strong>Ginza 4-chome intersection gate</strong>, or two minutes from Higashi-ginza via the underground passage toward Ginza. Platform movement is extra.</p><p>For Itoya instead, the operator gives about two minutes from <strong>Ginza Exit A13</strong> toward Kyobashi. Its main-store address is <strong>2-7-15 Ginza</strong>.</p><p>Choose the return entrance for your actual train, not merely a sign saying Ginza. If your airport route begins at Tokyo Station, include the journey there: Ginza’s shopping basements are not Tokyo Station’s departure concourse. Use the store’s accessible-route diagrams when stairs are unsuitable.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Keep the purchase useful, and leave the queue optional",
+        "html": "<p>Mitsukoshi’s general retail hours are listed as <strong>10:00–20:00</strong>; restaurants and food-floor eat-in counters have their own hours. Building browsing has no general entrance charge. Prices depend on the product, and a food hall is not automatically a place to sit down and eat.</p><p>For a small purchase, a tax-free procedure or a long gift-wrapping line may use more time than it saves. Ask about the finish time before joining a queue. If it is raining, remain in the chosen building; if the item is unavailable, buy a simpler alternative rather than crossing Ginza to restart the search.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.mistore.jp/store/ginza/access.html",
+        "label": "Ginza Mitsukoshi: hours and station access",
+        "checked": "2026-11-17",
+        "note": "Current general hours 10:00–20:00; operator gives 4-chome gate and Higashi-ginza approaches."
+      },
+      {
+        "url": "https://www.mistore.jp/store/ginza/shops.html",
+        "label": "Mitsukoshi: food floors and facilities",
+        "checked": "2026-11-17",
+        "note": "Official floor guide places food departments on B2/B3 and gives separate restaurant floors."
+      },
+      {
+        "url": "https://www.ito-ya.co.jp/ext/lang/en/information.html",
+        "label": "Itoya: store and stationery information",
+        "checked": "2026-11-17",
+        "note": "Official English information page confirms Ginza main store, stationery, A13 two-minute approach and Sunday/holiday earlier closing."
+      }
+    ]
+  },
+  "ginza-evening": {
+    "opening": "For an evening in Ginza before Haneda, make dinner the main event. Ginza Mitsukoshi’s restaurant floors give you several cuisines in one building; a short look at the 4-chome crossing can come before or after, depending on the queue.",
+    "visitMinutes": "75–100",
+    "suitableFor": "One seated meal and a brief Ginza street view before an airport journey.",
+    "skipIf": "You want a long tasting menu, or the available table cannot finish before your leave-by time.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Dinner first, with the street view as the flexible part",
+        "html": "<p>Begin at the <strong>Ginza 4-chome crossing</strong> for the illuminated department-store streetscape, then go to <strong>Ginza Mitsukoshi’s 11F/12F restaurants</strong>. The floor guide lists options including soba, tonkatsu, sushi and Japanese cuisine. Look at the menu and queue before sitting down rather than choosing solely from a photograph.</p><p>Our 75–100 minute local allowance is for one meal, movement through the building and a brief street pause. It is not a reservation or a promise about service speed. Tell the restaurant your latest departure time before ordering. A course meal whose finish time is uncertain is a poor match.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Choose Ginza or Higashi-ginza for the next journey",
+        "html": "<p>Mitsukoshi is beside the 4-chome crossing at <strong>4-6-16 Ginza</strong>. Its official access guide links Ginza Station and Higashi-ginza through the underground passage. Higashi-ginza’s Toei Asakusa Line is a different service from the Tokyo Metro lines at Ginza, so keep the onward train’s operator and destination clear.</p><p>Return to street or station level before your transport deadline; the lift ride and the passage are part of leaving dinner. Adding a second shopping building after eating makes that exit less predictable, particularly when everyone is leaving at once.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "No table? Change the meal, not the airport deadline",
+        "html": "<p>The department store’s <strong>20:00 retail closing</strong> does not establish the restaurant’s last-order time. Use the individual restaurant listing for dinner hours and prices. Your bill depends on the menu, drinks and any displayed service or cover conditions; no meal is included in the planner.</p><p>If the queue is long, choose another restaurant on the same floors with immediate seating. A food-floor purchase is a fallback only while that floor is open and when you have somewhere suitable to eat it. Otherwise, move toward Haneda and make dinner an airport meal. The outside street view can be shortened to a few minutes without spoiling the evening.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.mistore.jp/store/ginza/shops.html",
+        "label": "Ginza Mitsukoshi: restaurant floors",
+        "checked": "2026-11-17",
+        "note": "Operator floor guide confirms restaurant departments on 11F/12F and their cuisines."
+      },
+      {
+        "url": "https://www.mistore.jp/store/ginza/access.html",
+        "label": "Mitsukoshi: access and separate dining-hours links",
+        "checked": "2026-11-17",
+        "note": "Retail closing and restaurant hours distinguished; no fixed restaurant last order asserted."
+      },
+      {
+        "url": "https://www.ginza.jp/en/",
+        "label": "Ginza official: district information",
+        "checked": "2026-11-17",
+        "note": "Local district source; visit allowance and queue decision are editorial."
+      }
+    ]
+  },
+  "hamamatsucho-zojoji": {
+    "opening": "Zojoji offers a temple courtyard with Tokyo Tower rising behind it, while keeping Hamamatsucho as a clear return point for the Tokyo Monorail. Choose the temple exterior and main approach; going up Tokyo Tower is a separate visit.",
+    "visitMinutes": "50–70",
+    "suitableFor": "A temple-and-city photograph with a return toward Hamamatsucho.",
+    "skipIf": "You expect to add the tower deck, temple exhibitions and a long meal to the same short walk.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "A temple visit with the tower as the backdrop",
+        "html": "<p>Walk the main approach toward <strong>Zojoji’s main hall</strong>, then pause where the hall and Tokyo Tower share the view. The contrast between the temple roof and the red-and-white tower is the point of this compact stop; you do not have to climb the tower to enjoy it.</p><p>Allow roughly 20–30 minutes within the temple area, plus the walk out and back. The <strong>Sangedatsumon gate is under conservation work in the current official tourism notice</strong>, so do not expect an unobstructed gate photograph. Follow the temporary approach signs and keep out of repair areas rather than trying to recover an older postcard view.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Hamamatsucho is the return anchor",
+        "html": "<p>Zojoji’s operator lists about <strong>10 minutes on foot from JR/Tokyo Monorail Hamamatsucho</strong> and <strong>5 minutes from Daimon</strong>. Use the official map for the approach through the Daimon area toward the temple, then return along the route you recognize.</p><p>A nearby Daimon subway entrance does not take you straight onto the monorail platform. If the airport journey uses Tokyo Monorail, allow the walk back and movement to its own entrance. With a stroller, use the operator’s station layout to choose lifts; a ten-minute general walking estimate does not certify an accessible route.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Keep paid exhibits and a tower ascent separate",
+        "html": "<p>The ordinary exterior visit is different from admission to the <strong>Zojoji Treasures Gallery</strong> or the Tokugawa mausoleum. Each has its own admission and opening conditions. Pay for one only when the time remaining genuinely covers it; do not discover the extra visit length after buying.</p><p>In heavy rain, the outdoor photograph may not be worth a wet return with luggage. A seated meal near Hamamatsucho keeps the departure route simpler. If the temple walk is still appealing, shorten it to the main courtyard and return without adding the tower’s ticket line.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.zojoji.or.jp/map/",
+        "label": "Zojoji: official access map",
+        "checked": "2026-11-17",
+        "note": "Temple lists Hamamatsucho 10-minute and Daimon 5-minute walking approaches."
+      },
+      {
+        "url": "https://www.zojoji.or.jp/en/",
+        "label": "Zojoji: English temple guide",
+        "checked": "2026-11-17",
+        "note": "Temple context and principal buildings; paid exhibition areas distinct."
+      },
+      {
+        "url": "https://www.gotokyo.org/en/spot/47/index.html",
+        "label": "GO TOKYO: Zojoji and current gate works",
+        "checked": "2026-11-17",
+        "note": "Current metropolitan tourism notice says Sangedatsumon conservation/repair is ongoing."
+      }
+    ]
+  },
+  "hanazono-shrine": {
+    "opening": "Hanazono Shrine is a compact pause on Shinjuku’s east side, especially when the alternative is another crowded shopping floor. Visit the main shrine and the small torii-lined area, then return toward the station rather than extending into a full nightlife walk.",
+    "visitMinutes": "20–35",
+    "suitableFor": "A short outdoor shrine visit while already around Shinjuku-sanchome.",
+    "skipIf": "A festival fills the grounds and you need a quiet, quick stop.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "A small loop rather than a second district",
+        "html": "<p>Enter the grounds, pause before the <strong>main shrine building</strong> and look for the smaller shrine area with red torii. Keep the visit to these two points. The appeal is the change of pace from Shinjuku’s streets, not a long sequence of buildings or a paid guided attraction.</p><p>Our suggested 20–35 minutes is local time for a simple visit and photographs where permitted. Religious services, shrine-office requests or a festival need their own allowance. Do not walk through a service or block worshippers to get a photograph. A small offering is optional; ordinary grounds access is not a ticketed museum visit.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "E2 is the useful Shinjuku-sanchome exit",
+        "html": "<p>The Shinjuku tourism association identifies <strong>Shinjuku-sanchome Exit E2</strong> as the immediate approach and gives about <strong>7 minutes from JR Shinjuku’s East Exit</strong>. The address is <strong>5-17-3 Shinjuku</strong>. The subway exit is close to the shrine, but reaching E2 from a distant platform still takes time.</p><p>Keep your return route tied to the service you need afterward. If you arrived by JR or must collect bags near the station’s other side, include that return rather than treating a nearby subway stair as the end of the walk.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Festival atmosphere can change the whole visit",
+        "html": "<p>During events such as <strong>Tori-no-Ichi</strong>, stalls and visitors can make the grounds lively and slow to cross. That can be a worthwhile experience, but it is a different proposition from a quiet twenty-minute shrine pause. Use the shrine’s current announcements for event dates rather than assuming an ordinary weekday layout.</p><p>In rain or during a crowded festival, shorten the outdoor visit or choose an indoor break. <strong>Animate Shinjuku in Marui Men</strong> is another nearby activity if merchandise is your actual priority; it is not an automatic extra stop to fit into the shrine allowance. A goshuin or amulet purchase depends on shrine-office hours, which are separate from entering the grounds.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.kanko-shinjuku.jp/spot/c005/article_369.html",
+        "label": "Shinjuku tourism association: shrine access",
+        "checked": "2026-11-17",
+        "note": "Official local tourism source gives E2 immediate access and JR East Exit seven-minute approach."
+      },
+      {
+        "url": "https://hanazono-jinja.or.jp/",
+        "label": "Hanazono Shrine: current events and shrine information",
+        "checked": "2026-11-17",
+        "note": "Official domain returned HTTP 503 in direct check on 17 November; office hours and current event dates were therefore not asserted. Landmark/access facts are supported by Shinjuku Tourism Association."
+      }
+    ]
+  },
+  "harajuku": {
+    "opening": "For a short Harajuku visit, choose Takeshita Street for youth fashion and a snack. Keep the street as an out-and-back from Harajuku Station; Meiji Jingu, Omotesando and Shibuya each turn it into a longer outing.",
+    "visitMinutes": "45–60",
+    "suitableFor": "A lively street scene, small fashion purchase or crepe near Harajuku.",
+    "skipIf": "Slow-moving crowds or a large suitcase would make a narrow shopping street uncomfortable.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "One street pass and one treat",
+        "html": "<p>Start at the <strong>Takeshita Street entrance arch on the Harajuku Station side</strong>. Walk toward the shops with one purpose—an accessory, a small clothing item or a crepe—then turn back with time still left. <strong>Marion Crepes’ Harajuku Takeshita-dori shop</strong> is a named snack option, not a promise of immediate service.</p><p>Allow roughly half an hour for the street and browsing, keeping the rest of the 45–60 minute suggestion for a purchase and the station return. If a food queue consumes that allowance, skip it or choose an open alternative. Finish eating where the shop permits and deal with rubbish before returning to the station.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Start and finish at Harajuku, not Shibuya",
+        "html": "<p>JR Harajuku is the simplest named station anchor for Takeshita Street. Use the street association’s illustrated map to place the entrance arch and chosen shop. Meiji-jingumae subway station has different exits and platforms; include that approach if it is your arrival or departure station.</p><p>A walk that ends at Omotesando Station is a one-way district walk rather than this compact return. Save it for a plan that includes the extra distance. Avoid weaving across the crowd to return to a forgotten shop: make purchases as you pass, or deliberately leave them for the return leg.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "What this stop costs—and when another area is better",
+        "html": "<p>The street has no general admission charge. Crepes, drinks and shopping are separate purchases, with prices and opening hours set by each shop. The official street directory specifically directs visitors to individual shops for their schedules; an early train arrival does not mean all stores are open.</p><p>For quieter fashion and architecture, choose Omotesando instead of trying to force a relaxing visit through a congested Takeshita Street. For a woodland shrine walk, choose Meiji Jingu and its seasonal closing time. In heavy rain, a single open shop or café near the station is more comfortable than a full street pass.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.takeshita-street.com/map.html",
+        "label": "Takeshita Street association: illustrated map",
+        "checked": "2026-11-17",
+        "note": "Association map identifies shop positions and street entrance; route allowance is editorial."
+      },
+      {
+        "url": "https://www.takeshita-street.com/shop.html",
+        "label": "Takeshita Street: current member directory",
+        "checked": "2026-11-17",
+        "note": "Shop hours differ; no district-wide opening time inferred."
+      },
+      {
+        "url": "https://www.marion.co.jp/store/tokyo/",
+        "label": "Marion Crepes: Tokyo shop directory",
+        "checked": "2026-11-17",
+        "note": "Operator confirms the Harajuku Takeshita-dori location; no menu price or queue time promised."
+      }
+    ]
+  },
+  "kanda-jimbocho": {
+    "opening": "Jimbocho is most rewarding when you arrive with a subject: art books, railway books, Japanese literature or picture books. A two-shop visit around Yasukuni-dori is easier to enjoy and finish than an open-ended search through the whole book district.",
+    "visitMinutes": "60–80",
+    "suitableFor": "A reader who wants a distinctive bookshop visit and can choose a category.",
+    "skipIf": "You expect every shop to stock English books, or need time-consuming rare-book research.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Choose a subject before choosing the shelves",
+        "html": "<p><strong>Shosen Grande</strong> is a practical anchor for specialist interests; use its floor guide to go straight to your category. <strong>Books Tokyodo</strong> provides another browse in the Jimbocho bookshop area. Look at a book’s language and format before buying: a beautiful Japanese art or picture book can still be useful without fluent reading, whereas a dense specialist text may not be.</p><p>Give the first shop about 25–30 minutes, the second a shorter browse, and preserve time for payment and packing. These are our visit suggestions, not store-imposed limits. A café is a replacement for the second shop if your feet need the break, not another compulsory stage.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Use Jimbocho rather than the broad name Kanda",
+        "html": "<p>Shosen’s directions say to leave <strong>Jimbocho Station at A7</strong> and walk along <strong>Yasukuni-dori toward Akihabara</strong>; the shop is on the right after roughly a minute. That is the operator’s access estimate from the exit, not from a platform. Use the current map for the accessible alternative if the staircase is unsuitable.</p><p>Kanda Station is a different departure point. Do not plan an airport connection from Kanda and then allow no time to reach it from a Jimbocho shop. Keep the return entrance on your phone before you start browsing, especially if you came through the underground interchange.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "A heavy bargain may not be a useful flight-day purchase",
+        "html": "<p>Ordinary bookshop browsing has no admission charge. Used books, new books and collectible editions have different prices and conditions; compare the marked price and inspect what you can before paying. Two small books can be a more comfortable purchase than a stack of large art volumes.</p><p>Shop holidays and hours vary, so identify your two targets before travelling. If one is closed, make the other the whole visit. <strong>Book House Cafe</strong> is a named picture-book-and-café alternative for a family or a seated pause, subject to its own opening and seating availability.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.shosen.co.jp/grande/",
+        "label": "Shosen Grande: shop and A7 access directions",
+        "checked": "2026-11-17",
+        "note": "Operator gives A7, eastward Yasukuni-dori approach and approximately one-minute exit-to-shop walk."
+      },
+      {
+        "url": "https://www.tokyodo-web.co.jp/floor/",
+        "label": "Books Tokyodo: store and floor information",
+        "checked": "2026-11-17",
+        "note": "Named second bookshop; exact stock and event hours are not guaranteed."
+      },
+      {
+        "url": "https://visit-chiyoda.tokyo/app/en/spot/detail/705",
+        "label": "Chiyoda tourism association: Book House Cafe",
+        "checked": "2026-11-17",
+        "note": "Official district listing supports the picture-book/café alternative."
+      }
+    ]
+  },
+  "kappabashi": {
+    "opening": "Kappabashi is a useful last stop when you want a small kitchen souvenir with a clear purpose. Choose tableware and chopsticks in the southern section, or make food replicas your destination farther along the street; those are different walks.",
+    "visitMinutes": "60–90",
+    "suitableFor": "A practical kitchen gift, chopsticks or a small food-replica souvenir.",
+    "skipIf": "Your target shop is closed, or fragile purchases and engraving would make packing rushed.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Two concrete shopping options",
+        "html": "<p>For tableware, begin at <strong>Niimi</strong>, the south-entrance shop with the giant chef figure, then consider <strong>Hashitou Honten</strong> for wooden or lacquered chopsticks. A small bowl, chopstick rest or one pair of chopsticks is easier to pack than a large serving dish. Ask how fragile items will be wrapped before paying.</p><p>For a food-replica gift, make <strong>Ganso Shokuhin Sample-ya’s Kappabashi shop</strong> the main destination instead. Its magnets and small replica goods can be a complete purchase mission. A wax-making workshop is a separately reserved activity; it is not included in a short shopping allowance.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "The nearest station depends on which shop you choose",
+        "html": "<p>The street association gives a five-minute general approach from <strong>Tawaramachi</strong>. That describes reaching the district, not every shop. Ganso’s own map quotes <strong>12 minutes from Tawaramachi Exit 3</strong>, or <strong>5 minutes from Tsukuba Express Asakusa Exit A2</strong>. The Tobu and Toei Asakusa stations are different locations.</p><p>For the southern tableware route, use Niimi at <strong>1-1-1 Matsugaya</strong> as the starting landmark. For Ganso, save <strong>3-7-6 Nishi-Asakusa</strong>. Do not walk to one end of the street and then discover that the intended store is at the other.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Sundays change the choice",
+        "html": "<p>The association says only about 30% of shops open on Sundays. Niimi and Hashitou list Sunday/public-holiday closures, whereas Ganso lists Sunday and holiday shopping hours of <strong>10:00–17:30</strong>, with year-end closures. Choose the actual shop before making a Sunday journey.</p><p>Browsing has no street admission charge; products and workshops are extra. Kitchen knives require appropriate packing and airline-compliant checked baggage, so they are awkward if baggage is already checked or you travel cabin-bag only. If packing or a service queue takes too long, choose a small ready-to-carry gift and leave rather than adding another specialist store.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.kappabashi.or.jp/en/access/",
+        "label": "Kappabashi association: station approaches",
+        "checked": "2026-11-17",
+        "note": "Five-minute district approach from Tawaramachi; district boundary not every shop."
+      },
+      {
+        "url": "https://www.kappabashi.or.jp/en/shops/143/",
+        "label": "Niimi: location and trading days",
+        "checked": "2026-11-17",
+        "note": "Association tenant page confirms southern entrance, giant chef and Sunday/holiday closure."
+      },
+      {
+        "url": "https://www.kappabashi.or.jp/en/shops/148/",
+        "label": "Hashitou: chopsticks and trading days",
+        "checked": "2026-11-17",
+        "note": "Association tenant page supports named category and Sunday/holiday closure."
+      },
+      {
+        "url": "https://www.ganso-sample.com/en/shop/kappabashi/",
+        "label": "Ganso: actual shop approaches and hours",
+        "checked": "2026-11-17",
+        "note": "Operator gives 12 minutes Tawaramachi Exit 3 and 5 minutes TX Asakusa A2."
+      },
+      {
+        "url": "https://www.kappabashi.or.jp/en/shops/96/",
+        "label": "Ganso: products and reservations",
+        "checked": "2026-11-17",
+        "note": "Association confirms workshops require reservation; Sunday/holiday hours listed."
+      }
+    ]
+  },
+  "meiji-shrine": {
+    "opening": "Meiji Jingu is a woodland walk to an active shrine, not an attraction immediately outside Harajuku’s gate. Use the south entrance, reach the main sanctuary and return the same way; the approach itself deserves time.",
+    "visitMinutes": "50–70",
+    "suitableFor": "A quiet shrine-and-forest experience without a museum or garden visit.",
+    "skipIf": "The seasonal closing time leaves no comfortable return walk, or you need a mostly seated activity.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "South entrance → sanctuary → the same entrance",
+        "html": "<p>From the <strong>Harajuku-side south entrance</strong>, follow the principal approach through the torii and wooded grounds toward the main shrine buildings. Pause at the barrel displays on the way and leave the main sanctuary area respectfully after your visit. Retracing the route keeps the exit familiar.</p><p>The shrine says the entrance-to-main-buildings walk takes <strong>at least another ten minutes</strong> after reaching an entrance. Our suggested 50–70 minute local visit includes walking both ways and unhurried pauses. It does not include Meiji Jingu Museum, the Inner Garden or a separate Harajuku shopping trip. Those facilities would need their own hours, admission and walking time.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "A station arrival is only the start of the approach",
+        "html": "<p>Use <strong>Harajuku Station</strong> or <strong>Meiji-jingumae</strong> for the south approach and the shrine’s official access map to locate the entrance. Do not use a different gate on the return simply because a map shows another nearby station; that changes the walking distance and onward route.</p><p>Much of this stop is outdoors. With a stroller, mobility aid or tired child, allow extra time for the surface and choose the official accessible route rather than assuming every path is equivalent. The shrine lists wheelchairs at the entrances, but availability and your individual access needs still matter.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Winter closing comes early",
+        "html": "<p>The grounds are free to enter and open daily, but hours change by month with daylight. The reviewed official table gives <strong>November 06:10–16:10</strong> and <strong>December 06:40–16:00</strong>; summer closing is later. Use the complete monthly table for another season rather than carrying a winter or summer time into the wrong month.</p><p>Plan to finish the sanctuary visit early enough to walk back before closing. If rain, fatigue or the time remaining makes that unpleasant, choose a seated break on the Harajuku side instead. A late-afternoon woodland walk cannot simply be shifted into the evening after the shrine closes. Museum and garden opening times may be shorter than grounds hours.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.meijijingu.or.jp/en/access/",
+        "label": "Meiji Jingu: entrance and sanctuary access",
+        "checked": "2026-11-17",
+        "note": "Operator explicitly distinguishes station-to-entrance access from at least ten further minutes to main buildings."
+      },
+      {
+        "url": "https://www.meijijingu.or.jp/en/opening/",
+        "label": "Meiji Jingu: monthly opening table",
+        "checked": "2026-11-17",
+        "note": "Official November/December hours, daily grounds access and separate facility hours."
+      },
+      {
+        "url": "https://www.meijijingu.or.jp/en/visit/",
+        "label": "Meiji Jingu: visiting guidance",
+        "checked": "2026-11-17",
+        "note": "Free ordinary grounds entry and visitor guidance; route duration is an editorial estimate."
+      }
+    ]
+  },
+  "nakano-broadway": {
+    "opening": "Nakano Broadway suits a collector who can choose two specialist shops. It is less effective as an early-morning visit or an open-ended hunt for a rare item: many Mandarake shops begin at noon, and stock changes.",
+    "visitMinutes": "60–80",
+    "suitableFor": "A focused vintage-toy, manga or character-goods browse.",
+    "skipIf": "You must guarantee a particular item, or your available shopping window ends before noon.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Choose the type of collection before the floor",
+        "html": "<p>Use Mandarake’s floor guide rather than walking every corridor. The reviewed guide places the <strong>main store on 3F</strong> and <strong>Henya on 4F</strong>; Henya specializes in vintage toys and corporate novelty items. A manga-first visitor can spend most of the time at the main store; a vintage-toy fan can start with Henya and add one relevant specialist shop.</p><p>Keep around 40–50 minutes for the chosen shops and the remaining local allowance for moving between them, payment and the return through Sunmall. Inspect condition labels and packaging, particularly with secondhand goods. Older product photographs on a shop page are examples, not a stock reservation.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "North exit, Sunmall, then Broadway",
+        "html": "<p>Mandarake’s operator gives <strong>five minutes from JR Nakano’s North Exit</strong>. Go through the <strong>Nakano Sunmall</strong> shopping arcade toward Broadway, then use the building’s current floor directory for the chosen shop. The arcade helps with rain, although not every stage of the journey is sheltered.</p><p>Return through the same arcade to Nakano Station. The linked flight plan may include an outward trip from Shinjuku; the 60–80 minute estimate here is the local visit only. Reaching Shinjuku and any stored bags afterward is additional journey time, not another piece of shopping time.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Noon opening and a clear spending limit",
+        "html": "<p>Mandarake lists <strong>12:00–20:00</strong> for its Nakano operation. Other Broadway shops have their own schedules. Ordinary browsing does not require a general admission ticket, while prices vary widely by rarity and condition. Decide a spending limit before falling into a comparison between several versions of the same item.</p><p>If staff need time to find an item or a payment line grows, keep the search to the time you genuinely have. Leave without buying rather than extending to another district. In crowded narrow aisles, a large suitcase makes the visit less pleasant for everyone; avoid planning this as a casual stop with all your luggage still in hand.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.mandarake.co.jp/dir/nkn/",
+        "label": "Mandarake Nakano: current store information",
+        "checked": "2026-11-17",
+        "note": "Operator lists noon-to-20:00 hours and JR North Exit five-minute approach."
+      },
+      {
+        "url": "https://www.mandarake.co.jp/shop/nkn/floor_guide.html",
+        "label": "Mandarake: specialist shop floors",
+        "checked": "2026-11-17",
+        "note": "Official floor guide lists main store on 3F and Henya on 4F."
+      },
+      {
+        "url": "https://www.mandarake.co.jp/shop/nkn/henya.html",
+        "label": "Mandarake Henya: vintage-toy focus",
+        "checked": "2026-11-17",
+        "note": "Product categories confirmed; operator warns example stock may already be sold."
+      }
+    ]
+  },
+  "nihonbashi": {
+    "opening": "Nihonbashi means “Japan Bridge” and names both the bridge and the surrounding district. For a short visit, connect that piece of Edo history with a specific food stop at COREDO Muromachi rather than treating the whole neighborhood as one attraction.",
+    "visitMinutes": "50–70",
+    "suitableFor": "A compact bridge walk and a Japanese food ingredient or dashi stop.",
+    "skipIf": "You want a full department-store tour or must collect bags across the city before leaving.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "The bridge, then a taste of dashi",
+        "html": "<p>Start at <strong>Nihonbashi Bridge</strong> and look at the river and the road-origin marker: the bridge was the starting point of the major roads from Edo, and distances from Tokyo still use it as a reference. Give this outdoor stop about 10–15 minutes rather than expecting a large exhibition.</p><p>Continue toward <strong>COREDO Muromachi 1</strong> for <strong>Ninben Nihonbashi Main Store on 1F</strong>. Its dashi bar offers a way to taste bonito stock, while packaged ingredients make a small kitchen souvenir. Keep the final part of the local allowance for payment and your station approach. A full lunch or a second department store needs more time.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Use the bridge or the shop as the map pin",
+        "html": "<p><strong>Nihonbashi Station</strong> is useful for the bridge area; <strong>Mitsukoshimae</strong> serves the Muromachi side. Save the station for your onward route before walking between the two. A broad pin for “Nihonbashi” may lead to a district center rather than the bridge itself.</p><p>Tokyo Station is nearby in city terms, but reaching its Yaesu side, the correct concourse and an airport departure point is a separate walk. Do not allow zero minutes for that connection. In rain, make Ninben and the open COREDO shops the main visit and shorten the bridge pause.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "A small food purchase without an unnecessary detour",
+        "html": "<p>The public bridge has no admission charge; dashi drinks, food and shopping are paid separately. Ninben’s menu and opening hours govern what is available on your date. A soup tasting is not a guaranteed seated meal, so choose a restaurant instead if a proper lunch and rest are what you need.</p><p>For gifts, look at the package’s ingredients, expiry date and storage instructions. Choose an item you will actually use at home, and remember that destination-country food import rules can differ. If the shop is crowded, the bridge and one short browse are still a complete visit; there is no need to cross to another shopping district just to fill the remaining minutes.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.gotokyo.org/en/spot/44/index.html",
+        "label": "GO TOKYO: bridge history and location",
+        "checked": "2026-11-17",
+        "note": "Metropolitan tourism source for road origin and bridge location."
+      },
+      {
+        "url": "https://www.nihonbashi-tokyo.jp/en/sights/",
+        "label": "Nihonbashi: district sights",
+        "checked": "2026-11-17",
+        "note": "Local district source supports name and historical context."
+      },
+      {
+        "url": "https://mitsui-shopping-park.com/en/urban/muromachi/store/600234.html",
+        "label": "COREDO: Ninben shop and dashi bar",
+        "checked": "2026-11-17",
+        "note": "Operator listing confirms Ninben in COREDO Muromachi 1 1F and dashi-bar concept."
+      }
+    ]
+  },
+  "odaiba": {
+    "opening": "Odaiba’s short version is a waterfront view, not a tour of every mall on the island. Choose Odaiba Marine Park near AQUA CiTY for the bay and Rainbow Bridge, with the building as an indoor fallback when the weather turns.",
+    "visitMinutes": "50–75",
+    "suitableFor": "A bay view and a short outdoor walk with an indoor break nearby.",
+    "skipIf": "Strong wind or rain makes the waterfront unpleasant, or you want several ticketed attractions.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "One section of waterfront, then a place to sit",
+        "html": "<p>Use <strong>Odaiba Marine Park</strong> for the water, city skyline and Rainbow Bridge view. A compact option is the waterfront near <strong>AQUA CiTY ODAIBA</strong> and the <strong>Statue of Liberty replica</strong>. Choose one stretch, pause for photographs and return; the point is to enjoy the openness after days in dense streets.</p><p>Spend roughly 25–40 minutes outside and use the rest of the 50–75 minute suggestion for the return or a short drink break. A restaurant queue, a shopping circuit or walking to the old Daiba fort is additional time. This is not a plan to walk across Rainbow Bridge to the mainland.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Daiba and Tokyo Teleport are different starting points",
+        "html": "<p>Use the park’s access map to compare <strong>Daiba / Odaiba-kaihinkoen on Yurikamome</strong> with <strong>Tokyo Teleport on the Rinkai Line</strong>. Choose the station that matches your airport-return route rather than walking to the first rail sign you see. Malls and the waterfront spread across a large area.</p><p>Save your return entrance and the indoor landmark AQUA CiTY before setting off. In wind or rain, go back toward that known building instead of continuing along the shore in search of a better photo. The walking surface and route to lifts should be checked on the park map when travelling with a stroller or mobility aid.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "The beach is a view, not a swimming stop",
+        "html": "<p>The ordinary public waterfront walk is free; restaurants, shopping and indoor attractions cost extra. <strong>Swimming is not permitted at Odaiba’s beach</strong> under the general visitor guidance. Treat it as a walk and a place to look across the bay, not a last-minute swim before the airport.</p><p>AQUA CiTY provides a rain alternative, with different shop and restaurant schedules. An early waterfront visit does not guarantee that the mall’s cafés are open. If weather removes the reason you wanted to come, choose a station-side meal elsewhere rather than spending a long transfer just to sit inside a shopping center.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tptc.co.jp/park/01_02/access",
+        "label": "Park operator: Odaiba access and facilities map",
+        "checked": "2026-11-17",
+        "note": "Official park map supports station choices and waterfront geography; no unsupported precise local walk quoted."
+      },
+      {
+        "url": "https://www.gotokyo.org/en/spot/39/index.html",
+        "label": "GO TOKYO: Odaiba Marine Park",
+        "checked": "2026-11-17",
+        "note": "Public metropolitan tourism source identifies the waterfront and Statue of Liberty replica."
+      },
+      {
+        "url": "https://www.aquacity.jp/access/",
+        "label": "AQUA CiTY ODAIBA: access",
+        "checked": "2026-11-17",
+        "note": "Named indoor landmark and official approach map."
+      },
+      {
+        "url": "https://www.gotokyo.org/en/see-and-do/attractions/beach-and-pool/index.html",
+        "label": "GO TOKYO: beach swimming rules",
+        "checked": "2026-11-17",
+        "note": "Metropolitan tourism guidance explicitly says Odaiba does not allow swimming."
+      }
+    ]
+  },
+  "omotesando": {
+    "opening": "Omotesando is a good choice for an architecture-and-design stroll when you keep it to one section of the avenue. Omotesando Hills gives the visit a named destination and an indoor option; it does not require an added Harajuku tour.",
+    "visitMinutes": "50–70",
+    "suitableFor": "An avenue walk with one design or fashion browse.",
+    "skipIf": "You need a quick seated rest, or plan to combine Harajuku, Omotesando and Shibuya without a longer route.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "The avenue and one building",
+        "html": "<p>Walk a short stretch of the <strong>zelkova-lined avenue</strong>, looking above the shop windows at the different building fronts, then enter <strong>Omotesando Hills</strong> for one deliberate browse. Use the building’s current shop directory to select fashion, accessories or a café before going inside. The building can be the whole indoor part of the stop.</p><p>Keep roughly 20–30 minutes for the outside walk and 20–30 for the chosen indoor activity, with time left to return to the station. These are local suggestions, not mandatory stages. Avoid changing this into a hunt for several flagship stores scattered across the backstreets.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Omotesando A2 is the short Hills approach",
+        "html": "<p>The operator gives <strong>two minutes from Omotesando Station Exit A2</strong> to Omotesando Hills at <strong>4-12-10 Jingumae</strong>. That is the exit-to-building estimate; the walk from a platform is extra. Use the operator’s accessible approach if stairs are unsuitable.</p><p>If you arrive from Harajuku, the avenue walk itself becomes a larger part of the visit. Decide whether to return to Harajuku or leave from Omotesando before shopping; do not discover afterward that the desired airport connection is back at the far end. This local visit is shorter than a combined Harajuku-and-Omotesando planner route, whose whole timing is shown separately below.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Street access does not establish shop hours",
+        "html": "<p>The reviewed Omotesando Hills schedule lists <strong>shops and cafés 11:00–20:00</strong>; restaurants have a separate evening schedule and individual exceptions apply. There is no general admission charge for the ordinary shopping areas. Purchases, meals and any special paid event are separate.</p><p>Before 11:00, choose the avenue for architecture rather than promising open shops. In rain, replace most of the avenue walk with one open indoor stop. If your aim is a relaxed meal, sit down early enough for the food to arrive and the bill to be paid; a building full of restaurants does not guarantee an immediately available table.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.omotesandohills.com/access/train.html",
+        "label": "Omotesando Hills: station approach",
+        "checked": "2026-11-17",
+        "note": "Official operator gives Omotesando A2 two-minute approach."
+      },
+      {
+        "url": "https://www.omotesandohills.com/information/opening_hour.html",
+        "label": "Omotesando Hills: current hours",
+        "checked": "2026-11-17",
+        "note": "Operator lists shops/cafés 11:00–20:00 and distinct restaurant hours/exceptions."
+      },
+      {
+        "url": "https://www.gotokyo.org/en/destinations/western-tokyo/aoyama-and-omotesando/index.html",
+        "label": "GO TOKYO: avenue and district",
+        "checked": "2026-11-17",
+        "note": "Metropolitan tourism context for architecture and avenue; itinerary choices are editorial."
+      }
+    ]
+  },
+  "roppongi-azabudai": {
+    "opening": "Choose Azabudai Hills or Roppongi Hills before travelling: they are separate places, not one station-side complex. For the compact option, use Azabudai’s Central Green and Market, keeping ticketed art and viewing facilities for a separately timed visit.",
+    "visitMinutes": "60–80",
+    "suitableFor": "Contemporary architecture, an outdoor pause and a small food browse.",
+    "skipIf": "A particular museum or observation-floor admission is essential but not booked or confirmed.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Azabudai: Central Green and the Market",
+        "html": "<p>From the signed public routes, make your way toward the <strong>Central Green</strong> for the garden-and-tower setting. Then use <strong>Azabudai Hills Market in Garden Plaza C, 1F/B1</strong> for a small food purchase or browse. This gives the visit two named points without trying to tour every tower.</p><p>Allow roughly half the local visit for the public outdoor spaces and half for the market and finding your way back. If rain is heavy, make the open market the main activity. Food retailers and restaurants have different service styles: buying from a counter does not necessarily include somewhere to sit and eat.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Kamiyacho is not Roppongi Station",
+        "html": "<p>Azabudai Hills is directly connected to <strong>Kamiyacho Exit 5</strong> and <strong>Roppongi-itchome Exit 4</strong>. Its access page gives a <strong>ten-minute walk from the listed Roppongi exits</strong>. The similar place names hide a real difference in walking distance and platform connections.</p><p>Save the station and exit used to arrive, and follow current building signs on the way back. If your intended destination is Roppongi Hills, choose that district instead: do not first travel to Azabudai and then walk over as an unplanned extra. A short local walk should not turn into two sets of station navigation.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "No assumed free observation deck",
+        "html": "<p>The market’s reviewed general hours are <strong>10:00–20:00</strong>, with exceptions by shop. Ordinary public-area browsing is different from admission to <strong>teamLab Borderless</strong>, an exhibition or a viewing facility. Those need their own ticket, entry conditions and time; this compact visit includes none of them.</p><p>Do not head up a tower expecting an unrestricted free observation floor. Choose the actual facility and current access terms first. If a reserved attraction is the reason for your visit, build the rest of the day around that booking rather than adding it after the garden. For a tired traveller, one seated café break in the chosen district may be more useful than another public-space loop.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.azabudai-hills.com/access/",
+        "label": "Azabudai Hills: station exits and approach times",
+        "checked": "2026-11-17",
+        "note": "Operator lists direct Kamiyacho 5/Roppongi-itchome 4 and ten-minute Roppongi approaches."
+      },
+      {
+        "url": "https://www.azabudai-hills.com/en/azabudaihillsmarket/index.html",
+        "label": "Azabudai Hills Market: location and general hours",
+        "checked": "2026-11-17",
+        "note": "Operator page lists Garden Plaza C 1F/B1 and 10:00–20:00, shop exceptions."
+      },
+      {
+        "url": "https://www.azabudai-hills.com/en/",
+        "label": "Azabudai Hills: public spaces and facility directory",
+        "checked": "2026-11-17",
+        "note": "Current facility directory; no unverified access to tower observation floors promised."
+      }
+    ]
+  },
+  "shibuya": {
+    "opening": "For a short Shibuya stop, Hachiko and the scramble crossing are enough to give you the scene. A booked SHIBUYA SKY visit is a different plan: its entry queue, lifts, baggage rules and ticket time cannot be treated as a quick extra.",
+    "visitMinutes": "40–60",
+    "suitableFor": "The crossing, Hachiko and one short café or shopping pause.",
+    "skipIf": "You need an unbooked sunset viewing ticket or would struggle in dense pedestrian crowds.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Hachiko and one crossing, then decide what is left",
+        "html": "<p>Start on the <strong>Hachiko side of Shibuya Station</strong>, see the statue without blocking people waiting to meet, then cross the <strong>scramble crossing</strong> with the signal. Step clear of the crossing before looking back or taking photographs. One crossing and a short look at the surrounding screens are a complete experience.</p><p>Use the remaining local time for a single open café or shop, keeping the station entrance as the return point. Our 40–60 minute suggestion is for this street-level stop. A café line or busy lift can absorb the spare time; skip the extra purchase rather than adding a rushed second building.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "The return platform may be on another level",
+        "html": "<p>Shibuya’s JR, Tokyo Metro, Tokyu and Keio services use different gates and levels. Record the operator and entrance for your onward route before walking out to Hachiko. Being back beside the statue is not the same as being ready to board the airport connection.</p><p><strong>SHIBUYA SKY is in Shibuya Scramble Square, with entry on 14F</strong>. Its operator warns that the <strong>Sky Lobby at Shibuya Hikarie is a different place</strong>. If you have a SKY booking, follow the dedicated official approach rather than searching among similarly named buildings from the Hachiko side.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Street-level is free; the roof is a booked attraction",
+        "html": "<p>Hachiko and the public crossing have no admission charge. SHIBUYA SKY sells entry-time-specific tickets, with prices varying by time and purchase method. Use the current ticket page rather than an old flat-price quote; a sold-out online time is not a reason to expect tickets at the counter.</p><p>The rooftop has baggage restrictions and may close for weather. A SKY booking therefore needs its own storage and weather plan; it is not included in this street-level visit allowance. In heavy rain, choose an open indoor stop near the station or move on. You do not need a high viewpoint to enjoy the crossing, and you should never stand in traffic to photograph it.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.gotokyo.org/en/destinations/western-tokyo/shibuya/index.html",
+        "label": "GO TOKYO: crossing, Hachiko and district",
+        "checked": "2026-11-17",
+        "note": "Official metropolitan tourism source supports compact street-level landmarks."
+      },
+      {
+        "url": "https://www.shibuya-scramble-square.com/sky/access/",
+        "label": "SHIBUYA SKY: correct building and 14F entrance",
+        "checked": "2026-11-17",
+        "note": "Operator explicitly distinguishes SKY from Hikarie Sky Lobby and provides approach maps."
+      },
+      {
+        "url": "https://shibuya-scramble-square.com/sky/ticket",
+        "label": "SHIBUYA SKY: current booking and baggage conditions",
+        "checked": "2026-11-17",
+        "note": "Time-sensitive ticket categories; no frozen price given, separate visit required."
+      },
+      {
+        "url": "https://www.shibuya-scramble-square.com/sky/faq/",
+        "label": "SHIBUYA SKY: admission and weather guidance",
+        "checked": "2026-11-17",
+        "note": "Operator FAQ governs access; no guaranteed roof opening or immediate admission claimed."
+      }
+    ]
+  },
+  "shinagawa": {
+    "opening": "Shinagawa is useful when a final meal and a straightforward airport connection matter more than another sightseeing district. The key choice is the side of the gates: ecute is inside the JR paid area, while your Haneda departure uses Keikyu.",
+    "visitMinutes": "40–60",
+    "suitableFor": "A meal or food gift near the airport corridor, especially if you are already at Shinagawa.",
+    "skipIf": "You want a major sightseeing attraction or would make an unnecessary station entry just to buy a snack.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Make the gate decision before the food decision",
+        "html": "<p>If you already have valid access to the <strong>JR paid area</strong>, use <strong>ecute Shinagawa</strong> for a food purchase or seated café. Choose from its current deli, bakery or restaurant directory and stay within the same shopping zone rather than leaving and re-entering the station.</p><p>If you are already outside the JR gates and heading for Keikyu, choose a meal on the public side instead. Going into ecute solely for a snack introduces a ticketing decision and another exit. Keep the local visit to roughly 40–60 minutes, including ordering, paying and leaving the shop; add more for a full restaurant meal.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "JR shops and Keikyu trains are not one paid area",
+        "html": "<p>The ecute access page explains that outside visitors need a valid JR ticket or appropriate admission arrangement for its gated shops. Its stated admission-ticket/IC entry use is limited to <strong>two hours</strong>, with extra admission charges for longer use. That is a shopping-access condition, not permission to board a train.</p><p>After shopping, follow <strong>Keikyu / Haneda Airport</strong> signs and verify the train’s destination and your terminal stop. Retrieve any JR-side stored bag before exiting that area. Construction or a changed passage can affect station movement, so use the current operator map rather than a remembered platform number.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "A packable gift can be better than another district",
+        "html": "<p>Ecute has different hours for delis, bakeries, shops and restaurants, with Sunday/holiday variations and shop-specific exceptions. Use the chosen tenant’s listing rather than treating the longest opening time as universal. Food and gifts cost the marked price; any required station admission is separate.</p><p>For a last purchase, a small sealed sweet or bakery item is easier to carry than a chilled meal or large gift box. Look at expiry and storage instructions. If there is no immediate restaurant seating, choose something you can eat in an appropriate place or eat after reaching the airport. A quiet forty-minute break here can be more useful than travelling elsewhere for one rushed photograph.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.ecute.jp/shinagawa/access",
+        "label": "Ecute Shinagawa: gate conditions and opening categories",
+        "checked": "2026-11-17",
+        "note": "Operator confirms JR paid-area access, admission/IC arrangements and two-hour entry limit; hours differ by category."
+      },
+      {
+        "url": "https://www.ecute.jp/shinagawa/",
+        "label": "Ecute: current tenant directory",
+        "checked": "2026-11-17",
+        "note": "Use named complex with live tenants; no unverified seat availability or fixed menu cost."
+      },
+      {
+        "url": "https://www.haneda-tokyo-access.com/en/",
+        "label": "Keikyu: Haneda access and terminal guidance",
+        "checked": "2026-11-17",
+        "note": "Airport rail operator source; do not freeze construction-sensitive platform numbers."
+      }
+    ]
+  },
+  "shiodome": {
+    "opening": "Shiodome’s pedestrian deck is a network of public walkways, not a single observation attraction. For a short visit, start from Shiodome City Center near Shimbashi, make one small loop and keep the same station approach for the return.",
+    "visitMinutes": "35–55",
+    "suitableFor": "Modern city architecture and a short pause near Shimbashi.",
+    "skipIf": "You need a fully sheltered or independently verified step-free loop, or expect a free tower observatory.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "One deck section, with City Center as the landmark",
+        "html": "<p>Locate <strong>Shiodome City Center</strong> first, then follow the signed public walkways toward the surrounding Shiodome buildings. Choose one outward section, pause for the contrast between the towers and the railway-side city, and return to the same landmark. A building name is easier to find again than an anonymous point on a deck.</p><p>Use roughly 20–30 minutes for the walk and the remainder of the local suggestion for a drink or station return. Do not keep crossing into another building simply because the walkway continues. Hamarikyu is a separately ticketed garden visit and should not appear as a free addition to this small loop.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Keep the exit and the level together",
+        "html": "<p>City Center’s operator quotes <strong>three minutes from JR Shimbashi’s Shiodome exit</strong>, <strong>three minutes from Ginza Line Exit 2</strong> and <strong>two minutes from the Toei Asakusa Line Shiodome/Shiosite exit</strong>. Those are building access estimates, not times for the entire sightseeing loop.</p><p>Use the operator’s area map to match your exit, building and walkway level. Shimbashi platforms, underground passages and Shiodome’s elevated paths are different parts of the journey. If your route uses a lift, follow the current signed route and allow extra time rather than assuming every deck link is step-free.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Choose a café instead when the weather removes the view",
+        "html": "<p>Ordinary public-walkway sightseeing has no general admission charge. Restaurants, cafés and high-floor dining are separate paid activities. A “sky view restaurant” is a business with its own opening and booking conditions, not a public observatory that anyone can enter for photographs.</p><p>City Center lists cafés, food and convenience services, including <strong>Famima!! on B2</strong>, as practical indoor options. In rain or strong wind, choose an open nearby facility instead of forcing a longer outdoor loop. Not every connection is covered or accessible all night. Leave by the known station approach; a fast advertised airport train ride does not include finding the platform from the deck.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.shiodome-cc.com/en/",
+        "label": "Shiodome City Center: access, map and services",
+        "checked": "2026-11-17",
+        "note": "Operator gives specific station exit approaches and distinguishes public services from paid high-floor restaurants."
+      },
+      {
+        "url": "https://www.japan.travel/en/spot/368/",
+        "label": "JNTO: Shiodome district",
+        "checked": "2026-11-17",
+        "note": "Official national tourism context; the compact walkway route and local allowance are editorial, not a surveyed accessible trail."
+      }
+    ]
+  }
+}

@@ -1,0 +1,838 @@
+{
+  "haneda-airport": {
+    "opening": "At Haneda, the easiest last experience is in the terminal your flight actually uses. For a Terminal 3 departure, the public-side Edo Ko-ji and aircraft-viewing deck make a compact visit without another train journey. They are not facilities you can visit after entering the international gate area.",
+    "visitMinutes": "30–60",
+    "suitableFor": "Travellers already at Haneda who want a meal or aircraft view without another city transfer.",
+    "skipIf": "Your terminal or check-in requirements are unresolved, or a visit would postpone the next required procedure.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Terminal 3: a small Edo street or a runway view",
+        "html": "<p>From the 3F departure lobby, choose one direction: go to 4F Edo Ko-ji for food and traditional shopfronts, or continue toward 5F for TIAT Sky Road and the observation deck. Do not make all three a checklist. Our local allowance is about 20–30 minutes for the deck, or 45–60 minutes for an unhurried meal if seating is available.</p><p>At Haneda Nihonbashi, look at the timber bridge and the Edo scenes around it rather than treating the space as a shortcut to another terminal. The deck is free to enter; food and purchases are extra. Neither a café queue nor an outdoor view deserves the time reserved for security.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "T2 and T3 are different destinations",
+        "html": "<p>International flights can use T2 or T3. For T3, leave the train at Haneda Airport Terminal 3 and follow Departures to 3F. If using T2, choose its own public facilities: the outdoor observation deck is on 5F, and the indoor FLIGHT DECK TOKYO offers a weather-sheltered alternative.</p><p>This suggestion stays on the public side. Once airside, use shops near your gate instead. A terminal shuttle, lift journey and repeat navigation turn a casual cross-terminal detour into a separate outing.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Late arrival, bad weather or a closed restaurant?",
+        "html": "<p>The official deck listing gives T1/T2 hours of 06:30–22:00 and T3 access around the clock, with possible weather or security closures. A 24-hour terminal does not mean every restaurant is open. Use the restaurant directory for your terminal and the public/airside area shown there.</p><p>If the deck closes, choose the nearby indoor public area or proceed to the airline procedures. A lounge is not a general waiting room: eligible cards, airline conditions and the location beyond security determine whether you can enter.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tokyo-haneda.com/en/service/facilities/amusement.html",
+        "label": "Haneda: Edo Ko-ji, Haneda Nihonbashi and TIAT Sky Road",
+        "checked": "2026-11-17",
+        "note": "Verified named public facilities and floors; simulator listed as closed and not recommended."
+      },
+      {
+        "url": "https://www.tokyo-haneda.com/en/service/facilities/observation_deck.html",
+        "label": "Haneda: observation-deck floors and hours",
+        "checked": "2026-11-17",
+        "note": "T1/T2 06:30–22:00; T3 24h; weather/security restrictions apply."
+      },
+      {
+        "url": "https://www.tokyo-haneda.com/en/flight/int/dep_step.html",
+        "label": "Haneda: international departure procedures",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      }
+    ]
+  },
+  "hozenji": {
+    "opening": "Hozenji is a temple visit measured in a few quiet moments, not a half-day attraction. Pair the moss-covered Fudo statue with the short stone-paved alley, then return toward Nankai Namba. It is a useful cultural pause when a museum or a restaurant queue would be too much.",
+    "visitMinutes": "25–40",
+    "suitableFor": "A short outdoor temple visit near central Namba, especially when you want atmosphere rather than shopping.",
+    "skipIf": "Heavy rain makes the stones uncomfortable, a service needs space, or the round trip from your station does not fit.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "The Fudo statue, then one pass through the alley",
+        "html": "<p>Start at the temple precinct and observe how visitors pray at Mizukake Fudo, the moss-covered figure. If you wish to make an offering, follow the instructions and the people ahead of you; the spot remains a place of worship. Then walk through Hozenji Yokocho once, noticing the small restaurant entrances and stone pavement.</p><p>Allow roughly 10–15 minutes for the temple and another 10–15 for the alley, with a little time to orient yourself. There is no general admission ticket for this outdoor stop. Donations, charms and restaurant bills are separate choices.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Use the temple’s exact underground exit",
+        "html": "<p>The temple gives two useful approaches: from Namba, use Namba Walk exit B16 and continue north for about one minute; from Nippombashi, use B18 and continue north for about one minute. Those times begin at the exits, not at your train platform.</p><p>For a KIX return, save the Nankai Namba entrance before walking here. Osaka-Namba, Metro Namba and Nankai Namba are connected parts of a large district, not interchangeable boarding points. Retrace the known approach rather than making the final minutes a search for an unfamiliar passage.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "The precinct and temple office keep different hours",
+        "html": "<p>The official site says the outdoor precinct can be visited 24 hours, while the office for goshuin and amulets operates 10:00–18:00. An evening view therefore does not promise office service or an open restaurant. Do not wait for a meal simply to complete an imagined Hozenji package.</p><p>In rain, shorten the alley walk and use a café near your return station. Wet stones and a large suitcase are a poor pairing. Hozenji can also be the alternative to the nearby print museum, rather than an extra attraction added after it.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.houzenji.jp/",
+        "label": "Hozenji: precinct hours, office service and B16/B18 access",
+        "checked": "2026-11-17",
+        "note": "Current official site gives24h grounds,10–18office and named exits."
+      }
+    ]
+  },
+  "kamigata-ukiyoe-museum": {
+    "opening": "Choose Kamigata Ukiyoe Museum if you would enjoy looking closely at Osaka’s kabuki actor prints. The collection gives the surrounding theatre district a story; it is not a large survey of every kind of Japanese art. Visit the museum first and make nearby Hozenji optional.",
+    "visitMinutes": "45–60",
+    "suitableFor": "A focused indoor art stop near Namba, with interest in prints, faces, costumes or kabuki.",
+    "skipIf": "It is a closure day, admission is nearly over, or you need a fully verified step-free museum route.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Look at a few prints rather than racing every label",
+        "html": "<p>Choose one actor portrait and notice the expression, hairstyle and costume. Then compare it with a second print: the appeal is in how an individual performer becomes recognizable through line and pose. A concentrated 45–60 minute visit can feel more satisfying than a fast circuit followed by a rushed extra attraction.</p><p>The museum is opposite Hozenji in the narrow Namba streets. On leaving, a brief look at the temple is easy to understand as an optional change of pace, but a full meal or printmaking workshop is a different commitment. Workshops have their own reservation and price conditions.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Find Hozenji from Namba Walk",
+        "html": "<p>Osaka City’s facility listing places the entrance about one minute north of Namba Walk’s north-side exit 16; Hozenji’s own directions identify the nearby exit as B16. Use the museum address, 1-6-4 Namba, and the temple frontage as your final landmarks rather than a general Namba station pin.</p><p>Keep your return anchored to Nankai Namba if taking its airport railway. The gallery occupies multiple floors, and the city facility record does not document a special barrier-free arrangement. This guide does not treat its interior as a confirmed step-free route.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Admission, last entry and a no-ticket alternative",
+        "html": "<p>The reviewed municipal listing gives 11:00–18:00, with last admission at 17:30. Mondays are normally closed; when the Monday is a holiday, the closure moves to the following day. Listed admission is ¥700 for adults, ¥500 for high-school students and ¥300 for elementary/junior-high pupils; qualifying preschool children are free.</p><p>If closed or if you would only have a few rushed minutes inside, use the outdoor Hozenji-and-alley visit instead. Do not buy a ticket on the assumption that you can compensate by shortening the return to the airport train.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.manabi.city.osaka.lg.jp/yoyaku/shisetsuInfoDetailInfo.html?shisetsu_code=262",
+        "label": "Osaka City: museum prices, hours and entrance",
+        "checked": "2026-11-17",
+        "note": "Operator homepage returned502during review; municipal listing verifies¥700/500/300,hours11–18,last17:30,Mondays,nextdayholiday exception and exit16."
+      },
+      {
+        "url": "https://www.houzenji.jp/",
+        "label": "Hozenji: neighboring B16 exit",
+        "checked": "2026-11-17",
+        "note": "Used to identify the neighboring B16 label; not an interior museum survey."
+      }
+    ]
+  },
+  "kansai-airport": {
+    "opening": "At KIX, staying near your departure terminal can be a better final stop than another trip into Osaka. The useful choice is between a public-side meal, facilities after security and the separate Sky View outing. They do not share the same access route.",
+    "visitMinutes": "30–60",
+    "suitableFor": "Travellers at KIX who want a meal or rest with few additional connections.",
+    "skipIf": "A transfer to your actual departure terminal or an airline requirement still needs attention.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "A meal near the terminal, or the separate aircraft-viewing trip",
+        "html": "<p>For a short public-side break, keep to T1 or Aeroplaza. Aeroplaza is a useful named fallback: the official directory lists NAKAU on 3F as a 24-hour food option and Lawson on 2F as a 24-hour convenience store. These are examples of public-side facilities, not a promise that every restaurant remains open overnight.</p><p>Sky View is an actual outing. The airport lists its observation hall 10:00–17:00 and museum 11:00–16:00. A free bus from T1’s 1F bus stop 1 takes about six minutes each way, before waiting. It is unsuitable for filling a few spare minutes between check-in and security.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "The railway station is beside T1, not T2",
+        "html": "<p>Rail passengers arrive at Kansai-airport Station by T1 and Aeroplaza. For an international T1 departure, follow the terminal signs to the 4F departure lobby. T2 passengers continue to the Aeroplaza 1F shuttle stop: the airport quotes a 7–9 minute bus ride, and the approach, wait and counter walk are additional.</p><p>If you are using T2, do not settle into a T1 meal until the onward journey is accounted for. Likewise, a restaurant labelled “after security, international” cannot be used while you are waiting on the public side.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "When the airport stop should become a rest stop",
+        "html": "<p>If you are tired, carrying awkward shopping bags or travelling with a child, a familiar terminal seat and a simple meal may be the most useful final experience. Save one nearby shop for after procedures if its area and opening hours fit. Do not add Sky View simply because the journey is free.</p><p>The island connection matters during disruption. Once at the airport, returning to Rinku or Osaka creates another rail or road commitment; it is not a harmless extension of an airport visit. Use the departure terminal as the endpoint and keep the remaining choices nearby.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.kansai-airport.or.jp/en/shop-and-dine/dine",
+        "label": "KIX: dining directory",
+        "checked": "2026-11-17",
+        "note": "Verified NAKAU Aeroplaza3F public-side24hours via search; directHTTP may restrict automated fetches."
+      },
+      {
+        "url": "https://www.kansai-airport.or.jp/en/shop-and-dine/shop",
+        "label": "KIX: shop directory",
+        "checked": "2026-11-17",
+        "note": "Verified Lawson Aeroplaza2F24hours."
+      },
+      {
+        "url": "https://www.kansai-airport.or.jp/en/shop-and-dine/skyview/access",
+        "label": "KIX: Sky View hours and bus",
+        "checked": "2026-11-17",
+        "note": "10–17hall,11–16museum,T1busstop1,approx6minride."
+      },
+      {
+        "url": "https://www.kansai-airport.or.jp/en/access/t2",
+        "label": "KIX: T2 shuttle approach",
+        "checked": "2026-11-17",
+        "note": "Airport states7–9minride; walking/waitingextra."
+      }
+    ]
+  },
+  "namba": {
+    "opening": "Namba is the practical choice when your bags and KIX train are already around Nankai Namba. Use the station-connected Namba CITY for a meal or one purchase, rather than turning the final stop into a circuit of every Minami attraction.",
+    "visitMinutes": "45–75",
+    "suitableFor": "A final Osaka meal with a straightforward return to the Nankai airport railway.",
+    "skipIf": "Your luggage is across the city or you mainly want an attraction well beyond the station complex.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "A simple Namba CITY visit",
+        "html": "<p>Start by locating the Nankai entrance you will return to, then use the Namba CITY directory to choose a restaurant in the main or south building. Give the meal most of the visit and leave the final 10–15 minutes to pay, use a toilet and return to the station approach. Do not count a queue as part of the eating allowance.</p><p>If you prefer a specific grilled-fish meal outside the complex, Shinpachi Shokudo Namba Nankai Street at 12-32 Namba Sennichimae is an operator-listed alternative; return to the same Nankai station approach afterward. For browsing rather than lunch, the connected shopping floors make it possible to stop after one useful purchase. Namba Parks, Hozenji and Dotonbori are alternatives for a longer local window; they are not included automatically in this station-centered suggestion.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Nankai Namba is the name you need for the airport train",
+        "html": "<p>Namba CITY’s operator states that it connects directly to Nankai Namba. Its published approaches are about two minutes from the Midosuji Line and about ten minutes from JR Namba’s OCAT north exit. Those different figures show why “Namba Station” alone is not enough to plan a return.</p><p>Write down the building, floor and gate side of your storage point. An inexpensive locker near JR Namba can create an unwanted detour if you are expecting to board Nankai. Use the Nankai signs and your actual departure information when leaving the shopping floors.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Lunch hours, help and a rainy-day fallback",
+        "html": "<p>Namba CITY lists shops 11:00–21:00 and restaurants 11:00–22:00, with exceptions by tenant. Before 11:00, do not plan a full shopping visit. For help, its main-building B2 information counter operates 11:00–21:00; the 1F tourist information office has a separate 09:00–20:00 listing.</p><p>Most of this choice can stay within the station-connected complex in rain. If a restaurant is full, choose immediate seating or a food purchase rather than walking farther north in search of a famous meal. Browsing needs no general ticket; each meal and purchase has its own price.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://nambacity.com/access",
+        "label": "Namba CITY: railway approaches and opening hours",
+        "checked": "2026-11-17",
+        "note": "Nankaiconnected;Midosuji2min,JR OCATnorth10min are operatorapproaches,not timed airport routes."
+      },
+      {
+        "url": "https://nambacity.com/information",
+        "label": "Namba CITY: information desks and visitor services",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://shinpachi-shokudo.com/",
+        "label": "Shinpachi Shokudo: Namba Nankai Street location",
+        "checked": "2026-11-17",
+        "note": "Named meal alternative outside Namba CITY; not claimed inside the complex."
+      }
+    ]
+  },
+  "namba-yasaka-shrine": {
+    "opening": "The giant lion head at Namba Yasaka Shrine makes a clear purpose for a short visit: see the lion hall, pause at the main shrine, and return. It works better as one compact cultural stop than as the first item in a long Namba checklist.",
+    "visitMinutes": "25–40",
+    "suitableFor": "A memorable shrine visit in daylight, without a museum ticket or long shopping route.",
+    "skipIf": "The grounds are about to close, rain makes the walk uncomfortable, or another district has already filled the available time.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Give the lion hall your attention",
+        "html": "<p>Once in the grounds, take in the lion-shaped hall from the open area in front, then move aside so other visitors can approach. The scale is part of the fun: it is a striking piece of shrine architecture, not a structure visitors enter to explore its mouth. Continue to the main shrine for a respectful visit before leaving.</p><p>Our 25–40 minute local suggestion allows a few photographs and a pause rather than a scheduled ceremony. There is no general admission charge for the ordinary grounds visit; offerings and amulets are optional. Special events can change the atmosphere and how much room is available.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Use the shrine address for the final walk",
+        "html": "<p>The shrine is at 2-9-19 Motomachi, Naniwa-ku. Osaka’s tourism listing describes an approximately six-minute approach from the Namba stations, but your actual walk depends on where you leave the large station complex. Use the shrine’s own map rather than inventing one exit that serves every railway.</p><p>Keep the route back to Nankai Namba distinct from the time at the shrine. If you have saved luggage there, the return ends at that storage point first. Namba Yasaka and Hozenji sit on different sides of the wider station district; visiting both creates a longer route.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Visit during the day; do not assume an always-open shrine",
+        "html": "<p>The Osaka tourism campaign listing gives grounds access 06:00–17:00 and office hours 09:00–16:50. This is a daytime suggestion, and office service is a separate window. Avoid arriving close to closing simply to take a hurried picture.</p><p>In steady rain, choose Namba CITY’s station-connected meal instead. If staying for a festival or prayer service, follow the shrine’s event guidance and set aside a different amount of time. This compact visit does not reserve a place at any service.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://nambayasaka.jp/",
+        "label": "Namba Yasaka Shrine: address and current notices",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://osaka-info.jp/special/dc/event/detail12/",
+        "label": "Osaka tourism campaign: grounds and office hours",
+        "checked": "2026-11-17",
+        "note": "Grounds06–17,office09–16:50,approx6minwalk; other unofficialsitesconflict,notused."
+      }
+    ]
+  },
+  "narita-airport": {
+    "opening": "At Narita, choose a meal, a useful souvenir or an aircraft view in your own terminal. A short flight-free window is easily lost by changing buildings. First decide whether you are still before security or have already entered the international departure area.",
+    "visitMinutes": "30–60",
+    "suitableFor": "An airport-based finish when you prefer a predictable meal, rest or browse.",
+    "skipIf": "You would need to change terminals for the only shop you want, or procedures still require immediate attention.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "A small public-side plan in Terminal1 or2",
+        "html": "<p>In T1, a stationery browse at TRAVELER’S FACTORY AIRPORT on 4F can be a compact souvenir stop; the airport directory lists it before security. For an aircraft view, T1’s observation deck is on 5F. In T2, use the 4F observation-deck areas instead of travelling to T1 for the same activity.</p><p>The deck listing gives 07:00–21:00 from October through March, and 06:30–21:00 from April through September, with weather restrictions. A 20–30 minute view or 45–60 minute meal is our local suggestion; it does not include collecting bags or airline procedures. The decks have no general sightseeing admission ticket.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Terminal3 is beyond the Terminal2 railway stop",
+        "html": "<p>Narita Airport Terminal 1 station serves T1; Airport Terminal 2 station is the rail stop for both T2 and T3. For T3, the airport quotes about 13 minutes from the station gates to the T3 information counter using the access corridor. Getting to your airline and completing procedures take additional time.</p><p>The free terminal buses are another option, but their ride times do not include the wait. If meeting someone, name the terminal, floor and public-side landmark. “At Narita” is too broad to make a reliable meeting point.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Do not choose an airside shop while waiting landside",
+        "html": "<p>The airport shop search labels each outlet Before Security Check or After Security Check. T1’s Narita Nakamise is an international airside shopping area; it is not a public mall you can browse while waiting for bag drop. A boarding pass and completion of the required procedures determine access.</p><p>If weather closes the deck, stay with an indoor shop or meal in the correct building. Do not return to Narita town merely because you dislike waiting: the airport-to-town ride creates fresh walking, waiting and baggage stages that this short airport visit does not include.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.narita-airport.jp/en/fun/view/",
+        "label": "Narita: deck floors and seasonal hours",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.narita-airport.jp/en/shop/shop-search/?areas=BSC&category=shop&terminals=T1",
+        "label": "Narita: public-side T1 shops",
+        "checked": "2026-11-17",
+        "note": "TRAVELERS FACTORYAIRPORT4F beforesecurityverified;directorycurrenthoursnotpromised."
+      },
+      {
+        "url": "https://www.narita-airport.jp/ja/access/shuttlebus/walking-through/",
+        "label": "Narita: T2 station to T3 corridor",
+        "checked": "2026-11-17",
+        "note": "13minstationgate-toinformationcounter,notcounterprocedures."
+      },
+      {
+        "url": "https://www.narita-airport.jp/en/shop/malllist-t1/",
+        "label": "Narita: T1 airside shopping area",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      }
+    ]
+  },
+  "narita-omotesando": {
+    "opening": "Narita Omotesando is the sloping temple approach in Chiba, not Tokyo’s Omotesando fashion avenue. Choose it for a street walk and perhaps an eel meal. You can enjoy the shops without making a full temple visit compulsory.",
+    "visitMinutes": "45–90",
+    "suitableFor": "A food-and-street visit from JR Narita or Keisei Narita, with time for the uphill return.",
+    "skipIf": "A popular restaurant has a wait that would use the return margin, or your bags make the sloping street awkward.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "A food-first route with a clear turning point",
+        "html": "<p>Walk from the station area toward the older shopfronts of the approach. Kawatoyo Honten is a specific eel-restaurant landmark at 386 Nakamachi; its operator lists roughly 11–12 minutes on foot from either town station. Stop there for a meal only when the stated wait and service time fit.</p><p>For a shorter visit, make the street itself the activity: browse a small section, choose a snack or gift, and turn back at your chosen time rather than chasing the temple gate. Our 45–60 minute browse or 60–90 minute meal allowance is local time, before the airport journey.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Return to the railway you will actually use",
+        "html": "<p>JR Narita and Keisei Narita are town stations, separate from the airport terminals. Save the appropriate station entrance before heading down the approach. The return slopes upward, and browsing on the way out does not make the climb back instantaneous.</p><p>For an airport-bound service, follow the destination and your departure terminal rather than any train with Narita in its name. The temple’s published short train ride to Airport Terminal 2 is only the ride; waiting, bag collection and T3 onward access can add substantially to the complete journey.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Lunch is not guaranteed by an open street",
+        "html": "<p>Kawatoyo’s reviewed operator page lists 10:00–17:00 last orders and possible irregular closures. That is one restaurant’s schedule, not the entire street’s. Meal prices depend on the portion and menu; a substantial eel lunch is not included in the planner’s travel budget.</p><p>If a queue is long, keep the walk and eat at the airport. If visiting late, select an open shop near the station rather than walking to the far end for a closed kitchen. For a temple-focused visit, use the separate Naritasan guide and allow the extra approach and precinct time.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://unagi-kawatoyo.com/access/",
+        "label": "Kawatoyo Honten: address, approach and last orders",
+        "checked": "2026-11-17",
+        "note": "Officialaccess12min;shop11min. Reportedroughly11–12,noexactguarantee."
+      },
+      {
+        "url": "https://www.nrtk.jp/mypage/00002.html",
+        "label": "Narita tourism association: Kawatoyo and temple-town street",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.naritasan.or.jp/access/",
+        "label": "Naritasan: town-station and airport connections",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      }
+    ]
+  },
+  "naritasan-shinshoji": {
+    "opening": "Naritasan Shinshoji is a real temple visit in Narita town, not an attraction inside the airport. Make its main approach and courtyard your priority. A temple visit, a park walk and an eel lunch together need a different amount of time.",
+    "visitMinutes": "45–60 in the temple; allow separate station walks",
+    "suitableFor": "Travellers interested in temple architecture who can comfortably manage the town approach and return.",
+    "skipIf": "The full town visit does not fit before the airport journey, or stairs and slopes do not suit your group.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "A focused route to the main temple area",
+        "html": "<p>Approach through the main entrance, continue toward the main hall and pause in the courtyard before retracing your route. Look at the contrast between the large hall and the details of the surrounding structures instead of trying to see the whole complex. A 45–60 minute precinct allowance lets the visit feel like a pause rather than a race.</p><p>The large park is a separate choice with more walking. Likewise, attending a Goma fire ritual requires the temple’s actual service schedule and time to arrive quietly. It is not something promised to start whenever you reach the hall. Ordinary grounds admission has no general entry ticket; offerings and individual facilities are separate.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "A ten-minute access listing is not the whole town visit",
+        "html": "<p>The temple’s official access page lists a ten-minute walk from JR Narita or Keisei Narita. For a first-time visitor following Omotesando, our more generous allowance is 20–30 minutes each way, allowing for orientation, crossings, slopes and pauses. These are planning allowances, not another official walking measurement.</p><p>With 45–60 minutes in the temple, that makes 85–120 minutes in town before a meal, baggage collection or the airport journey. Preserve the return walk even if the outward street is enjoyable. For mobility needs, consult the temple map for the suitable approach rather than assuming a stair-free equivalent beside every staircase.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Temple or lunch: choose the main reason to stop",
+        "html": "<p>If an eel lunch is the main attraction, use the Omotesando food walk and make the temple optional. If the temple is the reason for coming, visit it before joining a restaurant queue. This keeps a delayed meal from consuming the experience you came to see.</p><p>During heavy rain or a major event, the approach and grounds can take longer. A short airport-based meal is the fallback when the complete town journey no longer fits; compressing the walk, shrine visit and train connection into one spare hour is not a useful substitute.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.naritasan.or.jp/access/",
+        "label": "Naritasan: ten-minute station approach and access map",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.naritasan.or.jp/",
+        "label": "Naritasan: current notices and service information",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.japan.travel/en/spot/1549/",
+        "label": "JNTO: temple, town approach and park",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      }
+    ]
+  },
+  "rinku-town": {
+    "opening": "At Rinku Town, choose either focused outlet shopping or a short waterfront view. The station is one stop from KIX, but that does not make the shops part of the terminal. Bags, the return walk and the airport-island connection still determine whether it is a useful stop.",
+    "visitMinutes": "45–75",
+    "suitableFor": "Travellers already in Rinku who know the item or waterfront view they want.",
+    "skipIf": "Weather or transport disruption makes another island crossing uncertain, or you want a full outlet-shopping day.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "One shopping zone, not250 stores",
+        "html": "<p>Rinku Premium Outlets has a large site, so pick the brand or product before leaving the station. Use the center map to identify the nearest relevant zone, visit it and leave with time to pay and pack. A 45–75 minute local allowance supports a focused purchase; it does not promise a tour of the whole center.</p><p>If you want open air instead, make Rinku Park and the waterside view the purpose, and keep the shops optional. Shopping plus a long shoreline loop is a different plan. Public walking needs no general admission ticket; purchases and paid attractions have separate charges.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Save the route back to Rinku-Town Station",
+        "html": "<p>The outlet operator quotes an approximately six-minute walk from Rinku-Town Station. That is an approach to the outlet, not from any far corner of the development or your eventual shop counter. Keep the station entrance and return path saved, especially after carrying purchases.</p><p>At the station, choose the airport-bound service. If your flight uses KIX T2, reaching Kansai-airport Station is not the last stage: the Aeroplaza approach, shuttle wait and bus ride are still required. Do not replace these with the idea that Rinku is “right beside the airport.”</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Hours and a concrete decision in bad weather",
+        "html": "<p>The operator lists 10:00–20:00 for March–January and 10:00–19:00 in February, with restaurant exceptions. Its next announced annual closure is 25 February 2027. Check the current center notice if that date affects your trip.</p><p>In wind or persistent rain, abandon the waterfront part and decide whether one nearby shop is still worthwhile. When airport access is disrupted, travel to the airport rather than using the delay as extra shopping time. The return connection matters more than completing a discount purchase.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.premiumoutlets.co.jp/en/rinku/",
+        "label": "Rinku Premium Outlets: hours, map and annual closure",
+        "checked": "2026-11-17",
+        "note": "Nextclosure2027-02-25verified17Nov2026."
+      },
+      {
+        "url": "https://www.premiumoutlets.co.jp/en/rinku/access/access_bus.html",
+        "label": "Rinku Premium Outlets: station approach",
+        "checked": "2026-11-17",
+        "note": "Operatorquotes6minwalkfromRinkuTown;notwholevisit."
+      },
+      {
+        "url": "https://www.kansai-airport.or.jp/en/access/t2",
+        "label": "KIX: onward route to Terminal2",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      }
+    ]
+  },
+  "tokyo-character-street": {
+    "opening": "Tokyo Character Street is for a focused hunt for a favorite character, not a fast check of every shop. Most of the familiar street is on the Yaesu side’s B1 public concourse, but some shops in the current directory are on 1F. Use the shop map before choosing your route.",
+    "visitMinutes": "35–60",
+    "suitableFor": "Fans who can name one or two shops they want to browse, including families staying close to Tokyo Station.",
+    "skipIf": "A special-release queue or a shop on another floor would consume the available window.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Choose two stores with a reason to enter",
+        "html": "<p>For Studio Ghibli goods, start with Donguri Republic; for model vehicles, choose Tomica/Plarail; for soft toys and character gifts, compare Rilakkuma Store & Sumikko Gurashi Shop. These are specific B1 choices in the operator’s reviewed directory. Give the first store most of the visit and make the second optional.</p><p>Pokémon Store and DRAGON BALL STORE TOKYO are listed on 1F in the current directory, so do not wander B1 expecting every name to be there. New shop openings and temporary events can alter the route. Allow the final 10–15 minutes for payment, packing and finding the station route rather than one more shelf.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Outside the JR gates, on the Yaesu side",
+        "html": "<p>Tokyo Station First Avenue is outside the ticket gates. Follow Yaesu signs from your arrival platform, leave the paid area and use the B1 map to find the selected shops. A Marunouchi-side arrival or a long Shinkansen platform approach adds walking before this local visit begins.</p><p>Remember where your luggage is stored and where your onward transport leaves. Crossing to Marunouchi and returning to Yaesu for airport buses is a station traversal, not a free addition. Do not buy a JR entry ticket merely to reach these public-side stores.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Opening time, purchases and an early-morning alternative",
+        "html": "<p>The operator’s general Character Street hours are 10:00–20:30, with individual notices taking priority. Browsing has no general admission ticket, while merchandise prices vary by shop. A release-day queue may require a separate admission system or simply make a short visit impractical.</p><p>Before 10:00, choose another open station facility rather than waiting in front of closed shutters. With children, agree on one item or one store first and keep a seated break in the plan. The street is indoors, but that does not make queues or crowded shop entrances effortless with a stroller.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tokyoeki-1bangai.co.jp/serviceguide/",
+        "label": "Tokyo Station First Avenue: public-side access and hours",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.tokyoeki-1bangai.co.jp/shop/?area=area2&floor=b1f",
+        "label": "Character Street: current shops and floors",
+        "checked": "2026-11-17",
+        "note": "Reviewed directory lists Pokémon/DragonBall1F,selectedotherstoresB1;thiscorrectsall-B1assumption."
+      }
+    ]
+  },
+  "tokyo-station-gallery": {
+    "opening": "Tokyo Station Gallery combines an exhibition with a close look at the station’s historic brick structure. It is a good choice only when the current exhibition is open and admission still leaves an unrushed visit. The entrance is at Marunouchi North, outside the JR gates.",
+    "visitMinutes": "60–90",
+    "suitableFor": "An indoor art visit with time to look at both the exhibition and station architecture.",
+    "skipIf": "The current exhibition is closed, between installations, outside the planner’s verified dates, or almost at last entry.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Choose a few works, then look at the building",
+        "html": "<p>Give the exhibition your attention first, choosing a few works to discuss rather than hurrying past every label. On the way through, notice the exposed brick and steel structure and the staircase area. The building helps explain why this museum belongs inside Tokyo Station rather than in an anonymous gallery.</p><p>The official facility guide also identifies a 2F corridor display on station history. For children, architecture and a small number of memorable works can be a better target than completing every room. Our 60–90 minute local allowance includes room to pause, not a guarantee that every exhibition takes the same time.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Marunouchi North Exit, not the Yaesu shopping concourse",
+        "html": "<p>From JR Tokyo Station, leave through Marunouchi North: the gallery is just outside the gates. From the Marunouchi Line, the museum’s directions lead toward exit M12, then into the North Dome, with the entrance on the left. Its published approximately three-minute subway approach is not a universal time from all Tokyo Station platforms.</p><p>The official facility page lists one lift, toilets on 1F and 2F, and a 2F accessible toilet with baby-changing facilities. It also lists free 1F lockers and reception handling when lockers are full or bags do not fit. Ask reception about the actual bag before assuming it can accompany you into the exhibition.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Ticket and calendar before a station detour",
+        "html": "<p>General hours are 10:00–18:00, Fridays until 20:00, with last entry 30 minutes before closing. Mondays, holiday exceptions and exhibition changeovers need the exhibition’s own calendar. Prices vary by exhibition, so a single permanent admission price would be misleading.</p><p>The planner deliberately withholds this route when the date is beyond its checked exhibition calendar. That is not a claim that the museum will be closed; use its live exhibition page or choose the free Marunouchi exterior walk. Do not plan around an exhibition that has not yet been verified here.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.ejrcf.or.jp/gallery/english/",
+        "label": "Tokyo Station Gallery: hours, closures and exhibition prices",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.ejrcf.or.jp/gallery/english/access.html",
+        "label": "Tokyo Station Gallery: Marunouchi North and M12 approach",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.ejrcf.or.jp/gallery/institution.html",
+        "label": "Tokyo Station Gallery: brickwork, lift, toilets and bag facilities",
+        "checked": "2026-11-17",
+        "note": "Verified1Flockers/receptionoversize,one lift,toilets1F2F,accessible2Fwithbabyfacilities."
+      }
+    ]
+  },
+  "tokyo-station-marunouchi": {
+    "opening": "For a short Tokyo Station visit, the Marunouchi side is the red-brick facade and open square; Yaesu is a different side with many shops and airport buses. A relaxed exterior walk works well when you choose which side your return journey needs.",
+    "visitMinutes": "35–60",
+    "suitableFor": "A free architecture-and-city-view stop near Tokyo Station, with an optional indoor pause.",
+    "skipIf": "Your baggage and onward transport are on the opposite side and a station crossing would make the stop rushed.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "The station square, then one view from KITTE",
+        "html": "<p>Leave toward the Marunouchi square and step far enough back to see the length of the red-brick building rather than standing in a doorway. Take a short walk across the public square and choose whether to continue to KITTE, beside the station’s south end, or return directly.</p><p>KITTE Garden on 6F offers a view back over the station when open. Keep it as the second part of one compact visit, with time for lifts and finding the exit. Do not combine it automatically with Character Street on the far side of the station. The square and garden have no general admission charge.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Pick a Marunouchi exit and keep the return side visible",
+        "html": "<p>Use the station’s Marunouchi North, Central or South exit according to your chosen meeting point. For KITTE, the south side is the useful landmark. Tokyo Station’s paid concourse, public passages and department-store floors are different routes; a shop name is not a substitute for a saved station exit.</p><p>If your airport bus leaves from Yaesu, include the full crossing and the booked boarding point after this walk. If using a rail service, preserve time to reach the actual platform from the public square. A station-side stop can still be a long way from a particular train.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Weather and hours change the value of the garden",
+        "html": "<p>KITTE lists its 6F garden 11:00–23:00 on weekdays and 11:00–22:00 on weekends/holidays, with weather closures. Before 11:00, the station facade itself remains the appropriate purpose; do not promise an early roof-garden visit.</p><p>In rain, replace the garden with an open indoor café or shop, keeping the station side consistent. A seated meal needs extra time beyond our short exterior-and-view allowance. Skip the second viewpoint if the lift queue or weather makes it less pleasant; the station square is already a complete small experience.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://marunouchi.jp-kitte.jp/gb/information.jsp",
+        "label": "KITTE:6F garden hours and station view",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://marunouchi.jp-kitte.jp/guide/facilities.jsp",
+        "label": "KITTE: free garden admission and weather restrictions",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.gotokyo.org/en/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html",
+        "label": "GO TOKYO: Marunouchi station area",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      }
+    ]
+  },
+  "tokyo-tower": {
+    "opening": "Tokyo Tower is in Shibakoen, not Ginza. Decide whether you want the tower in your photograph or the view from its observation deck: the first can be a short outdoor stop; the second involves a ticket, an ascent and possible queues.",
+    "visitMinutes": "20–30 exterior;60–90 Main Deck",
+    "suitableFor": "An exterior landmark photo or a deliberate observation-deck visit with enough room for the queue.",
+    "skipIf": "Poor visibility or ticket waiting would use the time intended for the visit and return.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "A view of the tower, or a view from it?",
+        "html": "<p>For the exterior, choose a public pavement viewpoint near the tower and, if it fits, a short look toward nearby Zojoji. Allow 20–30 minutes locally for photographs rather than joining an admission queue. Keep roads and entrances clear, and do not look for the often-photographed underground parking stairs: the operator asks visitors not to take pictures there.</p><p>For the Main Deck, set aside roughly 60–90 minutes locally and add any unusually long queue. The 150m deck costs ¥1,500 for adults on the reviewed tariff. The 250m Top Deck Tour includes the Main Deck and lists adult prices ¥3,300 online/¥3,500 at the counter; its booked slot makes it a separate commitment.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Use an actual exit, then include the walk back",
+        "html": "<p>The tower’s official access table lists Akabanebashi Gate at Akabanebashi Station about five minutes away, Kamiyacho exit 1 about seven, Onarimon A 1 about six, Daimon A 6 about ten, and JR Hamamatsucho North Exit about fifteen. These are operator walking estimates, not the total airport journey.</p><p>The nearest arrival station may not be your best airport-return station. Hamamatsucho is useful for the monorail corridor, but the tower is not beside the monorail platform. Keep the street walk and station navigation in the route instead of counting only the train ride.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Hours, visibility and the easy exit from the plan",
+        "html": "<p>The Main Deck is listed 09:00–23:00, last admission 22:30; crowding can bring entry forward. The Top Deck is listed 09:00–22:45, last tour 22:15, and can close for weather or operational reasons. The exterior visit needs no observation ticket.</p><p>If visibility is poor or the ascent queue is long, keep the exterior stop and choose a meal along your return route. Do not buy another attraction ticket merely to justify having travelled here. A comfortable departure after seeing the tower is a better outcome than watching the clock from the lift queue.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://en.tokyotower.co.jp/fee/",
+        "label": "Tokyo Tower: deck tickets and hours",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://en.tokyotower.co.jp/access/",
+        "label": "Tokyo Tower: station exits and parking-stair photography restriction",
+        "checked": "2026-11-17",
+        "note": "Verifiednamedexits5/7/6/10/15minoperatorapproaches."
+      }
+    ]
+  },
+  "toyosu": {
+    "opening": "Toyosu Market is a working wholesale market with designated visitor routes. Come for one restaurant and a look into the market, not the expectation that a casual breakfast includes guaranteed close-up access to the tuna auction. Tsukiji Outer Market is a different district.",
+    "visitMinutes": "60–90",
+    "suitableFor": "An early-day market meal and a focused visitor-route look on a market opening day.",
+    "skipIf": "It is a market closure day, the desired restaurant has a long queue, or you expect an unreserved auction-deck visit.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Choose the market building before choosing breakfast",
+        "html": "<p>The market has several buildings rather than one food street. For a named comparison, the tourism association lists Iwasa Sushi in the Fisheries Intermediate Wholesale Market Building, or Tenfusa for tempura in the Fruit and Vegetable Building. These are different building choices, not two counters to visit in the same short breakfast. Use the official visitor map to choose a restaurant area in advance. The Fisheries Intermediate Wholesale Market Building has restaurants and the Uogashi Yokocho goods area; the market also has a rooftop garden with bay views when accessible.</p><p>Our 60–90 minute local suggestion covers one meal and a brief visitor-route look, not every building. If a restaurant queue absorbs the meal window, choose another open counter rather than waiting until the visit becomes only a line. Public visitor routes have no general admission ticket; food and shopping are extra.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Shijo-mae is the market station",
+        "html": "<p>Use Shijo-mae Station on the Yurikamome, then follow the marked visitor access. Toyosu Station is the connection point for a different part of the district, not the market’s entrance. The metropolitan visitor guide shows designated routes between the blocks; wholesale work areas are not public shortcuts.</p><p>Pick the building and return station before starting, because an extra crossing or a search for a particular restaurant can use much of a short visit. Strollers and large bags need the public lift routes; do not assume you can walk through a trading area to save time.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Opening calendar and auction access are separate questions",
+        "html": "<p>Tokyo’s official visitor guidance lists 05:00–17:00 on operating days, excluding Sundays, public holidays and other market closures. Each shop and restaurant keeps its own hours. The calendar, not a generic weekday rule, is the right evidence for a particular travel date.</p><p>The special tuna-auction observation deck uses an advance application and lottery when oversubscribed. The general upstairs visitor walkway is a different viewing position. If you have not secured the special visit, do not build the morning around it. On a closure day, choose another neighborhood or a terminal meal rather than arriving for locked visitor routes.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.english.metro.tokyo.lg.jp/w/016-101-003992",
+        "label": "Tokyo Metropolitan Government: market visitor rules, calendar and auction process",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.shijou.metro.tokyo.lg.jp/documents/d/shijou/pamphlet-english",
+        "label": "Toyosu official English visitor map (PDF)",
+        "checked": "2026-11-17",
+        "note": "Mapshows3blocks,visitorrouteandgoodsarea/rooflift."
+      },
+      {
+        "url": "https://www.gotokyo.org/en/spot/1743/index.html",
+        "label": "GO TOKYO: market buildings, Uogashi Yokocho and rooftop",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://toyosu-kanko.com/about/%E3%82%B0%E3%83%AB%E3%83%A1%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88/",
+        "label": "Toyosu market tourism association: restaurant buildings and choices",
+        "checked": "2026-11-17",
+        "note": "Verified Iwasa Sushi in seafood intermediate building and Tenfusa in fruit/vegetable building; no queue or same-day seating guarantee."
+      }
+    ]
+  },
+  "tsukiji-outer-market": {
+    "opening": "Tsukiji Outer Market is for a food walk among specialist shops, not a visit to Toyosu’s wholesale auction. Pick one thing you want to eat, one lane to browse and the station you will return to. There is no single opening time for every stall.",
+    "visitMinutes": "60–90",
+    "suitableFor": "A morning or early-afternoon food stop with a flexible choice of open stalls.",
+    "skipIf": "A closure day leaves too few suitable shops, the lanes are too crowded with your luggage, or it is already late afternoon.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "One meal and one lane is enough",
+        "html": "<p>For a named tamagoyaki stop, Tsukiji Yamacho at 4-10-10 Tsukiji is listed by the market association as open 06:00–15:30 with no regular closing day. It is one example, not a reason to wait through a long queue. Start with your main food choice rather than sampling every queue. For a simple route, use Tsukiji Uogashi and the surrounding outer-market lanes as identifiable anchors, then browse for tea, dried bonito, tamagoyaki or a small kitchen item. The market directory groups shops by these specialties, making a chosen interest easier to follow than a list of famous counters.</p><p>Give around 45–60 minutes to eating and nearby browsing, then keep 15–30 for navigation, a pause and the return. These are our local allowances. If the first queue will consume them, move to another open stall or a seated meal elsewhere. Follow the shop’s eating and rubbish rules rather than treating the narrow lanes as an unrestricted picnic space.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Choose Tsukiji or Tsukijishijo for the return you need",
+        "html": "<p>The market association lists approximately one-minute approaches from Tsukiji on the Hibiya Line and Tsukijishijo on the Oedo Line, and about three minutes from Higashi-ginza. Those are approaches to the district, not walking times from every platform to a chosen stall.</p><p>Use the market map to locate your return station and Plat Tsukiji information centre before getting absorbed in the shops. Tsukiji, Tsukijishijo and Toyosu are different destinations. Do not append an auction trip simply because a guide calls this the fish-market area.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "A useful visiting window and a concrete help point",
+        "html": "<p>We suggest approximately 09:00–14:00 for this short food visit, subject to the official calendar and each shop. Some businesses open earlier, while closure days, holidays and late afternoons can offer far less choice. An accessible street is not proof of an open kitchen.</p><p>Plat Tsukiji offers maps, English-language help and coin lockers of several sizes. Its reviewed English listing gives the counter 08:00–14:00 on weekdays/Saturdays and 10:00–14:00 on Sundays, holidays and closure days, with year-end closures. Use that as a help point, not a promise of an empty locker or evening collection access. Street browsing is free; budget from the menu you actually select.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tsukiji.or.jp/english/access/",
+        "label": "Tsukiji market association: station approaches and map",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.tsukiji.or.jp/english/plattsukiji/",
+        "label": "Plat Tsukiji: information, lockers and counter hours",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.tsukiji.or.jp/english/calendar/",
+        "label": "Tsukiji market calendar",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.tsukiji.or.jp/english/shoplist/",
+        "label": "Tsukiji official shop directory",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.tsukiji.or.jp/english/shoplist/cat-c/cat-10/466/",
+        "label": "Tsukiji Yamacho: address and listed shop hours",
+        "checked": "2026-11-17",
+        "note": "Named example from market association; menu price and current queue not claimed."
+      }
+    ]
+  },
+  "ueno-ameyoko": {
+    "opening": "Ameyoko is the busy shopping district beside the railway between Ueno and Okachimachi. For a short final stop, make one pass through the market and choose a snack or purchase. A Ueno Park museum is a separate visit, not an automatic part of the market walk.",
+    "visitMinutes": "45–75",
+    "suitableFor": "A lively market browse when your bags and airport connection are around Ueno.",
+    "skipIf": "Crowds are making walking slow, a large suitcase is awkward in the lanes, or a museum visit is your real priority.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "A straightforward market pass",
+        "html": "<p>Start at the Ueno end, walk along the Ameyoko shopping lane beside the elevated railway and use the market’s central sign/building area as a turning point. If you continue toward Okachimachi, remember that you will need the return walk unless your onward route deliberately starts there.</p><p>For packaged sweets as gifts, Niki no Kashi Daiichi Eigyosho is a concrete target at 4-1-8 Ueno; the shopping association lists it 10:00–19:00. Choose a category before entering: tea and dry foods, sweets, clothing or one immediate snack. For a food purchase, ask where you may eat and dispose of the packaging. A 45–75 minute local allowance is enough for atmosphere and one purpose; it is not a promise to inspect the district’s hundreds of shops.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "JR Ueno and Keisei-Ueno need different return instructions",
+        "html": "<p>Taito City’s tourism listing places Ameyoko beside the railway between JR Ueno and JR Okachimachi, with access also from Keisei-Ueno and nearby subway stations. Store your bags near the operator you will use next. For a Skyliner departure, the destination is Keisei-Ueno, not a platform inside JR Ueno.</p><p>Save the exact storage entrance and train departure point before walking into the market. Ueno Park lies on the other side of the station area; adding a park museum can involve more crossing, walking and admission time than the market map suggests.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "A market has shop hours, not one shared timetable",
+        "html": "<p>Browse the businesses that are actually open instead of assuming every shop opens with the railway station. There is no general market admission charge; meals and purchases have individual prices. For a tight departure window, a stall without a queue is more useful than waiting for a famous counter.</p><p>If rain or crowds make the lanes uncomfortable, shorten the walk and take a seated break near your return station. A museum ticket creates a new closing-time commitment and should replace the market, not silently extend it. Keep the route aligned with the station where the bags and train are waiting.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://t-navi.city.taito.lg.jp/spot/1033",
+        "label": "Taito City: Ameyoko location and station access",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.gotokyo.org/en/destinations/northern-tokyo/ueno/index.html",
+        "label": "GO TOKYO: Ueno district and park context",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://www.ueno-ameyoko.jp/shop/shop_7497/",
+        "label": "Ameyoko association: Niki no Kashi Daiichi Eigyosho",
+        "checked": "2026-11-17",
+        "note": "Verified named shop address and published hours; not a personally tested quality ranking."
+      }
+    ]
+  },
+  "ueno-toshogu": {
+    "opening": "Ueno Toshogu offers a close look at gold leaf, carved details and an Edo-period shrine within Ueno Park. Choose whether the free outer approach is enough or you want the paid inner precinct. Neither ticket gives a casual visit inside the shrine building.",
+    "visitMinutes": "35–55",
+    "suitableFor": "A compact architecture-focused shrine visit, especially if you are already near Ueno Park.",
+    "skipIf": "You would arrive after the paid precinct closes, or a garden visit is your main aim outside its seasonal opening.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Lantern approach, gate and the paid precinct",
+        "html": "<p>Follow the lantern-lined approach toward the gilded gate and pause for the carving and metalwork. You can appreciate the outer setting without buying a precinct ticket. For a closer view behind the wall, allow time for admission and a slow circuit rather than treating it as a quick photograph at the entrance.</p><p>The current shrine tariff is ¥700 for adults/junior-high age and above and ¥300 for elementary-school children. The shrine interior is not open for this ordinary visit. The seasonal peony garden has separate dates and ticket arrangements; do not add it automatically to the paid shrine stop.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Approach through Ueno Park",
+        "html": "<p>The shrine’s English access guidance names JR Ueno’s Park Exit, the Shinobazu-side approach from the subway, and Keisei-Ueno’s front entrance. Use the approach for the railway you are actually travelling on rather than assuming all Ueno exits meet at the park gate.</p><p>Within the park, follow the Ueno Toshogu signs and retain the same station direction for the return. A 35–55 minute local visit allowance does not include a cross-park museum detour or the walk back to a separate baggage counter. Large bags make the shrine approach less relaxed.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "The paid area closes before the grounds",
+        "html": "<p>From October through February the official Japanese page lists grounds 09:00–16:30 and paid precinct 09:30–16:00. From March through September the corresponding windows are 09:00–17:30 and 09:30–17:00. Weather can change access, so an outer-ground closing time is not the last time to buy an inner-precinct ticket.</p><p>If you arrive too late, make a short free outer visit only if access remains open and you still want it. If the garden is closed, choose the architecture rather than searching for flowers that are not on display. In heavy rain, replace this outdoor stop with an indoor break near your return station.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.uenotoshogu.com/",
+        "label": "Ueno Toshogu: current prices and separate grounds/precinct hours",
+        "checked": "2026-11-17",
+        "note": "OfficialJapanese has¥700adult,¥300elementary,groundsandpaidwindowsspecified."
+      },
+      {
+        "url": "https://www.uenotoshogu.com/en/?lang=en",
+        "label": "Ueno Toshogu: English access and interior restriction",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      }
+    ]
+  },
+  "umeda": {
+    "opening": "Umeda works best when you already have your bags and airport transport around Osaka Station. The easiest short visit is a public-space pause above the tracks and one meal nearby. Umeda Sky Building is a separate attraction, not another floor of Osaka Station.",
+    "visitMinutes": "45–75",
+    "suitableFor": "A station-based Osaka finish with indoor options and a named return point.",
+    "skipIf": "Your luggage or booked KIX bus is elsewhere, or a separate observation attraction is the real purpose of the visit.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "Use the station’s clocks as a real destination",
+        "html": "<p>Take the public route to Toki-no-hiroba on 5F above JR Osaka Station. The broad roof and gold/silver clocks make this a useful orientation point, and the view down toward the trains gives the stop a clear purpose. Pause here, then choose one meal or shop on the same side as your return route.</p><p>Osaka Station City lists plaza access 08:00–23:30. It is a free public space, not a paid observatory. Our 45–75 minute local suggestion supports a pause and simple meal, not an expedition through every connected department store. Keep a few minutes at the end for lifts, toilets and reaching the right station entrance.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Osaka, Umeda and Osaka-Umeda are a district, not one gate",
+        "html": "<p>Identify your actual airport departure first: JR Osaka Station for the chosen rail service, or the exact stop for a booked airport bus. Metro Umeda and Hankyu/Hanshin Osaka-Umeda are different stations in the wider complex. Following the nearest sign for “Umeda” can put you on the wrong level or side.</p><p>From the 5F plaza, return by the known public concourse. If you intend to use JR’s airport service, preserve the platform approach shown on the live route; it is not necessarily a descent straight to the platforms visible below the plaza. Shops and meal choices should follow that return corridor.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "Rain-friendly does not mean no walking",
+        "html": "<p>The roof over Toki-no-hiroba makes it useful in changeable weather, but it is a large open station environment, not a quiet lounge. If tired or carrying awkward bags, choose immediate seating closer to your departure rather than pursuing another viewpoint.</p><p>If a meal has a queue, choose an open alternative in Osaka Station City and keep the last part of the visit for returning to luggage. Umeda Sky Building and Grand Green Osaka can be worthwhile, but either needs its own approach and visit allowance; replace this station stop with one of them rather than stacking them on.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://osakastationcity.com/green/toki/",
+        "label": "Osaka Station City: Toki-no-hiroba floor and hours",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      },
+      {
+        "url": "https://osaka-info.jp/experience/en/osaka/spot/544",
+        "label": "Osaka tourism: free public plaza and railway setting",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      }
+    ]
+  },
+  "dotonbori": {
+    "opening": "For a short Dotonbori stop, make Ebisubashi and the Glico sign the destination, then choose one food purchase or a brief riverwalk. The bright streets can fill an evening, but the compact version needs an obvious way back to Nankai Namba.",
+    "visitMinutes": "45–75",
+    "suitableFor": "A first look at Osaka’s canal-side signs and a quick snack, without a long restaurant or cruise commitment.",
+    "skipIf": "Crowds have slowed the approach, your restaurant choice has a long queue, or you need to return to luggage far from Namba.",
+    "sections": [
+      {
+        "id": "local-walk",
+        "title": "One bridge, one riverside section and one snack",
+        "html": "<p>Reach Ebisubashi, take a look at the illuminated Glico sign from the public bridge area and step aside from the main pedestrian flow. Then choose one short stretch of the riverwalk before returning. The point is to enjoy the scale and humor of the signs, not to photograph every facade.</p><p>For food, choose a takoyaki counter with a manageable queue or immediate seating nearby. Our 45–75 minute local visit allowance includes that small purchase; a full okonomiyaki dinner or river cruise is a separate commitment. The public bridge and riverwalk have no general admission charge; food and cruises are extra.</p>"
+      },
+      {
+        "id": "station-approach",
+        "title": "Follow Ebisubashi-suji from the Nankai side",
+        "html": "<p>The shopping association describes Ebisubashi-suji as the north–south arcade between the Takashimaya/Namba Marui end and Ebisubashi. From Nankai Namba, its directions lead out toward Takashimaya and across the pedestrian crossing to the arcade’s south end. Walk north toward the canal, keeping this line as the return route.</p><p>For subway arrivals, the association names Namba Walk exits 12/13 on the northern approach or NAMBA Nannan E3 from the southern approach. These are orientation options, not a single correct exit for every railway. Save Nankai Namba separately if that is where your airport train leaves.</p>"
+      },
+      {
+        "id": "choices",
+        "title": "A busy street is not a guaranteed quick meal",
+        "html": "<p>Restaurants and shops have individual opening times; Dotonbori has no shared dinner schedule. Ask about the actual wait before joining a queue, and keep payment, packing and the return walk visible in your local allowance.</p><p>In heavy rain or overwhelming crowds, shorten the canal section and choose a station-side meal instead. Avoid carrying an open food tray through dense foot traffic or stopping with luggage across the bridge flow. If you want the calmer temple atmosphere of Hozenji, use that as the chosen stop rather than adding another loop after the canal.</p>"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.dotonbori.or.jp/shoppingstreet_access.html",
+        "label": "Ebisubashi-suji association: Nankai and subway approaches",
+        "checked": "2026-11-17",
+        "note": "Verifiedarcadegeometry,NankaiTakashimayaapproach,exits12/13andE3."
+      },
+      {
+        "url": "https://www.osaka-info.jp/en/spot/dotonbori/",
+        "label": "Osaka tourism: Dotonbori district and individual shop hours",
+        "checked": "2026-11-17",
+        "note": "Official operator information reviewed; visit allowances are editorial estimates."
+      }
+    ]
+  }
+}

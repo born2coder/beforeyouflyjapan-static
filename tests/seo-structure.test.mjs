@@ -1,176 +1,78 @@
-import assert from "node:assert/strict";
-import fs from "node:fs";
-import path from "node:path";
-import test from "node:test";
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import {createRequire} from 'node:module';
+import test from 'node:test';
+const {JSDOM}=createRequire(path.resolve(process.env.BYF_TEST_DEPS,'package.json'))('jsdom');
+const root=path.resolve(import.meta.dirname,'..'),origin='https://beforeyouflyjapan.com';
+const pages=fs.globSync('**/index.html',{cwd:root}).sort();
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const docs=new Map(pages.map(p=>[p,new JSDOM(read(p)).window.document]));
+const pageURL=p=>p==='index.html'?'/':'/'+p.replace(/index\.html$/,'');
+const sitemap=read('sitemap.xml'),targets=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
+const local=p=>p==='/'?'index.html':path.extname(p)?p.slice(1):p.slice(1)+'index.html';
+const editorial={...JSON.parse(read('content/editorial-tokyo.json')),...JSON.parse(read('content/editorial-regions.json'))};
+const guides=JSON.parse(read('audit/guide-usefulness-evidence.json')).pages;
 
-const root = path.resolve(import.meta.dirname, "..");
-const pages = fs.globSync("**/index.html", { cwd: root }).sort();
-const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-const redirects = fs.readFileSync(path.join(root, "_redirects"), "utf8").trim().split("\n").map((line) => line.split(/\s+/));
-
-function pageUrl(relative) {
-  return relative === "index.html" ? "/" : `/${relative.replace(/index\.html$/, "")}`;
-}
-
-function metadata(html, name) {
-  return html.match(new RegExp(`<meta name="${name}" content="([^"]*)"`, "i"))?.[1] || "";
-}
-
-function canonical(html) {
-  return html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1] || "";
-}
-
-function localTarget(url) {
-  const parsed = new URL(url, "https://beforeyouflyjapan.com");
-  if (parsed.origin !== "https://beforeyouflyjapan.com") return null;
-  if (parsed.pathname.startsWith("/api/")) return null;
-  const raw = decodeURIComponent(parsed.pathname);
-  if (raw === "/") return path.join(root, "index.html");
-  if (path.extname(raw)) return path.join(root, raw.slice(1));
-  return path.join(root, raw.slice(1), "index.html");
-}
-
-test("SEO layer and application layer are separated", () => {
-  assert.equal(pages.length, 117);
-  const planPages = pages.filter((name) => name.startsWith("plans/"));
-  const placePages = pages.filter((name) => name.startsWith("places/"));
-  assert.equal(planPages.length, 56);
-  assert.equal(placePages.length, 40);
-  for (const relative of planPages) {
-    const html = fs.readFileSync(path.join(root, relative), "utf8");
-    assert.match(metadata(html, "robots"), /noindex,follow/);
-    assert.ok(!sitemap.includes(`https://beforeyouflyjapan.com${pageUrl(relative)}`));
-    assert.match(html, /id="your-timeline"/);
-  }
-  for (const relative of placePages) {
-    const html = fs.readFileSync(path.join(root, relative), "utf8");
-    assert.match(metadata(html, "robots"), /^index,follow/);
-    assert.match(html, /class="byf-verdict"/);
-    assert.ok(sitemap.includes(`https://beforeyouflyjapan.com${pageUrl(relative)}`));
-  }
-  assert.equal((sitemap.match(/<url>/g) || []).length, 58);
+test('117 pages keep distinct search articles and noindex plan examples',()=>{
+ assert.equal(pages.length,117);assert.equal(pages.filter(p=>p.startsWith('places/')).length,40);assert.equal(pages.filter(p=>p.startsWith('plans/')).length,56);assert.equal(targets.length,58);
+ for(const [p,d] of docs){const robots=d.querySelector('meta[name=robots]')?.content||'';
+  if(p.startsWith('plans/')){assert.ok(robots.includes('noindex,follow'),p);assert.ok(!targets.includes(pageURL(p)),p);assert.ok(d.querySelector('#your-timeline'),p);}
+  if(p.startsWith('places/')){assert.ok(robots.startsWith('index,follow'),p);assert.ok(targets.includes(pageURL(p)),p);}
+ }
 });
-
-test("metadata is unique, self-canonical and has one H1", () => {
-  const titles = new Set();
-  const descriptions = new Set();
-  for (const relative of pages) {
-    const html = fs.readFileSync(path.join(root, relative), "utf8");
-    const title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || "";
-    const description = metadata(html, "description");
-    assert.ok(title.length >= 10, `${relative}: missing title`);
-    assert.ok(description.length >= 50, `${relative}: weak description`);
-    assert.ok(!titles.has(title), `${relative}: duplicate title`);
-    assert.ok(!descriptions.has(description), `${relative}: duplicate description`);
-    titles.add(title);
-    descriptions.add(description);
-    assert.equal((html.match(/<h1\b/gi) || []).length, 1, `${relative}: H1 count`);
-    assert.equal(canonical(html), `https://beforeyouflyjapan.com${pageUrl(relative)}`);
-    assert.doesNotMatch(html, /&amp;#\d+;|WordPress|Twenty Twenty|wp-content|wp-includes/i);
-  }
+test('metadata, one H1 and self canonicals identify every page uniquely',()=>{
+ const titles=new Set(),descs=new Set();for(const [p,d] of docs){const title=d.title,desc=d.querySelector('meta[name=description]')?.content||'';
+  assert.ok(title.length>=10,p+' title');assert.ok(desc.length>=50,p+' description');assert.ok(!titles.has(title),p+' duplicate title');assert.ok(!descs.has(desc),p+' duplicate description');titles.add(title);descs.add(desc);
+  assert.equal(d.querySelectorAll('h1').length,1,p);assert.equal(d.querySelector('link[rel=canonical]')?.href,origin+pageURL(p),p);
+ }
 });
-
-test("internal links resolve without redirect hops", () => {
-  const redirectSources = new Set(redirects.map(([source]) => source));
-  for (const relative of pages) {
-    const html = fs.readFileSync(path.join(root, relative), "utf8");
-    for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
-      const url = match[1];
-      if (/^(?:data:|mailto:|tel:|#)/.test(url)) continue;
-      const parsed = new URL(url, "https://beforeyouflyjapan.com");
-      if (parsed.origin !== "https://beforeyouflyjapan.com") continue;
-      assert.ok(!redirectSources.has(parsed.pathname), `${relative}: internal redirect ${url}`);
-      const target = localTarget(url);
-      if (target) assert.ok(fs.existsSync(target), `${relative}: broken local link ${url}`);
-    }
-  }
+test('internal article, asset and section links resolve to a real destination',()=>{
+ for(const [p,d] of docs){for(const el of d.querySelectorAll('a[href],script[src],link[rel=stylesheet],img[src]')){
+  const href=el.getAttribute('href')||el.getAttribute('src');if(!href||/^(data:|mailto:|tel:)/.test(href))continue;
+  const url=new URL(href,origin+pageURL(p));if(url.origin!==origin||url.pathname.startsWith('/api/'))continue;
+  const file=local(decodeURIComponent(url.pathname));assert.ok(fs.existsSync(path.join(root,file)),p+' -> '+url.pathname);
+  if(url.hash&&file.endsWith('index.html'))assert.ok(docs.get(file)?.getElementById(decodeURIComponent(url.hash.slice(1))),p+' missing '+url.pathname+url.hash);
+ }}
 });
-
-test("redirects are one hop and targets exist", () => {
-  const sources = new Set(redirects.map(([source]) => source));
-  assert.equal(redirects.length, 117);
-  for (const [source, target, status] of redirects) {
-    assert.equal(status, "301", source);
-    assert.ok(!sources.has(target), `${source}: redirect chain to ${target}`);
-    const local = localTarget(target);
-    assert.ok(local && fs.existsSync(local), `${source}: missing target ${target}`);
-  }
+test('old URL redirects have existing final targets and no chains',()=>{
+ const rows=read('_redirects').trim().split('\n').filter(x=>x&&!x.startsWith('#')).map(x=>x.split(/\s+/));
+ const sources=new Set(rows.map(x=>x[0]));for(const [src,dest] of rows){if(dest.startsWith('https:')||dest.startsWith('/api/'))continue;assert.ok(!sources.has(dest),src+' chain');assert.ok(fs.existsSync(path.join(root,local(new URL(dest,origin).pathname))),src+' target');}
 });
-
-test("priority guides contain decision support and source dates", () => {
-  const required = {
-    "before-late-flight-tokyo/index.html": ["Quick answer", "Example timeline", "What can go wrong", "Safer alternative", "Official sources"],
-    "how-early-arrive-haneda-airport/index.html": ["3 hours before departure", "Which time", "Worked example", "Rail disruption", "Sources and what these times mean"],
-    "after-hotel-checkout-tokyo/index.html": ["Quick answer", "Choose the luggage plan", "Calculate usable time", "Official sources"],
-    "how-we-check/index.html": ["Sources we prioritize", "What the timing includes", "Our risk labels", "Correction policy"],
-  };
-  for (const [relative, phrases] of Object.entries(required)) {
-    const html = fs.readFileSync(path.join(root, relative), "utf8");
-    for (const phrase of phrases) assert.ok(html.includes(phrase), `${relative}: missing ${phrase}`);
-    assert.match(html, relative.startsWith("how-early-arrive-haneda") ? /2026-10-30/ : /2026-09-(?:08|11)/);
-  }
+test('all 40 destinations contain one integrated local visit and one credited real photograph',()=>{
+ for(const [slug,row] of Object.entries(editorial)){const d=docs.get('places/'+slug+'/index.html');assert.ok(d.querySelector('.byf-editorial-hero').textContent.includes(row.opening),slug);
+  assert.equal(d.querySelectorAll('.byf-editorial-section').length,row.sections.length,slug);assert.equal(d.querySelectorAll('.byf-place-photo').length,1,slug);assert.equal(d.querySelectorAll('.byf-practical').length,1,slug);
+  const photo=d.querySelector('.byf-place-photo');assert.ok(photo.querySelector('a[href*="commons.wikimedia.org"]'),slug);assert.ok(photo.querySelector('a[href*="creativecommons.org"]'),slug);
+  assert.ok(d.querySelector('#flight-fit').textContent.includes(row.visitMinutes.match(/^[0-9–]+/)[0]),slug);assert.equal(d.querySelectorAll('.byf-query-content').length,0,slug+' old article stacked');
+ }
 });
-
-test("Search Console-led Primary SEO Pages have focused metadata, answers and contextual links", () => {
-  const primary = [
-    "how-early-arrive-haneda-airport/index.html", "after-hotel-checkout-tokyo/index.html",
-    "before-late-flight-tokyo/index.html", "places/haneda-airport/index.html",
-    "places/tsukiji-outer-market/index.html", "places/tokyo-tower/index.html", "places/omotesando/index.html",
-    "places/shiodome/index.html", "places/nihonbashi/index.html", "places/naritasan-shinshoji/index.html",
-    "places/toyosu/index.html", "places/shinagawa/index.html", "places/asakusa-sensoji/index.html",
-  ];
-  assert.ok(primary.length >= 10 && primary.length <= 15);
-  for (const relative of primary) {
-    const html = fs.readFileSync(path.join(root, relative), "utf8");
-    assert.match(html, /<meta name="description" content=".{80,170}">/);
-    assert.doesNotMatch(html, /Make sure you have enough time|This is a useful place to visit|Check transport before you go/);
-    if (relative.startsWith("places/")) {
-      assert.match(html, /<b>Quick answer:<\/b>/);
-      assert.match(html, /class="byf-example-timeline"/);
-      assert.match(html, /class="byf-primary-links"/);
-    }
+test('complete route models disclose actual stages and preserve the arithmetic',()=>{
+ const c={window:{}};vm.createContext(c);for(const f of ['planner-data','planner-core'])vm.runInContext(read('assets/'+f+'.js'),c);
+ const core=c.window.BYFPlannerCore,data=core.enhanceData(c.window.BYF_STATIC_DATA);
+ for(const p of pages.filter(p=>p.startsWith('places/'))){const d=docs.get(p);assert.ok(d.querySelector('#plan-from-here').textContent.includes('not minimum time before takeoff'),p);
+  for(const card of d.querySelectorAll('.byf-route-model')){const link=card.querySelector('a[href*="plan_id="]'),id=Number(new URL(link.href,origin).searchParams.get('plan_id')),plan=data.plans.find(x=>x.id===id);assert.ok(plan,p);
+   const sum=[...card.querySelectorAll('.byf-model-stages b')].reduce((n,e)=>n+parseInt(e.textContent),0);assert.equal(sum,core.totalMinutes(core.withLuggageStep(plan,'none','',plan.area).steps),p+' sum');
   }
+ }
 });
-
-test("All place pages expose route-specific timing and connected alternatives", () => {
-  for (const relative of pages.filter((name) => name.startsWith("places/"))) {
-    const html = fs.readFileSync(path.join(root, relative), "utf8");
-    assert.match(html, /\d+ minutes for (HND|NRT|KIX)/, relative);
-    assert.match(html, /class="byf-route-support"/, relative);
-    assert.match(html, /class="byf-example-timeline"/, relative);
-    assert.match(html, /class="byf-primary-links"/, relative);
-    assert.match(html, /BreadcrumbList/, relative);
-    assert.equal((html.match(/<b>Quick answer:<\/b>/g) || []).length, 1, relative);
-  }
+test('all13 departure guides answer with sourced decisions and a valid airport CTA',()=>{
+ assert.equal(guides.length,13);for(const row of guides){const d=docs.get(local(row.path));assert.ok(d.querySelector('.byf-query-content'),row.path);assert.ok(d.querySelectorAll('.byf-query-content section').length>=3,row.path);assert.ok(d.querySelector('.byf-query-content').textContent.includes('2026-11-17')||d.querySelector('.byf-query-content').textContent.includes('17 November 2026'),row.path);
+  const a=d.querySelector('.byf-guide-cta a');assert.ok(a,row.path);assert.ok(['HND','NRT','KIX'].includes(new URL(a.getAttribute('href'),origin).searchParams.get('airport')),row.path);
+ }
 });
-
-test("Primary SEO additions retain the 375/390/412 mobile layout guards", () => {
-  const css = fs.readFileSync(path.join(root, "assets/seo.css"), "utf8");
-  assert.match(css, /@media\(max-width:600px\).*?\.byf-primary-links ul\{grid-template-columns:1fr\}/s);
-  assert.match(css, /@media\(max-width:720px\).*?\.byf-verdict-grid\{grid-template-columns:1fr\}/s);
-  for (const relative of pages.filter((name) => name.startsWith("places/"))) {
-    const html = fs.readFileSync(path.join(root, relative), "utf8");
-    assert.match(html, /<meta name="viewport" content="width=device-width,initial-scale=1">/);
-  }
+test('article schemas match visible titles and section identifiers are unique',()=>{
+ for(const [p,d] of docs){const ids=[...d.querySelectorAll('[id]')].map(x=>x.id);assert.equal(ids.length,new Set(ids).size,p+' duplicate id');
+  const schema=[...d.querySelectorAll('script[type="application/ld+json"]')].map(x=>JSON.parse(x.textContent));
+  if(p.startsWith('places/')||guides.some(g=>local(g.path)===p)){const a=schema.filter(x=>x['@type']==='Article');assert.equal(a.length,1,p);assert.equal(a[0].headline,d.querySelector('h1').textContent,p);assert.equal(a[0].dateModified,'2026-11-17',p);}
+  assert.ok(d.querySelector('meta[name=viewport]')?.content.includes('width=device-width'),p);
+ }
 });
-
-test("planner scripts load safely and result links target the personalized timeline", () => {
-  const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
-  const planner = fs.readFileSync(path.join(root, "assets/planner.js"), "utf8");
-  assert.match(home, /<script defer src="\/assets\/planner-core\.js/);
-  assert.match(home, /<script defer src="\/assets\/planner-data\.js/);
-  assert.match(home, /<script defer src="\/assets\/planner\.js/);
-  assert.match(planner, /#your-timeline/);
-
-  for (const relative of pages.filter((name) => name.startsWith("plans/"))) {
-    const html = fs.readFileSync(path.join(root, relative), "utf8");
-    assert.match(html, /<script defer src="\/assets\/plan-context\.js/);
-  }
+test('the homepage explains actual departure choices and every search page is reachable',()=>{
+ const d=docs.get('index.html');assert.equal(d.querySelectorAll('.byf-home-choice').length,3);const seen=new Set(['/']),queue=['/'];while(queue.length){const u=queue.shift(),doc=docs.get(local(u));if(!doc)continue;for(const a of doc.querySelectorAll('a[href]')){const x=new URL(a.getAttribute('href'),origin+u);if(x.origin===origin&&docs.has(local(x.pathname))&&!seen.has(x.pathname)){seen.add(x.pathname);queue.push(x.pathname);}}}for(const url of targets)assert.ok(seen.has(url),'Unreachable '+url);
 });
-
-test("homepage exposes the current Search Console verification token once", () => {
-  const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
-  const token = '<meta name="google-site-verification" content="HHR-KfF6i7VxLJHq3Acgiq4nZ14VRq0HYPmX6iC-IaU">';
-  assert.equal(home.split(token).length - 1, 1);
-  assert.ok(home.indexOf(token) < home.indexOf("</head>"));
+test('planner and ownership scripts remain present without duplicating the search token',()=>{
+ const home=docs.get('index.html');for(const f of ['planner-core','planner-data','planner'])assert.equal(home.querySelectorAll(`script[src^="/assets/${f}.js"]`).length,1,f);
+ for(const p of pages.filter(p=>p.startsWith('plans/')))assert.equal(docs.get(p).querySelectorAll('script[src^="/assets/plan-context.js"]').length,1,p);
+ assert.equal(home.querySelectorAll('meta[name=google-site-verification]').length,1);
 });

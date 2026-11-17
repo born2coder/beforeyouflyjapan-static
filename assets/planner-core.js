@@ -390,6 +390,15 @@
     });
     const ids = new Set(plans.map((plan) => plan.id));
     EXTRA_PLANS.forEach((plan) => { if (!ids.has(plan.id)) plans.push(plan); });
+    // A nearby district is not a free connection. City routes begin at their
+    // named area, unless an authored connector accounts for the other start.
+    plans.forEach((plan) => {
+      plan.starts = plan.airportPlan
+        ? (plan.steps.some(isAirportTransferStep)
+          ? Object.keys(AREA_REGIONS).filter((area) => airportTransferMinimum(plan.airport, area) !== null)
+          : [plan.area])
+        : Array.from(new Set([plan.area, ...Object.keys(plan.startConnectors || {})]));
+    });
     return {
       ...source,
       plans,
@@ -417,11 +426,9 @@
   }
 
   function areaMatches(plan, startArea) {
-    if (plan.strictStarts) return plan.starts.includes(startArea);
-    if (plan.area === startArea) return true;
-    if (plan.starts.includes(startArea)) return true;
-    if (startArea === "Tokyo" && plan.airport === "HND" && !plan.airportPlan) return true;
-    return plan.starts.some((area) => isNearby(area, startArea));
+    if (!startArea) return false;
+    if (plan.airportPlan) return plan.starts.includes(startArea) && airportTransferMinimum(plan.airport, startArea) !== null;
+    return plan.area === startArea || Boolean(plan.startConnectors?.[startArea]);
   }
 
   function airportTransferMinimum(airport, area) {
@@ -460,14 +467,19 @@
   function prepareSteps(plan, startArea) {
     const steps = plan.steps.map((step) => ({ ...step }));
     if (plan.startConnectors?.[startArea]) steps.unshift({ ...plan.startConnectors[startArea] });
-    if (!plan.airportPlan || startArea !== plan.area) return steps;
+    if (!plan.airportPlan) return steps;
     const airportIndex = steps.findIndex(isAirportTransferStep);
-    if (airportIndex === 0) steps.splice(airportIndex, 1);
+    if (startArea === plan.area && airportIndex === 0) steps.splice(airportIndex, 1);
+    else if (airportIndex >= 0) {
+      const allowance = airportTransferMinimum(plan.airport, startArea);
+      if (allowance !== null) steps[airportIndex].minutes = Math.max(Number(steps[airportIndex].minutes || 0), allowance);
+    }
     return steps;
   }
 
   function withLuggageStep(plan, luggage, luggageArea, startArea) {
     const mode = normalizeLuggageMode(luggage);
+    if (!areaMatches(plan, startArea)) return { compatible: false, pickupMinutes: 0, mode, steps: [] };
     let steps = prepareSteps(plan, startArea);
 
     if (plan.airportPlan) {
@@ -483,6 +495,9 @@
       }
       const minutes = pickupMinutes(startArea, luggageArea);
       if (minutes === null) return { compatible: false, pickupMinutes: 0, mode, steps };
+      const collectionTransfer = airportTransferMinimum(plan.airport, luggageArea);
+      if (collectionTransfer === null) return { compatible: false, pickupMinutes: 0, mode, steps };
+      steps[airportIndex].minutes = Math.max(Number(steps[airportIndex].minutes || 0), collectionTransfer);
       steps.splice(airportIndex, 0, {
         minutes,
         label: `Return to ${luggageArea} and collect your luggage`,
